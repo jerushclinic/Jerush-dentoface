@@ -1,0 +1,13 @@
+{
+  "name": "jerush-custom-theme",
+  "version": "1.0.0",
+  "description": "Tailwind-styled WordPress theme for Jerush Dentoface",
+  "main": "index.php",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./assets/css/tailwind-compiled.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./assets/css/tailwind-compiled.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
