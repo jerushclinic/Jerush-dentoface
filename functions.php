@@ -87,5 +87,14 @@ function jerush_tailwind_scripts() {
 		'1.0.0', 
 		true 
 	);
+
+	// Enqueue treatments page filter Javascript logic
+	wp_enqueue_script( 
+		'jerush-treatments-js', 
+		get_template_directory_uri() . '/assets/js/treatments.js', 
+		array(), 
+		'1.0.0', 
+		true 
+	);
 }
 add_action( 'wp_enqueue_scripts', 'jerush_tailwind_scripts' );
