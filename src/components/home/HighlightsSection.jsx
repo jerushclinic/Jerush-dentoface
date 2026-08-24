@@ -157,7 +157,7 @@ export default function HighlightsSection() {
         </div>
 
         {/* ─── 2. CAROUSEL CARDS SLIDER ─── */}
-        <div className="relative overflow-hidden w-full pb-4" ref={containerRef}>
+        <div className="relative overflow-hidden w-full pt-2 pb-8 px-2 -mx-2" ref={containerRef}>
           <motion.div
             className="flex gap-4 sm:gap-6 lg:gap-7 w-full"
             animate={{ x: `calc(-${currentIndex * (100 / visibleCount)}% - ${currentIndex * (gap / visibleCount)}px)` }}
@@ -171,7 +171,7 @@ export default function HighlightsSection() {
               >
                 <div
                   onClick={() => handleCardClick(item)}
-                  className="bg-white border border-slate-200/90 rounded-[28px] overflow-hidden shadow-[0_10px_30px_rgba(40,83,164,0.06)] hover:shadow-[0_20px_45px_rgba(40,83,164,0.14)] hover:border-brandSky/50 transition-all duration-500 flex flex-col h-[490px] cursor-pointer group text-left relative transform hover:-translate-y-1.5"
+                  className="bg-white border border-slate-200/80 rounded-[28px] overflow-hidden shadow-[0_4px_20px_-4px_rgba(15,23,42,0.06),0_10px_25px_-5px_rgba(15,23,42,0.04)] hover:shadow-[0_20px_40px_-8px_rgba(15,23,42,0.12),0_8px_16px_-4px_rgba(15,23,42,0.06)] hover:border-slate-300/90 transition-all duration-500 flex flex-col h-[490px] cursor-pointer group text-left relative transform hover:-translate-y-1.5"
                 >
                   {/* Image Cover Container */}
                   <div className="h-60 w-full overflow-hidden relative shrink-0 bg-slate-900">

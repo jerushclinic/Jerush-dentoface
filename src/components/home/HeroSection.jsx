@@ -50,17 +50,17 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-transparent via-70% to-slate-950"></div>
       </div>
 
-      {/* Enclosed Capsule Quick Actions Bar */}
+      {/* Enclosed Capsule Quick Actions Bar (Desktop Only) */}
       <div 
         className={`hidden lg:block z-[999] transition-all duration-500 ease-out px-6 ${
           isSticky 
-            ? 'fixed bottom-2 left-1/2 -translate-x-1/2 w-full max-w-3xl' 
+            ? 'fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-3xl' 
             : 'absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-4xl'
         }`}
       >
-        <div className={`bg-slate-950/80 backdrop-blur-xl border border-sky-500/30 rounded-2xl shadow-[0_0_30px_rgba(30,151,212,0.15)] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-slate-800/80 overflow-hidden transform transition-all duration-300 hover:border-sky-400/50 hover:shadow-[0_0_40px_rgba(30,151,212,0.25)] ${
+        <div className={`bg-slate-950/90 backdrop-blur-xl border border-b-0 border-sky-500/30 rounded-t-2xl shadow-[0_-10px_35px_rgba(2,6,23,0.5)] grid grid-cols-4 divide-x divide-slate-800/80 overflow-hidden transform transition-all duration-300 hover:border-sky-400/50 hover:shadow-[0_-15px_45px_rgba(2,6,23,0.7)] ${
           isSticky 
-            ? 'scale-[0.98] border-sky-500/50 shadow-[0_15px_45px_rgba(0,0,0,0.4)]' 
+            ? 'border-sky-500/50 shadow-[0_-12px_40px_rgba(2,6,23,0.6)]' 
             : ''
         }`}>
           {/* Action 1: Book Appointment */}

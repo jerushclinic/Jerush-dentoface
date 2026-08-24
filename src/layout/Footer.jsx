@@ -54,7 +54,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className={`bg-primary text-slate-400 font-body border-t border-slate-800 pt-16 text-left ${isHomePage ? 'pb-32 lg:pb-28' : 'pb-20 md:pb-8'}`}>
+      <footer className={`bg-primary text-slate-400 font-body border-t border-slate-800 pt-16 text-left ${isHomePage ? 'pb-32 lg:pb-28' : 'pb-20 lg:pb-8'}`}>
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Column 1: Brand & Bio */}
           <div className="flex flex-col gap-4">
@@ -230,8 +230,8 @@ export default function Footer() {
         </div>
       </footer>
 
-      {/* Mobile Sticky Bottom Navigation Bar (Hidden on Tablet md & Desktop) */}
-      <div className="jerush-mobile-bottombar fixed bottom-0 left-0 right-0 z-[90] md:hidden bg-slate-950/95 backdrop-blur-xl border-t border-slate-800/80 px-2 pt-2 pb-3.5 grid grid-cols-4 justify-items-center items-center shadow-[0_-10px_30px_rgba(2,6,23,0.5)]">
+      {/* Mobile & Tablet Sticky Bottom Navigation Bar (Hidden on Desktop >= 1024px) */}
+      <div className="jerush-mobile-bottombar fixed bottom-0 left-0 right-0 z-[90] lg:hidden bg-slate-950/95 backdrop-blur-xl border-t border-slate-800/80 px-2 pt-2 pb-3.5 grid grid-cols-4 justify-items-center items-center shadow-[0_-10px_30px_rgba(2,6,23,0.5)]">
         {/* Item 1: Book Appt */}
         <Link to="/contact" onClick={handleLinkClick} className="flex flex-col items-center justify-center text-center w-full py-1 text-slate-400 hover:text-brandSky transition-all duration-200 group">
           <svg className="w-[15px] h-[15px] mb-0.5 group-hover:scale-110 transition-all duration-300" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
