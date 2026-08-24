@@ -41,8 +41,8 @@ export default function BlogPreviewSection({ blogs }) {
   // Derive categories
   const categories = ['All', ...Array.from(new Set(localBlogs.map(b => b.category).filter(Boolean)))].slice(0, 5);
 
-  const filteredBlogs = (activeCategory === 'All' 
-    ? localBlogs 
+  const filteredBlogs = (activeCategory === 'All'
+    ? localBlogs
     : localBlogs.filter(b => b.category === activeCategory)
   ).slice(0, 3);
 
@@ -69,7 +69,7 @@ export default function BlogPreviewSection({ blogs }) {
       <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-cyan-400/5 rounded-full blur-[90px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
           <div className="max-w-2xl">
@@ -110,31 +110,33 @@ export default function BlogPreviewSection({ blogs }) {
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
               </div>
             </button>
-            <span className="text-[11px] font-semibold text-slate-400">
-              Updated weekly by medical team
-            </span>
           </div>
         </div>
 
-        {/* Category Filters (If multiple categories exist) */}
+        {/* Category Filters (Modern Segmented Pill Dock) */}
         {categories.length > 1 && (
-          <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-8 no-scrollbar">
-            {categories.map((cat) => {
-              const isSelected = activeCategory === cat;
-              return (
-                <button
-                  key={cat}
-                  onClick={() => setActiveCategory(cat)}
-                  className={`px-4 py-2 rounded-xl text-xs font-headline font-bold transition-all duration-200 shrink-0 select-none ${
-                    isSelected
-                      ? 'bg-gradient-to-r from-brandBlue to-brandSky text-white shadow-md shadow-brandBlue/20 scale-100'
-                      : 'bg-white hover:bg-slate-100 text-slate-600 border border-slate-200/70 hover:border-slate-300'
-                  }`}
-                >
-                  {cat === 'All' ? 'All Insights' : cat}
-                </button>
-              );
-            })}
+          <div className="flex items-center mb-10 overflow-x-auto no-scrollbar scroll-smooth">
+            <div className="inline-flex max-w-full overflow-x-auto no-scrollbar p-1.5 bg-slate-100/90 backdrop-blur-xl rounded-full border border-slate-200/80 shadow-[inset_0_2px_4px_rgba(0,0,0,0.03)] items-center gap-1.5 sm:gap-2">
+              {categories.map((cat) => {
+                const isSelected = activeCategory === cat;
+                return (
+                  <button
+                    key={cat}
+                    onClick={() => setActiveCategory(cat)}
+                    className={`group relative flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-[13px] font-bold font-headline transition-all duration-300 whitespace-nowrap shrink-0 cursor-pointer select-none ${
+                      isSelected
+                        ? 'bg-gradient-to-r from-brandBlue via-[#198BC8] to-brandSky text-white shadow-lg shadow-brandSky/25 scale-[1.02]'
+                        : 'text-slate-600 hover:text-slate-950 hover:bg-white/80'
+                    }`}
+                  >
+                    {isSelected && (
+                      <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse shrink-0" />
+                    )}
+                    <span>{cat === 'All' ? 'All Insights' : cat}</span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
         )}
 
