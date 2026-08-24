@@ -60,8 +60,8 @@ export default function HeroSection() {
       >
         <div className={`grid grid-cols-4 divide-x divide-slate-800/80 overflow-hidden transform transition-all duration-300 ${
           isSticky 
-            ? 'bg-slate-950/95 backdrop-blur-2xl border-t border-x border-b-0 border-sky-500/40 rounded-t-2xl shadow-[0_-15px_40px_rgba(2,6,23,0.8)] ring-1 ring-white/10 hover:border-sky-400/60 hover:shadow-[0_-20px_50px_rgba(2,6,23,0.9)]' 
-            : 'bg-slate-950/90 backdrop-blur-xl border border-b-0 border-sky-500/30 rounded-t-2xl shadow-[0_-10px_35px_rgba(2,6,23,0.5)] hover:border-sky-400/50 hover:shadow-[0_-15px_45px_rgba(2,6,23,0.7)]'
+            ? 'bg-slate-950/95 backdrop-blur-2xl border-t border-x border-b-0 border-sky-500/40 rounded-t-2xl ring-1 ring-white/10 hover:border-sky-400/60 shadow-[0_-4px_12px_rgba(15,23,42,0.08)]' 
+            : 'bg-slate-950/90 backdrop-blur-xl border border-b-0 border-sky-500/30 rounded-t-2xl hover:border-sky-400/50'
         }`}>
           {/* Action 1: Book Appointment */}
           <a
