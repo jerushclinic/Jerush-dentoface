@@ -51,8 +51,8 @@
 | Location | Hub Type | Key Specialties | Direct Contact |
 | :--- | :--- | :--- | :--- |
 | **Thuckalay, Kanyakumari** | Flagship Hospital | Multi-Specialty Dental, Hair & Cosmetics | +91 94891 60055 |
-| **Trichy, TN** | Advanced Care Center | Laser Dentistry & Hair Restoration | +91 97510 10107 |
-| **Chennai, TN** | Cosmetic & Aesthetics Center | Digital Smile Design & Facial Aesthetics | +91 94891 60055 |
+| **Trichy, TN** | Advanced Care Centre | Laser Dentistry & Hair Restoration | +91 97510 10107 |
+| **Chennai, TN** | Cosmetic & Aesthetics Centre | Digital Smile Design & Facial Aesthetics | +91 94891 60055 |
 | **Dubai, UAE** | Consultation & Patient Desk | Global Patient Liaison & Aesthetic Care | +971 50725 3105 |
 | **USA & Australia** | Overseas Liaison Desks | International Patient Care Coordination | Direct Desk Online |
 

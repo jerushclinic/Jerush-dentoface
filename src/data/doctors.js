@@ -159,7 +159,7 @@ export const doctors = [
     image: '/images/doctors/viji1.webp',
     fallbackImg: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=400',
     specialties: ['Cosmetology', 'Homeopathic Medicine', 'Skin Care', 'Hair Care'],
-    bio: 'Dr. Vijayalakshmi completed her UG degree from White Memorial Homeopathic Medical College in 2019. She started her cosmetologist practice since 2019 in Vcare Hair and Skin Clinic, Tirunelveli. Now she is working as a cosmetologist in Jerush Dentofacial and Cosmetic Laser Center since May 2024.',
+    bio: 'Dr. Vijayalakshmi completed her UG degree from White Memorial Homeopathic Medical College in 2019. She started her cosmetologist practice since 2019 in Vcare Hair and Skin Clinic, Tirunelveli. Now she is working as a cosmetologist in Jerush Dentofacial and Cosmetic Laser Centre since May 2024.',
     schedule: 'Mon - Sat (10:00 AM - 6:00 PM)',
     socialLinks: {}
   },

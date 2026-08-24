@@ -52,7 +52,7 @@ export default function MilestonesLegacyPage() {
     {
       year: '2025+',
       title: 'Digital Health & AI Diagnostics',
-      desc: 'Deployed 3D intraoral printing, AI smile preview modeling, and Class-B automated sterilization labs across flagship centers.'
+      desc: 'Deployed 3D intraoral printing, AI smile preview modeling, and Class-B automated sterilization labs across flagship centres.'
     }
   ];
 

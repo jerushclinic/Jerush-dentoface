@@ -18,7 +18,7 @@ const INFRASTRUCTURE_ITEMS = [
     description: 'Comfortable private inpatient suites and recovery rooms equipped with adjustable beds and warm, premium interiors.'
   },
   {
-    title: 'Centers of Excellence',
+    title: 'Centres of Excellence',
     image: '/images/infrastructure/centres-of-excellence.png',
     description: 'Equipped with in-house German CAD/CAM 3D scanning labs, digital diagnostic units, and world-class dental lasers.'
   }

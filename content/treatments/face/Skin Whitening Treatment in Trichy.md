@@ -128,7 +128,7 @@ I G
 Here I did my laser treatment for my facial hair growth.. within 3 sessions I got a great change in my facial hair growth.. staffs are very friendly.. doctors clearly explain about the treatment and they done a great job.. fully satisfied about the treatment..
 
 Hebrona Lance​  
-I feel confident and feel happy after taking continued med and laser sessions. Jerush dentofacial and cosmetic center is one of the best place to treat our skin conditions. I really experienced a lot of goodness in my first session of treatment itself.
+I feel confident and feel happy after taking continued med and laser sessions. Jerush dentofacial and cosmetic centre is one of the best place to treat our skin conditions. I really experienced a lot of goodness in my first session of treatment itself.
 
 Evangelin  
 This is one of the best hospital for cosmetic treatments around kanyakumari. The ambience is quite inviting. They have well experienced specialists, the doctors and staffs were friendly. Their treatment is so good and helped me to recover from acne. Thank you Jerush Team\!

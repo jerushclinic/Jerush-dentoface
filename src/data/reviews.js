@@ -15,7 +15,7 @@ export const reviews = [
     rating: 5,
     treatment: 'Dental Implant Treatment',
     image: '/images/testimonials/hewon.webp',
-    text: 'I am very happy with the treatment from Jerush Dental Center. During my implant treatment, all staff were very kind and supportive, especially Dr. Bladbin had explained all treatment well so that I could understand how my teeth is getting better. I highly recommend this clinic and can say you can count on them for any treatment.'
+    text: 'I am very happy with the treatment from Jerush Dental Centre. During my implant treatment, all staff were very kind and supportive, especially Dr. Bladbin had explained all treatment well so that I could understand how my teeth is getting better. I highly recommend this clinic and can say you can count on them for any treatment.'
   },
   {
     id: 3,

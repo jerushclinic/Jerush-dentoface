@@ -72,7 +72,7 @@ export default function DrBladbinPage() {
                 </div>
                 <div>
                   <h5 className="font-headline font-bold text-xs text-slate-800 uppercase tracking-wide">Availability</h5>
-                  <p className="text-sm text-slate-600 font-semibold">Thuckalay & Liaison Centers</p>
+                  <p className="text-sm text-slate-600 font-semibold">Thuckalay & Liaison Centres</p>
                 </div>
               </div>
             </div>

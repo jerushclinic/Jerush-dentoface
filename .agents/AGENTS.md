@@ -10,3 +10,6 @@
     - Clean description in `text-slate-300`.
     - Primary button: Glowing cyan/blue gradient pill button (`bg-gradient-to-r from-brandSky via-[#198BC8] to-brandBlue`) with white circular icon wrapper.
     - Secondary button: Translucent dark pill button with phone or external link icon.
+
+## Language & Terminology
+- **Spelling Convention**: Always use British English spelling for **"Centre"** and **"Centres"** (never "Center" or "Centers") when referring to hospital wings, medical facilities, regional branches ("4 Regional Centres"), excellence centres ("Centres of Excellence"), or the organization name ("Jerush Dentofacial & Cosmetic Laser Centre").

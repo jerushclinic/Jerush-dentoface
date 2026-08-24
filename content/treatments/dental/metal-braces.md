@@ -22,7 +22,7 @@ Forget old-school "train tracks." Welcome to modern, micro-engineered steel brac
 
 * **Main Title:** Heavy-Duty Precision. Unstoppable Confidence.
 * **Subtitle:** Smaller brackets, smoother contours and faster results. Built by specialist orthodontists across Nagercoil, Thuckalay, Trichy and Chennai.
-* **Badges:** `Micro-Sized German Steel` | `0% Interest Monthly Plans` | `4 Regional Centers` | `Lifetime Smile Retention`
+* **Badges:** `Micro-Sized German Steel` | `0% Interest Monthly Plans` | `4 Regional Centres` | `Lifetime Smile Retention`
 * **Call to Action (CTA) Buttons:**
   * `[ Book Your 3D Smile Scan Today ]`
   * `[ Chat with an Orthodontist on WhatsApp ]`
@@ -99,7 +99,7 @@ Here is what your smile transformation looks like at Jerush Dentofacial:
 +-------------------------------------------------------------------+
 |  Step 1: 3D Digital Scan & Facial X-Ray                           |
 |  Comprehensive oral evaluation, OPG digital X-rays and custom    |
-|  treatment planning at your nearest Jerush center.                |
+|  treatment planning at your nearest Jerush centre.                |
 +-------------------------------------------------------------------+
 |
 v
@@ -138,7 +138,7 @@ Our modern German stainless steel brackets feature rounded, low-profile contours
 Most treatments take **12 to 18 months**, depending on your bite structure. Minor alignment cases can be completed in as little as 9 months!
 
 ### Q4: Which Jerush Dentofacial clinic is closest to me?
-We operate fully equipped orthodontic centers across Tamil Nadu:
+We operate fully equipped orthodontic centres across Tamil Nadu:
 * **Thuckalay & Nagercoil:** Serving Kanyakumari District which is near to Trivandrum, Kerala., Chennai, Trichy.
 * **Trichy:** Serving Central Tamil Nadu regions.
 * **Chennai:** Serving Metro Chennai and surrounding coastal districts.

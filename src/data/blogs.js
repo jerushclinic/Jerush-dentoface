@@ -161,7 +161,7 @@ export const blogs = [
     status: "published",
     content: `
       <p>Missing teeth can affect your smile, chewing ability, and overall dental health.</p>
-      <p>At Jerush Dentofacial and Cosmetic Laser Center, Chennai, we provide advanced dental implants treatment that restores your confidence and gives you a permanent solution to tooth loss.</p>
+      <p>At Jerush Dentofacial and Cosmetic Laser Centre, Chennai, we provide advanced dental implants treatment that restores your confidence and gives you a permanent solution to tooth loss.</p>
       <p>Whether you’re looking for a single tooth replacement or full dental implants, our expert implantologists provide inexpensive, reliable, and long-lasting results.</p>
       
       <div class="blog-img-wrapper max-w-2xl mx-auto my-6 rounded-2xl overflow-hidden shadow-sm border border-slate-100 bg-slate-50 p-1">

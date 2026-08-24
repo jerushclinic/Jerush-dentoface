@@ -2,7 +2,7 @@
 
 Missing teeth can affect your smile, chewing ability and overall dental health.
 
-In Jerush Dentofacial and Cosmetic Laser Center, Chennai, we provide advanced dental implants treatment that restore your confidence and give you a permanent solution to tooth loss. 
+In Jerush Dentofacial and Cosmetic Laser Centre, Chennai, we provide advanced dental implants treatment that restore your confidence and give you a permanent solution to tooth loss. 
 
 Whether you’re looking for a single tooth replacement or full dental implants, our expert implantologists provide inexpensive, reliable and long-lasting results.
 
@@ -226,7 +226,7 @@ Customized crown: classes include high quality zirconia crown, ceramic crowns an
 
 24/7 dental support : Emergency care is available in our clinic, making us a reliable dental hospital.
 
-At the Jerush Dentofacial and Cosmetic Laser Center, our goal is to help patients naturally restore teeth and enjoy the best dental implant solutions in India, supported by reliable care and modern technology.
+At the Jerush Dentofacial and Cosmetic Laser Centre, our goal is to help patients naturally restore teeth and enjoy the best dental implant solutions in India, supported by reliable care and modern technology.
 
 
 **Happy Clients for Dental Treatments:**
