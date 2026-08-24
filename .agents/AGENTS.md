@@ -1,7 +1,12 @@
 # Custom Rules
 
 ## CTA Section Design for Treatment Pages
-- **Style Requirement**: All CTA (Call to Action) sections at the bottom of treatment pages must follow the redesigned format established on the Root Canal Treatment page:
-  - Layout: Grid-based with columns `grid-cols-1 lg:grid-cols-[1.2fr_2fr]` (with items-stretch).
-  - Left side: A clean cutout of a specialist doctor (e.g. `/images/doctors/...`) aligned to the bottom, containing an absolute-positioned name & specialty overlay tag.
-  - Right side: Bold headline, description text, and interactive buttons (e.g., Book Appointment, Phone call button) against a rich gradient background (e.g., `from-brandBlue to-brandSky`).
+- **Style Requirement**: All CTA (Call to Action) sections at the bottom of treatment pages and related landing pages must follow the unified `TreatmentCtaBanner` / `DentalAppointmentBanner` dark navy format:
+  - Container: Deep navy background `bg-gradient-to-r from-[#071324] via-[#0E2752] to-[#071324]` with atmospheric cyan & blue glow blurs, rounded 3xl corners, and subtle borders.
+  - Left side (when doctor is specified): Specialist doctor cutout aligned to the bottom with ambient glow behind and a frosted dark name/specialty tag overlay (`bg-slate-900/85 backdrop-blur-md`).
+  - Right side:
+    - Translucent sky blue badge pill (`READY TO SMILE?` or specialist tag) with outline icon.
+    - Large bold white headline with a curved sky-blue brush underline accent on the key phrase.
+    - Clean description in `text-slate-300`.
+    - Primary button: Glowing cyan/blue gradient pill button (`bg-gradient-to-r from-brandSky via-[#198BC8] to-brandBlue`) with white circular icon wrapper.
+    - Secondary button: Translucent dark pill button with phone or external link icon.

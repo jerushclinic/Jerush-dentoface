@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Phone } from 'lucide-react';
+import { ArrowRight, Phone, ExternalLink } from 'lucide-react';
 
 export default function DentalAppointmentBanner({
   badgeText = "Ready to Smile?",
@@ -11,14 +11,17 @@ export default function DentalAppointmentBanner({
   subtitle = "Take the first step toward a healthier, brighter smile. Our expert team is ready to provide personalized care just for you.",
   primaryBtnText = "Book Now",
   primaryBtnLink = "/contact",
+  onPrimaryClick,
   secondaryBtnText = "Contact Us",
   secondaryBtnPhone = "+919489160000",
+  secondaryBtnLink,
   imageSrc = "/images/dental-chair.webp",
-  imageAlt = "Jerush Modern Dental Care"
+  imageAlt = "Jerush Modern Dental Care",
+  className = ""
 }) {
   return (
-    <section className="w-full py-10 px-4 sm:px-6 lg:px-8 font-body select-none">
-      <div className="max-w-7xl mx-auto relative rounded-3xl overflow-hidden bg-gradient-to-r from-[#071324] via-[#0E2752] to-[#071324] border border-white/10 shadow-[0_20px_50px_rgba(10,22,40,0.4)]">
+    <section className={`w-full py-10 px-4 sm:px-6 lg:px-8 font-body select-none ${className}`}>
+      <div className="max-w-7xl mx-auto relative rounded-3xl overflow-hidden bg-gradient-to-r from-[#071324] via-[#0E2752] to-[#071324] border border-white/10 shadow-[0_20px_50px_rgba(7,19,36,0.5)]">
 
         {/* Background Decorative Lighting & Mesh Effects */}
         <div className="absolute -top-24 -left-24 w-96 h-96 bg-brandSky/15 rounded-full blur-[120px] pointer-events-none" />
@@ -73,23 +76,42 @@ export default function DentalAppointmentBanner({
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap items-center gap-4">
-              <Link
-                to={primaryBtnLink}
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-gradient-to-r from-brandSky via-[#198BC8] to-brandBlue text-white font-headline font-bold text-xs sm:text-sm uppercase tracking-wider shadow-lg shadow-brandSky/25 hover:shadow-brandSky/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 group"
-              >
-                <span>{primaryBtnText}</span>
-                <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center group-hover:translate-x-1 transition-transform">
-                  <ArrowRight className="w-3.5 h-3.5 text-white" />
-                </div>
-              </Link>
+              {onPrimaryClick ? (
+                <button
+                  type="button"
+                  onClick={onPrimaryClick}
+                  className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-gradient-to-r from-brandSky via-[#198BC8] to-brandBlue text-white font-headline font-bold text-xs sm:text-sm uppercase tracking-wider shadow-lg shadow-brandSky/25 hover:shadow-brandSky/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 group cursor-pointer border-none"
+                >
+                  <span>{primaryBtnText}</span>
+                  <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center group-hover:translate-x-1 transition-transform">
+                    <ArrowRight className="w-3.5 h-3.5 text-white" />
+                  </div>
+                </button>
+              ) : (
+                <Link
+                  to={primaryBtnLink}
+                  className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-gradient-to-r from-brandSky via-[#198BC8] to-brandBlue text-white font-headline font-bold text-xs sm:text-sm uppercase tracking-wider shadow-lg shadow-brandSky/25 hover:shadow-brandSky/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 group"
+                >
+                  <span>{primaryBtnText}</span>
+                  <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center group-hover:translate-x-1 transition-transform">
+                    <ArrowRight className="w-3.5 h-3.5 text-white" />
+                  </div>
+                </Link>
+              )}
 
               <a
-                href={`tel:${secondaryBtnPhone.replace(/\s+/g, '')}`}
+                href={secondaryBtnLink || `tel:${secondaryBtnPhone.replace(/\s+/g, '')}`}
+                target={secondaryBtnLink && secondaryBtnLink.startsWith('http') ? '_blank' : undefined}
+                rel={secondaryBtnLink && secondaryBtnLink.startsWith('http') ? 'noopener noreferrer' : undefined}
                 className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full border border-white/20 hover:border-brandSky/50 bg-white/[0.05] hover:bg-white/[0.12] text-white font-headline font-bold text-xs sm:text-sm uppercase tracking-wider backdrop-blur-md transition-all duration-300 group"
               >
                 <span>{secondaryBtnText}</span>
                 <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Phone className="w-3.5 h-3.5 text-brandSky" />
+                  {secondaryBtnLink && secondaryBtnLink.startsWith('http') ? (
+                    <ExternalLink className="w-3.5 h-3.5 text-brandSky" />
+                  ) : (
+                    <Phone className="w-3.5 h-3.5 text-brandSky" />
+                  )}
                 </div>
               </a>
             </div>

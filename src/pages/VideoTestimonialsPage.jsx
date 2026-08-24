@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { reviewService } from '../services/reviewService';
 import PageBreadcrumbHero from '../components/common/PageBreadcrumbHero';
+import TreatmentCtaBanner from '../components/common/TreatmentCtaBanner';
 
 // Enhanced Video Testimonials Dataset
 const STATIC_VIDEOS = [
@@ -826,55 +827,22 @@ export default function VideoTestimonialsPage() {
           )}
         </AnimatePresence>
 
-        {/* ─── 7. BOTTOM CTA BANNER (Custom Rule: grid-cols-[1.2fr_2fr] with Doctor Cutout) ─── */}
-        <section className="pt-8">
-          <div className="bg-gradient-to-r from-brandBlue to-brandSky rounded-3xl text-white shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_2fr] gap-8 items-stretch">
-              {/* Left side: Doctor Cutout aligned to bottom */}
-              <div className="relative flex items-end justify-center overflow-hidden border-b lg:border-b-0 lg:border-r border-white/10 bg-black/5 min-h-[300px] lg:min-h-0 pt-8 lg:pt-0">
-                <img
-                  src="/images/doctors/dr-bladbin-portrait.webp"
-                  alt="DR. A. BLADBIN - Founder & Chief Surgeon"
-                  className="h-[320px] lg:h-[380px] w-auto object-contain object-bottom transition-transform duration-500 hover:scale-102"
-                />
-                {/* Overlay tag for Doctor name */}
-                <div className="absolute bottom-4 left-4 bg-slate-900/80 backdrop-blur-sm border border-white/10 px-3 py-1.5 rounded-xl text-left">
-                  <p className="text-[10px] font-bold text-brandSky uppercase tracking-wider">Founder & Chief Surgeon</p>
-                  <p className="text-xs font-headline font-black text-white">DR. A. BLADBIN LLB, MDS, PhD</p>
-                </div>
-              </div>
-
-              {/* Right side: CTA details */}
-              <div className="p-8 sm:p-12 flex flex-col justify-center text-left space-y-6">
-                <h2 className="font-headline font-black text-2xl sm:text-4xl relative z-10 leading-tight">
-                  Ready to Experience Exceptional Dental & Aesthetic Care?
-                </h2>
-                <p className="text-white/85 text-sm sm:text-base max-w-xl leading-relaxed relative z-10">
-                  Join thousands of smiling, satisfied patients across Tamil Nadu and abroad. Schedule your digital consultation with Dr. Bladbin and our specialist team today.
-                </p>
-                <div className="flex flex-wrap gap-4 relative z-10">
-                  <button
-                    onClick={handleBookClick}
-                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-white text-brandBlue font-headline font-bold text-xs uppercase tracking-wider rounded-2xl shadow-md hover:bg-slate-50 hover:scale-[1.02] transition-all cursor-pointer"
-                  >
-                    <Calendar className="w-4 h-4" />
-                    Book Free Consultation
-                  </button>
-                  <a
-                    href="tel:+919489160055"
-                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-transparent border border-white/40 text-white font-headline font-bold text-xs uppercase tracking-wider rounded-2xl hover:bg-white/10 hover:border-white transition-all"
-                  >
-                    <Phone className="w-4 h-4" />
-                    Call +91 94891 60055
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* ─── 7. BOTTOM CTA BANNER (New Dark Navy Aesthetic) ─── */}
+        <TreatmentCtaBanner
+          badgeText="Founder & Chief Surgeon"
+          titlePrefix="Ready to Experience Exceptional"
+          highlightWord="Dental & Aesthetic Care?"
+          titleSuffix=""
+          subtitle="Join thousands of smiling, satisfied patients across Tamil Nadu and abroad. Schedule your digital consultation with Dr. Bladbin and our specialist team today."
+          primaryBtnText="Book Free Consultation"
+          onPrimaryClick={handleBookClick}
+          secondaryBtnText="Call +91 94891 60055"
+          secondaryBtnPhone="+919489160055"
+          doctorImage="/images/doctors/dr-bladbin-portrait.webp"
+          doctorName="DR. A. BLADBIN LLB, MDS, PhD"
+          doctorRole="Founder & Chief Surgeon"
+          doctorAlt="DR. A. BLADBIN - Founder & Chief Surgeon"
+        />
 
       </div>
     </div>

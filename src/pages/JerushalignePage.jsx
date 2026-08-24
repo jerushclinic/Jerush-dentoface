@@ -7,6 +7,7 @@ import {
   ExternalLink, Play, Zap, RefreshCw, Smile, FileText, Check, Shield
 } from 'lucide-react';
 import PageBreadcrumbHero from '../components/common/PageBreadcrumbHero';
+import TreatmentCtaBanner from '../components/common/TreatmentCtaBanner';
 
 const STATS = [
   { value: '5,000+', label: 'Sets Crafted In-House' },
@@ -699,57 +700,22 @@ export default function JerushalignePage() {
         </div>
       </section>
 
-      {/* ─── SECTION 8: BOTTOM CTA BANNER (Per AGENTS.md rule & DentalImplantsPage format) ─── */}
-      <section className="max-w-7xl mx-auto px-6 pb-20">
-        <div className="bg-gradient-to-r from-brandBlue to-brandSky rounded-3xl text-white shadow-xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
-          <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_2fr] gap-8 items-stretch">
-            {/* Left side: Dr. Bladbin's Image */}
-            <div className="relative flex items-end justify-center overflow-hidden border-b lg:border-b-0 lg:border-r border-white/10 bg-black/5 min-h-[300px] lg:min-h-0 pt-8 lg:pt-0">
-              <img
-                src="/images/doctors/dr-bladbin-portrait.webp"
-                alt="DR. A. BLADBIN - Jerush Dentofacial"
-                className="h-[320px] lg:h-[380px] w-auto object-contain object-bottom transition-transform duration-500 hover:scale-102"
-              />
-              {/* Overlay tag for Doctor name */}
-              <div className="absolute bottom-4 left-4 bg-slate-900/80 backdrop-blur-sm border border-white/10 px-3 py-1.5 rounded-xl text-left">
-                <p className="text-[10px] font-bold text-brandSky uppercase tracking-wider">Clear Aligner Specialist</p>
-                <p className="text-xs font-headline font-black text-white">DR. A. BLADBIN</p>
-              </div>
-            </div>
-
-            {/* Right side: CTA details */}
-            <div className="p-8 sm:p-12 flex flex-col justify-center text-left space-y-6">
-              <h2 className="font-headline font-black text-2xl sm:text-3xl relative z-10 leading-tight">
-                Ready to Straighten Your Teeth in Just 2 Days?
-              </h2>
-              <p className="text-white/80 text-sm sm:text-base max-w-xl leading-relaxed relative z-10 font-body">
-                Book your 3D digital intraoral scan at Jerush Dentofacial. Experience world-class in-house clear aligners custom manufactured under the supervision of Dr. A. Bladbin and our digital orthodontics team.
-              </p>
-              <div className="flex flex-wrap gap-4 relative z-10">
-                <button
-                  onClick={handleBookClick}
-                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-white text-brandBlue font-headline font-bold text-xs uppercase tracking-wider rounded-2xl shadow-md hover:bg-slate-50 hover:scale-[1.02] transition-all"
-                >
-                  <Calendar className="w-4 h-4" />
-                  Book 3D Digital Scan
-                </button>
-                <a
-                  href="https://www.jerushaligne.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-transparent border border-white/40 text-white font-headline font-bold text-xs uppercase tracking-wider rounded-2xl hover:bg-white/10 hover:border-white transition-all"
-                >
-                  <ExternalLink className="w-4 h-4 text-white" />
-                  Visit www.jerushaligne.com
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* ─── SECTION 8: BOTTOM CTA BANNER (New Dark Navy Aesthetic) ─── */}
+      <TreatmentCtaBanner
+        badgeText="Clear Aligner Specialist"
+        titlePrefix="Ready to Straighten Your Teeth in Just"
+        highlightWord="2 Days?"
+        titleSuffix=""
+        subtitle="Book your 3D digital intraoral scan at Jerush Dentofacial. Experience world-class in-house clear aligners custom manufactured under the supervision of Dr. A. Bladbin and our digital orthodontics team."
+        primaryBtnText="Book 3D Digital Scan"
+        onPrimaryClick={handleBookClick}
+        secondaryBtnText="Visit www.jerushaligne.com"
+        secondaryBtnLink="https://www.jerushaligne.com"
+        doctorImage="/images/doctors/dr-bladbin-portrait.webp"
+        doctorName="DR. A. BLADBIN"
+        doctorRole="Clear Aligner Specialist"
+        doctorAlt="DR. A. BLADBIN - Jerush Dentofacial"
+      />
     </div>
   );
 }

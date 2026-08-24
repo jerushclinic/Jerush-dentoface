@@ -6,6 +6,7 @@ import {
   TrendingUp, Scissors, UserCheck, Flame
 } from 'lucide-react';
 import PageBreadcrumbHero from '../components/common/PageBreadcrumbHero';
+import TreatmentCtaBanner from '../components/common/TreatmentCtaBanner';
 import { treatmentService } from '../services/treatmentService';
 
 // Icon Map helper to load Lucide components
@@ -263,6 +264,19 @@ export default function TreatmentsPage() {
         )}
 
       </div>
+
+      {/* ─── Bottom CTA Banner (New Dark Navy Aesthetic) ─── */}
+      <TreatmentCtaBanner
+        badgeText="World-Class Care"
+        titlePrefix="Book Your"
+        highlightWord="Appointment"
+        titleSuffix="Today"
+        subtitle="Take the first step toward a healthier, brighter smile. Our expert multidisciplinary team is ready to provide personalized care just for you."
+        primaryBtnText="Book Free Consultation"
+        onPrimaryClick={handleBookClick}
+        secondaryBtnText="Call +91 94891 60000"
+        secondaryBtnPhone="+919489160000"
+      />
     </div>
   );
 }

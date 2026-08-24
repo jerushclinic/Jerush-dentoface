@@ -192,7 +192,7 @@ export default function EventJournalFormModal({ isOpen, onClose, onSave, eventDa
                 <input
                   type="text"
                   required
-                  placeholder="e.g. September 4, 2026"
+                  placeholder="e.g. August 26, 2026"
                   value={formData.date}
                   onChange={(e) => setFormData({ ...formData, date: e.target.value })}
                   className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs font-medium focus:outline-none focus:border-brandSky"
