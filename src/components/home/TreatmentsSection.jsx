@@ -116,29 +116,33 @@ export default function TreatmentsSection({ treatments }) {
           </p>
         </div>
 
-        {/* Category Tabs */}
-        <div className="grid grid-cols-2 md:flex md:flex-wrap md:items-center md:justify-center gap-2.5 mb-12 max-w-md mx-auto md:max-w-none">
-          {CATEGORIES.map((cat) => {
-            const Icon = cat.icon;
-            const isActive = activeTab === cat.id;
-            return (
-              <button
-                key={cat.id}
-                onClick={() => setActiveTab(cat.id)}
-                className={`flex items-center justify-center gap-2.5 px-4 py-2.5 rounded-xl text-[11px] sm:text-xs font-bold uppercase tracking-wider border font-headline transition-all duration-300 ${
-                  isActive
-                    ? 'bg-gradient-to-r from-brandBlue to-brandSky text-white border-transparent shadow-md shadow-brandBlue/25 scale-[1.01]'
-                    : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100 hover:text-slate-900'
-                }`}
-              >
-                <span className="relative flex items-center justify-center w-6 h-6 rounded-full bg-slate-950 border border-brandSky/60 shadow-[0_0_8px_rgba(30,151,212,0.5)] overflow-hidden shrink-0 isolate pointer-events-none">
-                  <img src={cat.gif} alt={cat.label} loading="eager" className="w-full h-full object-cover scale-110 pointer-events-none" />
-                  <span className="absolute inset-0 rounded-full ring-1 ring-inset ring-brandSky/40 pointer-events-none" />
-                </span>
-                <span className="truncate">{cat.label}</span>
-              </button>
-            );
-          })}
+        {/* Category Tabs (Modern Segmented Pill Dock) */}
+        <div className="flex justify-center mb-12 sm:mb-14">
+          <div className="inline-flex max-w-full overflow-x-auto no-scrollbar scroll-smooth p-1.5 sm:p-2 bg-slate-100/90 backdrop-blur-xl rounded-full border border-slate-200/80 shadow-[inset_0_2px_4px_rgba(0,0,0,0.03)] items-center gap-1.5 sm:gap-2 mx-auto">
+            {CATEGORIES.map((cat) => {
+              const isActive = activeTab === cat.id;
+              return (
+                <button
+                  key={cat.id}
+                  onClick={() => setActiveTab(cat.id)}
+                  className={`group relative flex items-center gap-2 sm:gap-2.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-[13px] font-bold font-headline uppercase tracking-wider transition-all duration-300 whitespace-nowrap shrink-0 cursor-pointer select-none ${
+                    isActive
+                      ? 'bg-gradient-to-r from-brandBlue via-[#198BC8] to-brandSky text-white shadow-lg shadow-brandSky/25 scale-[1.02]'
+                      : 'text-slate-600 hover:text-slate-950 hover:bg-white/80'
+                  }`}
+                >
+                  <span className={`relative flex items-center justify-center w-7 h-7 sm:w-7.5 sm:h-7.5 rounded-full overflow-hidden shrink-0 transition-all duration-300 ${
+                    isActive
+                      ? 'bg-white/20 ring-1 ring-white/50 shadow-inner'
+                      : 'bg-white border border-slate-200/90 shadow-sm group-hover:scale-105'
+                  }`}>
+                    <img src={cat.gif} alt={cat.label} loading="eager" className="w-full h-full object-cover pointer-events-none" />
+                  </span>
+                  <span>{cat.label}</span>
+                </button>
+              );
+            })}
+          </div>
         </div>
 
         {/* Grid Display */}
