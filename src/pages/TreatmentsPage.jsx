@@ -149,32 +149,34 @@ export default function TreatmentsPage() {
             <div className="w-10 h-10 border-4 border-brandBlue border-t-transparent rounded-full animate-spin"></div>
           </div>
         ) : (
-          /* Treatments Cards Grid */
-          <motion.div 
-            layout
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            <AnimatePresence mode="popLayout">
-              {filteredData.map((treatment) => {
+          /* Treatments Cards Grid with Smooth Staggered Transition (No FLIP Scale Stretching) */
+          <AnimatePresence mode="wait">
+            <motion.div 
+              key={`${activeCategory}-${searchQuery}`}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.22, ease: 'easeOut' }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8"
+            >
+              {filteredData.map((treatment, idx) => {
                 const Icon = getIcon(treatment.iconName || 'Smile');
                 return (
                   <motion.div
-                    layout
-                    initial={{ opacity: 0, y: 15 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, scale: 0.95 }}
-                    transition={{ duration: 0.3 }}
                     key={treatment.id}
-                    className="group bg-white border border-slate-100 hover:border-slate-200/80 rounded-3xl p-3 flex flex-col justify-between transition-all duration-355 shadow-sm hover:shadow-xl"
+                    initial={{ opacity: 0, y: 16 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: Math.min(idx * 0.04, 0.3), ease: [0.22, 1, 0.36, 1] }}
+                    className="group bg-white border border-slate-200/80 hover:border-brandSky/40 rounded-3xl overflow-hidden flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-brandBlue/10 hover:-translate-y-1.5"
                   >
-                    <div>
-                      {/* Image & Badges */}
-                      <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100 rounded-2xl border border-slate-100/50">
+                    <div className="flex flex-col flex-1">
+                      {/* Image & Badges with Natural 4:3 Visible Height */}
+                      <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
                         {treatment.image ? (
                           <img 
                             src={treatment.image} 
                             alt={treatment.title} 
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                            className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105" 
                             loading="lazy"
                             onError={(e) => {
                               e.target.onerror = null;
@@ -189,71 +191,85 @@ export default function TreatmentsPage() {
                             <Smile className="w-12 h-12 text-brandSky/30" />
                           </div>
                         )}
+
+                        {/* Subtle Scrim Gradient Overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300"></div>
                         
-                        {/* Category Tag Overlay */}
-                        <span className={`absolute top-4 left-4 text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-lg border shadow-sm z-10 ${
-                          treatment.category === 'dental' 
-                            ? 'bg-blue-500/90 text-white border-blue-400/20'
-                            : treatment.category === 'cosmetic'
-                            ? 'bg-purple-500/90 text-white border-purple-400/20'
-                            : treatment.category === 'hair'
-                            ? 'bg-emerald-500/90 text-white border-emerald-400/20'
-                            : 'bg-rose-500/90 text-white border-rose-400/20'
-                        }`}>
-                          {treatment.category === 'hair' ? 'Hair Restoration' : treatment.category === 'body' ? 'Body Contouring' : treatment.category}
-                        </span>
+                        {/* Floating Category Badge Pill on Top Left */}
+                        <div className="absolute top-3.5 left-3.5 z-10">
+                          <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full backdrop-blur-md text-[10px] font-extrabold uppercase tracking-wider font-headline shadow-sm border ${
+                            treatment.category === 'dental' 
+                              ? 'bg-blue-600/90 text-white border-blue-400/30'
+                              : treatment.category === 'cosmetic'
+                              ? 'bg-purple-600/90 text-white border-purple-400/30'
+                              : treatment.category === 'hair'
+                              ? 'bg-emerald-600/90 text-white border-emerald-400/30'
+                              : 'bg-rose-600/90 text-white border-rose-400/30'
+                          }`}>
+                            <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                            {treatment.category === 'hair' ? 'Hair Restoration' : treatment.category === 'body' ? 'Body Contouring' : treatment.category === 'cosmetic' ? 'Skin & Laser' : 'Dental Care'}
+                          </span>
+                        </div>
                         
-                        {/* Icon Round Badge Overlay */}
-                        <div className="absolute -bottom-3 right-4 w-10 h-10 rounded-2xl bg-white border border-slate-100 shadow-md flex items-center justify-center text-brandSky group-hover:scale-110 transition-transform duration-300 z-10">
-                          <Icon className="w-5 h-5" />
+                        {/* Floating Icon Round Badge Overlay on Bottom Right of Photo */}
+                        <div className="absolute bottom-3.5 right-3.5 w-9 h-9 rounded-full bg-white/95 backdrop-blur-md border border-white/60 shadow-md flex items-center justify-center text-brandBlue group-hover:scale-110 group-hover:bg-brandBlue group-hover:text-white transition-all duration-300 z-10">
+                          <Icon className="w-4 h-4" />
                         </div>
                       </div>
 
                       {/* Content */}
-                      <h3 className="font-headline font-black text-lg text-slate-800 mt-5 mb-2 group-hover:text-brandBlue transition-colors pl-2">
-                        {treatment.title}
-                      </h3>
-                      <p className="text-slate-500 text-xs sm:text-sm leading-relaxed mb-5 pl-2 pr-2 line-clamp-3">
-                        {treatment.desc}
-                      </p>
+                      <div className="p-6 pb-2 text-left flex-1 flex flex-col justify-between">
+                        <div>
+                          <h3 className="font-headline font-extrabold text-[17px] sm:text-lg text-slate-900 group-hover:text-brandBlue transition-colors line-clamp-2 min-h-[48px] flex items-center leading-snug">
+                            {treatment.title}
+                          </h3>
+                          <p className="text-secondary text-xs sm:text-sm leading-relaxed mt-2 line-clamp-3">
+                            {treatment.desc}
+                          </p>
+                        </div>
 
-                      {/* Bullet Benefits */}
-                      <ul className="space-y-2 mb-6 pl-2 pr-2">
-                        {treatment.benefits && treatment.benefits.map((b, idx) => (
-                          <li key={idx} className="flex items-center gap-2 text-xs text-slate-650 font-medium">
-                            <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
-                            <span>{b}</span>
-                          </li>
-                        ))}
-                      </ul>
+                        {/* Bullet Benefits */}
+                        {treatment.benefits && treatment.benefits.length > 0 && (
+                          <div className="space-y-1.5 pt-3 mt-3 border-t border-slate-100">
+                            {treatment.benefits.slice(0, 3).map((b, bIdx) => (
+                              <div key={bIdx} className="flex items-center gap-2 text-[11px] sm:text-xs text-slate-600 font-medium">
+                                <span className="w-1.5 h-1.5 rounded-full bg-brandSky shrink-0"></span>
+                                <span className="line-clamp-1">{b}</span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     </div>
 
                     {/* Actions */}
-                    <div className="flex items-center gap-2.5 pt-4 border-t border-slate-100/80 pl-2 pr-2 pb-2">
-                      <button
-                        onClick={() => {
-                          navigate(getTreatmentPath(treatment.id));
-                          window.scrollTo({ top: 0, behavior: 'smooth' });
-                        }}
-                        className="flex-1 py-2 bg-slate-50 hover:bg-slate-105 text-slate-600 hover:text-slate-800 border border-slate-200/80 rounded-xl text-xs font-bold font-headline transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
-                      >
-                        <Info className="w-3.5 h-3.5" />
-                        Details
-                      </button>
-                      <a
-                        href="#"
-                        onClick={handleBookClick}
-                        className="flex-1 py-2 bg-gradient-to-r from-brandBlue to-brandSky text-white rounded-xl text-xs font-bold font-headline transition-all hover:brightness-110 flex items-center justify-center gap-1.5 cursor-pointer shadow-sm shadow-brandBlue/10"
-                      >
-                        <Calendar className="w-3.5 h-3.5" />
-                        Book Now
-                      </a>
+                    <div className="px-6 pb-6 pt-3 mt-auto">
+                      <div className="flex items-center gap-2.5 pt-3 border-t border-slate-100">
+                        <button
+                          onClick={() => {
+                            navigate(getTreatmentPath(treatment.id));
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                          }}
+                          className="flex-1 py-2.5 bg-slate-50 hover:bg-slate-100 text-slate-700 hover:text-slate-900 border border-slate-200/80 rounded-xl text-xs font-bold font-headline transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-xs"
+                        >
+                          <Info className="w-3.5 h-3.5 text-brandBlue" />
+                          Details
+                        </button>
+                        <a
+                          href="#"
+                          onClick={handleBookClick}
+                          className="flex-1 py-2.5 bg-gradient-to-r from-brandBlue via-[#198BC8] to-brandSky text-white rounded-xl text-xs font-bold font-headline transition-all hover:shadow-md hover:shadow-brandBlue/20 hover:brightness-105 flex items-center justify-center gap-1.5 cursor-pointer shadow-sm shadow-brandBlue/15"
+                        >
+                          <Calendar className="w-3.5 h-3.5" />
+                          Book Now
+                        </a>
+                      </div>
                     </div>
                   </motion.div>
                 );
               })}
-            </AnimatePresence>
-          </motion.div>
+            </motion.div>
+          </AnimatePresence>
         )}
 
         {filteredData.length === 0 && !loading && (

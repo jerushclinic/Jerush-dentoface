@@ -168,7 +168,12 @@
   position: relative;
   top: 0;
   z-index: 1000;
-  transition: transform 0.3s ease-in-out, background-color var(--transition-normal), border-bottom var(--transition-normal), box-shadow var(--transition-normal);
+  will-change: transform, opacity;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color var(--transition-normal),
+    border-bottom var(--transition-normal),
+    box-shadow var(--transition-normal);
 }
 
 /* Scroll Active State */
@@ -177,16 +182,18 @@
   top: 0;
   left: 0;
   width: 100%;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.07);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  background-color: rgba(255, 255, 255, 0.82);
-  border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+  background-color: rgba(255, 255, 255, 0.88);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.7);
 }
 
-/* Scroll reveal direction class */
+/* Scroll reveal direction class with smooth slide & fade */
 .jerush-header.nav-hide {
-  transform: translateY(-100%);
+  transform: translateY(-100%) !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 .jerush-navbar {
@@ -1239,7 +1246,9 @@
     border-bottom: none !important;
     box-shadow: none !important;
     z-index: 1000;
-    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    will-change: transform, opacity;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+      opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
       background-color 0.35s ease,
       border-bottom 0.3s ease,
       box-shadow 0.3s ease;
@@ -1285,9 +1294,11 @@
     border-color: var(--color-border);
   }
 
-  /* Hide on scroll down (applied by JS) */
+  /* Hide on scroll down (applied by JS with smooth slide & fade) */
   .jerush-header.nav-hide {
-    transform: translateY(-100%);
+    transform: translateY(-100%) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
   }
 
   /* Solid header background on non-home pages for mobile visibility */

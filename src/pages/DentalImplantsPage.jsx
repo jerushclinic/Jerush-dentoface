@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import PageBreadcrumbHero from '../components/common/PageBreadcrumbHero';
 import TreatmentCtaBanner from '../components/common/TreatmentCtaBanner';
+import TreatmentSectionNav from '../components/common/TreatmentSectionNav';
 
 const STATS = [
   { value: '188K+', label: 'Happy Patients' },
@@ -367,25 +368,12 @@ export default function DentalImplantsPage() {
         </div>
       </section>
 
-      {/* Sticky Tab Navigation (Oliva-Style Button Pills, Jerush Colors) */}
-      <div className="jerush-sticky-subnav bg-slate-50/90 backdrop-blur-md border-y border-slate-200/50 py-4 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-wrap justify-center gap-2 md:gap-3 text-xs font-headline font-bold uppercase tracking-wider">
-            {TABS.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => scrollToSection(tab.id)}
-                className={`px-6 py-2.5 rounded-full border transition-all duration-300 whitespace-nowrap ${activeSection === tab.id
-                  ? 'bg-brandSky border-brandSky text-white shadow-md shadow-brandSky/15 scale-105'
-                  : 'bg-white border-brandSky/30 text-brandBlue hover:bg-brandSky/5 hover:border-brandSky/60'
-                  }`}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
+      {/* Sticky Tab Navigation (Cute, Compact Capsule Pills) */}
+      <TreatmentSectionNav
+        tabs={TABS}
+        activeSection={activeSection}
+        onTabClick={scrollToSection}
+      />
 
       {/* ─── What Is a Dental Implant ─── */}
       <section id="overview" className="max-w-7xl mx-auto px-6 py-16">

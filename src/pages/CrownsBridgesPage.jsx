@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import PageBreadcrumbHero from '../components/common/PageBreadcrumbHero';
 import TreatmentCtaBanner from '../components/common/TreatmentCtaBanner';
+import TreatmentSectionNav from '../components/common/TreatmentSectionNav';
 
 const STATS = [
   { value: '15K+', label: 'Crowns & Bridges Restored' },
@@ -31,17 +32,17 @@ const BADGES = [
   {
     title: 'ISO Certified',
     desc: 'International Quality Standards',
-    img: '/images/treatments/crowns-bridges/iso-badge.webp'
+    img: '/images/treatments/dental/crowns-bridges/iso-badge.webp'
   },
   {
     title: 'CAD/CAM Digital Dentistry',
     desc: 'Precision Digital Milling',
-    img: '/images/treatments/crowns-bridges/cad-cam-badge.webp'
+    img: '/images/treatments/dental/crowns-bridges/cad-cam-badge.webp'
   },
   {
     title: 'Best in Class Treatment',
     desc: 'World-Class Ceramics',
-    img: '/images/treatments/crowns-bridges/best-in-class-badge.webp'
+    img: '/images/treatments/dental/crowns-bridges/best-in-class-badge.webp'
   }
 ];
 
@@ -49,7 +50,7 @@ const MATERIALS = [
   {
     name: 'Monolithic Zirconia',
     badge: 'Maximum Strength',
-    img: '/images/treatments/crowns-bridges/Monolithic-zirconia.webp',
+    img: '/images/treatments/dental/crowns-bridges/Monolithic-zirconia.webp',
     desc: 'Delivers maximum mechanical strength for molars subject to heavy biting forces.',
     features: ['1200+ MPa mechanical strength', 'Ideal for heavy biting forces', 'Metal-free bio-compatibility', 'Long-term durability'],
     popularFor: 'Molars & Heavy Biting Restorations'
@@ -57,7 +58,7 @@ const MATERIALS = [
   {
     name: 'E-Max (Lithium Disilicate)',
     badge: 'Superior Aesthetics',
-    img: '/images/treatments/crowns-bridges/e-max-lithium-disilicate.webp',
+    img: '/images/treatments/dental/crowns-bridges/e-max-lithium-disilicate.webp',
     desc: 'Premium all-ceramic choice offering superior translucency and unmatched aesthetic beauty for front teeth.',
     features: ['Superior enamel translucency', 'Unmatched aesthetic beauty', 'High edge strength', 'Stain-resistant ceramic finish'],
     popularFor: 'Front Teeth & Cosmetic Restorations'
@@ -65,7 +66,7 @@ const MATERIALS = [
   {
     name: 'Layered Zirconia',
     badge: 'Hybrid Excellence',
-    img: '/images/treatments/crowns-bridges/layered-zirconia.webp',
+    img: '/images/treatments/dental/crowns-bridges/layered-zirconia.webp',
     desc: 'Combines the high structural strength of a Zirconia core with a natural, tooth-colored porcelain exterior.',
     features: ['High structural Zirconia core', 'Natural porcelain exterior', 'Lifelike depth & translucency', 'Ideal for visible smile zones'],
     popularFor: 'Anterior Teeth & Complex Bridges'
@@ -76,22 +77,22 @@ const BENEFITS = [
   {
     title: 'Restored Chewing & Function',
     desc: 'Eat, bite and speak naturally without pain, discomfort or hesitation.',
-    img: '/images/treatments/crowns-bridges/restored-chewing-function.webp'
+    img: '/images/treatments/dental/crowns-bridges/restored-chewing-function.webp'
   },
   {
     title: 'Seamless Natural Aesthetics',
     desc: 'Precision digital shade-matching matches the color, gradient and translucency of neighboring teeth.',
-    img: '/images/treatments/crowns-bridges/seamless-natural-aesthetics.webp'
+    img: '/images/treatments/dental/crowns-bridges/seamless-natural-aesthetics.webp'
   },
   {
     title: 'Long-Term Tooth Protection',
     desc: 'Shields weakened or post-root canal teeth from future fractures and wear.',
-    img: '/images/treatments/crowns-bridges/long-term-tooth-protection.webp'
+    img: '/images/treatments/dental/crowns-bridges/long-term-tooth-protection.webp'
   },
   {
     title: 'Prevents Tooth Shifting',
     desc: 'Dental bridges prevent remaining natural teeth from drifting into open gaps, preserving proper jaw alignment.',
-    img: '/images/treatments/crowns-bridges/prevents-tooth-shifting.webp'
+    img: '/images/treatments/dental/crowns-bridges/prevents-tooth-shifting.webp'
   }
 ];
 
@@ -206,7 +207,7 @@ const PROCEDURE_STEPS = [
     shortTitle: '3D Scanning',
     desc: 'Comprehensive clinical assessment, digital X-rays and 3D intraoral scanning for sub-millimeter precision.',
     highlight: 'Comprehensive Assessment & 3D Scans',
-    img: '/images/treatments/crowns-bridges/step-1-digital-scanning.webp'
+    img: '/images/treatments/dental/crowns-bridges/step-1-digital-scanning.webp'
   },
   {
     step: '02',
@@ -214,7 +215,7 @@ const PROCEDURE_STEPS = [
     shortTitle: 'Tooth Preparation',
     desc: 'Precise, conservative shaping of abutment teeth under painless local anesthesia.',
     highlight: 'Painless Local Anesthesia',
-    img: '/images/treatments/crowns-bridges/step-2-tooth-preparation.webp'
+    img: '/images/treatments/dental/crowns-bridges/step-2-tooth-preparation.webp'
   },
   {
     step: '03',
@@ -222,7 +223,7 @@ const PROCEDURE_STEPS = [
     shortTitle: 'CAD/CAM Milling',
     desc: 'High-precision digital crafting of your custom ceramic or zirconia restoration in our specialized lab.',
     highlight: 'Digital Lab Precision Milling',
-    img: '/images/treatments/crowns-bridges/step-3-laboratory-milling.webp'
+    img: '/images/treatments/dental/crowns-bridges/step-3-laboratory-milling.webp'
   },
   {
     step: '04',
@@ -230,7 +231,7 @@ const PROCEDURE_STEPS = [
     shortTitle: 'Placement & Fitting',
     desc: 'Final cementation with medical-grade adhesive, bite calibration, and aesthetic verification.',
     highlight: 'Bite Calibration & Permanent Bond',
-    img: '/images/treatments/crowns-bridges/step-4-placement-and-fitting.webp'
+    img: '/images/treatments/dental/crowns-bridges/step-4-placement-and-fitting.webp'
   }
 ];
 
@@ -429,7 +430,7 @@ export default function CrownsBridgesPage() {
           >
             <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-100 bg-white p-2">
               <img
-                src="/images/treatments/crowns-bridges/dental-bridge.webp"
+                src="/images/treatments/dental/crowns-bridges/dental-bridge.webp"
                 alt="World-Class Dental Crowns & Bridges"
                 className="w-full h-[380px] object-cover rounded-2xl"
               />
@@ -465,25 +466,12 @@ export default function CrownsBridgesPage() {
         </div>
       </section>
 
-      {/* ─── Sticky Tab Navigation (Oliva-Style Button Pills) ─── */}
-      <div className="jerush-sticky-subnav bg-slate-50/90 backdrop-blur-md border-y border-slate-200/50 py-4 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-wrap justify-center gap-2 md:gap-3 text-xs font-headline font-bold uppercase tracking-wider">
-            {TABS.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => scrollToSection(tab.id)}
-                className={`px-6 py-2.5 rounded-full border transition-all duration-300 whitespace-nowrap ${activeSection === tab.id
-                    ? 'bg-brandSky border-brandSky text-white shadow-md shadow-brandSky/15 scale-105'
-                    : 'bg-white border-brandSky/30 text-brandBlue hover:bg-brandSky/5 hover:border-brandSky/60'
-                  }`}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
+      {/* ─── Sticky Tab Navigation (Cute, Compact Capsule Pills) ─── */}
+      <TreatmentSectionNav
+        tabs={TABS}
+        activeSection={activeSection}
+        onTabClick={scrollToSection}
+      />
 
       {/* ─── Overview Section ─── */}
       <section id="overview" className="max-w-7xl mx-auto px-6 py-20">
@@ -774,7 +762,7 @@ export default function CrownsBridgesPage() {
                 {/* Indication Visual Diagram */}
                 <div className="w-full aspect-[16/10.5] rounded-2xl border border-slate-200/80 overflow-hidden bg-white shadow-sm flex items-center justify-center transition-all duration-300 group-hover:border-brandSky/40">
                   <img
-                    src="/images/treatments/crowns-bridges/dental-crown-indication.webp"
+                    src="/images/treatments/dental/crowns-bridges/dental-crown-indication.webp"
                     alt="Indications for Dental Crowns"
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                   />
@@ -812,7 +800,7 @@ export default function CrownsBridgesPage() {
                 {/* Indication Visual Diagram */}
                 <div className="w-full aspect-[16/10.5] rounded-2xl border border-slate-200/80 overflow-hidden bg-white shadow-sm flex items-center justify-center transition-all duration-300 group-hover:border-brandSky/40">
                   <img
-                    src="/images/treatments/crowns-bridges/dental-bridge-indication.webp"
+                    src="/images/treatments/dental/crowns-bridges/dental-bridge-indication.webp"
                     alt="Indications for Dental Bridges"
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                   />

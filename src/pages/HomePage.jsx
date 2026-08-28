@@ -12,7 +12,6 @@ import HighlightsSection from '../components/home/HighlightsSection.jsx';
 import BlogPreviewSection from '../components/home/BlogPreviewSection.jsx';
 import FaqSection from '../components/common/FaqSection.jsx';
 import ContactSection from '../components/home/ContactSection.jsx';
-import DentalAppointmentBanner from '../components/common/DentalAppointmentBanner.jsx';
 
 import { doctorService } from '../services/doctorService';
 import { treatmentService } from '../services/treatmentService';
@@ -103,10 +102,6 @@ export default function HomePage() {
 
       <SectionReveal>
         <BlogPreviewSection blogs={blogs} />
-      </SectionReveal>
-
-      <SectionReveal>
-        <DentalAppointmentBanner />
       </SectionReveal>
 
       <SectionReveal>

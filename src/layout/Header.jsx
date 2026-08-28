@@ -113,43 +113,82 @@ export default function Header() {
   const [galleryActiveTab, setGalleryActiveTab] = useState('gallery-cases');
   const [activeHoverMenu, setActiveHoverMenu] = useState(null);
 
-  // Handle scroll events for sticky header and hide-on-scroll-down
+  // Handle scroll events for sticky header and smooth hide-on-scroll-down / show-on-scroll-up
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      const isTreatmentPage =
-        location.pathname === '/dental-implants' ||
-        location.pathname.startsWith('/dental-treatments/') ||
-        location.pathname.startsWith('/cosmetic-dermatology-laser-treatments/') ||
-        location.pathname.startsWith('/hair-restoration-treatments/') ||
-        location.pathname.startsWith('/body-contouring-wellness/') ||
-        location.pathname.startsWith('/treatments');
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+          
+          // Comprehensive check for treatment pages where sub-navigation is sticky
+          const isTreatmentPage =
+            location.pathname === '/dental-implants' ||
+            location.pathname === '/jerushaligne' ||
+            location.pathname === '/root-canal-treatment' ||
+            location.pathname === '/crowns-bridges' ||
+            location.pathname === '/oral-pathology' ||
+            location.pathname === '/gfc-hair' ||
+            location.pathname === '/hair-transplant' ||
+            location.pathname === '/fractional-co2-laser' ||
+            location.pathname === '/cryo-sculpting' ||
+            location.pathname === '/dental-camps' ||
+            location.pathname.startsWith('/dental-treatments/') ||
+            location.pathname.startsWith('/cosmetic-dermatology-laser-treatments/') ||
+            location.pathname.startsWith('/hair-restoration-treatments/') ||
+            location.pathname.startsWith('/body-contouring-wellness/') ||
+            location.pathname.startsWith('/treatments');
 
-      // Scrolled state: main navbar sticks on all pages when scroll > 50
-      if (currentScrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+          // Scrolled state: main navbar turns glassmorphic/sticky when scroll > 40
+          if (currentScrollY > 40) {
+            setIsScrolled(true);
+          } else {
+            setIsScrolled(false);
+          }
 
-      // Hide/reveal header immediately on scroll down/up
-      const delta = currentScrollY - lastScrollY.current;
-      if (isTreatmentPage) {
-        setIsNavHidden(false);
-        lastScrollY.current = currentScrollY;
-      } else if (Math.abs(delta) > 3) {
-        if (delta > 0 && currentScrollY > 120) {
-          setIsNavHidden(true); // Scrolling down, hide immediately
-        } else if (delta < 0) {
-          setIsNavHidden(false); // Scrolling up, show immediately
-        }
-        lastScrollY.current = currentScrollY;
+          // Mobile menu open: prevent hiding
+          if (isMobileMenuOpen) {
+            setIsNavHidden(false);
+            lastScrollY.current = currentScrollY;
+            ticking = false;
+            return;
+          }
+
+          // Treatment pages keep header visible
+          if (isTreatmentPage) {
+            setIsNavHidden(false);
+            lastScrollY.current = currentScrollY;
+            ticking = false;
+            return;
+          }
+
+          // For all other pages (Home, About, Doctors, Blogs, Careers, Gallery, Reviews, etc.):
+          // If at the very top of the page, always show
+          if (currentScrollY <= 60) {
+            setIsNavHidden(false);
+          } else {
+            const delta = currentScrollY - lastScrollY.current;
+            // Smooth threshold buffer to prevent micro-jitter
+            if (delta > 8 && currentScrollY > 90) {
+              // Scrolling down smoothly hides the header
+              setIsNavHidden(true);
+            } else if (delta < -6) {
+              // Scrolling up smoothly reveals the header
+              setIsNavHidden(false);
+            }
+          }
+
+          lastScrollY.current = currentScrollY;
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [location.pathname]);
+  }, [location.pathname, isMobileMenuOpen]);
 
   // Load translation state from cookie on mount
   useEffect(() => {
