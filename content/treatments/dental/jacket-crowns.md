@@ -74,6 +74,6 @@ Your smile deserves the best care, don’t wait to restore your tooth and confid
 
 Visit Jerush Dento Facial Laser Centre, Kanyakumari, Chennaai, Trichy for expert j[acket crown treatment](https://www.jerushdentoface.com/braces-clips-treatment-for-malocclusion/) and experience world-class dental care close to home.
 
-Book Your Appointment Today\!
+Book Your Appointment Today
 
 For a consultation with our dental specialist, give us a call or visit our website. With a perfectly fitted Jacket Crown, we can help you achieve a confident, healthy and bright smile.  
