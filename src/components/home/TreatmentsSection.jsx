@@ -64,6 +64,7 @@ export default function TreatmentsSection({ treatments }) {
     if (item.id === 'oral-pathology') return '/dental-treatments/oral-pathology-screening';
     if (item.id === 'dental-implants') return '/dental-implants';
     if (item.id === 'root-canal') return '/dental-treatments/root-canal-treatment-in-tamilnadu';
+    if (item.id === 'metal-braces') return '/treatments/metal-braces';
     return `/treatments/${item.id}`;
   };
 

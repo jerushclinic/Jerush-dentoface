@@ -2,7 +2,7 @@
 
 **Target URL Slug:** `/dental-treatments/best-metal-orthodontic-braces/`
 
-Forget old-school "train tracks." Welcome to modern, micro-engineered steel braces designed for maximum speed, zero hassle, and lifetime confidence. Welcome to **Jerush Dentofacial & Cosmetic Laser Centre**—Tamil Nadu’s home for precision orthodontic transformations.
+Forget old-school "train tracks." Welcome to modern, micro-engineered steel braces designed for maximum speed, zero hassle, and lifetime confidence. Welcome to **Jerush Dentofacial & Cosmetic Laser Centre**, Tamil Nadu’s home for precision orthodontic transformations.
 
 ---
 

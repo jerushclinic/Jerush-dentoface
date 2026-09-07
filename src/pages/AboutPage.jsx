@@ -54,7 +54,7 @@ export default function AboutPage() {
     {
       id: 'vip',
       label: 'VIP & International Lounge',
-      image: '/images/infrastructure/superior-patient-care.png',
+      image: '/images/infrastructure/superior-patient-care.webp',
       features: ['Zero wait time', 'Dedicated international liaison assistance', 'Private exit access'],
       desc: 'Premium lounges and private post-op recovery suites tailored for our international clientele and privacy-focused patients.'
     }

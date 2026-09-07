@@ -4,7 +4,7 @@ import { apiClient } from "./api";
 const allJerushaligneOpeningPhotos = [
   { id: 101, image_url: '/images/events/jerushaligne-opening-event/jerushaligne-manufacturing-units-open.webp', aspect: 'landscape' },
   { id: 102, image_url: '/images/events/jerushaligne-opening-event/jerushaligne-clear-aligners-unit-open.webp', aspect: 'landscape' },
-  { id: 103, image_url: '/images/events/jerushaligne-opening-event/baldbin-father-opening-jerushaligne.webp', aspect: 'landscape' },
+  { id: 103, image_url: '/images/events/jerushaligne-opening-event/jerushaligne-opening-banner.webp', aspect: 'landscape' },
   { id: 104, image_url: '/images/events/jerushaligne-opening-event/baldbin-jaja-with-ex-ias.webp', aspect: 'landscape' },
   { id: 105, image_url: '/images/events/jerushaligne-opening-event/binbila-and-bladbin.webp', aspect: 'landscape' },
   { id: 106, image_url: '/images/events/jerushaligne-opening-event/binila-artboard-sign.webp', aspect: 'landscape' },
@@ -91,13 +91,55 @@ const allDrBladbinBirthdayPhotos = [
   { id: 247, image_url: '/images/events/dr-bladbin-birthday/three-gift-frames-in-a-row.webp', aspect: 'landscape' }
 ];
 
+const allOnamPhotos = [
+  { id: 301, image_url: '/images/events/onam-2025/jerush-thuckalay-all-doctors-group-shoot.webp', aspect: 'landscape' },
+  { id: 302, image_url: '/images/events/onam-2025/pookolam-by-doctors.webp', aspect: 'landscape' },
+  { id: 303, image_url: '/images/events/onam-2025/all-doctors-shoot.webp', aspect: 'landscape' },
+  { id: 304, image_url: '/images/events/onam-2025/baldbin-binila-casual-look.webp', aspect: 'landscape' },
+  { id: 305, image_url: '/images/events/onam-2025/binila-candid-shot.webp', aspect: 'landscape' },
+  { id: 306, image_url: '/images/events/onam-2025/binila-portrait-casual-shot.webp', aspect: 'portrait' },
+  { id: 307, image_url: '/images/events/onam-2025/binila-with-dental-doctors-pookolam.webp', aspect: 'landscape' },
+  { id: 308, image_url: '/images/events/onam-2025/bladbin-binila-onam-shoot.webp', aspect: 'landscape' },
+  { id: 309, image_url: '/images/events/onam-2025/bladbin-binila.webp', aspect: 'landscape' },
+  { id: 310, image_url: '/images/events/onam-2025/ceo-with-bladbin.webp', aspect: 'landscape' },
+  { id: 311, image_url: '/images/events/onam-2025/cosmetic-assistants-dance-performance.webp', aspect: 'landscape' },
+  { id: 312, image_url: '/images/events/onam-2025/cosmetic-assistants.webp', aspect: 'landscape' },
+  { id: 313, image_url: '/images/events/onam-2025/dental-assistants.webp', aspect: 'landscape' },
+  { id: 314, image_url: '/images/events/onam-2025/desntal-ssistants-group.webp', aspect: 'landscape' },
+  { id: 315, image_url: '/images/events/onam-2025/dr-binila-casusal.webp', aspect: 'portrait' },
+  { id: 316, image_url: '/images/events/onam-2025/dr-bladbin-fiona-binila.webp', aspect: 'landscape' },
+  { id: 317, image_url: '/images/events/onam-2025/dr-bladbin-with-all-doctors-shoot.webp', aspect: 'landscape' },
+  { id: 318, image_url: '/images/events/onam-2025/dr-bladbin-with-his-assistants.webp', aspect: 'landscape' },
+  { id: 319, image_url: '/images/events/onam-2025/jerush-family-group-shoot.webp', aspect: 'landscape' },
+  { id: 320, image_url: '/images/events/onam-2025/pookalam-by-cosmetic-assistants.webp', aspect: 'landscape' },
+  { id: 321, image_url: '/images/events/onam-2025/pookolam-by-cosmetic.webp', aspect: 'landscape' },
+  { id: 322, image_url: '/images/events/onam-2025/r-binila-portrait.webp', aspect: 'portrait' }
+];
+
+const allMedicalCampPhotos = [
+  { id: 401, image_url: '/images/events/medical-camp/jerush-medical-camp-group-photo.webp', aspect: 'landscape' },
+  { id: 402, image_url: '/images/events/medical-camp/free-community-medical-camp-group-photo.webp', aspect: 'landscape' },
+  { id: 403, image_url: '/images/events/medical-camp/bladbin-inaugurating-medical-camp-jerush.webp', aspect: 'landscape' },
+  { id: 404, image_url: '/images/events/medical-camp/bladbin-stalin-visiting-medical-camp.webp', aspect: 'landscape' },
+  { id: 405, image_url: '/images/events/medical-camp/doctors-providing-health-consultation-medical-camp.webp', aspect: 'landscape' },
+  { id: 406, image_url: '/images/events/medical-camp/dr-ranisha-appreciation-award-medical-camp.webp', aspect: 'landscape' },
+  { id: 407, image_url: '/images/events/medical-camp/dr-stalin-dr-bladbin-jerush-stage.webp', aspect: 'landscape' },
+  { id: 408, image_url: '/images/events/medical-camp/dr-stalin-medical-camp-press-meet.webp', aspect: 'landscape' },
+  { id: 409, image_url: '/images/events/medical-camp/dr-vijayalaksmi-appreciation-award-medical-camp.webp', aspect: 'landscape' },
+  { id: 410, image_url: '/images/events/medical-camp/free-medical-checkup-community-health-camp.webp', aspect: 'landscape' },
+  { id: 411, image_url: '/images/events/medical-camp/jerush-medical-camp-chief-guest-welcome.webp', aspect: 'landscape' },
+  { id: 412, image_url: '/images/events/medical-camp/medical-awareness-rally-police-department.webp', aspect: 'landscape' },
+  { id: 413, image_url: '/images/events/medical-camp/medical-camp-group-photo-with-police.webp', aspect: 'landscape' },
+  { id: 414, image_url: '/images/events/medical-camp/medical-camp-health-screening-patient-care.webp', aspect: 'landscape' }
+];
+
 const mockEvents = [
   {
     id: 8,
     title: 'Jerushaligne and Advanced Technology Units Opening Celebration 2k26',
     description: 'Moments from the grand opening celebration of Jerushaligne Clear Aligners Manufacturing and our new Advanced Technology Units. A memorable day celebrating innovation, advanced patient care and our growing clinical family.',
     event_date: 'May 30, 2026',
-    cover_image: '/images/events/jerushaligne-opening-event/jerushaligne-manufacturing-units-open.webp',
+    cover_image: '/images/events/jerushaligne-opening-event/jerushaligne-opening-banner.webp',
     status: 'published',
     photo_count: allJerushaligneOpeningPhotos.length,
     photos: allJerushaligneOpeningPhotos
@@ -113,39 +155,48 @@ const mockEvents = [
     photos: allDrBladbinBirthdayPhotos
   },
   {
-    id: 10,
-    title: 'ESTRELLA 25 – The Star of Bethlehem',
-    description: "Every Christmas is a reminder of God's greatest gift to humanity, the birth of Jesus Christ, the Prince of Peace. ESTRELLA '25 was a beautiful celebration organized by the Jerush Family, bringing together staff, families, friends and well-wishers to share the joy of the season in an atmosphere filled with love, gratitude and fellowship.",
-    event_date: 'December 24, 2025',
-    cover_image: '/uploads/events/event_cover_1786083161_821.webp',
+    id: 11,
+    title: 'ONAM VIBEZ 2K25',
+    description: 'Jerush Hospital, Thuckalay, celebrated the spirit of Onam with joy, togetherness and vibrant festive energy on September 5, 2025. A colourful Pookalam added to the festive atmosphere, with our team coming together to create a beautiful traditional design.',
+    event_date: 'September 05, 2025',
+    cover_image: '/images/events/onam-2025/pookolam-by-doctors.webp',
+    status: 'published',
+    photo_count: allOnamPhotos.length,
+    photos: allOnamPhotos
+  },
+  {
+    id: 12,
+    title: 'Free Community Health & Medical Screening Camp',
+    description: 'Jerush Healthcare organized a comprehensive Free Medical & Dental Screening Camp serving over 500 local residents with free consultations, oral health kits, diagnostic tests and specialist care.',
+    event_date: 'August 18, 2025',
+    cover_image: '/images/events/medical-camp/jerush-medical-camp-group-photo.webp',
+    status: 'published',
+    photo_count: allMedicalCampPhotos.length,
+    photos: allMedicalCampPhotos
+  },
+  {
+    id: 9,
+    title: 'CRESCITA - 23rd Jerush Anniversary',
+    description: 'Celebrating 23 remarkable years of clinical excellence, growth and trust, Jerush Dentofacial & Cosmetic Laser Centre, Thuckalay, hosted "CRESCITA 2025" to mark its milestone anniversary.',
+    event_date: 'September 05, 2025',
+    cover_image: '/images/events/dr-bladbin-birthday/team-thuckalay-jerush.webp',
     status: 'published',
     photo_count: 0,
     photos: []
   },
   {
-    id: 11,
-    title: 'ONAM VIBEZ 2K25',
-    description: 'Jerush Hospital, Thuckalay, celebrated the spirit of Onam with joy, togetherness and vibrant festive energy on September 5, 2025. A colourful Pookalam added to the festive atmosphere, with our team coming together to create a beautiful traditional design.',
-    event_date: 'September 05, 2025',
-    cover_image: '/uploads/events/event_cover_1786351106_284.webp',
+    id: 10,
+    title: 'ESTRELLA 25 – The Star of Bethlehem',
+    description: "Every Christmas is a reminder of God's greatest gift to humanity, the birth of Jesus Christ, the Prince of Peace. ESTRELLA '25 was a beautiful celebration organized by the Jerush Family, bringing together staff, families, friends and well-wishers to share the joy of the season in an atmosphere filled with love, gratitude and fellowship.",
+    event_date: 'December 24, 2025',
+    cover_image: '/images/events/jerushaligne-opening-event/jerush-chapel.webp',
     status: 'published',
-    photo_count: 22,
-    photos: []
-  },
-  {
-    id: 9,
-    title: 'CRESCITA -23rd Jerush Anniversary',
-    description: 'Celebrating 23 remarkable years of clinical excellence, growth and trust, Jerush Dentofacial & Cosmetic Laser Centre, Thuckalay, hosted "CRESCITA 2025" to mark its milestone anniversary.',
-    event_date: 'September 05, 2025',
-    cover_image: '/uploads/events/event_cover_1785909896_371.webp',
-    status: 'published',
-    photo_count: 49,
+    photo_count: 0,
     photos: []
   }
 ];
 
-// Helper to normalize image URLs cleanly:
-// Fixes deleted /uploads/ paths to valid local static images while preserving user uploads and deletions.
+// Helper to normalize image URLs cleanly
 export const normalizeImageUrl = (url, title = '', isCover = false, index = 0) => {
   if (!url || typeof url !== 'string') {
     return '';
@@ -162,11 +213,67 @@ export const normalizeImageUrl = (url, title = '', isCover = false, index = 0) =
   return url;
 };
 
-// Sanitize event URLs without adding deleted photos back
+// Sanitize event URLs and attach real photo collections for built-in events
 const sanitizeEvent = (event) => {
   if (!event) return event;
   const title = event.title || '';
-  const cover = normalizeImageUrl(event.cover_image, title, true, 0);
+  const idStr = String(event.id);
+  const titleLower = title.toLowerCase();
+
+  // If this is a known event, ensure it uses its real static photo collection and cover
+  if (idStr === '8' || titleLower.includes('jerushaligne') || titleLower.includes('advanced technology')) {
+    return {
+      ...event,
+      cover_image: '/images/events/jerushaligne-opening-event/jerushaligne-opening-banner.webp',
+      photos: allJerushaligneOpeningPhotos,
+      photo_count: allJerushaligneOpeningPhotos.length
+    };
+  }
+
+  if (idStr === '7' || titleLower.includes('bladbin') || titleLower.includes('birthday')) {
+    return {
+      ...event,
+      cover_image: '/images/events/dr-bladbin-birthday/bladbin-birthday-cover.webp',
+      photos: allDrBladbinBirthdayPhotos,
+      photo_count: allDrBladbinBirthdayPhotos.length
+    };
+  }
+
+  if (idStr === '11' || titleLower.includes('onam')) {
+    return {
+      ...event,
+      cover_image: '/images/events/onam-2025/pookolam-by-doctors.webp',
+      photos: allOnamPhotos,
+      photo_count: allOnamPhotos.length
+    };
+  }
+
+  if (idStr === '12' || titleLower.includes('medical camp') || titleLower.includes('community health')) {
+    return {
+      ...event,
+      cover_image: '/images/events/medical-camp/jerush-medical-camp-group-photo.webp',
+      photos: allMedicalCampPhotos,
+      photo_count: allMedicalCampPhotos.length
+    };
+  }
+
+  if (idStr === '10' || titleLower.includes('estrella') || titleLower.includes('bethlehem') || titleLower.includes('christmas')) {
+    return {
+      ...event,
+      cover_image: event.cover_image && !event.cover_image.includes('/uploads/') ? event.cover_image : '/images/events/jerushaligne-opening-event/jerush-chapel.webp',
+      photos: Array.isArray(event.photos) && event.photos.length > 0 ? event.photos : [],
+      photo_count: Array.isArray(event.photos) ? event.photos.length : 0
+    };
+  }
+
+  if (idStr === '9' || titleLower.includes('crescita') || titleLower.includes('anniversary')) {
+    return {
+      ...event,
+      cover_image: event.cover_image && !event.cover_image.includes('/uploads/') ? event.cover_image : '/images/events/dr-bladbin-birthday/team-thuckalay-jerush.webp',
+      photos: Array.isArray(event.photos) && event.photos.length > 0 ? event.photos : [],
+      photo_count: Array.isArray(event.photos) ? event.photos.length : 0
+    };
+  }
 
   let photos = event.photos;
   if (Array.isArray(photos)) {
@@ -181,7 +288,7 @@ const sanitizeEvent = (event) => {
 
   return {
     ...event,
-    cover_image: cover,
+    cover_image: normalizeImageUrl(event.cover_image, title, true, 0),
     photos: photos || [],
     photo_count: photos ? photos.length : (event.photo_count || 0)
   };

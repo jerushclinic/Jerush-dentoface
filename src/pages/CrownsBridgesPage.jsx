@@ -9,6 +9,7 @@ import {
 import PageBreadcrumbHero from '../components/common/PageBreadcrumbHero';
 import TreatmentCtaBanner from '../components/common/TreatmentCtaBanner';
 import TreatmentSectionNav from '../components/common/TreatmentSectionNav';
+import useTreatmentScrollSpy from '../hooks/useTreatmentScrollSpy';
 
 const STATS = [
   { value: '15K+', label: 'Crowns & Bridges Restored' },
@@ -309,51 +310,11 @@ export default function CrownsBridgesPage() {
   const navigate = useNavigate();
   const [expandedFaq, setExpandedFaq] = useState(null);
   const [activeStep, setActiveStep] = useState(0);
-  const [activeSection, setActiveSection] = useState('overview');
 
-  useEffect(() => {
-    const observerCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
-    };
-
-    const observerOptions = {
-      root: null,
-      rootMargin: '-120px 0px -60% 0px',
-      threshold: 0
-    };
-
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-    const sectionIds = ['overview', 'benefits', 'transformations', 'symptoms', 'procedure', 'advantage', 'tourism', 'faqs'];
-    sectionIds.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) {
-        observer.observe(el);
-      }
-    });
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
-  const scrollToSection = (id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      const headerOffset = 138;
-      const elementPosition = el.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
+  const { activeSection, scrollToSection } = useTreatmentScrollSpy(
+    TABS.map(tab => tab.id),
+    138
+  );
 
   const handleBookClick = () => {
     navigate('/contact');

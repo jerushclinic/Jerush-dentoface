@@ -3554,12 +3554,18 @@ span.wpcf7-not-valid-tip {
   display: flex;
   width: max-content;
   animation: marquee-left 50s linear infinite;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
 }
 
 .animate-marquee-right {
   display: flex;
   width: max-content;
   animation: marquee-right 50s linear infinite;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
 }
 
 .marquee-row-1:hover .animate-marquee-left,

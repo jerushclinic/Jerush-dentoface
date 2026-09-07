@@ -66,16 +66,6 @@ function EventImage({ src, alt, className, aspect: initialAspect, ...props }) {
   };
 
   const handleImageError = () => {
-    if (currentSrc && (currentSrc.includes('/uploads/') || currentSrc.includes('data:image'))) {
-      const isBladbin = alt && (alt.toLowerCase().includes('bladbin') || alt.toLowerCase().includes('birthday'));
-      const fallbackUrl = isBladbin
-        ? '/images/events/dr-bladbin-birthday/bladbin-birthday-cover.webp'
-        : '/images/events/jerushaligne-opening-event/jerushaligne-manufacturing-units-open.webp';
-      if (currentSrc !== fallbackUrl) {
-        setCurrentSrc(fallbackUrl);
-        return;
-      }
-    }
     setError(true);
   };
 

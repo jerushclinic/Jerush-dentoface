@@ -22,10 +22,21 @@ function saveBase64Image($img, $prefix = 'event_photo') {
                 if (preg_match('/data:image\/(.*?);/', $parts[0], $matches)) {
                     $mime = $matches[1];
                 }
-                $ext = ($mime === 'jpeg') ? 'jpg' : (($mime === 'webp') ? 'webp' : 'png');
-                $uploadDir = __DIR__ . '/../uploads/events';
+                $ext = ($mime === 'jpeg' || $mime === 'jpg') ? 'jpg' : (($mime === 'webp') ? 'webp' : 'png');
+                
+                // Ensure parent uploads and uploads/events folders exist
+                $baseUploadDir = __DIR__ . '/../uploads';
+                $uploadDir = $baseUploadDir . '/events';
+                
+                if (!file_exists($baseUploadDir)) {
+                    @mkdir($baseUploadDir, 0755, true);
+                }
                 if (!file_exists($uploadDir)) {
                     @mkdir($uploadDir, 0755, true);
+                }
+                
+                if (!is_writable($uploadDir)) {
+                    @chmod($uploadDir, 0755);
                 }
 
                 if (!empty($originalName)) {
@@ -44,6 +55,9 @@ function saveBase64Image($img, $prefix = 'event_photo') {
                 $filepath = $uploadDir . '/' . $filename;
                 if (@file_put_contents($filepath, $data)) {
                     return '/uploads/events/' . $filename;
+                } else {
+                    error_log("Failed to write event photo to $filepath. Check folder permissions for uploads/events.");
+                    throw new Exception("Unable to save image to server directory /uploads/events/. Please verify folder write permissions (755/775).");
                 }
             }
         }

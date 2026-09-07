@@ -134,9 +134,10 @@ export default function TreatmentSectionNav({ tabs, activeSection, onTabClick })
             return (
               <button
                 key={tab.id}
+                type="button"
                 data-tab-id={tab.id}
                 onClick={() => onTabClick(tab.id)}
-                className={`shrink-0 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-[11px] sm:text-xs font-bold transition-all duration-300 whitespace-nowrap active:scale-95 flex items-center gap-1.5 ${isActive
+                className={`shrink-0 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-[11px] sm:text-xs font-bold transition-all duration-300 whitespace-nowrap active:scale-95 flex items-center gap-1.5 cursor-pointer select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-brandSky/60 ${isActive
                     ? 'bg-gradient-to-r from-brandBlue via-[#198BC8] to-brandSky text-white shadow-[0_2px_12px_rgba(25,139,200,0.32)] scale-[1.02] border border-transparent font-extrabold'
                     : 'bg-slate-100/90 text-slate-600 hover:text-brandBlue hover:bg-brandSky/10 border border-slate-200/80 hover:border-brandSky/30 hover:scale-[1.02]'
                   }`}

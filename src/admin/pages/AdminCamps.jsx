@@ -341,7 +341,7 @@ export default function AdminCamps() {
                       alt={camp.title}
                       className="w-full h-full object-cover"
                       onError={(e) => {
-                        e.target.src = '/images/events/jerushaligne-opening-event/jerushaligne-manufacturing-units-open.webp';
+                        e.target.src = '/images/events/medical-camp/jerush-medical-camp-group-photo.webp';
                       }}
                     />
                     <span
