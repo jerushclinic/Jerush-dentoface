@@ -7,7 +7,7 @@ In Jerush Dentofacial and Cosmetic Laser Centre, Chennai, we provide advanced de
 Whether you’re looking for a single tooth replacement or full dental implants, our expert implantologists provide inexpensive, reliable and long-lasting results.
 
 image path:
-"C:\jerush-dentoface-new-site-react\public\images\blog\dental-implants-blog\anatomy-of-healthy-teeth-and-tooth-dental-implant.webp"
+/Users/macbook/jerush-dentoface-new-site-react/public/images/treatments/dental/dental-implants/anatomy-of-healthy-teeth-and-tooth-dental-implant.webp
 
 **What is a dental implant?**
 
@@ -24,11 +24,11 @@ On average, dental implants cost per tooth in Chennai is affordable and varies d
 
 
 image path:
-"C:\jerush-dentoface-new-site-react\public\images\blog\dental-implants-blog\wmremove-transformed.webp"
+"/Users/macbook/jerush-dentoface-new-site-react/public/images/treatments/dental/dental-implants/wmremove-transformed.webp"
 
 **Types of dental implants:**
 image path:
-"C:\jerush-dentoface-new-site-react\public\images\blog\dental-implants-blog\implant-types.webp"
+"/Users/macbook/jerush-dentoface-new-site-react/public/images/treatments/dental/dental-implants/implant-types.webp"
 
 single implants
 multiple transplants
@@ -36,32 +36,32 @@ advanced dental implants
 
 **Material used for dental implant**
 image path:
-"C:\jerush-dentoface-new-site-react\public\images\blog\dental-implants-blog\materials-used.webp"
+"/Users/macbook/jerush-dentoface-new-site-react/public/images/treatments/dental/dental-implants/materials-used.webp"
 
 Titanium vs Zirconia Transplant
 
 **Dental implants technology**
 image path:
-"C:\jerush-dentoface-new-site-react\public\images\blog\dental-implants-blog\technology.webp"
+"/Users/macbook/jerush-dentoface-new-site-react/public/images/treatments/dental/dental-implants/technology.webp"
 
 3D scan, directed surgery or oral surgery.
 
 **Crown Type**
 image path:
-"C:\jerush-dentoface-new-site-react\public\images\blog\dental-implants-blog\crown-types.webp"
+"/Users/macbook/jerush-dentoface-new-site-react/public/images/treatments/dental/dental-implants/crown-types.webp"
 
 Zirconia molar crown, porcelain or ceramic crown.
 
 **Additional procedures**
 
 image path:
-"C:\jerush-dentoface-new-site-react\public\images\blog\dental-implants-blog\additional-procedures.webp"
+"/Users/macbook/jerush-dentoface-new-site-react/public/images/treatments/dental/dental-implants/additional-procedures.webp"
 
 bone grafting, sinus lift or oral surgery and dental implant.
 
 **Dental Clinic price and location**
 image path:
-"C:\jerush-dentoface-new-site-react\public\images\blog\dental-implants-blog\price-location.webp"
+"/Users/macbook/jerush-dentoface-new-site-react/public/images/treatments/dental/dental-implants/price-location.webp"
 
 (please add some content and related to targetting Chennai location)
 
@@ -71,7 +71,7 @@ image path:
 **The benefits of dental implants are just beyond changing teeth:**
 
 image path:
-"C:\jerush-dentoface-new-site-react\public\images\blog\dental-implants-blog\patient-checking-his-teeth-mirror.webp"
+"/Users/macbook/jerush-dentoface-new-site-react/public/images/treatments/dental/dental-implants/patient-checking-his-teeth-mirror.webp"
 
 
 ♦ Restore natural smiles and chewing functions.
@@ -86,33 +86,33 @@ Many patients see dramatic conversions in their dental implants before and after
 **What Conditions Are Treated with Dental Implants?**
 
 image path:
-"C:\jerush-dentoface-new-site-react\public\images\blog\dental-implants-blog\missing-teeth.webp"
+"/Users/macbook/jerush-dentoface-new-site-react/public/images/treatments/dental/dental-implants/missing-teeth.webp"
 
 Missing one or more teeth
 
 
-"C:\jerush-dentoface-new-site-react\public\images\blog\dental-implants-blog\bone loss issues.webp"
+"/Users/macbook/jerush-dentoface-new-site-react/public/images/treatments/dental/dental-implants/bone loss issues.webp"
 
 Experiencing dental implants and bone loss issues
 
-"C:\jerush-dentoface-new-site-react\public\images\blog\dental-implants-blog\unmanaged-dentures.webp"
+"/Users/macbook/jerush-dentoface-new-site-react/public/images/treatments/dental/dental-implants/unmanaged-dentures.webp"
 
 Unable to manage with dentures
 
 
-"C:\jerush-dentoface-new-site-react\public\images\blog\dental-implants-blog\affordable-dental-implants.webp"
+"/Users/macbook/jerush-dentoface-new-site-react/public/images/treatments/dental/dental-implants/affordable-dental-implants.webp"
 
 affordable dental replacement
 
 
 image path:
-"C:\jerush-dentoface-new-site-react\public\images\blog\dental-implants-blog\affordable-dental-implants.webp"
+"/Users/macbook/jerush-dentoface-new-site-react/public/images/treatments/dental/dental-implants/affordable-dental-implants.webp"
 
 Looking for affordable dental replacement solutions
 
 
 image path:
-"C:\jerush-dentoface-new-site-react\public\images\blog\dental-implants-blog\full-dental-implant-packages.webp"
+"/Users/macbook/jerush-dentoface-new-site-react/public/images/treatments/dental/dental-implants/full-dental-implant-packages.webp"
 
 Needing full dental implant cost packages for complete restoration
 
@@ -122,7 +122,7 @@ Needing full dental implant cost packages for complete restoration
 Dental Procedures:
 
 image path : 
-"C:\jerush-dentoface-new-site-react\public\images\blog\dental-implants-blog\treatment-plan.webp"
+"/Users/macbook/jerush-dentoface-new-site-react/public/images/treatments/dental/dental-implants/treatment-plan.webp"
 
 X-rays and scans to plan treatment.
 
@@ -130,7 +130,7 @@ X-rays and scans to plan treatment.
 Implant Surgery:
 
 image path :
-"C:\jerush-dentoface-new-site-react\public\images\blog\dental-implants-blog\implant-surgery.webp"
+"/Users/macbook/jerush-dentoface-new-site-react/public/images/treatments/dental/dental-implants/implant-surgery.webp"
 
 Titanium post placed into the jawbone.
 
@@ -138,14 +138,14 @@ Titanium post placed into the jawbone.
 Healing Time:
 
 image path :
-"C:\jerush-dentoface-new-site-react\public\images\blog\dental-implants-blog\healing-time.webp"
+"/Users/macbook/jerush-dentoface-new-site-react/public/images/treatments/dental/dental-implants/healing-time.webp"
 
 Usually, 3–6 months for osseointegration (dental implant how long does it take? depends on bone health).
 
 
 Crown Placement:
 
-"C:\jerush-dentoface-new-site-react\public\images\blog\dental-implants-blog\crown-placeement.webp"
+"/Users/macbook/jerush-dentoface-new-site-react/public/images/treatments/dental/dental-implants/crown-placeement.webp"
 
 Zirconia or ceramic dental implants, crowns, and bridges are attached.
 
@@ -153,7 +153,7 @@ Zirconia or ceramic dental implants, crowns, and bridges are attached.
 Follow-up Care:
 
 image path :
-"C:\jerush-dentoface-new-site-react\public\images\blog\dental-implants-blog\followup-care.webp"
+"/Users/macbook/jerush-dentoface-new-site-react/public/images/treatments/dental/dental-implants/followup-care.webp"
 
 Routine visits to ensure long-term success.
 
@@ -172,7 +172,7 @@ Find the real patient before and after the dental transplant review.
 
 Ensure 24-hour dental care for me for an emergency.
 
-"C:\jerush-dentoface-new-site-react\public\images\blog\dental-implants-blog\choosing-right-clinic.webp"
+"/Users/macbook/jerush-dentoface-new-site-react/public/images/treatments/dental/dental-implants/choosing-right-clinic.webp"
 
 The Jerush Dentofacial and Cosmetic Laser Centre is recognized as one of the best clinics for dental implants in Chennai, offering individual treatments with advanced features.
 
@@ -181,7 +181,7 @@ The Jerush Dentofacial and Cosmetic Laser Centre is recognized as one of the bes
 
 **To bring your dental implants to lifetime:**
 image path :
-"C:\jerush-dentoface-new-site-react\public\images\blog\dental-implants-blog\post-dental-implant-treatment.webp"
+"/Users/macbook/jerush-dentoface-new-site-react/public/images/treatments/dental/dental-implants/post-dental-implant-treatment.webp"
 
 ♦  Maintain proper brush and flossing habits.
 ♦  Regularly visit your nearby dentist

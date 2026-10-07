@@ -429,7 +429,7 @@ export default function JerushalignePage() {
             return (
               <div
                 key={idx}
-                className="bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-md hover:border-brandSky/40 transition-all duration-300 hover:-translate-y-1 transform-gpu flex flex-col justify-between group"
+                className="bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-md hover:border-brandSky/40 transition-all duration-300 transform-gpu flex flex-col justify-between group"
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
@@ -488,7 +488,7 @@ export default function JerushalignePage() {
             {CONDITIONS.map((c, i) => (
               <div
                 key={i}
-                className="bg-white rounded-3xl border border-slate-200/80 p-5 shadow-xs hover:shadow-md hover:border-brandSky/40 transition-all duration-300 hover:-translate-y-1 transform-gpu group"
+                className="bg-white rounded-3xl border border-slate-200/80 p-5 shadow-xs hover:shadow-md hover:border-brandSky/40 transition-all duration-300 transform-gpu group"
               >
                 <div className="rounded-2xl overflow-hidden h-44 mb-4 bg-slate-50 p-2 flex items-center justify-center border border-slate-100">
                   <img
@@ -527,7 +527,7 @@ export default function JerushalignePage() {
           {PROCEDURE_STEPS.map((step, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-lg hover:border-brandSky/40 transition-all duration-300 hover:-translate-y-1 transform-gpu flex flex-col justify-between group"
+              className="bg-white rounded-3xl border border-slate-200/80 p-6 shadow-sm hover:shadow-lg hover:border-brandSky/40 transition-all duration-300 transform-gpu flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
@@ -576,7 +576,7 @@ export default function JerushalignePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {REMOTE_FEATURES.map((item, idx) => (
-              <div key={idx} className="bg-white rounded-3xl border border-slate-200/80 p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1.5 transform-gpu space-y-5 group">
+              <div key={idx} className="bg-white rounded-3xl border border-slate-200/80 p-8 shadow-sm hover:shadow-lg transition-all duration-300 transform-gpu space-y-5 group">
                 <div className="rounded-2xl overflow-hidden h-52 bg-slate-50 p-3 flex items-center justify-center border border-slate-100">
                   <img
                     src={item.img}

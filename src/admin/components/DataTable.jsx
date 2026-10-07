@@ -126,7 +126,7 @@ export default function DataTable({
             <button
               disabled={safeP === 0}
               onClick={() => setPage(safeP - 1)}
-              className="p-1.5 rounded-lg text-slate-450 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 disabled:opacity-30 disabled:pointer-events-none transition-colors"
+              className="p-1.5 rounded-lg text-slate-450 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 disabled:opacity-30 disabled:pointer-events-none transition-colors cursor-pointer border-none"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
@@ -134,7 +134,7 @@ export default function DataTable({
               <button
                 key={i}
                 onClick={() => setPage(i)}
-                className={`w-7 h-7 rounded-lg text-[10px] font-bold transition-all ${safeP === i ? 'bg-brandBlue text-white shadow-sm shadow-brandBlue/20' : 'text-slate-550 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/80'}`}
+                className={`w-7 h-7 rounded-lg text-[10px] font-bold transition-all cursor-pointer border-none ${safeP === i ? 'bg-brandBlue text-white shadow-sm shadow-brandBlue/20' : 'text-slate-550 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/80'}`}
               >
                 {i + 1}
               </button>
@@ -142,7 +142,7 @@ export default function DataTable({
             <button
               disabled={safeP >= totalPages - 1}
               onClick={() => setPage(safeP + 1)}
-              className="p-1.5 rounded-lg text-slate-450 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 disabled:opacity-30 disabled:pointer-events-none transition-colors"
+              className="p-1.5 rounded-lg text-slate-450 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 disabled:opacity-30 disabled:pointer-events-none transition-colors cursor-pointer border-none"
             >
               <ChevronRight className="w-4 h-4" />
             </button>

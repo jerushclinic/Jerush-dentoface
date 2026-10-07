@@ -7,19 +7,26 @@ export default function BackToTop() {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
-      // Toggle visibility
-      if (window.scrollY > 400) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+    let ticking = false;
 
-      // Calculate scroll progress percentage
-      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-      if (totalHeight > 0) {
-        const progress = (window.scrollY / totalHeight) * 100;
-        setScrollProgress(progress);
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrollY = window.scrollY;
+
+          // Toggle visibility
+          setIsVisible(scrollY > 400);
+
+          // Calculate scroll progress percentage (throttled)
+          const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+          if (totalHeight > 0) {
+            const progress = (scrollY / totalHeight) * 100;
+            setScrollProgress(prev => Math.abs(prev - progress) > 0.5 ? progress : prev);
+          }
+
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 

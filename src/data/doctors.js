@@ -1,6 +1,7 @@
 export const doctors = [
   {
     id: 1,
+    sort_order: 1,
     name: 'DR. A. BLADBIN',
     role: 'Chairman & Maxillofacial Surgeon',
     qualification: 'MBBS(Ukraine), LLB, MDS(OMFS), PHD(Srilanka), PHD(Hons), FAM(Ger), MCHT(Ger), MCDC(Ger)',
@@ -18,6 +19,7 @@ export const doctors = [
   },
   {
     id: 2,
+    sort_order: 2,
     name: 'DR. C. BINILA BLADBIN',
     role: 'Director & Oral Surgeon',
     qualification: 'MDS (Oral & Maxillofacial Surgery)',
@@ -35,6 +37,7 @@ export const doctors = [
   },
   {
     id: 3,
+    sort_order: 3,
     name: 'DR. SHERINE PONRAJ',
     role: 'Prosthodontist',
     qualification: 'BDS., MDS',
@@ -48,6 +51,7 @@ export const doctors = [
   },
   {
     id: 4,
+    sort_order: 4,
     name: 'DR. S. BRINDHA',
     role: 'Prosthodontist & Implantologist',
     qualification: 'MBA., BDS., MDS',
@@ -61,6 +65,7 @@ export const doctors = [
   },
   {
     id: 5,
+    sort_order: 5,
     name: 'DR. U. NIVEDAN',
     role: 'Dental Surgeon & Cosmetologist',
     qualification: 'BDS., FMC., FFAM., PGDMT., PGDAC., MMP',
@@ -74,6 +79,7 @@ export const doctors = [
   },
   {
     id: 6,
+    sort_order: 6,
     name: 'DR. V. JASMIN SHAMILI',
     role: 'Endodontist & Cosmetic Dentist',
     qualification: 'BDS., MDS',
@@ -87,6 +93,7 @@ export const doctors = [
   },
   {
     id: 7,
+    sort_order: 7,
     name: 'DR. C. J. AISHWARYA',
     role: 'Dental Surgeon',
     qualification: 'BDS',
@@ -100,6 +107,7 @@ export const doctors = [
   },
   {
     id: 8,
+    sort_order: 8,
     name: 'DR. L. V. SARU PADMA',
     role: 'Dental Surgeon & Aesthetic Specialist',
     qualification: 'BDS., FDS., FMC',
@@ -113,6 +121,7 @@ export const doctors = [
   },
   {
     id: 9,
+    sort_order: 9,
     name: 'DR. S. GEETHA PRIYA',
     role: 'Dental Surgeon & Cosmetologist',
     qualification: 'BDS., MCC., DIRM, SPMU',
@@ -126,6 +135,7 @@ export const doctors = [
   },
   {
     id: 10,
+    sort_order: 10,
     name: 'DR. T. AMEEGA JOLLY',
     role: 'Cosmetologist',
     qualification: 'BAMS',
@@ -139,6 +149,7 @@ export const doctors = [
   },
   {
     id: 11,
+    sort_order: 11,
     name: 'DR. S. ABIRAM PRASAANTH',
     role: 'Dental Surgeon, Implantologist & Cosmetologist',
     qualification: 'BDS., FAAID(USA)., FMC., PGDCR',
@@ -152,6 +163,7 @@ export const doctors = [
   },
   {
     id: 12,
+    sort_order: 12,
     name: 'DR. A. VIJAYALAKSHMI',
     role: 'Cosmetologist',
     qualification: 'BHMS',
@@ -165,6 +177,7 @@ export const doctors = [
   },
   {
     id: 13,
+    sort_order: 13,
     name: 'DR. R. RANISHA',
     role: 'Cosmetologist',
     qualification: 'BAMS',
@@ -178,6 +191,7 @@ export const doctors = [
   },
   {
     id: 14,
+    sort_order: 14,
     name: 'DR. PRIYADHARSHINI',
     role: 'Dental Surgeon',
     qualification: 'BDS',
@@ -191,6 +205,7 @@ export const doctors = [
   },
   {
     id: 15,
+    sort_order: 15,
     name: 'DR. P. G. SURYAMBIKA',
     role: 'Dental Surgeon',
     qualification: 'BDS',
@@ -204,6 +219,7 @@ export const doctors = [
   },
   {
     id: 16,
+    sort_order: 16,
     name: 'DR. C. MONICKA',
     role: 'Radiologist & Implantologist',
     qualification: 'BDS, Radiologist',
@@ -217,6 +233,7 @@ export const doctors = [
   },
   {
     id: 17,
+    sort_order: 17,
     name: 'DR. E. S. JINCY',
     role: 'Dental Surgeon, Jerush Dubai',
     qualification: 'BDS',

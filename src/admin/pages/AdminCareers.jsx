@@ -17,18 +17,24 @@ export default function AdminCareers() {
   const [applications, setApplications] = useState([]);
   const [loadingApps, setLoadingApps] = useState(false);
 
-  const fetchCareers = () => {
-    setLoadingCareers(true);
+  const fetchCareers = (silent = false) => {
+    if (!silent) setLoadingCareers(true);
     careerService.getCareers().then((data) => {
       setCareers(data || []);
+      setLoadingCareers(false);
+    }).catch(err => {
+      console.error("Error loading careers:", err);
       setLoadingCareers(false);
     });
   };
 
-  const fetchApplications = () => {
-    setLoadingApps(true);
+  const fetchApplications = (silent = false) => {
+    if (!silent) setLoadingApps(true);
     careerService.getApplications().then((data) => {
       setApplications(data || []);
+      setLoadingApps(false);
+    }).catch(err => {
+      console.error("Error loading applications:", err);
       setLoadingApps(false);
     });
   };
@@ -48,31 +54,44 @@ export default function AdminCareers() {
     setModalOpen(true);
   };
 
-  const handleDeleteCareer = (career) => {
+  const handleDeleteCareer = async (career) => {
     if (confirm(`Delete position "${career.title}"?`)) {
-      careerService.deleteCareer(career.id).then(() => {
-        fetchCareers();
-      });
+      setCareers((prev) => prev.filter((c) => c.id !== career.id));
+      try {
+        await careerService.deleteCareer(career.id);
+      } catch (e) {
+        console.error("Error deleting career:", e);
+      }
+      fetchCareers(true);
     }
   };
 
-  const handleDeleteApp = (app) => {
+  const handleDeleteApp = async (app) => {
     if (confirm(`Delete application from "${app.name}"?`)) {
-      careerService.deleteApplication(app.id).then(() => {
-        fetchApplications();
-      });
+      setApplications((prev) => prev.filter((a) => a.id !== app.id));
+      try {
+        await careerService.deleteApplication(app.id);
+      } catch (e) {
+        console.error("Error deleting app:", e);
+      }
+      fetchApplications(true);
     }
   };
 
-  const handleSave = (formData) => {
-    if (editingCareer) {
-      careerService.updateCareer(editingCareer.id, formData).then(() => {
-        fetchCareers();
-      });
-    } else {
-      careerService.addCareer(formData).then(() => {
-        fetchCareers();
-      });
+  const handleSave = async (formData) => {
+    try {
+      if (editingCareer) {
+        setCareers((prev) => prev.map((c) => c.id === editingCareer.id ? { ...c, ...formData } : c));
+        await careerService.updateCareer(editingCareer.id, formData);
+      } else {
+        const tempItem = { ...formData, id: Date.now() };
+        setCareers((prev) => [tempItem, ...prev]);
+        await careerService.addCareer(formData);
+      }
+      fetchCareers(true);
+    } catch (err) {
+      console.error("Error saving career:", err);
+      fetchCareers(true);
     }
   };
 
@@ -223,7 +242,7 @@ export default function AdminCareers() {
 
       {/* Tab 1: Job Openings Table */}
       {activeTab === 'openings' && (
-        loadingCareers ? (
+        loadingCareers && careers.length === 0 ? (
           <div className="flex items-center justify-center h-64">
             <div className="w-8 h-8 border-3 border-brandBlue border-t-transparent rounded-full animate-spin"></div>
           </div>
@@ -256,7 +275,7 @@ export default function AdminCareers() {
 
       {/* Tab 2: Received Applications Table */}
       {activeTab === 'applications' && (
-        loadingApps ? (
+        loadingApps && applications.length === 0 ? (
           <div className="flex items-center justify-center h-64">
             <div className="w-8 h-8 border-3 border-brandBlue border-t-transparent rounded-full animate-spin"></div>
           </div>

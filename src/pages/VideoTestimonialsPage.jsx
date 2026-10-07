@@ -190,18 +190,9 @@ const parseVideoLink = (url, type) => {
   return null;
 };
 
-const CATEGORIES = [
-  { id: 'all', label: 'All Stories', icon: Sparkles },
-  { id: 'dental', label: 'Dental & Smile', icon: Smile },
-  { id: 'skin', label: 'Skin & Laser', icon: Sparkles },
-  { id: 'hair', label: 'Hair Restoration', icon: Activity }
-];
-
 export default function VideoTestimonialsPage() {
   const navigate = useNavigate();
   const [videos, setVideos] = useState(STATIC_VIDEOS);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [platformFilter, setPlatformFilter] = useState('all'); // 'all' | 'youtube' | 'instagram'
   const [searchQuery, setSearchQuery] = useState('');
   const [loading, setLoading] = useState(true);
   const [activeVideo, setActiveVideo] = useState(null);
@@ -286,18 +277,16 @@ export default function VideoTestimonialsPage() {
   // Filtered list for the main grid
   const filteredVideos = useMemo(() => {
     return videos.filter(v => {
-      const matchCategory = selectedCategory === 'all' || v.category === selectedCategory;
-      const matchPlatform = platformFilter === 'all' ||
-        (platformFilter === 'youtube' && v.type === 'video') ||
-        (platformFilter === 'instagram' && v.type === 'instagram');
-      const matchSearch = searchQuery.trim() === '' ||
-        v.name?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        v.treatment?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        v.location?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        v.text?.toLowerCase().includes(searchQuery.toLowerCase());
-      return matchCategory && matchPlatform && matchSearch;
+      if (searchQuery.trim() === '') return true;
+      const query = searchQuery.toLowerCase();
+      return (
+        v.name?.toLowerCase().includes(query) ||
+        v.treatment?.toLowerCase().includes(query) ||
+        v.location?.toLowerCase().includes(query) ||
+        v.text?.toLowerCase().includes(query)
+      );
     });
-  }, [videos, selectedCategory, platformFilter, searchQuery]);
+  }, [videos, searchQuery]);
 
   // Featured videos list for auto-sliding banner
   const featuredVideos = useMemo(() => {
@@ -539,91 +528,38 @@ export default function VideoTestimonialsPage() {
           </section>
         )}
 
-        {/* ─── 4. CATEGORY & PLATFORM FILTER PILLS ─── */}
-        <section className="space-y-6 mb-12">
-          {/* Category Filter Pills */}
-          <div className="flex justify-center">
-            <div className="flex flex-wrap items-center justify-center gap-2.5 p-2 bg-slate-900/80 border border-slate-800 rounded-2xl sm:rounded-full backdrop-blur-xl max-w-full shadow-2xl">
-              {CATEGORIES.map((cat) => {
-                const Icon = cat.icon;
-                const isActive = selectedCategory === cat.id;
-                const count = cat.id === 'all'
-                  ? videos.length
-                  : videos.filter(v => v.category === cat.id).length;
-
-                return (
-                  <button
-                    key={cat.id}
-                    onClick={() => setSelectedCategory(cat.id)}
-                    className={`flex items-center gap-2 px-5 py-2.5 rounded-full font-headline font-bold text-xs uppercase tracking-wider transition-all duration-300 cursor-pointer ${isActive
-                      ? 'bg-gradient-to-r from-brandBlue to-brandSky text-white shadow-lg shadow-brandBlue/30 scale-102'
-                      : 'text-slate-400 hover:text-white hover:bg-slate-800/60'
-                      }`}
-                  >
-                    <Icon className="w-4 h-4" />
-                    <span>{cat.label}</span>
-                    <span className={`text-[10px] px-2 py-0.5 rounded-full font-extrabold ${isActive ? 'bg-white/20 text-white' : 'bg-slate-800 text-slate-400'
-                      }`}>
-                      {count}
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Platform Pills & Search Bar */}
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-slate-900/40 border border-slate-800/80 rounded-2xl p-4 backdrop-blur-md">
-            {/* Platform Filter Buttons */}
-            <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
-              <span className="text-[11px] font-bold text-slate-500 uppercase tracking-widest font-headline mr-1 hidden sm:inline">
-                Platform:
-              </span>
-              <button
-                onClick={() => setPlatformFilter('all')}
-                className={`px-3.5 py-1.5 rounded-xl text-xs font-headline font-semibold transition-all cursor-pointer ${platformFilter === 'all'
-                  ? 'bg-brandSky/20 text-brandSky border border-brandSky/40 shadow-sm'
-                  : 'bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-white'
-                  }`}
-              >
-                All Formats
-              </button>
-              <button
-                onClick={() => setPlatformFilter('youtube')}
-                className={`px-3.5 py-1.5 rounded-xl text-xs font-headline font-semibold transition-all cursor-pointer flex items-center gap-1.5 ${platformFilter === 'youtube'
-                  ? 'bg-rose-500/20 text-rose-400 border border-rose-500/40 shadow-sm'
-                  : 'bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-white'
-                  }`}
-              >
-                <Youtube className="w-3.5 h-3.5 text-rose-500" />
-                YouTube Reviews
-              </button>
-              <button
-                onClick={() => setPlatformFilter('instagram')}
-                className={`px-3.5 py-1.5 rounded-xl text-xs font-headline font-semibold transition-all cursor-pointer flex items-center gap-1.5 ${platformFilter === 'instagram'
-                  ? 'bg-pink-500/20 text-pink-400 border border-pink-500/40 shadow-sm'
-                  : 'bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-white'
-                  }`}
-              >
-                <Instagram className="w-3.5 h-3.5 text-pink-500" />
-                Instagram Reels
-              </button>
+        {/* ─── 4. SECTION HEADER & SEARCH ─── */}
+        <section className="mb-8 pt-2">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-800/80">
+            {/* Left: Clean Heading & Live Review Count */}
+            <div className="space-y-1">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-brandSky/10 border border-brandSky/20 rounded-full text-[10px] sm:text-xs font-bold font-headline uppercase tracking-wider text-brandSky">
+                <span className="w-1.5 h-1.5 rounded-full bg-brandSky animate-pulse" />
+                Verified Patient Stories
+              </div>
+              <h2 className="font-headline font-black text-2xl sm:text-3xl text-white tracking-tight flex items-baseline gap-2.5">
+                <span>All Patient Video Stories</span>
+                <span className="text-xs font-semibold text-slate-400 font-body">
+                  ({filteredVideos.length} {filteredVideos.length === 1 ? 'review' : 'reviews'})
+                </span>
+              </h2>
             </div>
 
-            {/* Search Box */}
-            <div className="relative w-full md:w-72 shrink-0">
-              <Search className="w-4 h-4 text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2" />
+            {/* Right: Sleek Search Bar */}
+            <div className="relative w-full sm:w-80 shrink-0">
+              <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
                 placeholder="Search patient, treatment, town..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 bg-slate-950/80 border border-slate-800 rounded-xl text-xs text-white placeholder-slate-500 focus:outline-none focus:border-brandSky transition-colors"
+                className="w-full pl-10 pr-9 py-2.5 bg-slate-900/90 border border-slate-800 hover:border-slate-700 focus:border-brandSky/60 rounded-xl text-xs text-white placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-brandSky/30 transition-all shadow-inner"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-white"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white transition-colors"
+                  aria-label="Clear search"
                 >
                   <X className="w-3.5 h-3.5" />
                 </button>
@@ -634,12 +570,6 @@ export default function VideoTestimonialsPage() {
 
         {/* ─── 5. VIDEO REEL GRID ─── */}
         <section className="space-y-6 mb-20">
-          <div className="flex items-center justify-between">
-            <p className="text-xs text-slate-400 font-semibold uppercase tracking-wider font-headline">
-              Showing <span className="text-brandSky font-bold">{filteredVideos.length}</span> Video Reviews
-            </p>
-          </div>
-
           {loading ? (
             <div className="py-20 flex justify-center items-center">
               <div className="w-10 h-10 border-4 border-brandBlue border-t-transparent rounded-full animate-spin"></div>
@@ -648,12 +578,12 @@ export default function VideoTestimonialsPage() {
             <div className="bg-slate-900/50 border border-slate-800 rounded-3xl p-12 text-center space-y-4">
               <Smile className="w-12 h-12 text-slate-600 mx-auto" />
               <h3 className="font-headline font-bold text-lg text-white">No video testimonials found</h3>
-              <p className="text-slate-400 text-xs">Try selecting another filter or clearing your search term.</p>
+              <p className="text-slate-400 text-xs">Try searching with a different name, procedure, or town.</p>
               <button
-                onClick={() => { setSelectedCategory('all'); setPlatformFilter('all'); setSearchQuery(''); }}
-                className="px-4 py-2 bg-brandBlue text-white text-xs font-bold rounded-xl font-headline"
+                onClick={() => setSearchQuery('')}
+                className="px-5 py-2.5 bg-gradient-to-r from-brandBlue to-brandSky text-white text-xs font-bold rounded-xl font-headline shadow-md hover:brightness-105 transition-all cursor-pointer"
               >
-                Reset All Filters
+                Clear Search
               </button>
             </div>
           ) : (

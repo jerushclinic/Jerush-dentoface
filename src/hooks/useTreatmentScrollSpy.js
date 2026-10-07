@@ -16,6 +16,15 @@ export function useTreatmentScrollSpy(sectionIds, headerOffset = 138) {
   // Stable key from section IDs to prevent effect re-runs on new array references
   const sectionIdsKey = (sectionIds || []).join(',');
 
+  // Dynamically calculate effective offset based on live --header-height and navbar visibility
+  const getDynamicOffset = useCallback(() => {
+    if (typeof window === 'undefined') return headerOffset;
+    const isNavHidden = document.documentElement.classList.contains('nav-hidden');
+    const computedH = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--header-height'));
+    const headerH = !isNaN(computedH) && computedH > 0 ? computedH : 80;
+    return (isNavHidden ? 0 : headerH) + 58;
+  }, [headerOffset]);
+
   // Function to smoothly scroll to a section when a tab is clicked
   const scrollToSection = useCallback((id) => {
     setActiveSection(id);
@@ -32,14 +41,15 @@ export function useTreatmentScrollSpy(sectionIds, headerOffset = 138) {
     const el = document.getElementById(id);
     if (el) {
       const elementPosition = el.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + (window.pageYOffset || window.scrollY) - headerOffset;
+      const effectiveOffset = getDynamicOffset();
+      const offsetPosition = elementPosition + (window.pageYOffset || window.scrollY) - effectiveOffset;
 
       window.scrollTo({
         top: Math.max(0, offsetPosition),
         behavior: 'smooth'
       });
     }
-  }, [headerOffset]);
+  }, [getDynamicOffset]);
 
   useEffect(() => {
     const ids = sectionIdsKey ? sectionIdsKey.split(',') : [];
@@ -71,8 +81,8 @@ export function useTreatmentScrollSpy(sectionIds, headerOffset = 138) {
           }
 
           // 3. Trigger line: effective offset where section top crosses sticky header + subnav
-          // Header (80px) + Subnav (~52px) + buffer (28px) = ~160px from top of viewport
-          const triggerLine = headerOffset + 24;
+          const effectiveOffset = getDynamicOffset();
+          const triggerLine = effectiveOffset + 24;
 
           let currentActive = ids[0];
 
@@ -80,8 +90,6 @@ export function useTreatmentScrollSpy(sectionIds, headerOffset = 138) {
             const el = document.getElementById(ids[i]);
             if (el) {
               const rect = el.getBoundingClientRect();
-              // When scrolling down, as soon as a section's top crosses the trigger line, it activates.
-              // When scrolling up, as soon as a section's top goes below the trigger line, the previous section activates.
               if (rect.top <= triggerLine) {
                 currentActive = ids[i];
               }

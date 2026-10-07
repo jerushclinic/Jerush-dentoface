@@ -55,7 +55,7 @@ export default function InfrastructureSection() {
           </p>
         </div>
 
-        {/* Enhanced Image Showcase Cards Grid (Hardware accelerated & optimized) */}
+        {/* Enhanced Image Showcase Cards Grid (Hardware accelerated & optimized with bulletproof corner clipping) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-6 xl:gap-7">
           {INFRASTRUCTURE_ITEMS.map((item, idx) => (
             <motion.div
@@ -65,7 +65,11 @@ export default function InfrastructureSection() {
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.45, delay: idx * 0.08, ease: [0.25, 0.1, 0.25, 1] }}
               whileHover={{ y: -8 }}
-              className="group relative h-[440px] sm:h-[480px] lg:h-[440px] xl:h-[470px] rounded-[28px] overflow-hidden bg-slate-900 border border-slate-200/70 dark:border-slate-800 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_40px_-10px_rgba(0,102,204,0.22)] hover:border-brandSky/50 transition-shadow transition-colors duration-300 flex flex-col justify-end cursor-pointer select-none transform-gpu"
+              style={{
+                WebkitMaskImage: '-webkit-radial-gradient(white, black)',
+                maskImage: 'radial-gradient(white, black)'
+              }}
+              className="group relative h-[440px] sm:h-[480px] lg:h-[440px] xl:h-[470px] rounded-[28px] overflow-hidden bg-slate-900 isolate shadow-[0_4px_20px_-4px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_45px_-10px_rgba(0,102,204,0.26)] transition-all duration-300 flex flex-col justify-end cursor-pointer select-none"
             >
               {/* Full Background Clinic Image */}
               <img
@@ -75,14 +79,17 @@ export default function InfrastructureSection() {
                 height="1000"
                 loading="lazy"
                 decoding="async"
-                className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105 transform-gpu"
+                className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105 will-change-transform"
               />
 
               {/* Enhanced Crystal-Clear Gradient Scrim */}
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/25 to-transparent pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/25 to-transparent pointer-events-none z-10"></div>
 
-              {/* Top Accent Gradient Bar on Hover */}
-              <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-brandBlue via-[#198BC8] to-brandSky transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left z-20"></div>
+              {/* Luminous Ambient Glow along Rounded Contour on Hover */}
+              <div className="absolute inset-0 bg-gradient-to-b from-brandSky/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10"></div>
+
+              {/* Crisp High-Precision Rounded Border Overlay */}
+              <div className="absolute inset-0 rounded-[28px] border border-slate-200/70 dark:border-slate-800 group-hover:border-brandSky/60 transition-colors duration-300 pointer-events-none z-20"></div>
 
               {/* Minimal Top Index Tag */}
               <div className="absolute top-4 left-4 z-20">

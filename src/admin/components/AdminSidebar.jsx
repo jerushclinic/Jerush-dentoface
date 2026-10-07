@@ -2,7 +2,8 @@ import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import {
   LayoutDashboard, Users, Stethoscope, FileText, Star,
-  Image, Settings, ChevronLeft, ChevronRight, X, LogOut, Briefcase, Users2, Calendar, Radio, HeartHandshake
+  Image, Settings, ChevronLeft, ChevronRight, X, LogOut, Briefcase, Users2, Calendar, Radio, HeartHandshake,
+  BadgeCheck
 } from 'lucide-react';
 import { useAdminAuth } from '../context/AdminAuthContext';
 
@@ -11,6 +12,7 @@ const NAV_ITEMS = [
   { path: '/admin/marquee', label: 'Marquee News', icon: Radio },
   { path: '/admin/events', label: 'Upcoming Events', icon: Calendar },
   { path: '/admin/camps', label: 'Camps', icon: HeartHandshake },
+  { path: '/admin/staff-profiles', label: 'Staff Profiles', icon: BadgeCheck },
   { path: '/admin/doctors', label: 'Doctors', icon: Users },
   { path: '/admin/treatments', label: 'Treatments', icon: Stethoscope },
   { path: '/admin/blog', label: 'Blog', icon: FileText },

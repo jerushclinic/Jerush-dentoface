@@ -1,31 +1,87 @@
+# ----------------------------------------------------------------------
+# Jerush Dentofacial & Cosmetic Laser Centre - Production .htaccess
+# Optimized for React Single Page Application (SPA), LiteSpeed & Apache
+# ----------------------------------------------------------------------
+
 Options -MultiViews
 
-# Ensure proper MIME types for JavaScript, CSS, and WebP
+# 1. Ensure proper MIME types for modern web assets
 <IfModule mod_mime.c>
   AddType application/javascript .js .mjs
   AddType text/css .css
   AddType image/webp .webp
+  AddType image/svg+xml .svg
+  AddType font/woff2 .woff2
+  AddType font/woff .woff
 </IfModule>
 
-# Prevent search engines from indexing the development site
+# 2. GZIP / Deflate Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json image/svg+xml
+</IfModule>
+
+# 3. Browser Caching (Aggressive caching for hashed assets, zero-cache for index.html)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+
+  # HTML & Manifest (no cache for fast app updates)
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType application/json "access plus 0 seconds"
+
+  # Hashed Vite CSS & JS
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+
+  # Media & Fonts
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+</IfModule>
+
+# 4. Security & Environment Headers
 <IfModule mod_headers.c>
+  # Protect dev staging site from search engine indexation
   SetEnvIf Host "^dev\.jerushdentoface\.com$" IS_DEV_SITE
   Header set X-Robots-Tag "noindex, nofollow" env=IS_DEV_SITE
+
+  # Security headers
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-XSS-Protection "1; mode=block"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
 
+# 5. URL Rewriting & SPA Routing
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
-  # Pass Authorization header through to PHP
+  # Force HTTPS (optional - uncomment if SSL is active and not handled by Cloudflare)
+  # RewriteCond %{HTTPS} off
+  # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Pass Authorization header through to PHP scripts (/api/)
   RewriteCond %{HTTP:Authorization} ^(.*)
   RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
 
+  # Direct pass-through for backend API endpoints and uploads folder
+  RewriteRule ^api/ - [L]
+  RewriteRule ^uploads/ - [L]
+
+  # Never rewrite existing index.html
   RewriteRule ^index\.html$ - [L]
 
-  # Do NOT rewrite static assets to index.html if missing (prevents MIME type error)
-  RewriteCond %{REQUEST_URI} !^.*\.(js|css|png|jpg|jpeg|gif|webp|svg|ico|woff|woff2|ttf|eot)$ [NC]
+  # Do NOT rewrite missing static asset extensions to index.html (prevents MIME type errors)
+  RewriteCond %{REQUEST_URI} !^.*\.(js|css|png|jpg|jpeg|gif|webp|svg|ico|woff|woff2|ttf|eot|mp4|webm)$ [NC]
+
+  # Fallback all other missing routes to React SPA index.html
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . index.html [L]
+  RewriteRule . /index.html [L]
 </IfModule>

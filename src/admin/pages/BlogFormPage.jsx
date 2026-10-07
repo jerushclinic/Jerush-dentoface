@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { ArrowLeft, Save, Eye, ChevronDown, Plus, Undo, Redo } from 'lucide-react';
+import { ArrowLeft, Save, Eye, ChevronDown, Plus, Undo, Redo, ExternalLink, Link as LinkIcon, Unlink, X, Check } from 'lucide-react';
 import { blogService } from '../../services/blogService';
 import { doctorService } from '../../services/doctorService';
 import useUndoRedo from '../hooks/useUndoRedo';
@@ -13,6 +13,21 @@ const EMPTY_BLOG = {
 };
 
 const DEFAULT_CATEGORIES = ['Orthodontics', 'Dermatology', 'Hair Care', 'Oral Surgery', 'Cosmetic', 'General'];
+
+const WEBSITE_INTERLINKS = [
+  { label: 'All Treatments Catalogue', url: '/treatments' },
+  { label: 'Anti-Dandruff Treatment', url: '/treatments/anti-dandruff-treatment' },
+  { label: 'GFC Hair Therapy', url: '/hair-restoration-treatments/gfc-growth-factor-concentrate' },
+  { label: 'Hair Transplantation', url: '/hair-restoration-treatments/hair-transplant' },
+  { label: 'Clear Aligners (Jerushaligne)', url: '/dental-treatments/top-quality-invisible-clear-aligners-jerushaligne' },
+  { label: 'Dental Implants', url: '/dental-implants' },
+  { label: 'Root Canal Treatment', url: '/dental-treatments/root-canal-treatment-in-tamilnadu' },
+  { label: 'Fractional CO2 Laser', url: '/cosmetic-dermatology-laser-treatments/fractional-co2-laser' },
+  { label: 'Oral Pathology Screening', url: '/dental-treatments/oral-pathology-screening' },
+  { label: 'Smile Transformations', url: '/smile-transformations' },
+  { label: 'Meet Our Doctors', url: '/doctors' },
+  { label: 'Book Appointment / Contact', url: '/contact' }
+];
 
 export default function BlogFormPage() {
   const navigate = useNavigate();
@@ -43,13 +58,20 @@ export default function BlogFormPage() {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [activeBlockLabel, setActiveBlockLabel] = useState('Normal');
 
+  // Link Management states
+  const [linkModalOpen, setLinkModalOpen] = useState(false);
+  const [linkFormData, setLinkFormData] = useState({ text: '', url: '', openInNewTab: false });
+  const [activeLinkPopover, setActiveLinkPopover] = useState(null);
+  const savedRangeRef = useRef(null);
+  const editingLinkNodeRef = useRef(null);
+
   // Custom Category states
   const [categoriesList, setCategoriesList] = useState(DEFAULT_CATEGORIES);
   const [showCustomCategoryInput, setShowCustomCategoryInput] = useState(false);
   const [customCategory, setCustomCategory] = useState('');
 
   const editorRef = useRef(null);
-  const lastLoadedSlug = useRef('');
+  const isInternalChange = useRef(false);
 
   const headingOptions = [
     { label: 'Normal', value: '<p>' },
@@ -89,15 +111,19 @@ export default function BlogFormPage() {
     }
   }, [editSlug, resetForm]);
 
-  // Sync content Editable with state on initial load / mode toggles
+  // Sync content Editable with state on initial load, async data fetch, mode toggles, and undo/redo
   useEffect(() => {
     if (editorRef.current && editorMode === 'visual') {
-      if (lastLoadedSlug.current !== editSlug || editorRef.current.innerHTML === '') {
-        editorRef.current.innerHTML = form.content || '<p><br></p>';
-        lastLoadedSlug.current = editSlug || 'new';
+      if (isInternalChange.current) {
+        isInternalChange.current = false;
+        return;
+      }
+      const targetHtml = form.content || '<p><br></p>';
+      if (editorRef.current.innerHTML !== targetHtml) {
+        editorRef.current.innerHTML = targetHtml;
       }
     }
-  }, [editSlug, editorMode]);
+  }, [form.content, editorMode]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -110,10 +136,205 @@ export default function BlogFormPage() {
     }
   };
 
+  const handleSwitchMode = (newMode) => {
+    if (newMode === editorMode) return;
+    if (newMode === 'html') {
+      if (editorRef.current) {
+        setForm(prev => ({ ...prev, content: editorRef.current.innerHTML }));
+      }
+      setEditorMode('html');
+    } else {
+      setEditorMode('visual');
+    }
+  };
+
   const handleVisualInput = () => {
     if (editorRef.current) {
+      isInternalChange.current = true;
       const html = editorRef.current.innerHTML;
       setForm(prev => ({ ...prev, content: html }));
+    }
+  };
+
+  const openLinkModal = (existingLinkNode = null) => {
+    setActiveLinkPopover(null);
+    const sel = window.getSelection();
+
+    if (existingLinkNode) {
+      editingLinkNodeRef.current = existingLinkNode;
+      const href = existingLinkNode.getAttribute('href') || '';
+      const text = existingLinkNode.textContent || '';
+      const isNewTab = existingLinkNode.getAttribute('target') === '_blank';
+      setLinkFormData({ text, url: href, openInNewTab: isNewTab });
+      savedRangeRef.current = null;
+    } else {
+      editingLinkNodeRef.current = null;
+      let selectedText = '';
+      if (sel && sel.rangeCount > 0) {
+        const range = sel.getRangeAt(0);
+        const parentLink = range.commonAncestorContainer?.nodeType === 1 
+          ? range.commonAncestorContainer.closest('a')
+          : range.commonAncestorContainer?.parentElement?.closest('a');
+        
+        if (parentLink && editorRef.current?.contains(parentLink)) {
+          editingLinkNodeRef.current = parentLink;
+          setLinkFormData({
+            text: parentLink.textContent || '',
+            url: parentLink.getAttribute('href') || '',
+            openInNewTab: parentLink.getAttribute('target') === '_blank'
+          });
+          savedRangeRef.current = null;
+          setLinkModalOpen(true);
+          return;
+        }
+
+        savedRangeRef.current = range.cloneRange();
+        selectedText = range.toString();
+      }
+      setLinkFormData({
+        text: selectedText,
+        url: '',
+        openInNewTab: false
+      });
+    }
+    setLinkModalOpen(true);
+  };
+
+  const handleSaveLink = () => {
+    let rawUrl = (linkFormData.url || '').trim();
+    if (!rawUrl) return;
+
+    let normalizedUrl = rawUrl;
+    if (
+      !normalizedUrl.startsWith('http://') &&
+      !normalizedUrl.startsWith('https://') &&
+      !normalizedUrl.startsWith('/') &&
+      !normalizedUrl.startsWith('#') &&
+      !normalizedUrl.startsWith('mailto:') &&
+      !normalizedUrl.startsWith('tel:')
+    ) {
+      normalizedUrl = `https://${normalizedUrl}`;
+    }
+
+    const textToDisplay = linkFormData.text?.trim() || normalizedUrl;
+
+    if (editingLinkNodeRef.current && editorRef.current?.contains(editingLinkNodeRef.current)) {
+      const a = editingLinkNodeRef.current;
+      a.setAttribute('href', normalizedUrl);
+      a.textContent = textToDisplay;
+      if (linkFormData.openInNewTab) {
+        a.setAttribute('target', '_blank');
+        a.setAttribute('rel', 'noopener noreferrer');
+      } else {
+        a.removeAttribute('target');
+        a.removeAttribute('rel');
+      }
+      editingLinkNodeRef.current = null;
+    } else {
+      if (savedRangeRef.current) {
+        const sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(savedRangeRef.current);
+
+        const a = document.createElement('a');
+        a.href = normalizedUrl;
+        a.textContent = textToDisplay;
+        if (linkFormData.openInNewTab) {
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+        }
+
+        savedRangeRef.current.deleteContents();
+        savedRangeRef.current.insertNode(a);
+        
+        const newRange = document.createRange();
+        newRange.setStartAfter(a);
+        newRange.collapse(true);
+        sel.removeAllRanges();
+        sel.addRange(newRange);
+      } else if (editorRef.current) {
+        const targetBlank = linkFormData.openInNewTab ? ' target="_blank" rel="noopener noreferrer"' : '';
+        const linkHtml = `<a href="${normalizedUrl}"${targetBlank}>${textToDisplay}</a>&nbsp;`;
+        const sel = window.getSelection();
+        if (sel && sel.rangeCount > 0 && editorRef.current.contains(sel.anchorNode)) {
+          insertHTMLAtCursor(linkHtml);
+        } else {
+          editorRef.current.focus();
+          const p = editorRef.current.querySelector('p:last-child') || editorRef.current;
+          const a = document.createElement('a');
+          a.href = normalizedUrl;
+          a.textContent = textToDisplay;
+          if (linkFormData.openInNewTab) {
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+          }
+          p.appendChild(a);
+          p.appendChild(document.createTextNode(' '));
+        }
+      }
+    }
+
+    handleVisualInput();
+    setLinkModalOpen(false);
+  };
+
+  const handleUnlink = (linkNode = null) => {
+    const targetLink = linkNode || editingLinkNodeRef.current;
+    if (targetLink && editorRef.current?.contains(targetLink)) {
+      const text = targetLink.textContent;
+      const textNode = document.createTextNode(text);
+      targetLink.parentNode?.replaceChild(textNode, targetLink);
+      handleVisualInput();
+    }
+    setActiveLinkPopover(null);
+    setLinkModalOpen(false);
+  };
+
+  const handleEditorClick = (e) => {
+    const linkEl = e.target.closest('a');
+    if (linkEl && editorRef.current?.contains(linkEl)) {
+      e.preventDefault();
+      const rect = linkEl.getBoundingClientRect();
+      const editorRect = editorRef.current.getBoundingClientRect();
+      setActiveLinkPopover({
+        element: linkEl,
+        url: linkEl.getAttribute('href') || '',
+        text: linkEl.textContent || '',
+        top: rect.bottom - editorRect.top + editorRef.current.scrollTop + 6,
+        left: Math.max(8, Math.min(rect.left - editorRect.left, editorRect.width - 280))
+      });
+      return;
+    }
+    if (activeLinkPopover) {
+      setActiveLinkPopover(null);
+    }
+  };
+
+  const handlePaste = (e) => {
+    const clipboardData = e.clipboardData;
+    if (!clipboardData) return;
+
+    const html = clipboardData.getData('text/html');
+    if (html && html.includes('docs-internal-guid')) {
+      e.preventDefault();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+
+      doc.querySelectorAll('span[id^="docs-internal-guid"]').forEach(el => {
+        el.removeAttribute('id');
+        el.removeAttribute('style');
+      });
+
+      doc.querySelectorAll('span').forEach(span => {
+        span.style.removeProperty('font-family');
+        span.style.removeProperty('font-size');
+        span.style.removeProperty('background-color');
+        span.style.removeProperty('line-height');
+        span.style.removeProperty('white-space');
+      });
+
+      insertHTMLAtCursor(doc.body.innerHTML);
+      handleVisualInput();
     }
   };
 
@@ -417,7 +638,7 @@ export default function BlogFormPage() {
                   <div className="flex gap-1 p-0.5 bg-white/30 dark:bg-slate-950/40 rounded-xl border border-white/30 dark:border-slate-800/70">
                     <button
                       type="button"
-                      onClick={() => setEditorMode('visual')}
+                      onClick={() => handleSwitchMode('visual')}
                       className={`px-3 py-1 rounded-lg text-[9px] font-extrabold uppercase tracking-wider transition-all ${
                         editorMode === 'visual'
                           ? 'bg-gradient-to-r from-brandBlue to-brandSky text-white shadow-sm'
@@ -428,7 +649,7 @@ export default function BlogFormPage() {
                     </button>
                     <button
                       type="button"
-                      onClick={() => setEditorMode('html')}
+                      onClick={() => handleSwitchMode('html')}
                       className={`px-3 py-1 rounded-lg text-[9px] font-extrabold uppercase tracking-wider transition-all ${
                         editorMode === 'html'
                           ? 'bg-gradient-to-r from-brandBlue to-brandSky text-white shadow-sm'
@@ -546,12 +767,15 @@ export default function BlogFormPage() {
                       {/* Link */}
                       <button
                         type="button"
-                        onClick={() => {
-                          const url = prompt('Enter website link URL (e.g. https://google.com):');
-                          if (url) execFormatter('createLink', url);
+                        onMouseDown={() => {
+                          const sel = window.getSelection();
+                          if (sel && sel.rangeCount > 0) {
+                            savedRangeRef.current = sel.getRangeAt(0).cloneRange();
+                          }
                         }}
-                        className="p-1.5 hover:bg-white/80 dark:hover:bg-slate-800/80 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
-                        title="Insert Link"
+                        onClick={() => openLinkModal()}
+                        className="p-1.5 hover:bg-white/80 dark:hover:bg-slate-800/80 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors"
+                        title="Insert / Edit Link"
                       >
                         <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
@@ -635,7 +859,7 @@ export default function BlogFormPage() {
                                 }}
                                 className="w-full flex items-center gap-2.5 px-3 py-2 text-xs rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 text-left font-bold transition-colors"
                               >
-                                <div className="w-5 h-5 rounded bg-blue-500/10 flex items-center justify-center text-blue-500 text-[10px] font-extrabold">💡</div>
+                                <div className="w-5 h-5 rounded bg-brandSky/15 flex items-center justify-center text-brandBlue text-[10px] font-extrabold">💡</div>
                                 Callout / Highlight
                               </button>
                               <button
@@ -673,7 +897,7 @@ export default function BlogFormPage() {
 
                     {/* Visual Editor Content Area */}
                     <div 
-                      className={`p-3 bg-white dark:bg-slate-950 border-t border-slate-200/60 dark:border-slate-800/80 ${isFullscreen ? 'fixed inset-0 z-[9999] bg-slate-900/95 backdrop-blur-2xl p-10 flex flex-col justify-start' : ''}`}
+                      className={`relative p-3 bg-white dark:bg-slate-950 border-t border-slate-200/60 dark:border-slate-800/80 ${isFullscreen ? 'fixed inset-0 z-[9999] bg-slate-900/95 backdrop-blur-2xl p-10 flex flex-col justify-start' : ''}`}
                     >
                       {isFullscreen && (
                         <div className="max-w-4xl mx-auto w-full flex items-center justify-between pb-4 border-b border-slate-800 mb-6">
@@ -692,10 +916,65 @@ export default function BlogFormPage() {
                         ref={editorRef}
                         contentEditable={true}
                         onInput={handleVisualInput}
+                        onClick={handleEditorClick}
+                        onPaste={handlePaste}
                         className={`blog-content-area min-h-[380px] outline-none overflow-y-auto p-4 bg-slate-50/30 dark:bg-slate-900/20 border border-slate-100 dark:border-slate-800/50 rounded-xl text-slate-900 dark:text-slate-105 ${
                           isFullscreen ? 'max-w-4xl mx-auto w-full bg-slate-950/50 p-8 rounded-2xl border border-slate-800 flex-1' : 'max-h-[500px]'
                         }`}
                       />
+
+                      {/* Floating Link Action Popover */}
+                      {activeLinkPopover && (
+                        <div
+                          style={{ top: `${activeLinkPopover.top}px`, left: `${activeLinkPopover.left}px` }}
+                          className="absolute z-50 flex items-center gap-1.5 p-1.5 bg-slate-900/95 dark:bg-slate-850/95 text-white backdrop-blur-md border border-slate-700 rounded-xl shadow-2xl text-xs animate-fadeIn"
+                        >
+                          <span className="max-w-[180px] truncate text-[11px] text-slate-300 font-mono pl-1.5" title={activeLinkPopover.url}>
+                            {activeLinkPopover.url}
+                          </span>
+                          <div className="h-4 w-[1px] bg-slate-700 mx-0.5" />
+                          <button
+                            type="button"
+                            onClick={() => {
+                              const testUrl = activeLinkPopover.url.startsWith('/') 
+                                ? activeLinkPopover.url 
+                                : activeLinkPopover.url.startsWith('http') 
+                                  ? activeLinkPopover.url 
+                                  : `https://${activeLinkPopover.url}`;
+                              window.open(testUrl, '_blank', 'noopener,noreferrer');
+                            }}
+                            className="p-1 hover:bg-slate-800 text-brandSky hover:text-white rounded-lg transition-colors flex items-center gap-1 text-[10px] font-bold px-1.5"
+                            title="Open / Test Link in New Tab"
+                          >
+                            <ExternalLink className="w-3 h-3" />
+                            Open
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => openLinkModal(activeLinkPopover.element)}
+                            className="p-1 hover:bg-slate-800 text-slate-300 hover:text-white rounded-lg transition-colors flex items-center gap-1 text-[10px] font-bold px-1.5"
+                            title="Edit Link"
+                          >
+                            Edit
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => handleUnlink(activeLinkPopover.element)}
+                            className="p-1 hover:bg-red-950/60 text-red-400 hover:text-red-300 rounded-lg transition-colors flex items-center gap-1 text-[10px] font-bold px-1.5"
+                            title="Remove Link"
+                          >
+                            <Unlink className="w-3 h-3" />
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setActiveLinkPopover(null)}
+                            className="p-1 hover:bg-slate-800 text-slate-400 hover:text-white rounded-lg transition-colors"
+                            title="Close"
+                          >
+                            <X className="w-3 h-3" />
+                          </button>
+                        </div>
+                      )}
                     </div>
                   </div>
                 ) : (
@@ -956,6 +1235,137 @@ export default function BlogFormPage() {
                   Insert Image
                 </button>
               )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Link Modal Dialog */}
+      {linkModalOpen && (
+        <div className="fixed inset-0 z-[10000] flex items-center justify-center bg-slate-950/60 backdrop-blur-sm animate-fadeIn">
+          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 w-full max-w-lg shadow-2xl space-y-4 relative mx-4 text-left">
+            <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-xl bg-brandBlue/10 dark:bg-brandBlue/20 flex items-center justify-center text-brandBlue dark:text-brandSky">
+                  <LinkIcon className="w-4 h-4" />
+                </div>
+                <div>
+                  <h3 className="font-headline font-extrabold text-sm text-slate-900 dark:text-white">
+                    {editingLinkNodeRef.current ? 'Edit Link' : 'Insert Link'}
+                  </h3>
+                  <p className="text-[10px] text-slate-400">Add an external link or internal website page</p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setLinkModalOpen(false)}
+                className="p-1.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            {/* Link Text */}
+            <div className="space-y-1.5">
+              <label className={labelCls}>Text to Display</label>
+              <input
+                type="text"
+                value={linkFormData.text}
+                onChange={(e) => setLinkFormData(prev => ({ ...prev, text: e.target.value }))}
+                placeholder="e.g. anti-dandruff treatment in Chennai"
+                className={inputCls}
+              />
+            </div>
+
+            {/* Link URL */}
+            <div className="space-y-1.5">
+              <label className={labelCls}>Destination URL / Path</label>
+              <input
+                type="text"
+                value={linkFormData.url}
+                onChange={(e) => setLinkFormData(prev => ({ ...prev, url: e.target.value }))}
+                placeholder="https://... or /treatments/anti-dandruff-treatment"
+                className={inputCls}
+                autoFocus
+              />
+            </div>
+
+            {/* Quick Website Interlink Suggestions */}
+            <div className="space-y-2 pt-1">
+              <label className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">
+                ⚡ Quick Website Interlinks (Click to Select)
+              </label>
+              <div className="flex flex-wrap gap-1.5 max-h-36 overflow-y-auto p-1.5 bg-slate-50 dark:bg-slate-950/60 rounded-xl border border-slate-100 dark:border-slate-800/80">
+                {WEBSITE_INTERLINKS.map((item, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => {
+                      setLinkFormData(prev => ({
+                        ...prev,
+                        url: item.url,
+                        text: prev.text || item.label
+                      }));
+                    }}
+                    className={`px-2.5 py-1 text-[11px] font-semibold rounded-lg border transition-all text-left flex items-center gap-1 ${
+                      linkFormData.url === item.url
+                        ? 'bg-brandBlue text-white border-brandBlue shadow-sm'
+                        : 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-brandSky hover:text-brandBlue'
+                    }`}
+                  >
+                    <span>{item.label}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Target blank toggle */}
+            <div className="flex items-center gap-2 pt-1">
+              <label className="flex items-center gap-2 text-xs font-semibold text-slate-700 dark:text-slate-300 cursor-pointer select-none">
+                <input
+                  type="checkbox"
+                  checked={linkFormData.openInNewTab}
+                  onChange={(e) => setLinkFormData(prev => ({ ...prev, openInNewTab: e.target.checked }))}
+                  className="rounded border-slate-300 text-brandBlue focus:ring-brandSky w-4 h-4"
+                />
+                Open link in new tab (target="_blank")
+              </label>
+            </div>
+
+            {/* Modal Actions */}
+            <div className="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-slate-800">
+              {editingLinkNodeRef.current ? (
+                <button
+                  type="button"
+                  onClick={() => handleUnlink(editingLinkNodeRef.current)}
+                  className="px-3 py-2 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/30 rounded-xl text-xs font-bold transition-colors flex items-center gap-1"
+                >
+                  <Unlink className="w-3.5 h-3.5" />
+                  Remove Link
+                </button>
+              ) : <div />}
+
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => setLinkModalOpen(false)}
+                  className="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-650 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-xl text-xs font-bold transition-colors"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="button"
+                  onClick={handleSaveLink}
+                  disabled={!linkFormData.url.trim()}
+                  className={`px-4 py-2 rounded-xl text-xs font-bold shadow-md transition-all ${
+                    linkFormData.url.trim()
+                      ? 'bg-gradient-to-r from-brandBlue to-brandSky text-white hover:shadow-lg active:scale-95'
+                      : 'bg-slate-200 dark:bg-slate-800 text-slate-400 cursor-not-allowed'
+                  }`}
+                >
+                  {editingLinkNodeRef.current ? 'Update Link' : 'Insert Link'}
+                </button>
+              </div>
             </div>
           </div>
         </div>

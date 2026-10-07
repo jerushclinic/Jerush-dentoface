@@ -15,8 +15,6 @@ export default function AdminMarquee() {
   });
 
   const [loading, setLoading] = useState(true);
-  const [savingSettings, setSavingSettings] = useState(false);
-  const [savedSettingsSuccess, setSavedSettingsSuccess] = useState(false);
 
   // Modal State
   const [modalOpen, setModalOpen] = useState(false);
@@ -60,17 +58,19 @@ export default function AdminMarquee() {
     fetchData();
   }, []);
 
-  const handleSaveSettings = async () => {
-    setSavingSettings(true);
+  const handleUpdateSetting = async (key, value) => {
+    const updated = { ...settings, [key]: value };
+    setSettings(updated);
     try {
-      await marqueeService.updateSettings(settings);
-      setSavedSettingsSuccess(true);
-      setTimeout(() => setSavedSettingsSuccess(false), 2500);
+      await marqueeService.updateSettings(updated);
     } catch (e) {
-      console.error(e);
-    } finally {
-      setSavingSettings(false);
+      console.error("Failed to auto-save marquee setting:", e);
     }
+  };
+
+  const handleToggleMarquee = async () => {
+    const nextEnabled = !settings.enabled;
+    await handleUpdateSetting('enabled', nextEnabled);
   };
 
   const handleToggleItemActive = async (item) => {
@@ -218,17 +218,10 @@ export default function AdminMarquee() {
             </h3>
           </div>
 
-          <button
-            onClick={handleSaveSettings}
-            disabled={savingSettings}
-            className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-xl font-headline font-bold text-xs uppercase tracking-wider transition-all shadow-sm ${savedSettingsSuccess
-                ? 'bg-emerald-500 text-white'
-                : 'bg-brandBlue hover:bg-brandBlue/90 text-white'
-              }`}
-          >
-            <Save className="w-3.5 h-3.5" />
-            {savedSettingsSuccess ? 'Saved!' : 'Save Controls'}
-          </button>
+          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-[10px] font-bold uppercase tracking-wider border border-emerald-500/20">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+            <span>Auto-Saves Instantly</span>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -244,7 +237,7 @@ export default function AdminMarquee() {
             </div>
             <button
               type="button"
-              onClick={() => setSettings({ ...settings, enabled: !settings.enabled })}
+              onClick={handleToggleMarquee}
               className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none ${settings.enabled ? 'bg-emerald-500' : 'bg-slate-300 dark:bg-slate-700'
                 }`}
             >
@@ -260,7 +253,7 @@ export default function AdminMarquee() {
             <label className={labelCls}>Bar Theme Background</label>
             <select
               value={settings.theme}
-              onChange={(e) => setSettings({ ...settings, theme: e.target.value })}
+              onChange={(e) => handleUpdateSetting('theme', e.target.value)}
               className={inputCls}
             >
               <option value="dark-gradient">Dark Royal Gradient (Default)</option>
@@ -276,7 +269,7 @@ export default function AdminMarquee() {
             <label className={labelCls}>Scroll Speed</label>
             <select
               value={settings.speed}
-              onChange={(e) => setSettings({ ...settings, speed: e.target.value })}
+              onChange={(e) => handleUpdateSetting('speed', e.target.value)}
               className={inputCls}
             >
               <option value="slow">Slow & Relaxed (90s)</option>
@@ -291,7 +284,7 @@ export default function AdminMarquee() {
             <input
               type="text"
               value={settings.liveBadgeText}
-              onChange={(e) => setSettings({ ...settings, liveBadgeText: e.target.value })}
+              onChange={(e) => handleUpdateSetting('liveBadgeText', e.target.value)}
               placeholder="e.g. LIVE UPDATES"
               className={inputCls}
             />

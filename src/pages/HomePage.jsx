@@ -58,14 +58,8 @@ export default function HomePage() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.4, ease: 'easeOut' }}
     >
-      {/* Hero slides in immediately */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      >
-        <HeroSection />
-      </motion.div>
+      {/* Hero section rendered at true 100% viewport height with zero vertical offset */}
+      <HeroSection />
 
       {/* Upcoming Events Book Journal Banner Showcase */}
       <SectionReveal>

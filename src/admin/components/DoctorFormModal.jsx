@@ -5,7 +5,7 @@ import TagInput from './TagInput';
 import useUndoRedo from '../hooks/useUndoRedo';
 
 const EMPTY_DOCTOR = {
-  name: '', role: '', qualification: '', experience: '', image: '', fallbackImg: '', bio: '', schedule: '', specialties: []
+  name: '', role: '', qualification: '', experience: '', image: '', fallbackImg: '', bio: '', schedule: '', specialties: [], sort_order: ''
 };
 
 export default function DoctorFormModal({ open, onClose, onSave, doctor }) {
@@ -80,7 +80,8 @@ export default function DoctorFormModal({ open, onClose, onSave, doctor }) {
   };
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value }, false); // false = debounced history save
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: name === 'sort_order' ? (value === '' ? '' : Number(value)) : value }, false); // false = debounced history save
   };
 
   const handleSubmit = (e) => {
@@ -106,7 +107,7 @@ export default function DoctorFormModal({ open, onClose, onSave, doctor }) {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           <div>
             <label className={labelCls}>Qualification</label>
             <input name="qualification" value={form.qualification || ''} onChange={handleChange} placeholder="e.g. MBBS, MDS, PHD" className={inputCls} />
@@ -114,6 +115,19 @@ export default function DoctorFormModal({ open, onClose, onSave, doctor }) {
           <div>
             <label className={labelCls}>Experience</label>
             <input name="experience" value={form.experience || ''} onChange={handleChange} placeholder="e.g. 15+ Years Experience" className={inputCls} />
+          </div>
+          <div>
+            <label className={labelCls}>Display Position</label>
+            <input 
+              name="sort_order" 
+              type="number" 
+              min="1" 
+              value={form.sort_order ?? ''} 
+              onChange={handleChange} 
+              placeholder="e.g. 1" 
+              className={inputCls} 
+            />
+            <p className="text-[9px] text-slate-400 mt-1">Order on site (1 = First)</p>
           </div>
         </div>
 
@@ -246,10 +260,10 @@ export default function DoctorFormModal({ open, onClose, onSave, doctor }) {
           </div>
           
           <div className="flex gap-3 justify-end">
-            <button type="button" onClick={onClose} className="px-5 py-2.5 rounded-xl text-xs font-bold text-slate-500 dark:text-slate-400 hover:text-slate-750 dark:hover:text-slate-300 hover:bg-slate-100/80 dark:hover:bg-slate-800/50 transition-colors">
+            <button type="button" onClick={onClose} className="px-5 py-2.5 rounded-xl text-xs font-bold text-slate-500 dark:text-slate-400 hover:text-slate-750 dark:hover:text-slate-300 hover:bg-slate-100/80 dark:hover:bg-slate-800/50 transition-colors cursor-pointer border-none">
               Cancel
             </button>
-            <button type="submit" className="px-6 py-2.5 bg-gradient-to-r from-brandBlue to-brandSky text-white rounded-xl font-headline font-bold text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition-all active:scale-95">
+            <button type="submit" className="px-6 py-2.5 bg-gradient-to-r from-brandBlue to-brandSky text-white rounded-xl font-headline font-bold text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition-all active:scale-95 cursor-pointer border-none">
               {doctor ? 'Save Changes' : 'Add Doctor'}
             </button>
           </div>

@@ -78,7 +78,7 @@ export default function CareersPage() {
   return (
     <div className="bg-slate-50/50 text-slate-800 min-h-screen pt-0 font-body relative overflow-hidden text-left">
       {/* Hero Banner Slider (100% Full Viewport Height across all responsive devices) */}
-      <section className="relative w-full h-[100dvh] min-h-[540px] bg-slate-950 text-white overflow-hidden flex flex-col justify-center py-12 sm:py-16">
+      <section className="relative w-full h-[100dvh] xl:h-[calc(100dvh-var(--topbar-height,44px))] min-h-[540px] bg-slate-950 text-white overflow-hidden flex flex-col justify-center py-12 sm:py-16">
         {HERO_SLIDES.map((slide, idx) => (
           <motion.div
             key={idx}
@@ -372,7 +372,7 @@ export default function CareersPage() {
             ].map((feature, idx) => (
               <div
                 key={idx}
-                className="relative group rounded-3xl p-6 sm:p-8 backdrop-blur-md bg-white/70 hover:bg-white/90 border border-white/80 hover:border-brandSky/50 shadow-[0_8px_25px_-5px_rgba(40,83,164,0.06),inset_0_1px_1px_rgba(255,255,255,0.9)] hover:shadow-[0_16px_35px_rgba(40,83,164,0.12),inset_0_1px_1px_rgba(255,255,255,1)] transition-all duration-300 ease-out hover:-translate-y-1.5 transform-gpu will-change-transform flex flex-col items-start overflow-hidden text-left"
+                className="relative group rounded-3xl p-6 sm:p-8 backdrop-blur-md bg-white/70 hover:bg-white/90 border border-white/80 hover:border-brandSky/50 shadow-[0_8px_25px_-5px_rgba(40,83,164,0.06),inset_0_1px_1px_rgba(255,255,255,0.9)] hover:shadow-[0_16px_35px_rgba(40,83,164,0.12),inset_0_1px_1px_rgba(255,255,255,1)] transition-all duration-300 ease-out transform-gpu flex flex-col items-start overflow-hidden text-left"
               >
                 {/* Top specular highlight line (Apple signature glass edge shine) */}
                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent pointer-events-none" />

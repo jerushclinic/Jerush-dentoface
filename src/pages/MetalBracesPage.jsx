@@ -859,7 +859,7 @@ export default function MetalBracesPage() {
             {WHAT_WE_FIX.map((item, idx) => (
               <div
                 key={idx}
-                className="rounded-3xl bg-white border border-slate-200/80 overflow-hidden shadow-xs hover:shadow-xl hover:border-brandSky/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
+                className="rounded-3xl bg-white border border-slate-200/80 overflow-hidden shadow-xs hover:shadow-xl hover:border-brandSky/50 transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <div className="relative aspect-square w-full overflow-hidden bg-slate-100 border-b border-slate-100">

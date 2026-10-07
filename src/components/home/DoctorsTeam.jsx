@@ -134,7 +134,7 @@ export default function DoctorsTeam({ doctors }) {
             <div
               key={doc.id}
               onClick={() => setSelectedDoctor(doc)}
-              className="jerush-doctor-card rounded-3xl p-5 bg-gradient-to-b from-blue-50/40 via-sky-50/20 to-white border border-slate-200/60 hover:border-brandSky/40 shadow-[0_4px_20px_rgba(40,83,164,0.05)] hover:shadow-[0_12px_32px_rgba(40,83,164,0.10)] hover:-translate-y-1 transition-all duration-300 ease-out shrink-0 w-[85%] sm:w-[280px] md:w-[calc((100%-24px)/2)] lg:w-[calc((100%-72px)/4)] snap-start cursor-pointer group flex flex-col justify-between relative overflow-hidden"
+              className="jerush-doctor-card rounded-3xl p-5 bg-gradient-to-b from-blue-50/40 via-sky-50/20 to-white border border-slate-200/60 hover:border-brandSky/50 shadow-[0_4px_20px_rgba(40,83,164,0.05)] hover:shadow-[0_14px_34px_rgba(40,83,164,0.12)] transition-all duration-300 ease-out shrink-0 w-[85%] sm:w-[280px] md:w-[calc((100%-24px)/2)] lg:w-[calc((100%-72px)/4)] snap-start cursor-pointer group flex flex-col justify-between relative overflow-hidden"
             >
               {/* Soft glow accents */}
               <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-brandSky/5 group-hover:bg-gradient-to-br group-hover:from-brandBlue/20 group-hover:to-brandSky/30 group-hover:scale-125 transition-all duration-500 pointer-events-none" />

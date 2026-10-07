@@ -66,7 +66,7 @@ export default function BlogPreviewSection({ blogs }) {
       {/* Decorative ambient background glows */}
       <div className="absolute -top-32 -left-32 w-96 h-96 bg-brandSky/10 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute top-1/2 -right-32 w-96 h-96 bg-brandBlue/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-cyan-400/5 rounded-full blur-[90px] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-brandSky/5 rounded-full blur-[90px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
@@ -159,7 +159,7 @@ export default function BlogPreviewSection({ blogs }) {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.12 }}
                 onClick={() => handleBlogClick(blog.slug)}
-                className="bg-white rounded-3xl border border-slate-200/80 hover:border-slate-300/90 shadow-[0_4px_20px_-4px_rgba(15,23,42,0.06),0_10px_25px_-5px_rgba(15,23,42,0.04)] hover:shadow-[0_20px_40px_-8px_rgba(15,23,42,0.12),0_8px_16px_-4px_rgba(15,23,42,0.06)] overflow-hidden flex flex-col justify-between cursor-pointer transition-all duration-400 group hover:-translate-y-1.5 relative"
+                className="bg-white rounded-3xl border border-slate-200/80 hover:border-slate-300/90 shadow-[0_4px_20px_-4px_rgba(15,23,42,0.06),0_10px_25px_-5px_rgba(15,23,42,0.04)] hover:shadow-[0_20px_40px_-8px_rgba(15,23,42,0.12),0_8px_16px_-4px_rgba(15,23,42,0.06)] overflow-hidden flex flex-col justify-between cursor-pointer transition-all duration-400 group relative"
               >
                 <div>
                   {/* Image Container with Floating Badges */}

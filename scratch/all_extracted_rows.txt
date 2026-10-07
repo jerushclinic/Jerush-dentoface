@@ -1,0 +1,211 @@
+[Page 1 Y=25.0] THUCKALA\
+[Page 1 Y=84.0] Name | Employee
+Code | Designation | Date
+of
+Birth | Primary
+Contact | Address | Pincode | Blood
+Group | Phone
+Number
+[Page 1 Y=162.0] 94431-47724	/
+[Page 1 Y=173.0] Dr.Bladbin
+A | JHS-2002-001-CHD | Chairman | 30/6/1978 | S/O.Anbiah | 8-78	,	Arasu	Vilai,	Kappiyarai-PO | 629156 | AB	+ve
+[Page 1 Y=183.0] 94883-01111
+[Page 1 Y=248.0] 94431-63064	/
+[Page 1 Y=258.0] Dr.Binila
+Asir
+C | JHS-200-002-DIR | Director | 31/12/1981 | W/O	Bladbin | 8-78	,	Arasu	Vilai,	Kappiyarai-PO | 629156 | O	+ve
+[Page 1 Y=269.0] 94445-47724
+[Page 1 Y=316.0] ADMIN
+STAFFS
+[Page 1 Y=374.0] Dr.Prabin	A | JHS-TKY-2025-001-CEO | Chief	Executive	Officer | 12/5/1980 | S/O.Anbiah | 8-78	,	Arasu	Vilai,	Kappiyarai-PO | 629156 | A	+ve | 89256-89769
+[Page 1 Y=447.0] Rajesh	Kumar	P | JHS-TKY-2002-001-MNR | Manager | 19/7/1973 | S/O	Pius | Kala	Bhavanam,	Mettukadai,Thuckalay | 629175 | 79041-51421
+[Page 1 Y=503.0] DUT\
+DOCTORS
+-
+DENTAL
+[Page 1 Y=559.0] Dr.Sherine	Ponraj | JHS-TKY-2022-001-DDR | Prosthodontist | 21/7/1985 | D/O	Ponraj	S | 93-A2,	Crown	Street,Vathiyarvillai,Nagercoil | 629001 | O+ve | 99442-49544
+[Page 1 Y=622.0] 1-90,	Vattam,	Puthukaduvetti	Vilai,
+[Page 1 Y=632.0] Dr.Jasmin	Shamili	V | JHS-TKY-2023-002-DDR | Endodontist | 31/8/1995 | D/O	Vincent	P | 629174 | B	+ve | 94459-83702
+[Page 1 Y=643.0] Thiruvithancode	-	PO
+[Page 1 Y=705.0] Dr.Aiswarya	C	J | JHS-TKY-2015-003-DDR | Dental	Surgeon | 21/9/1991 | W/O.Sreenath | Chandraja,	Chathencode,	Vanniyoor	-PO | 629163 | A+ve | 90039-50518
+[Page 1 Y=768.0] 22-38A,	G.P.Bhavan,	Keezha	Karuppucode,
+[Page 1 Y=778.0] Dr.Suryambika	P	G | JHS-TKY-2023-005-DDR | Dental	Surgeon | 15/7/1992 | D/O,Perumal	Pillai | 629003 | B+ve | 78456-49099
+[Page 1 Y=789.0] Chunkankadai	-PO
+[Page 1 Y=841.0] 5-41	C,	Harijan	Colony	West,	Palavoor,
+[Page 1 Y=851.0] Dr	Priya	Dharshini	K | JHS-TKY-2025-006-DDR | Dental	Surgeon | 14/3/1999 | D/O	Kumar	M | 627114 | O+ve | 63742-83432
+[Page 1 Y=862.0] Radhapuram,	Tirunelveli		Dist
+[Page 1 Y=914.0] 18-37,	Kariya	Mangalathuvilai,	Mundavilai,
+[Page 1 Y=924.0] Dr	Aahina	David	D | JHS-TKY-2025-007-DDR | Dental	Surgeon | 13/2/1996 | W/O	Frederic	Jebarald	J | 629166 | O-ve | 90745-16161
+[Page 1 Y=935.0] Verkilambi	Post
+[Page 1 Y=987.0] 7-101/1,	Kulumaikkadu,	Villukuri,
+[Page 1 Y=997.0] Dr	Ajaishalu	I | JHS-TKY-2026-008-DDR | Periodontist | 5/9/1995 | W/O	Suhin	S | 629180 | B+ve | 63853-25561
+[Page 1 Y=1008.0] Kanyakumari	Dist
+[Page 1 Y=1060.0] 3/56A,	Anbu	illam,	Pullu	vilai,	Pookadai,
+[Page 1 Y=1070.0] Dr	Shanika	K | JHS-TKY-2026-009-DDR | Dental	Surgeon | 7/11/2001 | D/O	Krishnakumar	A | 629174 | O+ve | 83009-32192
+[Page 1 Y=1081.0] Thiruvithancode	Po
+[Page 1 Y=1133.0] 4-168/1,	Kavuvilai,	Arunankal,	Mulagumoodu
+[Page 1 Y=1143.0] Dr	Ivilin	R | JHS-TKY-2026-010-DDR | Dental	Surgeon | 28/8/2002 | W/O	Allen	Jijo	A | 629167 | A+ve | 94884-34094
+[Page 1 Y=1154.0] Po
+[Page 2 Y=1197.0] DUT\
+DOCTORS
+-
+COSMETIC
+[Page 2 Y=1237.0] 5-141,	ASM	House,	Poovan	Vilai,
+[Page 2 Y=1248.0] Dr.Ameega	Jolly	T | JHS-TKY-2023-001-CDR | Cosmetologist | 25/3/1999 | D/O	Sorna	Mabel	A | 629158 | B+ve | 94862-50834
+[Page 2 Y=1258.0] Maruthoorkurichy	-PO
+[Page 2 Y=1314.0] Dr.Vijayalakshmi	A | JHS-TKY-2024-002-CDR | Cosmetologist | 31/7/1996 | W/O	Anand	A | 2-99,	Vilaiveedu,	Vembanoor	-PO | 629801 | O-ve | 90477-55728
+[Page 2 Y=1380.0] Dr.	Ranisha	R | JHS-TKY-2024-003-CDR | Cosmetologist | 7/12/1999 | D/O	Ravidhas	G | 23-36/1,	Andamparai,	Manalikarai-PO | 629164 | O+ve | 63747-16456
+[Page 2 Y=1432.0] DENTAL
+PRO
+[Page 2 Y=1484.0] Monikha	M | JHS-TKY-2022-001-DPRO | Dental	PRO | 10/7/2001 | D/O	Mohanan	K | 7-157A,	Kollanvilai,	Mathar,	Chenkody	-	PO | 629177 | O	+ve | 90870-93320
+[Page 2 Y=1550.0] Atsha	S | JHS-TKY-2024-002-DPRO | Dental	PRO | 25/6/1999 | W/O	Amal	Joie.Y | 15-87,Mankoodalvilai,Kuzhicode	-	PO | 629167 | B+ve | 96558-65990
+[Page 2 Y=1600.0] COSMETIC
+PRO
+[Page 2 Y=1650.0] Aashmi	Sharo	M	F | JHS-TKY-2026-003-CPRO | Cosmetic	PRO | 14/8/2001 | D/O	Ajikumar	M | 22-50,	Adappuvilai,	Mettukadai,	Thuckalay | 629175 | AB	+ve | 93635-28700
+[Page 2 Y=1716.0] Gayathri	V	K | JHS-TKY-2026-004-CPRO | Cosmetic	PRO
+[Page 2 Y=1762.0] ACCOUNTS
+DEPT
+[Page 2 Y=1797.0] 16-202,Ramavilasam,Valaithankivilai,
+[Page 2 Y=1808.0] Suja	S | JHS-TKY-2022-001-ACC | Accountant | 3/4/1981 | W/O	Muthukrishnan	.G.K | 629161 | A	+ve | 75986-21239
+[Page 2 Y=1818.0] Koodaithukki,	Kulasekharam	-PO
+[Page 2 Y=1874.0] Ashika	H	C | JHS-TKY-2024-003-ACC | Accountant | 19/3/2002 | D/O	Harikrishnan.T | 4/63D,	Puthoor,Asarivilai,	Thickanamcode	-	PO | 629804 | O	+ve | 78453-45404
+[Page 2 Y=1940.0] Abisha	F | JHS-TKY-2026-004-ACC | Accountant | 20/2/2002 | W/O	Mugesh	M	S | 12-36,	Keerivilai,	Marayapuram,	Kappukadu	Po | 629162 | B+ve | 93853-76417
+[Page 2 Y=1989.0] DIGITAL
+MARKETING
+[Page 2 Y=2039.0] Satheesh	S | JHS-TKY-2024-002-DMT | Graphic	Designer | 1/7/2000 | S/O	Siva	S | 3-43A,	CSI	Church	Road,Peruvilai,	Nagercoil | 629003 | O+ve | 99944-94043
+[Page 2 Y=2094.0] 14/31,	Varavanmuri,	Seynamvilai,	Bethelpuram
+[Page 2 Y=2105.0] Shine	Peter	P | JHS-TKY-2026-003-DMT | Full	Stack	Developer | 22/1/1999 | S/O	Deva	Dhas	T | 629803 | O+ve | 63824-54633
+[Page 2 Y=2115.0] Post
+[Page 2 Y=2171.0] Anisha	Mol	A | JHS-TKY-2026-004-DMT | Content	Creator | 7/10/2004 | D/O	Athees	T | 19-95F,	Kattaikadu,	Ammandivilai	(PO) | 629204 | O+ve | 90924-71334
+[Page 2 Y=2226.0] Graphic	Designer		Video | 7-152/1,	Yerathuvilai,	Thachoor,	Aruvikkarai
+[Page 2 Y=2237.0] Liju	P	K | JHS-TKY-2026-005-DMT | 19/4/2000 | S/O	Panki	Raj	N | 629177 | B+ve | 74025-74706
+[Page 2 Y=2247.0] Editor | (PO)
+[Page 2 Y=2287.0] MAINTENANCE
+DEPT
+[Page 2 Y=2337.0] Dhivin	Raja	T	M | JHS-TKY-2022-001-MMG | Maintenance	Manager | 31/7/1994 | S/O	Thana	Raja	R | Karikki,	Thottathuvillai,	Kanjikuzhi	PO | 629169 | B+ve | 78454-61623
+[Page 3 Y=2387.0] RECEPTIONIST
+[Page 3 Y=2438.0] Anitha	R	P | JHS-TKY-2006-001-REC | Receptionist | 16/10/1989 | W/O	Sivakumar	T | 8-71,	Kattuvilai,	Kattathurai	-PO | 629158 | O+ve | 70927-73710
+[Page 3 Y=2504.0] Kiruba	L | JHS-TKY-2007-002-REC | Receptionist | 4/4/1989 | W/O	Dennis | Vazhavilai,	Pacode	-	PO | 629168 | AB+ve | 89031-94060
+[Page 3 Y=2570.0] Anusha	Y | JHS-TKY-2022-003-REC | Receptionist | 12/10/1997 | D/O	Yesudhas | Kanjamkadu,	Manalikarai	-	PO | 629164 | A+ve | 93859-36230
+[Page 3 Y=2625.0] 92,	A-2	Valanvilai,	Moolachal,
+[Page 3 Y=2636.0] Akhila	L | JHS-TKY-2023-004-REC | Receptionist | 15/7/1999 | W/O	Ramesh	R | 629166 | O+ve | 70928-63461
+[Page 3 Y=2646.0] Mekkamandapam	-	PO
+[Page 3 Y=2691.0] 10-42D,	Therkukaisaravilai,	Zionmalai,
+[Page 3 Y=2702.0] Jaspin	Bricy	G | JHS-TKY-2026-004-REC | Receptionist | 19/7/1993 | W/O	Darwin	D | 629166 | O-ve | 63827-59636
+[Page 3 Y=2712.0] Mekkamandapam	Po
+[Page 3 Y=2751.0] ALIGNER
+[Page 3 Y=2789.0] 7-48A,Kalliadappu	Veedu,	Nadaikkavu
+[Page 3 Y=2800.0] Sukustel	Martin	S | JHS-TKY-2023-001-ALG | Aligner	Technician | 21.06.1984 | S/O	Sukumaran | 629153 | B-ve | 96293-73094
+[Page 3 Y=2810.0] Chathencode	-PO
+[Page 3 Y=2855.0] Perunchakkavilai,	Eathavilai,	Mekkamandapam
+[Page 3 Y=2866.0] Berlin	Monisha	C | JHS-TKY-2024-002-ALG | Aligner	Technician | 2/7/1995 | W/O	Jaim	Vinit	R | 629166 | O+ve | 78688-42788
+[Page 3 Y=2876.0] -PO
+[Page 3 Y=2932.0] Gayathri	G	S | JHS-TKY-2026-003-ALG | Aligner	Technician | 23/2/2003 | D/O	Girish	M | 4-40,	Keelkalkurichi,	Thuckalay	PO | 629175 | B+ve | 63854-39599
+[Page 3 Y=2982.0] DENTAL
+LAB
+[Page 3 Y=3022.0] 7/222-8,	School	Street,	Kesavanputhoor,
+[Page 3 Y=3033.0] Darwin	F	J | JHS-TKY-2026-001-DLB | Dental	Lab	Technician | 17/12/1986 | S/O	Francis	S | 629851 | O+ve | 94886-59840
+[Page 3 Y=3043.0] Singargarden,	Azhagiapandipuram	Po
+[Page 3 Y=3083.0] OPG
+[Page 3 Y=3134.0] Sujithakumari	L | JHS-TKY-2011-001-OPG | X-Ray	Techician | 12/5/1988 | D/O	Lazer	P | Valiyattu	mugem,	Vendelicode	-PO | 629161 | 96559-47202
+[Page 3 Y=3189.0] 5-120B,	Kuttimavilai,	Keezhapulipanam,
+[Page 3 Y=3200.0] Jeba	T | JHS-TKY-2026-002-OPG | X-Ray	Techician | 30/5/1989 | W/O	Stalin	Prabhu	P | 629158 | O+ve | 94429-21601
+[Page 3 Y=3210.0] Kattathurai	PO
+[Page 3 Y=3249.0] PHARMAC\
+[Page 3 Y=3299.0] Manisha	M | JHS-TKY--003-PHM | Pharmacist
+[Page 3 Y=3354.0] 9-29/1,	Amman	Kovil	Street,	Valavilai,
+[Page 3 Y=3365.0] Shanthi	C | JHS-TKY-2025-002-PHM | Pharmacist | 31/7/1984 | W/O	Virgin	S | 629175 | A1+Ve | 81110-32337
+[Page 3 Y=3375.0] Padmananbhapuram,	Thuckalay	PO
+[Page 3 Y=3417.0] IMPRESSION
+ROOM
+[Page 3 Y=3469.0] Anusha	G | JHS-TKY-2024-001-IMP | Impression	Technician | 21/3/1992 | W/O	Rajastephen | Manakuntu	Mathoor,	Aruvikkarai	PO | 629177 | O+ve | 75989-39829
+[Page 3 Y=3535.0] Padma	Priya | JHS-TKY-2025-002-IMP | Impression	Technician | 21/3/2004 | W/O	Satham	Hussain | Amaravathi	Road,	Thiruvithancode	-PO | O+ve | 90422-97628
+[Page 4 Y=3601.0] Kavitha
+[Page 4 Y=3647.0] LAB
+[Page 4 Y=3683.0] 17-171,	Thoppuvilai,Karinchancode,Villukuri
+[Page 4 Y=3694.0] Stanley	P	K | JHS-TKY-2009-001-LBT | Lab	Technician | 1/6/1979 | 629180 | A1+ve | 99442-29290
+[Page 4 Y=3704.0] -PO
+[Page 4 Y=3744.0] DENTAL
+ASSISTANTS
+[Page 4 Y=3795.0] Lakshmi	P | JHS-TKY-2007-001-DAS | Dental	Assistant | 6/11/1986 | W/O	John	Hilbert	D | Vandavilai,Kuzhicode	-PO | 629167 | O+ve | 88831-53413
+[Page 4 Y=3861.0] Lathakumari	A | JHS-TKY-2012-002-DAS | Dental	Assistant | 30/7/1973 | W/O	Nelson	S | Nedumpara	vilai,	Perumchilambu,Velimalai	PO | 629164 | A1-ve | 89033-00508
+[Page 4 Y=3927.0] Rani	R | JHS-TKY-2013-003-DAS | Dental	Assistant | 12/2/1978 | W/O	Bala	Subramaniyan | Rechanyapuram,	Muttaikadu,Kumarapuram	PO | 629301 | O+ve | 76396-05948
+[Page 4 Y=3993.0] Sree	Devi.S | JHS-TKY-2017-004-DAS | Dental	Assistant | 10/1/1998 | D/O	Geetha	L | Perumavilai,Thenkankuzhi,Thickanamcode	PO | 629804 | B+ve | 89253-64392
+[Page 4 Y=4059.0] Subitha	G | JHS-TKY-2019-005-DAS | Dental	Assistant | 26/2/2000 | D/O	Indira	V | Pinnamootuvilai,	Thickanamcode	PO | 629804 | A+ve | 63795-21495
+[Page 4 Y=4125.0] Aswini	L | JHS-TKY-2022-007-DAS | Dental	Assistant | 7/11/2001 | D/O	Lekshmanan | Kanjankadu,	Pacharavilai,	Manalikarai	-	PO | 629164 | A+ve | 63824-75910
+[Page 4 Y=4191.0] Vijithra	V | JHS-TKY-2023-008-DAS | Dental	Assistant | 30/3/2004 | D/O	Visvamithran	C | Karukankuzhi,	Thickanamcode	PO | 629804 | B-ve | 63747-42014
+[Page 4 Y=4257.0] Jeba	T | JHS-TKY-2024-009-DAS | Dental	Assistant | 14/6/1989 | W/O	Kumaresan | Kulamankivilai,Nattalam	PO | 629165 | O-ve | 94888-57578
+[Page 4 Y=4312.0] 46-Arijana	Colony,	Urdvaimozhi,Thirunelveli
+[Page 4 Y=4323.0] Subitha	M | JHS-TKY-2024-010-DAS | Dental	Assistant | 23/7/2005 | D/O	Madasamy | 627201 | O+ve | 63807-58946
+[Page 4 Y=4333.0] Dist
+[Page 4 Y=4378.0] 1-74	Veerapuli	Sanal	Karai,	Thadikkarankonam
+[Page 4 Y=4389.0] Suji	J | JHS-TKY-2025-014-DAS | Dental	Assistant | 19/12/2004 | D/O	Justin	Raj	J | 629851 | B+ve | 93429-82735
+[Page 4 Y=4399.0] -	PO
+[Page 4 Y=4455.0] Pratheeba | JHS-TKY-2025-015-DAS | Dental	Assistant | 25/9/2004 | D/O	Selva	Kumar	J | Meicode,	Kollanvilai,	Manalikarai	-	PO | 629164 | B+ve | 80984-57317
+[Page 4 Y=4521.0] Sajila	S | JHS-TKY-2025-016-DAS | Dental	Assistant | 10/9/1988 | W/O	Christopher	M | 15-123c,	Baby	Street,	Pallavilai,	Peruvilai	PO | 629003 | O+ve | 94455-82457
+[Page 4 Y=4576.0] 9/147-1,	Valanvilai,	Moolachel,
+[Page 4 Y=4587.0] Sunitha	T | JHS-TKY-2026-017-DAS | Dental	Assistant | 11/12/1997 | W/O	Rajesh	P | 629166 | O+ve | 80987-79556
+[Page 4 Y=4597.0] Mekkamandapam	PO
+[Page 4 Y=4642.0] 190-F2,Mooliperumalvilai,	Karukki,	Kanjikuzhi
+[Page 4 Y=4653.0] Jeba	Kani	J | JHS-TKY-2026-018-DAS | Dental	Assistant | 5/12/1999 | W/O	Beny	Blad	Singh | 629156 | A-ve | 72003-98097
+[Page 4 Y=4663.0] Po
+[Page 4 Y=4719.0] Angnes	Preethi.	B | Dental	Assistant
+[Page 5 Y=4785.0] Naseema	J | JHS-TKY-2026-020-DAS | Dental	Assistant | 1/3/1993 | W/O	Subhash	A | 15-67,	Perumal	Kovil	Street,	Thuckalay | 629175 | B+ve | 91501-01208
+[Page 5 Y=4840.0] 21-168,	Kuzhivettanvilai,	Vellicode,	Kattathurai
+[Page 5 Y=4851.0] Jenitha	P | JHS-TKY-2026-021-DAS | Dental	Assistant | 20/10/2005 | D/O	Paulose	Y | 629158 | o+ve | 90423-39195
+[Page 5 Y=4861.0] Po
+[Page 5 Y=4902.0] COSMETIC
+ASSISTANTS
+[Page 5 Y=4943.0] 22-7,	Ziyon	Nagar,	Paramankurichi,
+[Page 5 Y=4954.0] Mageshwari	K | JHS-TKY-2025-001-CAS | Cosmetic	Assistant | 20/2/2006 | D/O	Kannan	M | 628213 | B+ve | 89251-49301
+[Page 5 Y=4964.0] Thoothukudi	Dist
+[Page 5 Y=5009.0] 8-68B,	Keelur,	Ramasamiyapuram,
+[Page 5 Y=5020.0] Suganeswari	K | JHS-TKY-2025-002-CAS | Cosmetic	Assistant | 30/11/2006 | D/O	Kalaiarasan	R | 627811 | A+ve | 82483-49440
+[Page 5 Y=5030.0] Devipattinam,	Tenkasi
+[Page 5 Y=5075.0] 17-189/3,	Amrith	Complex,	Vendalicode,
+[Page 5 Y=5086.0] Abhi	S | JHS-TKY-2026-003-CAS | Cosmetic	Assistant | 27/8/2004 | D/O	Saravanan	M | 629161 | O+ve | 63695-50730
+[Page 5 Y=5096.0] Kulasekaram	PO
+[Page 5 Y=5152.0] Jenisha	P | JHS-TKY-2026-004-CAS | Cosmetic	Assistant | 1/1/2001 | D/O	Palaiyan	T | 4-65B,	Cherukathuvilai,	Ettani,	Karungal	PO | 629157 | B+ve | 63856-41130
+[Page 5 Y=5218.0] Rethika	J | JHS-TKY-2026-005-CAS | Cosmetic	Assistant | 20/2/1994 | D/O	Jegatheeshwaran	C | 109,	Paruthiparavilai,	Kattathurai	PO | 629158 | B+ve | 85082-67957
+[Page 5 Y=5284.0] Jeflin	T | JHS-TKY-2026-006-CAS | Cosmetic	Assistant | 3/1/2006 | Varavanmuri,	Seynamvilai,	Bethelpuram	PO | O+ve | 80727-95486
+[Page 5 Y=5339.0] 6-59C,Thundathuvilai,	Mavilai,
+[Page 5 Y=5350.0] Abisha	V	S | JHS-TKY-2026-007-CAS | Cosmetic	Assistant | 5/1/2003 | D/O	Vijayakumar	N | 629178 | B+ve | 73975-40563
+[Page 5 Y=5360.0] Udayamarthandam	PO
+[Page 5 Y=5401.0] OFFICE
+STAFFS
+[Page 5 Y=5452.0] Gnana	Selvam | JHS-TKY-2022-001-HSC | Hospital	Catering	Staff | 6/4/1965 | W/O	Chellathurai	R | Vellankottavilai,	Kappiyari	-	PO | 629156 | 97879-24845
+[Page 5 Y=5507.0] 5-104C,	Manikkavillai,	Udhayamarthandam
+[Page 5 Y=5518.0] Raja	Kumar	M | JHS-TKY-2023-001-DRV | Driver | 24/4/1981 | S/O	Mani	P | 629178 | B+ve | 90036-15490
+[Page 5 Y=5528.0] Post
+[Page 5 Y=5584.0] Ajith.	P | JHS-TKY-2026-002-DRV | Driver | 21/2/1993 | S/O	Palanidas	G | 15/42A1,	Arasuvilai,	Palace	Road,	Thuckalay | 629175 | O-ve | 88708-46729
+[Page 5 Y=5636.0] HOUSE
+KEEPER
+[Page 5 Y=5677.0] 1-154/1,	South	of	Amala	Convent,
+[Page 5 Y=5688.0] Kalpana	S | JHS-TKY-2009-001-HKP | House	Keeper | 17/12/1980 | W/O	Saravanan	T | 629175 | AB+ve | 97896-45564
+[Page 5 Y=5698.0] Puthukaduvettivilai,	Thuckalay
+[Page 5 Y=5743.0] Amala	Convent	Thenpuram,
+[Page 5 Y=5754.0] Sree	Devi	.R | JHS-TKY-2016-002-HKP | House	Keeper | 17/11/1983 | W/O	Satheesh	M | 629175 | AB+ve | 97891-39670
+[Page 5 Y=5764.0] Puthukaduvettivilai,	Thuckalay	-	PO
+[Page 5 Y=5809.0] 2/194,	Valiyakarai,	Muthalakurichy,	Thuckalay
+[Page 5 Y=5820.0] Sandhya	R | JHS-TKY-2026-003-HKP | House	Keeper | 12/5/1979 | W/O	Mahesh	S | 629175 | O+ve | 73054-11520
+[Page 5 Y=5830.0] PO
+[Page 5 Y=5875.0] 4-36/1,	Pattanivilai,	Keelkalkurichy,	Thuckalay
+[Page 5 Y=5886.0] Kumari	Chithra	G | JHS-TKY-2026-004-HKP | House	Keeper | 16/6/1987 | W/O	Ayyapan	T | 629175 | O+ve | 95970-44331
+[Page 5 Y=5896.0] Po
+[Page 6 Y=5937.0] SECURIT\
+[Page 6 Y=5989.0] Vijayan | JHS-TKY-2016-001-SEC | Security | 1/5/1964
+[Page 6 Y=6055.0] Rajendran | JHS-TKY-2022-002-SEC | Security | 01.01.1963 | Moolachal,	Chonaparavilai,	Thuckalay | 629175 | 85898-40985
+[Page 6 Y=6106.0] TRAINEE
+[Page 6 Y=6158.0] Name
+[Page 6 Y=6224.0] Dharshini	R | 26/9/2006 | D/O	Ramaswamy	A | 13,Ottapidaram,Thoothukudi	Po | B+ve | 82480-88609
+[Page 6 Y=6279.0] 3/170,	Saveriyar	Kovil	Street,	Kulaserapattinam,
+[Page 6 Y=6290.0] Nisha	P | 5/8/2007 | D/O	Petchiyappan | 628206 | O+ve | 63823-79909
+[Page 6 Y=6300.0] Thoothukudi	Dist
+[Page 6 Y=6356.0] Chithra	Selvi
+[Page 6 Y=6411.0] 16/134,Church	Street,	Thattarmadam,
+[Page 6 Y=6422.0] Indhumathi	P | 3/10/2007 | D/O	Pannerselvam	P | 628206 | B-ve | 82206-88871
+[Page 6 Y=6432.0] Thoothukudi	Dist
+[Page 6 Y=6488.0] Ragavi
+[Page 6 Y=6543.0] 9-197,	Kamaraj	Nagar,	Thisayan	Vilai,
+[Page 6 Y=6554.0] Muthuselvi	R | 4/7/2008 | D/O	Ramachandran	K | 628206 | AB+ve | 81482-69282
+[Page 6 Y=6564.0] Thoothukudi	Dist

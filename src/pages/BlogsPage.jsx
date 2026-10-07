@@ -47,8 +47,8 @@ export default function BlogsPage() {
     <div className="w-full bg-slate-50 font-body text-left relative pt-0 pb-24 min-h-screen">
       {/* Page Header */}
       <PageBreadcrumbHero 
-        title="Dental & Facial Aesthetic Wellness Blog" 
-        breadcrumbs={[{ label: 'Blog', active: true }]} 
+        title="Dental & Facial Aesthetic Medical Insights" 
+        breadcrumbs={[{ label: 'Medical Insights', active: true }]} 
       />
 
       <div className="max-w-7xl mx-auto px-6">
@@ -94,7 +94,7 @@ export default function BlogsPage() {
               <div
                 key={blog.slug}
                 onClick={() => handlePostClick(blog.slug)}
-                className="bg-white border border-slate-100 rounded-3xl overflow-hidden flex flex-col justify-between shadow-sm cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
+                className="bg-white border border-slate-100 rounded-3xl overflow-hidden flex flex-col justify-between shadow-sm cursor-pointer hover:shadow-xl transition-all duration-300 group"
               >
                 <div>
                   <div className="aspect-[16/10] overflow-hidden bg-slate-100 border-b border-slate-50 relative">

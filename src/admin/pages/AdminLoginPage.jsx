@@ -46,7 +46,7 @@ export default function AdminLoginPage() {
       <div className="w-full max-w-md relative z-10">
         {/* Logo & Brand */}
         <div className="text-center mb-8">
-          <img src="/images/logo/jerush-greyblue-logo.webp" alt="Jerush Logo" className="h-28 w-auto mx-auto mb-4 object-contain rounded-2xl shadow-xl" />
+          <img src="/images/logo/jerush-logo.webp" alt="Jerush Logo" className="h-28 w-auto mx-auto mb-4 object-contain rounded-2xl shadow-xl" />
           <h1 className="font-headline font-extrabold text-2xl text-white">Admin Login</h1>
           <p className="text-slate-500 text-xs font-medium mt-2">Jerush Dentoface — Control Panel</p>
         </div>

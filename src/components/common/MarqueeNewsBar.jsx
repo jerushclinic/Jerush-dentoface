@@ -52,8 +52,8 @@ export default function MarqueeNewsBar() {
   // Theme styles
   const themeClasses = {
     'dark-gradient': 'bg-gradient-to-r from-slate-950 via-[#071324] to-slate-950 text-slate-100 border-b border-brandSky/20 shadow-md',
-    'brand-blue': 'bg-gradient-to-r from-brandBlue via-[#0E4975] to-brandBlue text-white border-b border-white/10 shadow-md',
-    'sky-glow': 'bg-gradient-to-r from-sky-600 via-brandSky to-sky-600 text-white border-b border-sky-400/30 shadow-md',
+    'brand-blue': 'bg-gradient-to-r from-brandBlue via-[#1a3c7a] to-brandBlue text-white border-b border-white/10 shadow-md',
+    'sky-glow': 'bg-gradient-to-r from-brandBlue via-brandSky to-brandBlue text-white border-b border-cyan-400/30 shadow-md',
     'emerald-notice': 'bg-gradient-to-r from-emerald-950 via-teal-900 to-emerald-950 text-emerald-100 border-b border-emerald-500/30 shadow-md',
     'amber-alert': 'bg-gradient-to-r from-amber-950 via-amber-900 to-amber-950 text-amber-100 border-b border-amber-500/30 shadow-md',
   };

@@ -72,7 +72,7 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {/* Card 1: Thuckalay */}
               <div className="bg-white border border-slate-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-                <h4 className="font-headline font-bold text-base text-primary mb-2">Thuckalay Center</h4>
+                <h4 className="font-headline font-bold text-base text-primary mb-2">Thuckalay Centre</h4>
                 <p className="text-xs text-secondary mb-4 leading-relaxed">
                   Jerush Dentoface, Thuckalay Centre, Kanyakumari, Tamil Nadu, India.
                 </p>

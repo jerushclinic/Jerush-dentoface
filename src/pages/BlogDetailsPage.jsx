@@ -155,6 +155,30 @@ export default function BlogDetailsPage() {
       };
     });
 
+    // Normalize and sanitize links in content
+    doc.querySelectorAll('a').forEach((link) => {
+      let href = link.getAttribute('href');
+      if (href) {
+        href = href.trim();
+        if (href.startsWith('www.')) {
+          href = `https://${href}`;
+          link.setAttribute('href', href);
+        }
+        if (href.startsWith('http://') || href.startsWith('https://')) {
+          try {
+            const urlObj = new URL(href, window.location.origin);
+            const isInternal = 
+              urlObj.hostname === window.location.hostname ||
+              urlObj.hostname.includes('jerushdentoface.com');
+            if (!isInternal) {
+              link.setAttribute('target', '_blank');
+              link.setAttribute('rel', 'noopener noreferrer');
+            }
+          } catch (e) {}
+        }
+      }
+    });
+
     return {
       cleanContent: doc.body.innerHTML,
       faqs,
@@ -163,6 +187,63 @@ export default function BlogDetailsPage() {
   }, [post]);
 
   const { cleanContent, faqs, headings } = parsedContentAndFaqs;
+
+  // Intercept clicks on links inside the blog content to support SPA navigation and proper external handling
+  const handleContentClick = (e) => {
+    const link = e.target.closest('a');
+    if (!link) return;
+
+    let href = link.getAttribute('href');
+    if (!href) return;
+
+    href = href.trim();
+
+    // Hash links
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const targetId = href.substring(1);
+      const target = document.getElementById(targetId);
+      if (target) {
+        const offset = 120;
+        window.scrollTo({
+          top: target.getBoundingClientRect().top + window.scrollY - offset,
+          behavior: 'smooth'
+        });
+      }
+      return;
+    }
+
+    // Relative internal link
+    if (href.startsWith('/')) {
+      e.preventDefault();
+      navigate(href);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    // Full URL check (internal vs external)
+    try {
+      const url = new URL(href, window.location.origin);
+      const isInternal = 
+        url.hostname === window.location.hostname ||
+        url.hostname.includes('jerushdentoface.com');
+
+      if (isInternal) {
+        e.preventDefault();
+        const internalPath = url.pathname + url.search + url.hash;
+        navigate(internalPath);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+    } catch (err) {}
+
+    // External link or bare www.
+    if (href.startsWith('www.')) {
+      e.preventDefault();
+      window.open(`https://${href}`, '_blank', 'noopener,noreferrer');
+      return;
+    }
+  };
 
   // Active section highlights on scroll using a robust scroll listener
   useEffect(() => {
@@ -263,30 +344,30 @@ export default function BlogDetailsPage() {
       
       {/* Reading Progress Bar */}
       <div 
-        className="fixed top-0 left-0 h-[4px] bg-[#2853A4] z-[10001] transition-all duration-75"
+        className="fixed top-0 left-0 h-[4px] bg-gradient-to-r from-brandBlue to-brandSky z-[10001] transition-all duration-75"
         style={{ width: `${scrollProgress}%` }}
       ></div>
 
       {/* Unified Premium Editorial Header Section */}
-      <section className="w-full bg-gradient-to-r from-brandBlue via-[#1b4393] to-brandSky py-16 px-6 text-white border-b border-white/10 relative overflow-hidden">
+      <section className="w-full bg-gradient-to-r from-brandBlue via-[#1b4393] to-brandSky pt-[140px] sm:pt-[144px] lg:pt-[148px] pb-12 sm:pb-16 px-5 sm:px-6 text-white border-b border-white/10 relative overflow-hidden">
         {/* Subtle abstract background lines */}
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center relative z-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 lg:gap-12 items-center relative z-10">
           
           {/* Left Column: Metadata, Title & Excerpt */}
-          <div className="space-y-6 text-left">
+          <div className="space-y-5 sm:space-y-6 text-left">
             {/* Breadcrumbs */}
-            <nav className="text-white/60 text-[11px] font-bold uppercase tracking-widest flex items-center gap-1.5 font-headline">
-              <Link to="/" className="text-white/70 hover:text-white transition-colors">Home</Link>
-              <span className="text-white/40 text-[10px] font-normal">&gt;</span>
-              <Link to="/blog" className="text-white/70 hover:text-white transition-colors">Blog</Link>
-              <span className="text-white/40 text-[10px] font-normal">&gt;</span>
-              <span className="text-white font-medium">{post.category}</span>
+            <nav className="text-white/80 text-xs font-bold uppercase tracking-wider flex flex-wrap items-center gap-2 font-headline pt-1" aria-label="Breadcrumbs">
+              <Link to="/" className="text-white/75 hover:text-white transition-colors">Home</Link>
+              <span className="text-white/40 text-xs font-normal">/</span>
+              <Link to="/blog" className="text-white/75 hover:text-white transition-colors">Medical Insights</Link>
+              <span className="text-white/40 text-xs font-normal">/</span>
+              <span className="text-brandSky font-bold">{post.category}</span>
             </nav>
 
             {/* Category Badge */}
             <div>
-              <span className="inline-block bg-white/10 text-white border border-white/20 px-5 py-1.5 rounded-full font-bold text-xs uppercase tracking-wider font-headline">
+              <span className="inline-block bg-white/15 text-white border border-white/25 px-4 sm:px-5 py-1.5 rounded-full font-bold text-xs uppercase tracking-wider font-headline shadow-sm">
                 {post.category}
               </span>
             </div>
@@ -590,6 +671,7 @@ export default function BlogDetailsPage() {
               <div 
                 className="blog-content-area text-slate-700 text-left"
                 dangerouslySetInnerHTML={{ __html: cleanContent }}
+                onClick={handleContentClick}
               />
               
               {/* Collapsible Bluish Accordion FAQ Section */}
@@ -710,10 +792,10 @@ export default function BlogDetailsPage() {
                     />
                   </div>
                   <div className="p-6 space-y-3 flex-grow flex flex-col justify-between text-left">
-                    <span className="text-[10px] font-extrabold text-[#2853A4] uppercase tracking-wider block">
+                    <span className="text-[10px] font-extrabold text-brandBlue uppercase tracking-wider block">
                       {rp.category}
                     </span>
-                    <h4 className="font-headline font-extrabold text-sm sm:text-base text-slate-850 line-clamp-2 hover:text-[#2853A4] transition-colors">
+                    <h4 className="font-headline font-extrabold text-sm sm:text-base text-slate-850 line-clamp-2 hover:text-brandBlue transition-colors">
                       {rp.title}
                     </h4>
                     <div className="flex items-center gap-1 text-[10px] text-slate-400 font-bold uppercase tracking-wider pt-2 border-t border-slate-50 mt-auto">
@@ -752,7 +834,7 @@ export default function BlogDetailsPage() {
         <a 
           href="#"
           onClick={handleBookClick}
-          className="flex-1 text-center py-2.5 bg-[#2853A4] text-white font-headline font-bold text-[11px] uppercase tracking-wider rounded-xl shadow-md hover:bg-brandBlue/90 transition-all active:scale-95 flex items-center justify-center gap-1.5"
+          className="flex-1 text-center py-2.5 bg-brandBlue text-white font-headline font-bold text-[11px] uppercase tracking-wider rounded-xl shadow-md hover:bg-brandBlue/90 transition-all active:scale-95 flex items-center justify-center gap-1.5"
         >
           <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
             <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />

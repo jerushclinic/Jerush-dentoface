@@ -1,44 +1,104 @@
 import { apiClient } from "./api";
 import { defaultCareers } from "../data/careers";
 
+const CAREERS_STORAGE_KEY = 'jerush_careers_cache';
+
+function getLocalCareers() {
+  try {
+    const raw = localStorage.getItem(CAREERS_STORAGE_KEY);
+    if (!raw) {
+      localStorage.setItem(CAREERS_STORAGE_KEY, JSON.stringify(defaultCareers));
+      return defaultCareers;
+    }
+    return JSON.parse(raw);
+  } catch (e) {
+    return defaultCareers;
+  }
+}
+
+function saveLocalCareers(list) {
+  try {
+    localStorage.setItem(CAREERS_STORAGE_KEY, JSON.stringify(list));
+  } catch (e) {
+    console.error("Failed writing careers to localStorage:", e);
+  }
+}
+
 export const careerService = {
   getCareers: async () => {
     try {
       const res = await apiClient.get('/careers.php');
-      if (Array.isArray(res)) return res;
-      if (res && Array.isArray(res.data)) return res.data;
-      return defaultCareers;
+      const apiCareers = Array.isArray(res) ? res : res?.data;
+      if (Array.isArray(apiCareers) && apiCareers.length > 0) {
+        saveLocalCareers(apiCareers);
+        return apiCareers;
+      }
     } catch (e) {
-      console.warn("API failed, falling back to mock careers:", e);
-      return defaultCareers;
+      console.warn("API failed, using local careers cache:", e);
     }
+    return getLocalCareers();
   },
 
   getCareerById: async (id) => {
     try {
       return await apiClient.get(`/careers.php?id=${id}`);
     } catch (e) {
-      console.warn(`API failed, falling back to mock career id ${id}:`, e);
-      const career = defaultCareers.find(c => String(c.id) === String(id));
-      if (!career) throw new Error("Career vacancy not found");
-      return career;
+      console.warn(`API failed for career id ${id}:`, e);
     }
+    const list = getLocalCareers();
+    const career = list.find(c => String(c.id) === String(id));
+    if (!career) throw new Error("Career vacancy not found");
+    return career;
   },
 
   saveCareersList: async (careersList) => {
+    saveLocalCareers(careersList);
     return true;
   },
 
   addCareer: async (careerData) => {
-    return apiClient.post('/careers.php', careerData);
+    const list = getLocalCareers();
+    const newCareer = {
+      ...careerData,
+      id: careerData.id || `job_${Date.now()}`
+    };
+    const updated = [newCareer, ...list];
+    saveLocalCareers(updated);
+
+    try {
+      const res = await apiClient.post('/careers.php', newCareer);
+      return res || newCareer;
+    } catch (e) {
+      console.warn("API addCareer failed, saved to local cache:", e);
+      return newCareer;
+    }
   },
 
   updateCareer: async (id, careerData) => {
-    return apiClient.put(`/careers.php?id=${id}`, careerData);
+    const list = getLocalCareers();
+    const updated = list.map(c => String(c.id) === String(id) ? { ...c, ...careerData } : c);
+    saveLocalCareers(updated);
+
+    try {
+      const res = await apiClient.put(`/careers.php?id=${id}`, careerData);
+      return res || { success: true };
+    } catch (e) {
+      console.warn("API updateCareer failed, updated in local cache:", e);
+      return { success: true };
+    }
   },
 
   deleteCareer: async (id) => {
-    return apiClient.delete(`/careers.php?id=${id}`);
+    const list = getLocalCareers();
+    const updated = list.filter(c => String(c.id) !== String(id));
+    saveLocalCareers(updated);
+
+    try {
+      await apiClient.delete(`/careers.php?id=${id}`);
+    } catch (e) {
+      console.warn("API deleteCareer failed, deleted from local cache:", e);
+    }
+    return { success: true };
   },
 
   submitApplication: async (applicationData) => {

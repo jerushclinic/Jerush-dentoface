@@ -106,7 +106,8 @@ export default function Footer() {
               <li><Link to="/" onClick={handleLinkClick} className="hover:text-brandSky transition-colors">Home</Link></li>
               <li><a href="#" onClick={(e) => handleScrollToSection('jerush-about-welcome', e)} className="hover:text-brandSky transition-colors">Our Legacy</a></li>
               <li><a href="#" onClick={(e) => handleScrollToSection('jerush-doctors', e)} className="hover:text-brandSky transition-colors">Meet Our Specialists</a></li>
-              <li><Link to="/smile-stories?category=dental" onClick={handleLinkClick} className="hover:text-brandSky transition-colors">Smile Transformations</Link></li>
+              <li><Link to="/smile-transformations" onClick={handleLinkClick} className="hover:text-brandSky transition-colors">Smile Transformations</Link></li>
+              <li><Link to="/editorial-standards" onClick={handleLinkClick} className="hover:text-brandSky transition-colors">Editorial Standards</Link></li>
               <li><Link to="/contact" onClick={handleLinkClick} className="hover:text-brandSky transition-colors">Contact & Locations</Link></li>
             </ul>
           </div>
@@ -222,10 +223,12 @@ export default function Footer() {
         {/* Copyright Bar */}
         <div className={`max-w-7xl mx-auto px-6 border-t border-slate-800/80 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500 ${isHomePage ? 'mb-4 lg:mb-8' : 'mb-0'}`}>
           <p>&copy; {new Date().getFullYear()} Jerush Dentofacial & Cosmetic Laser Centre. All rights reserved. Developed by Jerush Digital Tech</p>
-          <p className="flex gap-4">
-            <a href="#" className="hover:text-slate-400">Privacy Policy</a>
+          <p className="flex items-center gap-3 sm:gap-4 flex-wrap justify-center">
+            <Link to="/editorial-standards" onClick={handleLinkClick} className="hover:text-brandSky transition-colors">Editorial Standards</Link>
             <span className="text-slate-800">|</span>
-            <a href="#" className="hover:text-slate-400">Terms of Use</a>
+            <Link to="/privacy-policy" onClick={handleLinkClick} className="hover:text-brandSky transition-colors">Privacy Policy</Link>
+            <span className="text-slate-800">|</span>
+            <Link to="/terms-conditions" onClick={handleLinkClick} className="hover:text-brandSky transition-colors">Terms of Use</Link>
           </p>
         </div>
       </footer>
@@ -264,7 +267,7 @@ export default function Footer() {
         </Link>
 
         {/* Item 4: Smile Stories */}
-        <Link to="/smile-stories" onClick={handleLinkClick} className="flex flex-col items-center justify-center text-center w-full py-1 text-slate-400 hover:text-brandSky transition-all duration-200 group">
+        <Link to="/smile-transformations" onClick={handleLinkClick} className="flex flex-col items-center justify-center text-center w-full py-1 text-slate-400 hover:text-brandSky transition-all duration-200 group">
           <svg className="w-[15px] h-[15px] mb-0.5 group-hover:scale-110 transition-all duration-300" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="12" cy="12" r="8.5" stroke="#fbbf24" strokeWidth="1.8" fill="#fbbf24" fillOpacity="0.15" />
             <circle cx="9" cy="10.5" r="1" fill="#475569" />

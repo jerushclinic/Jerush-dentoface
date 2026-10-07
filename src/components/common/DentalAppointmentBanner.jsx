@@ -26,7 +26,7 @@ export default function DentalAppointmentBanner({
         {/* Background Decorative Lighting & Mesh Effects */}
         <div className="absolute -top-24 -left-24 w-96 h-96 bg-brandSky/15 rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-brandBlue/25 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(ellipse_at_center,rgba(30,151,212,0.08)_0%,transparent_70%)] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(ellipse_at_center,rgba(56,189,248,0.15)_0%,transparent_70%)] pointer-events-none" />
 
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center p-6 sm:p-10 lg:p-14">
 

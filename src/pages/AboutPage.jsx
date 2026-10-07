@@ -69,13 +69,13 @@ export default function AboutPage() {
     },
     {
       city: 'Trichy, TN',
-      type: 'Advanced Care Center',
+      type: 'Advanced Care Centre',
       specialties: 'Laser Dentistry & Hair Restoration',
       contact: '+91 97510 10107',
     },
     {
       city: 'Chennai, TN',
-      type: 'Cosmetic & Aesthetics Center',
+      type: 'Cosmetic & Aesthetics Centre',
       specialties: 'Digital Smile Design & Facial Aesthetics',
       contact: '+91 94891 60055',
     },

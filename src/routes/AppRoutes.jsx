@@ -29,9 +29,17 @@ import TeamPage from '../pages/TeamPage.jsx';
 
 import CrownsBridgesPage from '../pages/CrownsBridgesPage.jsx';
 import SmileStoriesPage from '../pages/SmileStoriesPage.jsx';
+import SmileTransformationsPage from '../pages/SmileTransformationsPage.jsx';
+import CosmeticResurfacingPage from '../pages/CosmeticResurfacingPage.jsx';
+import HairRegrowthResultsPage from '../pages/HairRegrowthResultsPage.jsx';
+import BodyContouringCasesPage from '../pages/BodyContouringCasesPage.jsx';
 import DentalCampsPage from '../pages/DentalCampsPage.jsx';
 import JerushalignePage from '../pages/JerushalignePage.jsx';
 import MetalBracesPage from '../pages/MetalBracesPage.jsx';
+import AdminStaffProfiles from '../admin/pages/AdminStaffProfiles.jsx';
+import EditorialStandardsPage from '../pages/EditorialStandardsPage.jsx';
+import TermsConditionsPage from '../pages/TermsConditionsPage.jsx';
+import PrivacyPolicyPage from '../pages/PrivacyPolicyPage.jsx';
 
 export default function AppRoutes() {
   return (
@@ -64,6 +72,10 @@ export default function AppRoutes() {
       <Route path="/best-crowns-and-bridges-treatment" element={<CrownsBridgesPage />} />
       <Route path="/dental-treatments/best-crowns-and-bridges-treatment" element={<CrownsBridgesPage />} />
       <Route path="/treatments/:id" element={<TreatmentDetailPage />} />
+      <Route path="/treatments/:id/" element={<TreatmentDetailPage />} />
+      <Route path="/services" element={<Navigate to="/treatments" replace />} />
+      <Route path="/services/:id" element={<TreatmentDetailPage />} />
+      <Route path="/services/:id/" element={<TreatmentDetailPage />} />
       <Route path="/dental-implants" element={<DentalImplantsPage />} />
       <Route path="/dental-treatments/dental-implants-in-chennai" element={<Navigate to="/dental-implants" replace />} />
       <Route path="/dental-treatments/root-canal-treatment-in-tamilnadu" element={<RootCanalTreatmentPage />} />
@@ -78,10 +90,26 @@ export default function AppRoutes() {
       <Route path="/leadership/dr-c-binila-bladbin-managing-director" element={<DrBinilaPage />} />
       <Route path="/leadership/dr-a-prabin-chief-executive-officer" element={<DrPrabinPage />} />
 
+      {/* Dedicated Transformations Pages */}
+      <Route path="/smile-transformations" element={<SmileTransformationsPage />} />
+      <Route path="/transformations/smile" element={<Navigate to="/smile-transformations" replace />} />
+
+      <Route path="/cosmetic-resurfacing" element={<CosmeticResurfacingPage />} />
+      <Route path="/transformations/cosmetic-resurfacing" element={<Navigate to="/cosmetic-resurfacing" replace />} />
+      <Route path="/transformations/skin" element={<Navigate to="/cosmetic-resurfacing" replace />} />
+
+      <Route path="/hair-regrowth-results" element={<HairRegrowthResultsPage />} />
+      <Route path="/transformations/hair-regrowth" element={<Navigate to="/hair-regrowth-results" replace />} />
+      <Route path="/transformations/hair" element={<Navigate to="/hair-regrowth-results" replace />} />
+
+      <Route path="/body-contouring-cases" element={<BodyContouringCasesPage />} />
+      <Route path="/transformations/body-contouring" element={<Navigate to="/body-contouring-cases" replace />} />
+      <Route path="/transformations/body" element={<Navigate to="/body-contouring-cases" replace />} />
+
       <Route path="/smile-stories" element={<SmileStoriesPage />} />
-      <Route path="/smile-transformations" element={<SmileStoriesPage />} />
-      <Route path="/before-after" element={<Navigate to="/smile-stories" replace />} />
-      <Route path="/gallery" element={<Navigate to="/smile-stories" replace />} />
+      <Route path="/transformations" element={<Navigate to="/smile-transformations" replace />} />
+      <Route path="/before-after" element={<Navigate to="/smile-transformations" replace />} />
+      <Route path="/gallery" element={<Navigate to="/smile-transformations" replace />} />
       <Route path="/camps" element={<DentalCampsPage />} />
       <Route path="/dental-camps" element={<DentalCampsPage />} />
       <Route path="/events" element={<EventsPage />} />
@@ -93,6 +121,17 @@ export default function AppRoutes() {
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/meet-our-team" element={<TeamPage />} />
       <Route path="/team" element={<Navigate to="/meet-our-team" replace />} />
+      <Route path="/staff-profiles" element={<AdminStaffProfiles standalone={true} />} />
+      <Route path="/staff" element={<Navigate to="/staff-profiles" replace />} />
+      <Route path="/editorial-standards" element={<EditorialStandardsPage />} />
+      <Route path="/clinical-editorial-standards" element={<Navigate to="/editorial-standards" replace />} />
+      <Route path="/medical-editorial-policy" element={<Navigate to="/editorial-standards" replace />} />
+      <Route path="/editorial-policy" element={<Navigate to="/editorial-standards" replace />} />
+      <Route path="/terms-conditions" element={<TermsConditionsPage />} />
+      <Route path="/terms-of-use" element={<Navigate to="/terms-conditions" replace />} />
+      <Route path="/terms" element={<Navigate to="/terms-conditions" replace />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+      <Route path="/privacy" element={<Navigate to="/privacy-policy" replace />} />
       {/* Fallback route */}
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

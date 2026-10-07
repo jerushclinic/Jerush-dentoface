@@ -19,11 +19,14 @@ export default function TreatmentCtaBanner({
   doctorName,
   doctorRole,
   doctorAlt,
+  imageFit = "auto",
+  imageClassName = "",
   imageSrc = "/images/dental-chair.webp",
   imageAlt = "Jerush Modern Dental Care",
   className = ""
 }) {
   const hasDoctor = Boolean(doctorImage);
+  const isCover = imageFit === 'cover' || (imageFit === 'auto' && doctorImage && doctorImage.includes('prabin'));
 
   return (
     <section className={`w-full py-10 px-4 sm:px-6 lg:px-8 font-body select-none ${className}`}>
@@ -32,7 +35,7 @@ export default function TreatmentCtaBanner({
         {/* Background Decorative Lighting & Mesh Effects */}
         <div className="absolute -top-24 -left-24 w-96 h-96 bg-brandSky/15 rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-brandBlue/25 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(ellipse_at_center,rgba(30,151,212,0.08)_0%,transparent_70%)] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(ellipse_at_center,rgba(56,189,248,0.15)_0%,transparent_70%)] pointer-events-none" />
 
         {hasDoctor ? (
           /* Grid with Doctor Cutout on Left */
@@ -43,7 +46,7 @@ export default function TreatmentCtaBanner({
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="relative flex items-end justify-center overflow-hidden border-b lg:border-b-0 lg:border-r border-white/10 bg-black/15 min-h-[300px] lg:min-h-0 pt-8 lg:pt-0"
+              className={`relative flex ${isCover ? 'items-stretch' : 'items-end'} justify-center overflow-hidden border-b lg:border-b-0 lg:border-r border-white/10 bg-black/15 min-h-[320px] lg:min-h-full ${isCover ? 'p-0' : 'pt-8 lg:pt-0'}`}
             >
               {/* Doctor background ambient glow */}
               <div className="absolute w-64 h-64 bg-gradient-to-tr from-brandSky/20 to-brandBlue/30 rounded-full blur-3xl pointer-events-none" />
@@ -51,7 +54,7 @@ export default function TreatmentCtaBanner({
               <img
                 src={doctorImage}
                 alt={doctorAlt || doctorName || "Specialist Doctor"}
-                className="relative z-10 h-[320px] lg:h-[390px] w-auto object-contain object-bottom transition-transform duration-500 hover:scale-[1.02] drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)]"
+                className={`relative z-10 ${imageClassName || (isCover ? 'w-full h-full min-h-[340px] lg:min-h-full object-cover object-top' : 'h-[320px] lg:h-[390px] w-auto object-contain object-bottom')} transition-transform duration-500 hover:scale-[1.02] drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)]`}
               />
 
               {/* Doctor Name & Role Overlay Tag */}

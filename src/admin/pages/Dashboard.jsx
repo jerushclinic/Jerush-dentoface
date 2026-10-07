@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Users, Stethoscope, FileText, Star, Image, Plus, ArrowUpRight, Activity, Briefcase } from 'lucide-react';
+import { Users, Stethoscope, FileText, Star, Image, Plus, ArrowUpRight, Activity, Briefcase, BadgeCheck } from 'lucide-react';
 import StatCard from '../components/StatCard';
 import { doctorService } from '../../services/doctorService';
 import { treatmentService } from '../../services/treatmentService';
@@ -72,10 +72,10 @@ export default function Dashboard() {
   }, []);
 
   const quickActions = [
+    { label: 'Staff Profiles', icon: BadgeCheck, path: '/admin/staff-profiles', color: 'brandBlue' },
     { label: 'Add Doctor', icon: Users, path: '/admin/doctors', color: 'brandBlue' },
     { label: 'New Treatment', icon: Stethoscope, path: '/admin/treatments', color: 'emerald' },
     { label: 'Write Blog', icon: FileText, path: '/admin/blog/new', color: 'violet' },
-    { label: 'View Reviews', icon: Star, path: '/admin/reviews', color: 'amber' },
   ];
 
   return (

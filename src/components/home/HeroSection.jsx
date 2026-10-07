@@ -32,7 +32,10 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="jerush-hero" className="w-full relative overflow-hidden font-body bg-slate-950 h-[100dvh] xl:h-[calc(100vh-124px)] text-left">
+    <section
+      id="jerush-hero"
+      className="w-full relative overflow-hidden font-body bg-slate-950 text-left"
+    >
       {/* HTML5 Background Video */}
       <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none" style={{ transform: 'translate3d(0, 0, 0)' }}>
         <video
@@ -60,8 +63,8 @@ export default function HeroSection() {
       >
         <div className={`grid grid-cols-4 divide-x divide-slate-800/80 overflow-hidden transform transition-all duration-300 ${
           isSticky 
-            ? 'bg-slate-950/95 backdrop-blur-2xl border-t border-x border-b-0 border-sky-500/40 rounded-t-2xl ring-1 ring-white/10 hover:border-sky-400/60 shadow-[0_-4px_12px_rgba(15,23,42,0.08)]' 
-            : 'bg-slate-950/90 backdrop-blur-xl border border-b-0 border-sky-500/30 rounded-t-2xl hover:border-sky-400/50'
+            ? 'bg-slate-950/95 backdrop-blur-2xl border-t border-x border-b-0 border-brandSky/40 rounded-t-2xl ring-1 ring-white/10 hover:border-brandSky/60 shadow-[0_-4px_12px_rgba(15,23,42,0.08)]' 
+            : 'bg-slate-950/90 backdrop-blur-xl border border-b-0 border-brandSky/30 rounded-t-2xl hover:border-brandSky/50'
         }`}>
           {/* Action 1: Book Appointment */}
           <a

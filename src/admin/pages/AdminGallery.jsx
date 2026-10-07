@@ -37,8 +37,8 @@ export default function AdminGallery() {
   const [editingEvent, setEditingEvent] = useState(null);
 
   // Fetch Events
-  const fetchEvents = () => {
-    setLoadingEvents(true);
+  const fetchEvents = (silent = false) => {
+    if (!silent) setLoadingEvents(true);
     galleryService.getEvents()
       .then(data => {
         setEvents(data || []);
@@ -84,12 +84,14 @@ export default function AdminGallery() {
   // Event CRUD Handlers
   const handleDeleteEvent = (eventItem) => {
     if (confirm(`Are you sure you want to delete the event album "${eventItem.title}" and all its photos?`)) {
+      setEvents((prev) => prev.filter((ev) => ev.id !== eventItem.id));
       galleryService.deleteEvent(eventItem.id)
         .then(() => {
-          fetchEvents();
+          fetchEvents(true);
         })
         .catch(err => {
           alert("Failed to delete event: " + err.message);
+          fetchEvents(true);
         });
     }
   };
@@ -104,7 +106,7 @@ export default function AdminGallery() {
     setEvents(prev => prev.map(item => item.id === row.id ? { ...item, status: newStatus } : item));
     galleryService.updateEvent(row.id, { ...row, status: newStatus }).catch(err => {
       console.error("Failed to toggle status:", err);
-      fetchEvents();
+      fetchEvents(true);
     });
   };
 
@@ -128,9 +130,9 @@ export default function AdminGallery() {
     },
     {
       key: 'title', label: 'Event Album Title', render: (row) => (
-        <div className="flex flex-col text-left max-w-[220px]">
+        <div className="flex flex-col text-left max-w-[280px]">
           <span className="font-bold text-slate-800 dark:text-white line-clamp-1">{row.title}</span>
-          <span className="text-[10px] text-slate-400 font-semibold">{row.description || 'No description'}</span>
+          <span className="text-[10px] text-slate-400 font-semibold line-clamp-2 mt-0.5 leading-snug">{row.description || 'No description'}</span>
         </div>
       )
     },
@@ -225,7 +227,7 @@ export default function AdminGallery() {
       {/* SECTION 1: JERUSH EVENTS */}
       {mainTab === 'events' && (
         <div className="space-y-6">
-          {loadingEvents ? (
+          {loadingEvents && events.length === 0 ? (
             <div className="flex items-center justify-center h-48">
               <div className="w-8 h-8 border-3 border-brandSky border-t-transparent rounded-full animate-spin"></div>
             </div>
@@ -356,7 +358,7 @@ export default function AdminGallery() {
       <EventFormModal
         open={eventModalOpen}
         onClose={() => setEventModalOpen(false)}
-        onSave={fetchEvents}
+        onSave={() => fetchEvents(true)}
         event={editingEvent}
       />
       

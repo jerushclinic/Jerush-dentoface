@@ -30,7 +30,7 @@ const ROW_1_CARDS = [
     rating: 5,
     treatment: 'Dental Implant Treatment',
     image: '/images/testimonials/hewon.webp',
-    text: 'I am very happy with the treatment from Jerush Dental Center. During my implant treatment, all staff were very kind and supportive, especially Dr. Bladbin had explained all treatment well so that I could understand how my teeth is getting better.'
+    text: 'I am very happy with the treatment from Jerush Dental Centre. During my implant treatment, all staff were very kind and supportive, especially Dr. Bladbin had explained all treatment well so that I could understand how my teeth is getting better.'
   },
   {
     id: 4,

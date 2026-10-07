@@ -16,6 +16,7 @@ import AdminTeam from '../pages/AdminTeam';
 import AdminEvents from '../pages/AdminEvents';
 import AdminCamps from '../pages/AdminCamps';
 import AdminMarquee from '../pages/AdminMarquee';
+import AdminStaffProfiles from '../pages/AdminStaffProfiles';
 
 function ProtectedRoute({ children }) {
   const { isAuthenticated } = useAdminAuth();
@@ -38,6 +39,8 @@ export default function AdminRoutes() {
         <Route path="marquee" element={<AdminMarquee />} />
         <Route path="events" element={<AdminEvents />} />
         <Route path="camps" element={<AdminCamps />} />
+        <Route path="staff-profiles" element={<AdminStaffProfiles />} />
+        <Route path="staff" element={<Navigate to="/admin/staff-profiles" replace />} />
         <Route path="doctors" element={<AdminDoctors />} />
         <Route path="treatments" element={<AdminTreatments />} />
         <Route path="blog" element={<AdminBlogs />} />
