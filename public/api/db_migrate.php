@@ -82,9 +82,16 @@ runMigrationStep("Doctors table schema", function() use ($db) {
           `instagram` VARCHAR(255) DEFAULT NULL,
           `linkedin` VARCHAR(255) DEFAULT NULL,
           `twitter` VARCHAR(255) DEFAULT NULL,
+          `sort_order` INT DEFAULT 0,
           `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
     ");
+
+    $st = $db->query("SHOW COLUMNS FROM `doctors` LIKE 'sort_order'");
+    if (!$st->fetch()) {
+        $db->exec("ALTER TABLE `doctors` ADD COLUMN `sort_order` INT DEFAULT 0");
+    }
+
     return "verified";
 });
 

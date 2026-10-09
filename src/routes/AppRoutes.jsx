@@ -40,6 +40,7 @@ import AdminStaffProfiles from '../admin/pages/AdminStaffProfiles.jsx';
 import EditorialStandardsPage from '../pages/EditorialStandardsPage.jsx';
 import TermsConditionsPage from '../pages/TermsConditionsPage.jsx';
 import PrivacyPolicyPage from '../pages/PrivacyPolicyPage.jsx';
+import TechnologiesPage from '../pages/TechnologiesPage.jsx';
 
 export default function AppRoutes() {
   return (
@@ -50,6 +51,9 @@ export default function AppRoutes() {
       <Route path="/about/clinical-excellence" element={<ClinicalExcellencePage />} />
       <Route path="/about/ethical-healthcare" element={<EthicalHealthcarePage />} />
       <Route path="/doctors" element={<DoctorsPage />} />
+      <Route path="/technologies" element={<TechnologiesPage />} />
+      <Route path="/advanced-technologies" element={<Navigate to="/technologies" replace />} />
+      <Route path="/about/technologies" element={<Navigate to="/technologies" replace />} />
       <Route path="/treatments" element={<TreatmentsPage />} />
       <Route path="/treatments/metal-braces" element={<MetalBracesPage />} />
       <Route path="/dental-treatments/best-metal-orthodontic-braces" element={<MetalBracesPage />} />

@@ -909,6 +909,7 @@ export default function Header() {
                                 <ul className="space-y-2">
                                   <li><Link to="/about" onClick={handleLinkClick} className="text-xs font-semibold text-slate-700 hover:text-brandBlue transition-colors block">About Our Hospital</Link></li>
                                   <li><Link to="/about/milestones-legacy" onClick={handleLinkClick} className="text-xs font-semibold text-slate-700 hover:text-brandBlue transition-colors block">Milestones & Legacy</Link></li>
+                                  <li><Link to="/technologies" onClick={handleLinkClick} className="text-xs font-semibold text-slate-700 hover:text-brandBlue transition-colors block">Advanced Technologies</Link></li>
                                   <li><Link to="/about" onClick={handleLinkClick} className="text-xs font-semibold text-slate-700 hover:text-brandBlue transition-colors block">Modern Facilities</Link></li>
                                   <li><Link to="/about" onClick={handleLinkClick} className="text-xs font-semibold text-slate-700 hover:text-brandBlue transition-colors block">Precision Diagnostics</Link></li>
                                 </ul>
@@ -2022,6 +2023,15 @@ export default function Header() {
               </Link>
 
               <Link
+                to="/technologies"
+                onClick={handleLinkClick}
+                className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
+              >
+                <span>Advanced Technologies</span>
+                <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
+              </Link>
+
+              <Link
                 to="/about/clinical-excellence"
                 onClick={handleLinkClick}
                 className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
@@ -2086,6 +2096,9 @@ export default function Header() {
 
                 <Link to="/about" onClick={handleLinkClick} className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
                   Hospital Facilities
+                </Link>
+                <Link to="/technologies" onClick={handleLinkClick} className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
+                  Technologies
                 </Link>
                 <Link to="/editorial-standards" onClick={handleLinkClick} className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
                   Editorial Standards

@@ -3,6 +3,7 @@ import { doctorService } from '../services/doctorService';
 import { Search } from 'lucide-react';
 import PageBreadcrumbHero from '../components/common/PageBreadcrumbHero';
 import DoctorProfileModal from '../components/common/DoctorProfileModal';
+import DoctorCard from '../components/common/DoctorCard';
 
 export default function DoctorsPage() {
   const [doctorsList, setDoctorsList] = useState([]);
@@ -23,6 +24,14 @@ export default function DoctorsPage() {
       }
     };
     fetchDoctors();
+
+    const handleUpdated = (e) => {
+      if (e.detail && Array.isArray(e.detail) && e.detail.length > 0) {
+        setDoctorsList(e.detail);
+      }
+    };
+    window.addEventListener('jerush_doctors_updated', handleUpdated);
+    return () => window.removeEventListener('jerush_doctors_updated', handleUpdated);
   }, []);
 
 
@@ -67,52 +76,12 @@ export default function DoctorsPage() {
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {filteredDoctors.map((doc) => (
-              <div
+              <DoctorCard
                 key={doc.id}
+                doctor={doc}
                 onClick={() => setSelectedDoctor(doc)}
-                className="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group flex flex-col justify-between w-full max-w-[290px] sm:max-w-none mx-auto relative overflow-hidden"
-              >
-                {/* Soft glow accents */}
-                <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-brandSky/5 group-hover:bg-gradient-to-br group-hover:from-brandBlue/20 group-hover:to-brandSky/30 group-hover:scale-125 transition-all duration-500 pointer-events-none -translate-y-10 translate-x-10" />
-
-                <div className="relative z-10">
-                  <div className="aspect-[4/5] rounded-xl overflow-hidden mb-5 bg-slate-100 relative">
-                    <img
-                      src={doc.image || doc.fallbackImg}
-                      alt={doc.name}
-                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105 will-change-transform backface-hidden"
-                      loading="lazy"
-                      onError={(e) => {
-                        e.target.src = doc.fallbackImg;
-                      }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                      <span className="text-[10px] text-white font-headline font-bold uppercase tracking-wider bg-brandSky/95 px-3 py-1.5 rounded-lg">
-                        View Profile
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="space-y-2 text-left">
-                    <h4 className="font-headline font-extrabold text-base text-primary group-hover:text-brandBlue transition-colors leading-tight">
-                      {doc.name}
-                    </h4>
-                    <p className="text-brandSky font-bold text-[11px] uppercase tracking-wider">
-                      {doc.role}
-                    </p>
-                    <p className="text-slate-400 text-xs font-semibold leading-snug">
-                      {doc.qualification}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="relative z-10 mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-secondary font-headline font-bold uppercase tracking-wide">
-                  <span>{doc.experience}</span>
-                  <div className="w-8 h-8 rounded-full bg-slate-100 group-hover:bg-gradient-to-r group-hover:from-brandBlue group-hover:to-brandSky text-slate-500 group-hover:text-white flex items-center justify-center shadow-sm group-hover:shadow-md group-hover:scale-110 transition-all duration-300">
-                    <span className="text-sm font-bold group-hover:translate-x-0.5 transition-transform">&rarr;</span>
-                  </div>
-                </div>
-              </div>
+                className="w-full max-w-[300px] sm:max-w-none mx-auto"
+              />
             ))}
           </div>
         )}

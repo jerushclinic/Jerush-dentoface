@@ -106,6 +106,7 @@ export default function Footer() {
               <li><Link to="/" onClick={handleLinkClick} className="hover:text-brandSky transition-colors">Home</Link></li>
               <li><a href="#" onClick={(e) => handleScrollToSection('jerush-about-welcome', e)} className="hover:text-brandSky transition-colors">Our Legacy</a></li>
               <li><a href="#" onClick={(e) => handleScrollToSection('jerush-doctors', e)} className="hover:text-brandSky transition-colors">Meet Our Specialists</a></li>
+              <li><Link to="/technologies" onClick={handleLinkClick} className="hover:text-brandSky transition-colors">Advanced Technologies</Link></li>
               <li><Link to="/smile-transformations" onClick={handleLinkClick} className="hover:text-brandSky transition-colors">Smile Transformations</Link></li>
               <li><Link to="/editorial-standards" onClick={handleLinkClick} className="hover:text-brandSky transition-colors">Editorial Standards</Link></li>
               <li><Link to="/contact" onClick={handleLinkClick} className="hover:text-brandSky transition-colors">Contact & Locations</Link></li>

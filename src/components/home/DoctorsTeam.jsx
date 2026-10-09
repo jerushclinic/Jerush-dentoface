@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { doctorService } from '../../services/doctorService';
 import DoctorProfileModal from '../common/DoctorProfileModal';
+import DoctorCard from '../common/DoctorCard';
 
 export default function DoctorsTeam({ doctors }) {
   const [selectedDoctor, setSelectedDoctor] = useState(null);
@@ -16,6 +17,14 @@ export default function DoctorsTeam({ doctors }) {
         setLocalDoctors(data);
       });
     }
+
+    const handleUpdated = (e) => {
+      if (e.detail && Array.isArray(e.detail) && e.detail.length > 0) {
+        setLocalDoctors(e.detail);
+      }
+    };
+    window.addEventListener('jerush_doctors_updated', handleUpdated);
+    return () => window.removeEventListener('jerush_doctors_updated', handleUpdated);
   }, [doctors]);
 
   const scrollNext = useCallback(() => {
@@ -131,53 +140,12 @@ export default function DoctorsTeam({ doctors }) {
           }}
         >
           {localDoctors.map((doc) => (
-            <div
+            <DoctorCard
               key={doc.id}
+              doctor={doc}
               onClick={() => setSelectedDoctor(doc)}
-              className="jerush-doctor-card rounded-3xl p-5 bg-gradient-to-b from-blue-50/40 via-sky-50/20 to-white border border-slate-200/60 hover:border-brandSky/50 shadow-[0_4px_20px_rgba(40,83,164,0.05)] hover:shadow-[0_14px_34px_rgba(40,83,164,0.12)] transition-all duration-300 ease-out shrink-0 w-[85%] sm:w-[280px] md:w-[calc((100%-24px)/2)] lg:w-[calc((100%-72px)/4)] snap-start cursor-pointer group flex flex-col justify-between relative overflow-hidden"
-            >
-              {/* Soft glow accents */}
-              <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-brandSky/5 group-hover:bg-gradient-to-br group-hover:from-brandBlue/20 group-hover:to-brandSky/30 group-hover:scale-125 transition-all duration-500 pointer-events-none" />
-
-              <div className="relative z-10">
-                {/* Image Wrap */}
-                <div className="aspect-[4/5] rounded-2xl overflow-hidden mb-4 bg-slate-100/60 relative border border-slate-200/50">
-                  <img
-                    src={doc.image || doc.fallbackImg}
-                    alt={doc.name}
-                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                    onError={(e) => {
-                      e.target.src = doc.fallbackImg;
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                    <span className="text-[10px] text-white font-headline font-bold uppercase tracking-wider bg-brandBlue/90 px-3 py-1.5 rounded-lg shadow-sm">
-                      View Profile
-                    </span>
-                  </div>
-                </div>
-
-                <div className="space-y-1.5 text-left">
-                  <h4 className="font-headline font-extrabold text-base text-primary group-hover:text-brandBlue transition-colors">
-                    {doc.name}
-                  </h4>
-                  <p className="text-brandBlue font-semibold text-[11px] uppercase tracking-wider">
-                    {doc.role}
-                  </p>
-                  <p className="text-slate-500 text-xs font-semibold">
-                    {doc.qualification}
-                  </p>
-                </div>
-              </div>
-
-              <div className="relative z-10 mt-4 pt-3.5 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-headline font-bold uppercase tracking-wide">
-                <span>{doc.experience}</span>
-                <div className="w-8 h-8 rounded-full bg-slate-100 group-hover:bg-gradient-to-r group-hover:from-brandBlue group-hover:to-brandSky text-slate-500 group-hover:text-white flex items-center justify-center shadow-sm group-hover:shadow-md group-hover:scale-110 transition-all duration-300">
-                  <span className="text-sm font-bold group-hover:translate-x-0.5 transition-transform">&rarr;</span>
-                </div>
-              </div>
-            </div>
+              className="shrink-0 w-[85%] sm:w-[280px] md:w-[calc((100%-24px)/2)] lg:w-[calc((100%-72px)/4)] snap-start"
+            />
           ))}
         </div>
       </div>

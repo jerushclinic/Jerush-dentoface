@@ -8,7 +8,7 @@ import ChairmansDesk from '../components/home/ChairmansDesk.jsx';
 import DoctorsTeam from '../components/home/DoctorsTeam.jsx';
 import InfrastructureSection from '../components/home/InfrastructureSection.jsx';
 import Testimonials from '../components/home/Testimonials.jsx';
-import HighlightsSection from '../components/home/HighlightsSection.jsx';
+import AdvancedTechnologiesSection from '../components/home/AdvancedTechnologiesSection.jsx';
 import BlogPreviewSection from '../components/home/BlogPreviewSection.jsx';
 import FaqSection from '../components/common/FaqSection.jsx';
 import ContactSection from '../components/home/ContactSection.jsx';
@@ -91,7 +91,7 @@ export default function HomePage() {
       </SectionReveal>
 
       <SectionReveal>
-        <HighlightsSection />
+        <AdvancedTechnologiesSection />
       </SectionReveal>
 
       <SectionReveal>

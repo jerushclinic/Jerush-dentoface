@@ -27,6 +27,14 @@ export default function AdminDoctors() {
 
   useEffect(() => {
     fetchDoctors(true);
+
+    const onUpdated = (e) => {
+      if (e.detail && Array.isArray(e.detail) && e.detail.length > 0) {
+        setDoctors(e.detail);
+      }
+    };
+    window.addEventListener('jerush_doctors_updated', onUpdated);
+    return () => window.removeEventListener('jerush_doctors_updated', onUpdated);
   }, []);
 
   const handleAdd = () => {
