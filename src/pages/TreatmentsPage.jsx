@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
   Search, Info, Calendar, ArrowRight, X, ChevronDown, ChevronRight,
-  Filter, Grid, List, CheckCircle2, Phone, RotateCcw
+  Filter, Grid, List, CheckCircle2, Phone, RotateCcw, ExternalLink
 } from 'lucide-react';
 import PageBreadcrumbHero from '../components/common/PageBreadcrumbHero';
 import TreatmentCtaBanner from '../components/common/TreatmentCtaBanner';
@@ -15,7 +15,7 @@ export default function TreatmentsPage() {
   const [treatments, setTreatments] = useState([]);
   const [loading, setLoading] = useState(true);
   const [viewMode, setViewMode] = useState('grid'); // 'grid' | 'list'
-  
+
   const initialCategory = searchParams.get('category') || 'all';
   const initialSubcategory = searchParams.get('sub') || 'all';
   const [activeCategory, setActiveCategory] = useState(initialCategory);
@@ -167,8 +167,8 @@ export default function TreatmentsPage() {
     const matchesCategory = activeCategory === 'all' || t.category === activeCategory;
     const matchesSubcategory = activeSubcategory === 'all' || t.subcategory === activeSubcategory;
     const query = searchQuery.toLowerCase().trim();
-    const matchesSearch = !query || 
-      t.title.toLowerCase().includes(query) || 
+    const matchesSearch = !query ||
+      t.title.toLowerCase().includes(query) ||
       (t.desc && t.desc.toLowerCase().includes(query)) ||
       (t.subcategory && t.subcategory.toLowerCase().includes(query)) ||
       (Array.isArray(t.benefits) && t.benefits.some(b => b.toLowerCase().includes(query)));
@@ -193,9 +193,9 @@ export default function TreatmentsPage() {
 
   return (
     <div className="bg-slate-50/70 text-slate-800 min-h-screen pt-0 font-body relative text-left pb-24">
-      <PageBreadcrumbHero 
-        title="Our Medical Services" 
-        breadcrumbs={[{ label: 'Medical Services', active: true }]} 
+      <PageBreadcrumbHero
+        title="Our Medical Services"
+        breadcrumbs={[{ label: 'Medical Services', active: true }]}
       />
 
       {/* Decorative ambient background glows contained without trapping sticky */}
@@ -256,9 +256,8 @@ export default function TreatmentsPage() {
                     <div key={catId} className="border border-slate-100 rounded-xl overflow-hidden">
                       <button
                         onClick={() => toggleAccordion(catId)}
-                        className={`w-full flex items-center justify-between p-2.5 px-3 text-xs font-headline font-bold uppercase tracking-wider transition-colors ${
-                          activeCategory === catId ? 'bg-brandBlue/10 text-brandBlue' : 'bg-slate-50 text-slate-700'
-                        }`}
+                        className={`w-full flex items-center justify-between p-2.5 px-3 text-xs font-headline font-bold uppercase tracking-wider transition-colors ${activeCategory === catId ? 'bg-brandBlue/10 text-brandBlue' : 'bg-slate-50 text-slate-700'
+                          }`}
                       >
                         <span className="font-headline font-bold text-xs uppercase tracking-wide">
                           <span>{cat?.name}</span>
@@ -270,11 +269,10 @@ export default function TreatmentsPage() {
                         <div className="p-2 space-y-1 bg-white border-t border-slate-100">
                           <button
                             onClick={() => handleSubcategorySelect(catId, 'all')}
-                            className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs font-semibold ${
-                              activeCategory === catId && activeSubcategory === 'all'
+                            className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs font-semibold ${activeCategory === catId && activeSubcategory === 'all'
                                 ? 'bg-brandBlue text-white'
                                 : 'text-slate-600 hover:bg-slate-50'
-                            }`}
+                              }`}
                           >
                             All {cat?.name} ({cat?.count})
                           </button>
@@ -285,11 +283,10 @@ export default function TreatmentsPage() {
                               <button
                                 key={sub}
                                 onClick={() => handleSubcategorySelect(catId, sub)}
-                                className={`w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs ${
-                                  isSubActive
+                                className={`w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs ${isSubActive
                                     ? 'bg-brandBlue text-white font-bold'
                                     : 'text-slate-600 hover:bg-slate-50'
-                                }`}
+                                  }`}
                               >
                                 <span className="truncate pr-2">{sub}</span>
                                 <span className="text-[10px] opacity-75 shrink-0">{subCount}</span>
@@ -307,29 +304,27 @@ export default function TreatmentsPage() {
         </div>
 
         {/* ─── Main Two-Column Layout: Left Side Accordion Sidebar + Right Compact Cards Grid ─── */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[285px_1fr] xl:grid-cols-[300px_1fr] gap-6 lg:gap-7 items-start">
 
           {/* ══════════════════════════════════════════════════════════════════
               LEFT SIDE ACCORDION NAVIGATION SIDEBAR (Desktop & Tablet)
               ══════════════════════════════════════════════════════════════════ */}
-          <aside className="hidden lg:block lg:col-span-4 xl:col-span-3.5 jerush-treatments-sidebar self-start space-y-3">
-            
+          <aside className="hidden lg:block w-full jerush-treatments-sidebar self-start space-y-3">
+
             <div className="bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 shadow-sm p-3.5 space-y-2">
-              
+
               {/* 1. All Treatments Top-Level Pill */}
               <div>
                 <button
                   onClick={() => handleCategorySelect('all')}
-                  className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl font-headline font-bold text-xs uppercase tracking-wider transition-all cursor-pointer ${
-                    activeCategory === 'all'
+                  className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl font-headline font-bold text-xs uppercase tracking-wider transition-all cursor-pointer ${activeCategory === 'all'
                       ? 'bg-gradient-to-r from-brandBlue to-brandSky text-white shadow-sm shadow-brandBlue/20 scale-[1.01]'
                       : 'bg-slate-50/80 hover:bg-slate-100/90 text-slate-700 border border-slate-200/70 hover:border-slate-300'
-                  }`}
+                    }`}
                 >
                   <span>All Procedures</span>
-                  <span className={`text-[10px] font-extrabold px-1.5 py-0.5 rounded-full ${
-                    activeCategory === 'all' ? 'bg-white/25 text-white' : 'bg-white text-slate-600 border border-slate-200/80'
-                  }`}>
+                  <span className={`text-[10px] font-extrabold px-1.5 py-0.5 rounded-full ${activeCategory === 'all' ? 'bg-white/25 text-white' : 'bg-white text-slate-600 border border-slate-200/80'
+                    }`}>
                     {treatments.length}
                   </span>
                 </button>
@@ -349,22 +344,20 @@ export default function TreatmentsPage() {
                   const isOpen = !!openAccordions[dept.id];
 
                   return (
-                    <div 
-                      key={dept.id} 
-                      className={`rounded-xl border transition-all overflow-hidden ${
-                        isDeptActive 
-                          ? 'border-brandBlue/40 bg-slate-50/40 shadow-xs' 
+                    <div
+                      key={dept.id}
+                      className={`rounded-xl border transition-all overflow-hidden ${isDeptActive
+                          ? 'border-brandBlue/40 bg-slate-50/40 shadow-xs'
                           : 'border-slate-200/70 bg-white hover:border-slate-300'
-                      }`}
+                        }`}
                     >
                       {/* Accordion Trigger Header */}
-                      <div 
+                      <div
                         onClick={() => handleCategorySelect(dept.id)}
-                        className={`w-full flex items-center justify-between p-2.5 px-3.5 cursor-pointer select-none transition-colors ${
-                          isDeptActive && activeSubcategory === 'all'
+                        className={`w-full flex items-center justify-between p-2.5 px-3.5 cursor-pointer select-none transition-colors ${isDeptActive && activeSubcategory === 'all'
                             ? 'bg-brandBlue/10 text-brandBlue font-bold'
                             : 'hover:bg-slate-50 text-slate-800'
-                        }`}
+                          }`}
                       >
                         <span className="font-headline font-bold text-xs uppercase tracking-wide truncate">
                           {dept.name}
@@ -399,16 +392,14 @@ export default function TreatmentsPage() {
                               {/* "All in this department" option */}
                               <button
                                 onClick={() => handleSubcategorySelect(dept.id, 'all')}
-                                className={`w-full text-left flex items-center justify-between px-2.5 py-1.5 rounded-lg text-[11px] font-headline transition-all cursor-pointer ${
-                                  isDeptActive && activeSubcategory === 'all'
+                                className={`w-full text-left flex items-center justify-between px-2.5 py-1.5 rounded-lg text-[11px] font-headline transition-all cursor-pointer ${isDeptActive && activeSubcategory === 'all'
                                     ? 'bg-brandBlue text-white font-bold shadow-xs'
                                     : 'text-slate-600 hover:text-brandBlue hover:bg-white font-medium'
-                                }`}
+                                  }`}
                               >
                                 <span className="truncate">All {dept.name}</span>
-                                <span className={`text-[9px] px-1 rounded-full font-bold ${
-                                  isDeptActive && activeSubcategory === 'all' ? 'bg-white/20 text-white' : 'text-slate-400'
-                                }`}>
+                                <span className={`text-[9px] px-1 rounded-full font-bold ${isDeptActive && activeSubcategory === 'all' ? 'bg-white/20 text-white' : 'text-slate-400'
+                                  }`}>
                                   {count}
                                 </span>
                               </button>
@@ -422,16 +413,14 @@ export default function TreatmentsPage() {
                                   <button
                                     key={sub}
                                     onClick={() => handleSubcategorySelect(dept.id, sub)}
-                                    className={`w-full text-left flex items-center justify-between px-2.5 py-1.5 rounded-lg text-[11px] transition-all cursor-pointer ${
-                                      isSubActive
+                                    className={`w-full text-left flex items-center justify-between px-2.5 py-1.5 rounded-lg text-[11px] transition-all cursor-pointer ${isSubActive
                                         ? 'bg-brandBlue text-white font-bold shadow-xs'
                                         : 'text-slate-600 hover:text-brandBlue hover:bg-white font-medium'
-                                    }`}
+                                      }`}
                                   >
                                     <span className="truncate pr-1.5">{sub}</span>
-                                    <span className={`text-[9px] px-1 rounded-full font-bold shrink-0 ${
-                                      isSubActive ? 'bg-white/20 text-white' : 'text-slate-400 bg-slate-200/50'
-                                    }`}>
+                                    <span className={`text-[9px] px-1 rounded-full font-bold shrink-0 ${isSubActive ? 'bg-white/20 text-white' : 'text-slate-400 bg-slate-200/50'
+                                      }`}>
                                       {subCount}
                                     </span>
                                   </button>
@@ -461,30 +450,64 @@ export default function TreatmentsPage() {
             </div>
 
             {/* Quick Doctor Assistance Box */}
-            <div className="bg-gradient-to-br from-[#071324] to-[#0E2752] text-white rounded-2xl p-4 shadow-sm relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-brandSky/10 rounded-full blur-xl pointer-events-none"></div>
-              <div className="flex items-center gap-2 mb-2">
+            <div className="bg-gradient-to-br from-[#071324] via-[#0E2752] to-[#071324] text-white rounded-2xl p-4 shadow-md border border-white/10 relative overflow-hidden group">
+              {/* Atmospheric Glow Blurs */}
+              <div className="absolute -top-10 -right-10 w-36 h-36 bg-brandSky/20 rounded-full blur-2xl pointer-events-none"></div>
+              <div className="absolute -bottom-10 -left-10 w-36 h-36 bg-brandBlue/30 rounded-full blur-2xl pointer-events-none"></div>
+
+              {/* Header Title with Live Pulse Indicator */}
+              <div className="flex items-center gap-2 mb-2 relative z-10">
                 <span className="w-2 h-2 rounded-full bg-brandSky animate-pulse shrink-0"></span>
                 <h4 className="font-headline font-bold text-xs uppercase tracking-wider text-white">
                   Need Help Choosing?
                 </h4>
               </div>
-              <p className="text-[11px] text-slate-300 leading-relaxed mb-3">
+
+              {/* Big Doctor Portrait Cutout */}
+              <div className="relative z-10 flex flex-col items-center pt-1 mb-2">
+                {/* Ambient Halo behind Dr. Bladbin */}
+                <div className="relative flex justify-center w-full">
+                  <div className="absolute w-40 h-40 bg-brandSky/25 rounded-full blur-2xl pointer-events-none top-6" />
+                  <img
+                    src="/images/doctors/dr-bladbin-portrait.webp"
+                    alt="Dr. A. Bladbin"
+                    className="h-44 sm:h-48 w-auto max-w-full object-contain object-bottom drop-shadow-[0_16px_28px_rgba(0,0,0,0.65)] relative z-10 transition-transform duration-300 hover:scale-[1.03]"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.target.src = '/images/doctors/bladbin1.webp';
+                    }}
+                  />
+                </div>
+
+                {/* Doctor Name */}
+                <Link
+                  to="/leadership/dr-a-bladbin-chairman-founder"
+                  className="font-headline font-extrabold text-sm sm:text-base text-white hover:text-brandSky tracking-wide text-center mt-2 relative z-10 transition-colors"
+                >
+                  Dr. A. Bladbin
+                </Link>
+              </div>
+
+              {/* Guidance Description */}
+              <p className="text-[11px] text-slate-300 leading-relaxed text-center mb-3.5 relative z-10">
                 Consult our senior medical directors across 4 regional centres in Tamil Nadu & Dubai.
               </p>
-              <div className="flex gap-2">
+
+              {/* Action Buttons */}
+              <div className="flex gap-2 relative z-10">
                 <button
                   onClick={handleBookClick}
-                  className="flex-1 py-1.5 bg-gradient-to-r from-brandSky to-brandBlue text-white rounded-lg text-[11px] font-headline font-bold shadow-xs hover:brightness-110 transition-all flex items-center justify-center gap-1 cursor-pointer"
+                  className="flex-1 py-2 px-3 bg-gradient-to-r from-brandSky via-[#198BC8] to-brandBlue hover:brightness-110 active:scale-[0.99] text-white rounded-xl text-xs font-headline font-bold shadow-md shadow-brandBlue/30 transition-all flex items-center justify-center gap-1.5 cursor-pointer"
                 >
-                  <Calendar className="w-3 h-3" />
+                  <Calendar className="w-3.5 h-3.5" />
                   <span>Book Appt</span>
                 </button>
                 <a
                   href="tel:+919489160000"
-                  className="px-2.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white border border-white/15 text-[11px] font-headline font-bold flex items-center justify-center gap-1 transition-colors"
+                  className="px-3 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white border border-white/15 hover:border-brandSky/40 text-xs font-headline font-bold flex items-center justify-center gap-1 transition-all"
+                  title="Call +91 94891 60000"
                 >
-                  <Phone className="w-3 h-3 text-brandSky" />
+                  <Phone className="w-3.5 h-3.5 text-brandSky" />
                 </a>
               </div>
             </div>
@@ -494,8 +517,8 @@ export default function TreatmentsPage() {
           {/* ══════════════════════════════════════════════════════════════════
               RIGHT MAIN CONTENT: SEARCH + METADATA + COMPACT TREATMENT CARDS
               ══════════════════════════════════════════════════════════════════ */}
-          <main className="lg:col-span-8 xl:col-span-8.5 space-y-4">
-            
+          <main className="min-w-0 space-y-4">
+
             {/* Top Toolbar: Search Bar + Active Filters + View Mode Switch */}
             <div className="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3 sm:p-3.5 shadow-sm space-y-3">
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
@@ -523,22 +546,20 @@ export default function TreatmentsPage() {
                 <div className="hidden sm:flex items-center gap-1 bg-slate-100 p-1 rounded-xl shrink-0 self-end sm:self-auto">
                   <button
                     onClick={() => setViewMode('grid')}
-                    className={`p-1.5 rounded-lg transition-all cursor-pointer ${
-                      viewMode === 'grid'
+                    className={`p-1.5 rounded-lg transition-all cursor-pointer ${viewMode === 'grid'
                         ? 'bg-white text-brandBlue shadow-xs font-bold'
                         : 'text-slate-500 hover:text-slate-800'
-                    }`}
+                      }`}
                     title="Grid View"
                   >
                     <Grid className="w-4 h-4" />
                   </button>
                   <button
                     onClick={() => setViewMode('list')}
-                    className={`p-1.5 rounded-lg transition-all cursor-pointer ${
-                      viewMode === 'list'
+                    className={`p-1.5 rounded-lg transition-all cursor-pointer ${viewMode === 'list'
                         ? 'bg-white text-brandBlue shadow-xs font-bold'
                         : 'text-slate-500 hover:text-slate-800'
-                    }`}
+                      }`}
                     title="List View"
                   >
                     <List className="w-4 h-4" />
@@ -635,10 +656,10 @@ export default function TreatmentsPage() {
                           {/* Compact Thumbnail (h-36 sm:h-40 instead of aspect 4/3!) */}
                           <div className="relative h-36 sm:h-40 w-full overflow-hidden bg-slate-100">
                             {treatment.image ? (
-                              <img 
-                                src={treatment.image} 
-                                alt={treatment.title} 
-                                className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105" 
+                              <img
+                                src={treatment.image}
+                                alt={treatment.title}
+                                className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
                                 loading="lazy"
                                 onError={(e) => {
                                   e.target.onerror = null;
@@ -659,15 +680,14 @@ export default function TreatmentsPage() {
 
                             {/* Category Badge Pill on Top Left */}
                             <div className="absolute top-2.5 left-2.5 z-10">
-                              <span className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full backdrop-blur-md text-[9px] font-extrabold uppercase tracking-wider font-headline shadow-xs border ${
-                                treatment.category === 'dental' 
+                              <span className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full backdrop-blur-md text-[9px] font-extrabold uppercase tracking-wider font-headline shadow-xs border ${treatment.category === 'dental'
                                   ? 'bg-blue-600/90 text-white border-blue-400/30'
                                   : treatment.category === 'cosmetic'
-                                  ? 'bg-purple-600/90 text-white border-purple-400/30'
-                                  : treatment.category === 'hair'
-                                  ? 'bg-emerald-600/90 text-white border-emerald-400/30'
-                                  : 'bg-rose-600/90 text-white border-rose-400/30'
-                              }`}>
+                                    ? 'bg-purple-600/90 text-white border-purple-400/30'
+                                    : treatment.category === 'hair'
+                                      ? 'bg-emerald-600/90 text-white border-emerald-400/30'
+                                      : 'bg-rose-600/90 text-white border-rose-400/30'
+                                }`}>
                                 <span className="w-1 h-1 rounded-full bg-white animate-pulse"></span>
                                 {treatment.category === 'hair' ? 'Hair' : treatment.category === 'body' ? 'Body' : treatment.category === 'cosmetic' ? 'Skin & Laser' : 'Dental'}
                               </span>
@@ -694,8 +714,8 @@ export default function TreatmentsPage() {
                             {treatment.benefits && treatment.benefits.length > 0 && (
                               <div className="flex flex-wrap gap-1 mt-2.5 pt-2 border-t border-slate-100">
                                 {treatment.benefits.slice(0, 2).map((b, bIdx) => (
-                                  <span 
-                                    key={bIdx} 
+                                  <span
+                                    key={bIdx}
                                     className="inline-flex items-center gap-1 text-[10px] font-medium text-slate-600 bg-slate-100/90 px-1.5 py-0.5 rounded-md truncate max-w-[170px]"
                                   >
                                     <span className="w-1 h-1 rounded-full bg-brandSky shrink-0"></span>
@@ -719,7 +739,7 @@ export default function TreatmentsPage() {
                             <span>Details</span>
                             <ArrowRight className="w-3 h-3 text-brandSky" />
                           </button>
-                          
+
                           <a
                             href="#"
                             onClick={handleBookClick}
@@ -765,11 +785,10 @@ export default function TreatmentsPage() {
                               loading="lazy"
                             />
                           )}
-                          <span className={`absolute top-1.5 left-1.5 px-1.5 py-0.2 rounded-full text-[8px] font-extrabold uppercase ${
-                            treatment.category === 'dental' ? 'bg-blue-600 text-white' :
-                            treatment.category === 'cosmetic' ? 'bg-purple-600 text-white' :
-                            treatment.category === 'hair' ? 'bg-emerald-600 text-white' : 'bg-rose-600 text-white'
-                          }`}>
+                          <span className={`absolute top-1.5 left-1.5 px-1.5 py-0.2 rounded-full text-[8px] font-extrabold uppercase ${treatment.category === 'dental' ? 'bg-blue-600 text-white' :
+                              treatment.category === 'cosmetic' ? 'bg-purple-600 text-white' :
+                                treatment.category === 'hair' ? 'bg-emerald-600 text-white' : 'bg-rose-600 text-white'
+                            }`}>
                             {treatment.category}
                           </span>
                         </div>
