@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -33,21 +33,21 @@ export default function AboutPage() {
     {
       id: 'dental',
       label: '3D Dental & Implant Suite',
-      image: '/images/treatments/dental_implants.png',
+      image: '/images/medical-services/dental_implants.png',
       features: ['Digital smile preview', 'Zero-pain laser procedures', 'Single-day ceramic crown capabilities'],
       desc: 'Our dental suite is outfitted with the latest 3D CBCT imaging and laser surgery tech, facilitating highly precise and comfortable dental treatments.'
     },
     {
       id: 'laser',
       label: 'Laser & Aesthetic Wing',
-      image: '/images/treatments/fractional_co2_laser.png',
+      image: '/images/medical-services/fractional_co2_laser.png',
       features: ['Non-invasive skin tightening', 'Pigment correction', 'Anti-aging therapies'],
       desc: 'Housing US-FDA approved aesthetic laser systems and dedicated skin care rooms for non-surgical skin rejuvenation.'
     },
     {
       id: 'hair',
       label: 'Hair Restoration OTs',
-      image: '/images/treatments/gfc_hair_therapy.png',
+      image: '/images/medical-services/gfc_hair_therapy.png',
       features: ['Class-100 positive pressure cleanrooms', 'Graft survival optimization setups', 'Advanced FUE/DHI technology'],
       desc: 'Ultra-sterile, purpose-built hair transplant operating theatres maximizing graft viability and patient comfort.'
     },
@@ -378,3 +378,4 @@ export default function AboutPage() {
     </div>
   );
 }
+

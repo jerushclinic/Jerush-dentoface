@@ -1,4 +1,4 @@
-export const TECHNOLOGIES_DATA = [
+﻿export const TECHNOLOGIES_DATA = [
   // ─── DENTAL CARE ───
   {
     id: 'cad-cam-aligners',
@@ -11,8 +11,8 @@ export const TECHNOLOGIES_DATA = [
     image: '/images/events/jerushaligne-opening-event/ceramic-teeth-manufacturing-unit.webp',
     gallery: [
       { url: '/images/events/jerushaligne-opening-event/ceramic-teeth-manufacturing-unit.webp', caption: '5-Axis Robotic Milling Unit' },
-      { url: '/images/treatments/dental/metal-braces/step-1-3d-digital-scan.webp', caption: '3D Intraoral Digital Scanning' },
-      { url: '/images/treatments/clear_aligners.png', caption: 'Custom JerushAligne Clear Trays' },
+      { url: '/images/medical-services/dental-care/metal-braces/step-1-3d-digital-scan.webp', caption: '3D Intraoral Digital Scanning' },
+      { url: '/images/medical-services/clear_aligners.png', caption: 'Custom JerushAligne Clear Trays' },
       { url: '/images/infrastructure/centres-of-excellence.webp', caption: 'In-House Precision Dental Lab' }
     ],
     description: 'Computer-aided design and 5-axis robotic milling for custom clear aligners, zirconia crowns, and aesthetic bridges with sub-micron computerized accuracy.',
@@ -34,10 +34,10 @@ export const TECHNOLOGIES_DATA = [
     title: '3D CBCT Cone-Beam Facial Tomography',
     equipmentName: 'High-Resolution Ultra-Low Radiation 3D CBCT Scanner',
     tag: 'Ultra-Low Radiation',
-    image: '/images/treatments/dental_implants.png',
+    image: '/images/medical-services/dental_implants.png',
     gallery: [
-      { url: '/images/treatments/dental_implants.png', caption: '3D Guided Bone & Nerve Reconstruction' },
-      { url: '/images/treatments/dental/metal-braces/step-1-3d-digital-scan.webp', caption: 'Sub-Millimeter Digital Diagnostics' },
+      { url: '/images/medical-services/dental_implants.png', caption: '3D Guided Bone & Nerve Reconstruction' },
+      { url: '/images/medical-services/dental-care/metal-braces/step-1-3d-digital-scan.webp', caption: 'Sub-Millimeter Digital Diagnostics' },
       { url: '/images/infrastructure/ip-op-facilities.webp', caption: 'Advanced Clinical Diagnostic Suite' },
       { url: '/images/dental-chair.webp', caption: 'Integrated Computer-Guided Operatory' }
     ],
@@ -64,7 +64,7 @@ export const TECHNOLOGIES_DATA = [
     gallery: [
       { url: '/images/dental-chair.webp', caption: 'Ergonomic Laser Operatory Suite' },
       { url: '/images/infrastructure/centres-of-excellence.webp', caption: 'Class-B Autoclaved Surgical Suite' },
-      { url: '/images/treatments/root_canal.png', caption: 'Laser Canal Sterilization' },
+      { url: '/images/medical-services/root_canal.png', caption: 'Laser Canal Sterilization' },
       { url: '/images/infrastructure/ip-op-facilities.webp', caption: 'Multi-Operatory Clinical Wing' }
     ],
     description: 'Precision laser photo-coagulation for bloodless gum sculpting, frenectomies, laser tooth whitening, and root canal sterilization.',
@@ -88,11 +88,11 @@ export const TECHNOLOGIES_DATA = [
     title: 'Fractional CO₂ Ultrapulse Laser Resurfacing',
     equipmentName: 'Medical-Grade Ultrapulse Fractional CO₂ Scanner',
     tag: 'Collagen Remodeling',
-    image: '/images/treatments/fractional_co2_laser.png',
+    image: '/images/medical-services/fractional_co2_laser.png',
     gallery: [
-      { url: '/images/treatments/fractional_co2_laser.png', caption: 'Micro-Column Laser Dermal Resurfacing' },
-      { url: '/images/treatments/pico_laser.png', caption: 'Integrated Multi-Wavelength Laser Chamber' },
-      { url: '/images/treatments/chemical_peels.png', caption: 'Pre-Laser Clinical Preparation' },
+      { url: '/images/medical-services/fractional_co2_laser.png', caption: 'Micro-Column Laser Dermal Resurfacing' },
+      { url: '/images/medical-services/pico_laser.png', caption: 'Integrated Multi-Wavelength Laser Chamber' },
+      { url: '/images/medical-services/chemical_peels.png', caption: 'Pre-Laser Clinical Preparation' },
       { url: '/images/infrastructure/ip-op-facilities.webp', caption: 'Sterile Cosmetic Laser Operatory' }
     ],
     description: 'Emits microscopic laser columns into deep dermal layers to vaporize stubborn acne scars, erase fine lines, and activate neocollagenesis.',
@@ -114,12 +114,12 @@ export const TECHNOLOGIES_DATA = [
     title: 'Q-Switched Nd:YAG & Pico Laser Platform',
     equipmentName: 'Dual-Wavelength Q-Switched Nanosecond & Pico Laser',
     tag: 'Pigment Shattering',
-    image: '/images/treatments/pico_laser.png',
+    image: '/images/medical-services/pico_laser.png',
     gallery: [
-      { url: '/images/treatments/pico_laser.png', caption: 'Photo-Acoustic Pigment Shattering' },
-      { url: '/images/treatments/carbon_peel.png', caption: 'Hollywood Carbon Laser Peel' },
-      { url: '/images/treatments/skin_whitening.png', caption: 'Epidermal Brightening Protocol' },
-      { url: '/images/treatments/fractional_co2_laser.png', caption: 'Combined Laser Toning Setup' }
+      { url: '/images/medical-services/pico_laser.png', caption: 'Photo-Acoustic Pigment Shattering' },
+      { url: '/images/medical-services/carbon_peel.png', caption: 'Hollywood Carbon Laser Peel' },
+      { url: '/images/medical-services/skin_whitening.png', caption: 'Epidermal Brightening Protocol' },
+      { url: '/images/medical-services/fractional_co2_laser.png', caption: 'Combined Laser Toning Setup' }
     ],
     description: 'Acoustic shockwaves pulverize stubborn melasma, pigmentation, sun spots, and tattoos into microscopic particles without thermal burning.',
     keySpecs: ['1064nm & 532nm Dual Wavelengths', 'Picosecond Pulse Duration', 'Carbon Laser Compatible', 'Zero Dermal Downtime'],
@@ -140,11 +140,11 @@ export const TECHNOLOGIES_DATA = [
     title: 'Hydra-Dermabrasion & RF Facial Tightening',
     equipmentName: 'Multipolar Radiofrequency Vortex Hydra-Infusion System',
     tag: 'Vortex Deep Infusion',
-    image: '/images/treatments/hydrafacial.png',
+    image: '/images/medical-services/hydrafacial.png',
     gallery: [
-      { url: '/images/treatments/hydrafacial.png', caption: 'Patented 4-Step Vortex Deep Cleansing' },
+      { url: '/images/medical-services/hydrafacial.png', caption: 'Patented 4-Step Vortex Deep Cleansing' },
       { url: '/images/testimonials/hydrafacial-treatment.webp', caption: 'Clinical Hydration & Peptide Delivery' },
-      { url: '/images/treatments/chemical_peels.png', caption: 'Gentle Ultrasonic Exfoliation' },
+      { url: '/images/medical-services/chemical_peels.png', caption: 'Gentle Ultrasonic Exfoliation' },
       { url: '/images/infrastructure/centres-of-excellence.webp', caption: 'Cosmetic Dermatology Clinic' }
     ],
     description: 'Patented 4-step vortex technology combining gentle pore extraction with hyaluronic acid, multi-peptides, and radiofrequency skin tightening.',
@@ -168,9 +168,9 @@ export const TECHNOLOGIES_DATA = [
     title: 'GFC (Growth Factor Concentrate) Therapy',
     equipmentName: 'Acellular Recombinant Centrifugation & Extraction System',
     tag: 'Next-Gen PRP',
-    image: '/images/treatments/gfc_hair_therapy.png',
+    image: '/images/medical-services/gfc_hair_therapy.png',
     gallery: [
-      { url: '/images/treatments/gfc_hair_therapy.png', caption: 'Direct Miniaturized Follicle Infiltration' },
+      { url: '/images/medical-services/gfc_hair_therapy.png', caption: 'Direct Miniaturized Follicle Infiltration' },
       { url: '/images/careers/state-of-the-art-technology.webp', caption: 'Acellular Centrifugation & Concentration' },
       { url: '/images/testimonials/arul-hair-transplant.webp', caption: 'Clinical Follicle Density Enhancement' },
       { url: '/images/infrastructure/ip-op-facilities.webp', caption: 'Sterile Hair Restoration Clinic' }
@@ -197,7 +197,7 @@ export const TECHNOLOGIES_DATA = [
     image: '/images/careers/state-of-the-art-technology.webp',
     gallery: [
       { url: '/images/careers/state-of-the-art-technology.webp', caption: 'Automated Titanium Micro-Motor Unit' },
-      { url: '/images/treatments/gfc_hair_therapy.png', caption: 'Holding Solutions with Growth Factors' },
+      { url: '/images/medical-services/gfc_hair_therapy.png', caption: 'Holding Solutions with Growth Factors' },
       { url: '/images/testimonials/hair-transplant-prem-kumar-jerush-chennai.webp', caption: 'Natural Calibrated Hairline Design' },
       { url: '/images/infrastructure/centres-of-excellence.webp', caption: 'Class-100 Laminar Airflow OT Suite' }
     ],
@@ -220,10 +220,10 @@ export const TECHNOLOGIES_DATA = [
     title: 'QR678® Bio-Peptide & Low-Level Laser (LLLT)',
     equipmentName: 'Cold Photobiomodulation Laser & Micro-Meso Delivery Unit',
     tag: 'Non-Surgical Regrowth',
-    image: '/images/treatments/qr678_therapy.png',
+    image: '/images/medical-services/qr678_therapy.png',
     gallery: [
-      { url: '/images/treatments/qr678_therapy.png', caption: '650nm Cold Photobiomodulation Laser' },
-      { url: '/images/treatments/gfc_hair_therapy.png', caption: 'Micro-Meso Bio-Peptide Infusion' },
+      { url: '/images/medical-services/qr678_therapy.png', caption: '650nm Cold Photobiomodulation Laser' },
+      { url: '/images/medical-services/gfc_hair_therapy.png', caption: 'Micro-Meso Bio-Peptide Infusion' },
       { url: '/images/testimonials/dandruff-treatment-patients.webp', caption: 'Clinical Scalp Tissue Revitalization' },
       { url: '/images/careers/state-of-the-art-technology.webp', caption: 'Trichology Diagnostics & Therapy Unit' }
     ],
@@ -246,3 +246,4 @@ export const CATEGORIES_DATA = [
   { id: 'cosmetic', label: 'Cosmetic & Skin', count: 3 },
   { id: 'hair', label: 'Hair Restoration', count: 3 }
 ];
+

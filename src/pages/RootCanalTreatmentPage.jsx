@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -21,32 +21,32 @@ const SYMPTOMS = [
   {
     title: 'Persistent Pain',
     desc: 'Severe, spontaneous toothache when chewing, applying pressure, or even at rest.',
-    img: '/images/treatments/dental/rct/persistent-pain.webp',
+    img: '/images/medical-services/dental-care/rct/persistent-pain.webp',
   },
   {
     title: 'Temperature Sensitivity',
     desc: 'Lingering sensitivity or sharp pain when consuming hot or cold foods and drinks.',
-    img: '/images/treatments/dental/rct/temperature-sensitivity.webp',
+    img: '/images/medical-services/dental-care/rct/temperature-sensitivity.webp',
   },
   {
     title: 'Tooth Injuries',
     desc: 'Cracked, chipped, or fractured teeth exposing the nerve and pulp to infection.',
-    img: '/images/treatments/dental/rct/tooth-cracks.webp',
+    img: '/images/medical-services/dental-care/rct/tooth-cracks.webp',
   },
   {
     title: 'Severe Tooth Decay',
     desc: 'Untreated deep cavities that breach the dentin layer and damage the tooth pulp.',
-    img: '/images/treatments/dental/rct/enamel-decay.webp',
+    img: '/images/medical-services/dental-care/rct/enamel-decay.webp',
   },
   {
     title: 'Swelling & Abscess',
     desc: 'Gum swelling, localized tenderness, or an abscess discharging near the root.',
-    img: '/images/treatments/dental/rct/swell-near-the-root.webp',
+    img: '/images/medical-services/dental-care/rct/swell-near-the-root.webp',
   },
   {
     title: 'Tooth Preservation',
     desc: 'The desire to keep your natural tooth and avoid extraction, dentures, or implants.',
-    img: '/images/treatments/dental/rct/enamel-maintain.webp',
+    img: '/images/medical-services/dental-care/rct/enamel-maintain.webp',
   }
 ];
 
@@ -226,7 +226,7 @@ export default function RootCanalTreatmentPage() {
           >
             <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-100 bg-white p-2">
               <img
-                src="/images/treatments/dental/rct/root-canal-treatment.webp"
+                src="/images/medical-services/dental-care/rct/root-canal-treatment.webp"
                 alt="Painless Root Canal Treatment in Tamil Nadu"
                 className="w-full h-[380px] object-cover rounded-2xl"
               />
@@ -302,7 +302,7 @@ export default function RootCanalTreatmentPage() {
             className="rounded-3xl overflow-hidden border border-slate-100 shadow-md bg-white p-2"
           >
             <img
-              src="/images/treatments/dental/rct/root-canal-process.webp"
+              src="/images/medical-services/dental-care/rct/root-canal-process.webp"
               alt="Anatomy description of Root Canal Treatment"
               className="w-full h-[360px] object-cover rounded-2xl"
             />
@@ -321,7 +321,7 @@ export default function RootCanalTreatmentPage() {
             className="rounded-3xl overflow-hidden border border-slate-100 shadow-md bg-white p-2"
           >
             <img
-              src="/images/treatments/dental/rct/close-up-image-dentist-examining-female-s-teeth-dentistry.webp"
+              src="/images/medical-services/dental-care/rct/close-up-image-dentist-examining-female-s-teeth-dentistry.webp"
               alt="Benefits of root canal treatment"
               className="w-full h-[360px] object-cover rounded-2xl"
             />
@@ -466,7 +466,7 @@ export default function RootCanalTreatmentPage() {
             className="rounded-3xl border border-slate-100 bg-white p-2 shadow-md"
           >
             <img
-              src="/images/treatments/dental/rct/rct-conditions.webp"
+              src="/images/medical-services/dental-care/rct/rct-conditions.webp"
               alt="Root Canal anatomy conditions diagram"
               className="w-full h-auto object-cover rounded-2xl"
             />
@@ -565,7 +565,7 @@ export default function RootCanalTreatmentPage() {
               className="rounded-3xl overflow-hidden border border-slate-200 bg-white p-2 shadow-sm flex items-center"
             >
               <img
-                src="/images/treatments/dental/rct/rct-procedure.webp"
+                src="/images/medical-services/dental-care/rct/rct-procedure.webp"
                 alt="Getting Root Canal Treatment procedure"
                 className="w-full h-auto object-cover rounded-2xl"
               />
@@ -716,3 +716,4 @@ export default function RootCanalTreatmentPage() {
     </div>
   );
 }
+

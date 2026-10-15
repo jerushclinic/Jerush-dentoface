@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -191,7 +191,7 @@ export default function GfcHairPage() {
             <div className="absolute inset-0 bg-gradient-to-tr from-brandBlue to-brandSky rounded-3xl blur-2xl opacity-10 -rotate-2"></div>
             <div className="rounded-3xl overflow-hidden aspect-[4/3] bg-slate-100 border border-slate-200/60 shadow-xl relative group">
               <img 
-                src="/images/treatments/gfc_hair_therapy.png" 
+                src="/images/medical-services/gfc_hair_therapy.png" 
                 alt="Hair care clinical GFC treatment" 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
@@ -396,3 +396,4 @@ export default function GfcHairPage() {
     </div>
   );
 }
+

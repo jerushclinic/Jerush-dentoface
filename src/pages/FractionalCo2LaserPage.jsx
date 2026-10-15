@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -212,7 +212,7 @@ export default function FractionalCo2LaserPage() {
             <div className="rounded-3xl overflow-hidden aspect-[4/3] bg-white border border-slate-200/60 shadow-xl relative group p-2">
               <div className="rounded-2xl overflow-hidden w-full h-full">
                 <img 
-                  src="/images/treatments/fractional_co2_laser.png" 
+                  src="/images/medical-services/fractional_co2_laser.png" 
                   alt="Fractional CO2 Laser Therapy session" 
                   className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700"
                   onError={(e) => {
@@ -562,3 +562,4 @@ export default function FractionalCo2LaserPage() {
     </div>
   );
 }
+

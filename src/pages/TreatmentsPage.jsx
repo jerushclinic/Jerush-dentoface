@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+﻿import React, { useState, useEffect, useMemo } from 'react';
 import { useNavigate, useSearchParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -663,10 +663,10 @@ export default function TreatmentsPage() {
                                 loading="lazy"
                                 onError={(e) => {
                                   e.target.onerror = null;
-                                  if (treatment.category === 'hair') e.target.src = '/images/treatments/gfc_hair_therapy.png';
-                                  else if (treatment.category === 'cosmetic') e.target.src = '/images/treatments/botox_fillers.png';
-                                  else if (treatment.category === 'body') e.target.src = '/images/treatments/cryo_sculpting.png';
-                                  else e.target.src = '/images/treatments/dental_implants.png';
+                                  if (treatment.category === 'hair') e.target.src = '/images/medical-services/gfc_hair_therapy.png';
+                                  else if (treatment.category === 'cosmetic') e.target.src = '/images/medical-services/botox_fillers.png';
+                                  else if (treatment.category === 'body') e.target.src = '/images/medical-services/cryo_sculpting.png';
+                                  else e.target.src = '/images/medical-services/dental_implants.png';
                                 }}
                               />
                             ) : (
@@ -864,3 +864,4 @@ export default function TreatmentsPage() {
     </div>
   );
 }
+

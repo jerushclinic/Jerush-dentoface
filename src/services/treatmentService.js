@@ -1,4 +1,4 @@
-import { apiClient } from "./api";
+﻿import { apiClient } from "./api";
 import { treatments } from "../data/treatments";
 
 const TREATMENTS_STORAGE_KEY = 'jerush_treatments_catalogue_v3';
@@ -87,7 +87,7 @@ export const treatmentService = {
       category: id.includes('hair') ? 'hair' : id.includes('skin') || id.includes('laser') || id.includes('peel') || id.includes('acne') ? 'cosmetic' : 'dental',
       desc: `Comprehensive clinical ${formattedTitle} procedure at Jerush Dentoface Hospital with state-of-the-art diagnostic and therapeutic technology.`,
       iconName: 'ShieldCheck',
-      image: '/images/treatments/dental_implants.png',
+      image: '/images/medical-services/dental_implants.png',
       details: `Our expert team at Jerush Dentoface provides specialized ${formattedTitle} using international medical standards, advanced sterilization, and personalized patient care.`,
       benefits: ['International clinical standards', 'Board-certified specialists', 'State-of-the-art pain-free technology']
     };
@@ -139,4 +139,5 @@ export const treatmentService = {
     return { success: true };
   }
 };
+
 

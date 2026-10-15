@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -190,7 +190,7 @@ export default function CryoSculptingPage() {
             <div className="rounded-3xl overflow-hidden aspect-[4/3] bg-white border border-slate-200/60 shadow-xl relative group p-2">
               <div className="rounded-2xl overflow-hidden w-full h-full">
                 <img 
-                  src="/images/treatments/cryo_sculpting.png" 
+                  src="/images/medical-services/cryo_sculpting.png" 
                   alt="Clinical body sculpting Cryo Freezing session" 
                   className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700"
                 />
@@ -429,3 +429,4 @@ export default function CryoSculptingPage() {
     </div>
   );
 }
+

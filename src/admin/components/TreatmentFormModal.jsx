@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Undo, Redo } from 'lucide-react';
 import FormModal from './FormModal';
 import TagInput from './TagInput';
@@ -93,7 +93,7 @@ export default function TreatmentFormModal({ open, onClose, onSave, treatment })
           </div>
           <div>
             <label className={labelCls}>Image URL</label>
-            <input name="image" value={form.image || ''} onChange={handleChange} placeholder="/images/treatments/dental_implants.png" className={inputCls} />
+            <input name="image" value={form.image || ''} onChange={handleChange} placeholder="/images/medical-services/dental_implants.png" className={inputCls} />
           </div>
         </div>
 
@@ -171,3 +171,4 @@ export default function TreatmentFormModal({ open, onClose, onSave, treatment })
     </FormModal>
   );
 }
+

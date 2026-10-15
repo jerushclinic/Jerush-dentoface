@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -77,7 +77,7 @@ const HARDWARE_OPTIONS = [
     title: 'Low-Profile Stainless Brackets',
     subtitle: 'German Surgical Steel',
     desc: 'Ultra-thin, rounded metal brackets designed to minimize cheek friction and eliminate ulcers.',
-    img: '/images/treatments/dental/metal-braces/low-profile-stainless-brackets.webp',
+    img: '/images/medical-services/dental-care/metal-braces/low-profile-stainless-brackets.webp',
     features: [
       'Up to 30% smaller than legacy brackets',
       'Rounded, mirror-polished edges for cheek comfort',
@@ -88,7 +88,7 @@ const HARDWARE_OPTIONS = [
     title: 'Smart Shape-Memory Wires',
     subtitle: 'Continuous Gentle Force',
     desc: 'Advanced nickel-titanium archwires that activate at body temperature for faster tooth alignment.',
-    img: '/images/treatments/dental/metal-braces/smart-shape-memory-wires.webp',
+    img: '/images/medical-services/dental-care/metal-braces/smart-shape-memory-wires.webp',
     features: [
       'Constant, gentle biological tooth movement',
       'Fewer adjustment visits required',
@@ -99,7 +99,7 @@ const HARDWARE_OPTIONS = [
     title: 'Hygienic Archwire Fasteners',
     subtitle: 'Snag-Free Elastic Ties',
     desc: 'Smooth, snag-free ties that secure the wire tightly while making daily brushing and flossing effortless.',
-    img: '/images/treatments/dental/metal-braces/hygienic-archwire-fasteners.webp',
+    img: '/images/medical-services/dental-care/metal-braces/hygienic-archwire-fasteners.webp',
     features: [
       'Snag-free ligature security',
       'Custom color bands (or discreet silver)',
@@ -112,37 +112,37 @@ const WHAT_WE_FIX = [
   {
     title: 'Severe Arch Crowding',
     desc: 'Opens up room in tight jaws to align squeezed and overlapping teeth into a perfectly rounded arch line.',
-    img: '/images/treatments/dental/metal-braces/severe-arch-crowding.webp',
+    img: '/images/medical-services/dental-care/metal-braces/severe-arch-crowding.webp',
     tag: 'Space Expansion'
   },
   {
     title: 'Stubborn Rotations',
     desc: 'Turns twisted incisors, premolars, and molars into their anatomically correct facial alignment.',
-    img: '/images/treatments/dental/metal-braces/stubborn-rotations.webp',
+    img: '/images/medical-services/dental-care/metal-braces/stubborn-rotations.webp',
     tag: 'Rotational Control'
   },
   {
     title: 'Overbites & Underbites',
     desc: 'Corrects vertical bite imbalances where upper teeth hide lower teeth or lower teeth protrude outwards.',
-    img: '/images/treatments/dental/metal-braces/overbites-underbites.webp',
+    img: '/images/medical-services/dental-care/metal-braces/overbites-underbites.webp',
     tag: 'Bite Correction'
   },
   {
     title: 'Crossbites & Open Bites',
     desc: 'Realigns misaligned bite planes so upper and lower teeth meet properly when chewing and speaking.',
-    img: '/images/treatments/dental/metal-braces/crossbites-openbites.webp',
+    img: '/images/medical-services/dental-care/metal-braces/crossbites-openbites.webp',
     tag: 'Jaw Alignment'
   },
   {
     title: 'Interdental Gap Spacing',
     desc: 'Closes wide gaps (diastema) between front teeth permanently with strong continuous tension.',
-    img: '/images/treatments/dental/metal-braces/interdental-gap-spacing.webp',
+    img: '/images/medical-services/dental-care/metal-braces/interdental-gap-spacing.webp',
     tag: 'Gap Closure'
   },
   {
     title: 'Impacted Teeth Trajectories',
     desc: 'Gently guides hidden, unerupted teeth out of the gum line into the natural dental arch line.',
-    img: '/images/treatments/dental/metal-braces/impacted-teeth-trajectories.webp',
+    img: '/images/medical-services/dental-care/metal-braces/impacted-teeth-trajectories.webp',
     tag: 'Eruption Guidance'
   }
 ];
@@ -183,28 +183,28 @@ const PROCEDURE_STEPS = [
     step: '01',
     title: '3D Digital Scan & Facial X-Ray',
     desc: 'Comprehensive oral evaluation, OPG digital X-rays, and custom 3D treatment planning at your nearest Jerush centre.',
-    img: '/images/treatments/dental/metal-braces/step-1-3d-digital-scan.webp',
+    img: '/images/medical-services/dental-care/metal-braces/step-1-3d-digital-scan.webp',
     badge: '3D Diagnostic Scan'
   },
   {
     step: '02',
     title: 'Precision Micro-Bracket Bonding',
     desc: 'Pain-free bonding of sleek stainless steel brackets onto teeth using light-cured, enamel-safe dental adhesives.',
-    img: '/images/treatments/dental/metal-braces/step-2-precision-micro-bracket-bonding.webp',
+    img: '/images/medical-services/dental-care/metal-braces/step-2-precision-micro-bracket-bonding.webp',
     badge: 'Enamel-Safe Bonding'
   },
   {
     step: '03',
     title: 'Archwire Fitting & Color Customization',
     desc: 'Activation with smart shape-memory wires locked with your favorite custom color elastic bands or discreet silver modules.',
-    img: '/images/treatments/dental/metal-braces/step-3-fitting-color-custom.webp',
+    img: '/images/medical-services/dental-care/metal-braces/step-3-fitting-color-custom.webp',
     badge: 'Memory Wire Activation'
   },
   {
     step: '04',
     title: 'Quick Monthly Calibration & Lifetime Retainer',
     desc: '15-minute routine checkups every 4–6 weeks, concluding with custom retainers to lock in your perfect smile forever.',
-    img: '/images/treatments/dental/metal-braces/step-quick-monthly-calibration.webp',
+    img: '/images/medical-services/dental-care/metal-braces/step-quick-monthly-calibration.webp',
     badge: 'Lifetime Smile Lock'
   }
 ];
@@ -366,7 +366,7 @@ export default function MetalBracesPage() {
             <div className="lg:col-span-7 relative">
               <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200/90 shadow-2xl bg-slate-900 group">
                 <img
-                  src="/images/treatments/dental/metal-braces/modern-metal-upgrade.webp"
+                  src="/images/medical-services/dental-care/metal-braces/modern-metal-upgrade.webp"
                   alt="Precision Metal Braces Jerush"
                   width="1024"
                   height="576"
@@ -415,7 +415,7 @@ export default function MetalBracesPage() {
             <div className="lg:col-span-7 order-2 lg:order-1">
               <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200/90 shadow-xl bg-slate-900 group">
                 <img
-                  src="/images/treatments/dental/metal-braces/modern-metal-upgrade.webp"
+                  src="/images/medical-services/dental-care/metal-braces/modern-metal-upgrade.webp"
                   alt="The Modern Metal Upgrade"
                   width="1024"
                   height="576"
@@ -532,7 +532,7 @@ export default function MetalBracesPage() {
             <div className="lg:col-span-7">
               <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200/90 shadow-xl bg-slate-900 group">
                 <img
-                  src="/images/treatments/dental/metal-braces/steel-still-rules.webp"
+                  src="/images/medical-services/dental-care/metal-braces/steel-still-rules.webp"
                   alt="Why Steel Still Rules"
                   width="1024"
                   height="576"
@@ -1048,3 +1048,4 @@ export default function MetalBracesPage() {
     </div>
   );
 }
+

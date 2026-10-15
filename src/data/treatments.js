@@ -1,4 +1,4 @@
-// Comprehensive Medical Services Catalogue for Jerush Dentofacial & Cosmetic Laser Centre
+﻿// Comprehensive Medical Services Catalogue for Jerush Dentofacial & Cosmetic Laser Centre
 // Total Clinical Procedures: 147
 // Structured by Department & Subspecialty
 
@@ -17,7 +17,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": "pediatric-dental-care.webp",
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "dental-varnish",
@@ -33,7 +33,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "pit-fissure-sealants",
@@ -49,7 +49,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "pedo-extractions",
@@ -65,7 +65,7 @@ export const treatments = [
     ],
     "iconName": "Scissors",
     "iconFile": "wisdom-tooth.webp",
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "space-maintainers",
@@ -81,7 +81,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "pulpotomy",
@@ -97,7 +97,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "pulpectomy",
@@ -113,7 +113,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "mouth-guards",
@@ -129,7 +129,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "dental-trainers",
@@ -145,7 +145,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "functional-appliances",
@@ -161,7 +161,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "habit-breaking-appliances",
@@ -177,7 +177,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "tongue-tie",
@@ -193,7 +193,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "cleft-lip-palate-correction",
@@ -209,7 +209,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": "cleft-lip-palate.webp",
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "proclination-malalignment-correction",
@@ -225,7 +225,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "smile-designing",
@@ -241,7 +241,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "veneers-laminates",
@@ -257,7 +257,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": "veneers.webp",
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "full-mouth-rehabilitation",
@@ -273,7 +273,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "tooth-coloured-restorations",
@@ -289,7 +289,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": "tooth-colored-fillings.webp",
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "tooth-jewellery",
@@ -305,7 +305,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "dentures",
@@ -313,7 +313,7 @@ export const treatments = [
     "category": "dental",
     "desc": "Custom-fitted acrylic and BPS flexible dentures for comfortable, natural-looking full or partial tooth replacement.",
     "iconName": "ShieldCheck",
-    "image": "/images/treatments/fixed_partial_denture.png",
+    "image": "/images/medical-services/fixed_partial_denture.png",
     "details": "Lightweight, bio-compatible prosthetics designed to match facial muscle contours and restore masticatory function.",
     "benefits": [
       "Comfortable custom fit",
@@ -337,7 +337,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": "denture.webp",
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "complete-dentures",
@@ -353,7 +353,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": "denture.webp",
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "fixed-partial-dentures-crowns-bridges",
@@ -369,7 +369,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": "dental-crown-bridge.webp",
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "cantilever-bridges",
@@ -385,7 +385,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "dental-implants",
@@ -393,7 +393,7 @@ export const treatments = [
     "category": "dental",
     "desc": "CBCT-guided precision titanium implants for permanent tooth replacement with digital 3D planning for optimal results.",
     "iconName": "ShieldCheck",
-    "image": "/images/treatments/dental_implants.png",
+    "image": "/images/medical-services/dental_implants.png",
     "details": "Bio-compatible titanium anchors placed directly into the jawbone, acting as artificial roots. Provides permanent, robust foundations for crowns, bridges, or dentures.",
     "benefits": [
       "CBCT-guided precision planning",
@@ -419,7 +419,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": "dental-implant.webp",
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "implant-supported-complete-dentures",
@@ -435,7 +435,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": "dental-implant.webp",
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "maxillofacial-prosthesis",
@@ -451,7 +451,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/hydrafacial.png"
+    "image": "/images/medical-services/hydrafacial.png"
   },
   {
     "id": "full-mouth-rehabilitation-1",
@@ -467,7 +467,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "implant-supported-prosthesis",
@@ -483,7 +483,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": "dental-implant.webp",
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "post-and-core",
@@ -491,7 +491,7 @@ export const treatments = [
     "category": "dental",
     "desc": "Specialized structural reinforcement post inserted into root-canal treated teeth before final crown placement.",
     "iconName": "ShieldCheck",
-    "image": "/images/treatments/root_canal.png",
+    "image": "/images/medical-services/root_canal.png",
     "details": "Custom fiber or metal post anchored within the root canal to rebuild lost coronal tooth structure, ensuring long-term crown retention.",
     "benefits": [
       "Restores severely broken teeth",
@@ -515,7 +515,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": "teeth-post-core.webp",
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "fibre-post",
@@ -531,7 +531,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": "teeth-post-core.webp",
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "fibre-reinforced-composite-bridges",
@@ -547,7 +547,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "root-canal",
@@ -555,7 +555,7 @@ export const treatments = [
     "category": "dental",
     "desc": "Single-visit painless root canal procedures using advanced rotary instruments and apex locators to save damaged teeth.",
     "iconName": "Heart",
-    "image": "/images/treatments/root_canal.png",
+    "image": "/images/medical-services/root_canal.png",
     "details": "Minimally invasive, single-visit therapy using high-precision rotary instruments to clean, disinfect, and seal infected tooth root canals with virtually zero pain.",
     "benefits": [
       "Completed in a single visit",
@@ -581,7 +581,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": "root-canal.webp",
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "surgical-extrusion",
@@ -597,7 +597,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "apexification",
@@ -613,7 +613,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "scaling-curettage",
@@ -629,7 +629,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": "deep-teeth-cleaning.webp",
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "gum-surgery",
@@ -637,7 +637,7 @@ export const treatments = [
     "category": "dental",
     "desc": "Advanced surgical flap procedure and laser pocket reduction for deep-seated periodontal bone & tissue restoration.",
     "iconName": "Scissors",
-    "image": "/images/treatments/root_canal.png",
+    "image": "/images/medical-services/root_canal.png",
     "details": "Microsurgical gum pocket clearing and regenerative bone grafting performed under localized anesthesia.",
     "benefits": [
       "Reduces deep gum pockets",
@@ -661,7 +661,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": "gum-surgery.webp",
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "bone-grafting",
@@ -677,7 +677,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": "gum-grafting.webp",
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "tooth-splinting",
@@ -693,7 +693,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "crown-lengthening",
@@ -709,7 +709,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "ridge-augmentation",
@@ -725,7 +725,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "jerushaligne-clear-aligners",
@@ -741,7 +741,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": "clear-aligner.webp",
-    "image": "/images/treatments/orthodontics_braces.png"
+    "image": "/images/medical-services/orthodontics_braces.png"
   },
   {
     "id": "metal-braces",
@@ -749,7 +749,7 @@ export const treatments = [
     "category": "dental",
     "desc": "Traditional high-grade stainless steel braces providing reliable, cost-effective tooth alignment for complex bite conditions.",
     "iconName": "Smile",
-    "image": "/images/treatments/orthodontics_braces.png",
+    "image": "/images/medical-services/orthodontics_braces.png",
     "details": "Precision metal brackets and archwires systematically guiding teeth into optimal functional and aesthetic positions.",
     "benefits": [
       "Highly effective for complex cases",
@@ -765,7 +765,7 @@ export const treatments = [
     "category": "dental",
     "desc": "Aesthetic ceramic brackets that blend in with natural enamel color for discrete orthodontic alignment.",
     "iconName": "Smile",
-    "image": "/images/treatments/orthodontics_braces.png",
+    "image": "/images/medical-services/orthodontics_braces.png",
     "details": "Translucent ceramic brackets designed to match your tooth shade while delivering the full structural alignment power of conventional braces.",
     "benefits": [
       "Discreet tooth-colored brackets",
@@ -781,7 +781,7 @@ export const treatments = [
     "category": "dental",
     "desc": "Custom braces fitted on the inside (lingual) surface of your teeth for completely invisible orthodontic treatment.",
     "iconName": "Smile",
-    "image": "/images/treatments/orthodontics_braces.png",
+    "image": "/images/medical-services/orthodontics_braces.png",
     "details": "Custom-cast brackets attached to the back of teeth, providing total aesthetic invisibility during adult orthodontic correction.",
     "benefits": [
       "Completely hidden behind teeth",
@@ -797,7 +797,7 @@ export const treatments = [
     "category": "dental",
     "desc": "Advanced Damon-style self-ligating brackets requiring no elastic ties, resulting in faster movement and easier hygiene.",
     "iconName": "Smile",
-    "image": "/images/treatments/orthodontics_braces.png",
+    "image": "/images/medical-services/orthodontics_braces.png",
     "details": "Specialized slide mechanism brackets reducing friction on archwires, leading to quicker appointment visits and gentler tooth movement.",
     "benefits": [
       "Faster overall treatment time",
@@ -821,7 +821,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": "denture.webp",
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "dentures-1",
@@ -829,7 +829,7 @@ export const treatments = [
     "category": "dental",
     "desc": "Custom-fitted acrylic and BPS flexible dentures for comfortable, natural-looking full or partial tooth replacement.",
     "iconName": "ShieldCheck",
-    "image": "/images/treatments/fixed_partial_denture.png",
+    "image": "/images/medical-services/fixed_partial_denture.png",
     "details": "Lightweight, bio-compatible prosthetics designed to match facial muscle contours and restore masticatory function.",
     "benefits": [
       "Comfortable custom fit",
@@ -853,7 +853,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/hydrafacial.png"
+    "image": "/images/medical-services/hydrafacial.png"
   },
   {
     "id": "maxillofacial-prosthesis-1",
@@ -869,7 +869,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/hydrafacial.png"
+    "image": "/images/medical-services/hydrafacial.png"
   },
   {
     "id": "oral-surgery",
@@ -885,7 +885,7 @@ export const treatments = [
     ],
     "iconName": "Scissors",
     "iconFile": "jaw-surgery.webp",
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "cyst-tumour-surgery",
@@ -901,7 +901,7 @@ export const treatments = [
     ],
     "iconName": "Scissors",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "cleft-lip-palate-surgery",
@@ -917,7 +917,7 @@ export const treatments = [
     ],
     "iconName": "Scissors",
     "iconFile": "cleft-lip-palate.webp",
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "wisdom-tooth",
@@ -925,7 +925,7 @@ export const treatments = [
     "category": "dental",
     "desc": "Safe, minimally invasive extraction of impacted or problematic wisdom teeth with advanced surgical techniques.",
     "iconName": "Activity",
-    "image": "/images/treatments/wisdom_tooth.png",
+    "image": "/images/medical-services/wisdom_tooth.png",
     "details": "Surgical removal of impacted third molars performed under localized anesthesia, utilizing advanced sutures and healing protocols to minimize swelling.",
     "benefits": [
       "Relieves chronic jaw pain",
@@ -949,7 +949,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": "wisdom-tooth.webp",
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "bone-grafting-1",
@@ -965,7 +965,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": "gum-grafting.webp",
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "guided-bone-regeneration",
@@ -981,7 +981,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": "gum-grafting.webp",
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "apicoectomy",
@@ -997,7 +997,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "tumour-cyst-surgery",
@@ -1013,7 +1013,7 @@ export const treatments = [
     ],
     "iconName": "Scissors",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "biopsy",
@@ -1029,7 +1029,7 @@ export const treatments = [
     ],
     "iconName": "Scissors",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "incisional-biopsy",
@@ -1045,7 +1045,7 @@ export const treatments = [
     ],
     "iconName": "Scissors",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "excisional-biopsy",
@@ -1061,7 +1061,7 @@ export const treatments = [
     ],
     "iconName": "Scissors",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "intermaxillary-fixation-imf",
@@ -1077,7 +1077,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": "jaw-surgery.webp",
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "cleft-lip-palate-surgery-1",
@@ -1093,7 +1093,7 @@ export const treatments = [
     ],
     "iconName": "Scissors",
     "iconFile": "cleft-lip-palate.webp",
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "dental-implants-1",
@@ -1101,7 +1101,7 @@ export const treatments = [
     "category": "dental",
     "desc": "CBCT-guided precision titanium implants for permanent tooth replacement with digital 3D planning for optimal results.",
     "iconName": "ShieldCheck",
-    "image": "/images/treatments/dental_implants.png",
+    "image": "/images/medical-services/dental_implants.png",
     "details": "Bio-compatible titanium anchors placed directly into the jawbone, acting as artificial roots. Provides permanent, robust foundations for crowns, bridges, or dentures.",
     "benefits": [
       "CBCT-guided precision planning",
@@ -1127,7 +1127,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "oral-health-evaluation",
@@ -1143,7 +1143,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "management-of-precancerous-cervical-lesions-conditions",
@@ -1159,7 +1159,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "cbct-3d",
@@ -1175,7 +1175,7 @@ export const treatments = [
     ],
     "iconName": "Activity",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "opg",
@@ -1191,7 +1191,7 @@ export const treatments = [
     ],
     "iconName": "Activity",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "cephalo-frontal-view",
@@ -1207,7 +1207,7 @@ export const treatments = [
     ],
     "iconName": "Activity",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "towen-s-view",
@@ -1223,7 +1223,7 @@ export const treatments = [
     ],
     "iconName": "Activity",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "water-s-view",
@@ -1239,7 +1239,7 @@ export const treatments = [
     ],
     "iconName": "Activity",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "submentovertex-view",
@@ -1255,7 +1255,7 @@ export const treatments = [
     ],
     "iconName": "Activity",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "maxillary-sinus-view",
@@ -1271,7 +1271,7 @@ export const treatments = [
     ],
     "iconName": "Activity",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "soft-splints",
@@ -1287,7 +1287,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "hard-splints",
@@ -1303,7 +1303,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "night-guards",
@@ -1319,7 +1319,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "botox-treatment",
@@ -1335,7 +1335,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "dental-health-camps",
@@ -1351,7 +1351,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "oral-pathology",
@@ -1359,7 +1359,7 @@ export const treatments = [
     "category": "dental",
     "desc": "Diagnostic checkups, soft tissue evaluations, and biopsy screenings for early detection of oral mucosal lesions.",
     "iconName": "Activity",
-    "image": "/images/treatments/wisdom_tooth.png",
+    "image": "/images/medical-services/wisdom_tooth.png",
     "details": "Comprehensive clinical examination using specialized diagnostic lights and biopsy sampling to evaluate suspicious sores, patches, or growths early.",
     "benefits": [
       "Early detection saves lives",
@@ -1383,7 +1383,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/treatments/dental_implants.png"
+    "image": "/images/medical-services/dental_implants.png"
   },
   {
     "id": "acne-treatment",
@@ -1391,7 +1391,7 @@ export const treatments = [
     "category": "cosmetic",
     "desc": "Dermatologist-formulated acne treatment protocols combining medical peels, comedone extraction, and anti-inflammatory light therapy.",
     "iconName": "Sparkles",
-    "image": "/images/treatments/chemical_peels.png",
+    "image": "/images/medical-services/chemical_peels.png",
     "details": "Targeted therapy suppressing oil gland hyperactivity, clearing active acne lesions, and preventing post-inflammatory hyperpigmentation.",
     "benefits": [
       "Clears active painful breakouts",
@@ -1415,7 +1415,7 @@ export const treatments = [
     ],
     "iconName": "Sparkles",
     "iconFile": null,
-    "image": "/images/treatments/botox_fillers.png"
+    "image": "/images/medical-services/botox_fillers.png"
   },
   {
     "id": "pigmentation-treatment",
@@ -1423,7 +1423,7 @@ export const treatments = [
     "category": "cosmetic",
     "desc": "Specialized laser toning and topical therapies for dark spots, melasma patches, and uneven tan lines.",
     "iconName": "TrendingUp",
-    "image": "/images/treatments/pico_laser.png",
+    "image": "/images/medical-services/pico_laser.png",
     "details": "Advanced Q-switched laser toning combined with clinical anti-pigment serums to shatter deep epidermal and dermal melanin safely.",
     "benefits": [
       "Targets hormonal melasma",
@@ -1439,7 +1439,7 @@ export const treatments = [
     "category": "cosmetic",
     "desc": "Custom multi-modality therapies targeting dermal hyperpigmentation for an even, glowing complexion.",
     "iconName": "Sparkles",
-    "image": "/images/treatments/pico_laser.png",
+    "image": "/images/medical-services/pico_laser.png",
     "details": "Combined gentle laser toning, mesotherapy, and antioxidant serums to reduce localized melanin clusters.",
     "benefits": [
       "Restores uniform complexion",
@@ -1455,7 +1455,7 @@ export const treatments = [
     "category": "cosmetic",
     "desc": "Pico and Q-switched laser treatment to clear sun spots, freckles, and dark tanning lines rapidly.",
     "iconName": "Sparkles",
-    "image": "/images/treatments/pico_laser.png",
+    "image": "/images/medical-services/pico_laser.png",
     "details": "Precise light pulses shattering superficial melanin deposits caused by sun exposure without damaging surrounding skin.",
     "benefits": [
       "Rapid removal of sun spots",
@@ -1471,7 +1471,7 @@ export const treatments = [
     "category": "cosmetic",
     "desc": "Patented multi-step treatment combining cleansing, exfoliation, extraction, and hydration with nutrient-rich serums for instant glow.",
     "iconName": "Sparkles",
-    "image": "/images/treatments/hydrafacial.png",
+    "image": "/images/medical-services/hydrafacial.png",
     "details": "A clinical skin conditioning therapy using vortex-extraction to deeply purify pores, apply medical-grade chemical peels, and infuse high-dose antioxidants.",
     "benefits": [
       "Instant visible skin glow",
@@ -1489,7 +1489,7 @@ export const treatments = [
     "category": "cosmetic",
     "desc": "Non-invasive Hollywood carbon laser peel that purifies pores, reduces oiliness, and brightens dull skin instantly.",
     "iconName": "Sparkles",
-    "image": "/images/treatments/carbon_peel.png",
+    "image": "/images/medical-services/carbon_peel.png",
     "details": "A liquid carbon layer is applied to the face and blasted with laser light, deep cleansing pores, exfoliating dead skin cells, and controlling oil production for instant porcelain glow.",
     "benefits": [
       "Instant skin radiance & glow",
@@ -1505,7 +1505,7 @@ export const treatments = [
     "category": "cosmetic",
     "desc": "Medical-grade chemical exfoliation treatments to improve skin texture, reduce pigmentation, and reveal fresher, younger-looking skin.",
     "iconName": "Scissors",
-    "image": "/images/treatments/chemical_peels.png",
+    "image": "/images/medical-services/chemical_peels.png",
     "details": "Controlled application of clinical acids (salicylic, glycolic, lactic, TCA) to target acne, superficial scars, and sun damage, promoting cell turnover.",
     "benefits": [
       "Clears active acne",
@@ -1521,7 +1521,7 @@ export const treatments = [
     "category": "cosmetic",
     "desc": "Advanced medical dermatological solutions for skin tone brightening, hyperpigmentation correction, and even complexion.",
     "iconName": "Sparkles",
-    "image": "/images/treatments/skin_whitening.png",
+    "image": "/images/medical-services/skin_whitening.png",
     "details": "Custom combination of medical peels, laser toning, and nutrient infusions to reduce melanin production, fade stubborn dark spots, and restore uniform skin brilliance.",
     "benefits": [
       "Fades dark spots & hyperpigmentation",
@@ -1537,7 +1537,7 @@ export const treatments = [
     "category": "cosmetic",
     "desc": "Diamond-tip mechanical resurfacing to buff away dead stratum corneum cells for silky smooth skin texture.",
     "iconName": "Sparkles",
-    "image": "/images/treatments/hydrafacial.png",
+    "image": "/images/medical-services/hydrafacial.png",
     "details": "Non-invasive diamond wand exfoliating dead surface skin while vacuuming away debris to unclog pores and enhance product absorption.",
     "benefits": [
       "Instantly smooths rough skin",
@@ -1561,7 +1561,7 @@ export const treatments = [
     ],
     "iconName": "Sparkles",
     "iconFile": null,
-    "image": "/images/treatments/hydrafacial.png"
+    "image": "/images/medical-services/hydrafacial.png"
   },
   {
     "id": "anti-ageing-facial",
@@ -1569,7 +1569,7 @@ export const treatments = [
     "category": "cosmetic",
     "desc": "Advanced anti-ageing facial utilizing micro-currents, peptide serums, and LED phototherapy for firm, supple skin.",
     "iconName": "TrendingUp",
-    "image": "/images/treatments/hydrafacial.png",
+    "image": "/images/medical-services/hydrafacial.png",
     "details": "Deep restorative facial boosting dermal microcirculation, smoothing fine lines, and restoring natural moisture barrier.",
     "benefits": [
       "Smooths fine dehydration lines",
@@ -1593,7 +1593,7 @@ export const treatments = [
     ],
     "iconName": "Heart",
     "iconFile": null,
-    "image": "/images/treatments/botox_fillers.png"
+    "image": "/images/medical-services/botox_fillers.png"
   },
   {
     "id": "co2-fractional-laser-therapy",
@@ -1609,7 +1609,7 @@ export const treatments = [
     ],
     "iconName": "Flame",
     "iconFile": "acne-scar.webp",
-    "image": "/images/treatments/botox_fillers.png"
+    "image": "/images/medical-services/botox_fillers.png"
   },
   {
     "id": "skin-boosters",
@@ -1625,7 +1625,7 @@ export const treatments = [
     ],
     "iconName": "Sparkles",
     "iconFile": null,
-    "image": "/images/treatments/botox_fillers.png"
+    "image": "/images/medical-services/botox_fillers.png"
   },
   {
     "id": "full-body-laser-hair-reduction",
@@ -1641,7 +1641,7 @@ export const treatments = [
     ],
     "iconName": "Flame",
     "iconFile": "full-body-laser-hair-removal.webp",
-    "image": "/images/treatments/botox_fillers.png"
+    "image": "/images/medical-services/botox_fillers.png"
   },
   {
     "id": "facial-hair-reduction",
@@ -1657,7 +1657,7 @@ export const treatments = [
     ],
     "iconName": "Sparkles",
     "iconFile": "facial-hair-removal.webp",
-    "image": "/images/treatments/hydrafacial.png"
+    "image": "/images/medical-services/hydrafacial.png"
   },
   {
     "id": "wrinkle-correction",
@@ -1673,7 +1673,7 @@ export const treatments = [
     ],
     "iconName": "Sparkles",
     "iconFile": "wrinkle-reduction.webp",
-    "image": "/images/treatments/botox_fillers.png"
+    "image": "/images/medical-services/botox_fillers.png"
   },
   {
     "id": "botox-fillers",
@@ -1681,7 +1681,7 @@ export const treatments = [
     "category": "cosmetic",
     "desc": "Expert facial rejuvenation with US FDA-approved botulinum toxin and hyaluronic acid fillers for wrinkle smoothing and volume restoration.",
     "iconName": "UserCheck",
-    "image": "/images/treatments/botox_fillers.png",
+    "image": "/images/medical-services/botox_fillers.png",
     "details": "Injectable cosmetics precisely administered by specialized dermatologists to relax dynamic lines and restore volume to cheeks, lips, and under-eyes.",
     "benefits": [
       "Restores youthful volume",
@@ -1697,7 +1697,7 @@ export const treatments = [
     "category": "cosmetic",
     "desc": "Expert facial rejuvenation with US FDA-approved botulinum toxin and hyaluronic acid fillers for wrinkle smoothing and volume restoration.",
     "iconName": "UserCheck",
-    "image": "/images/treatments/botox_fillers.png",
+    "image": "/images/medical-services/botox_fillers.png",
     "details": "Injectable cosmetics precisely administered by specialized dermatologists to relax dynamic lines and restore volume to cheeks, lips, and under-eyes.",
     "benefits": [
       "Restores youthful volume",
@@ -1713,7 +1713,7 @@ export const treatments = [
     "category": "cosmetic",
     "desc": "High-Intensity Focused Ultrasound (HIFU) for non-surgical face lifting, jawline snatching, and neck tightening.",
     "iconName": "TrendingUp",
-    "image": "/images/treatments/botox_fillers.png",
+    "image": "/images/medical-services/botox_fillers.png",
     "details": "Delivers ultrasound energy deep into the SMAS layer to contract tissue and generate collagen, lifting sagging cheeks and defining the jawline.",
     "benefits": [
       "Lifts sagging skin non-surgically",
@@ -1737,7 +1737,7 @@ export const treatments = [
     ],
     "iconName": "Sparkles",
     "iconFile": null,
-    "image": "/images/treatments/botox_fillers.png"
+    "image": "/images/medical-services/botox_fillers.png"
   },
   {
     "id": "mole-removal",
@@ -1745,7 +1745,7 @@ export const treatments = [
     "category": "cosmetic",
     "desc": "RF cautery and CO₂ laser precision removal of benign moles, skin tags, warts, and xanthelasma with minimal scarring.",
     "iconName": "Scissors",
-    "image": "/images/treatments/chemical_peels.png",
+    "image": "/images/medical-services/chemical_peels.png",
     "details": "Single-session painless radiofrequency cautery or laser vaporization of superficial skin growths under topical numbing gel.",
     "benefits": [
       "Painless single session",
@@ -1769,7 +1769,7 @@ export const treatments = [
     ],
     "iconName": "Sparkles",
     "iconFile": "wart-removal-treatment.webp",
-    "image": "/images/treatments/botox_fillers.png"
+    "image": "/images/medical-services/botox_fillers.png"
   },
   {
     "id": "mole-removal-1",
@@ -1777,7 +1777,7 @@ export const treatments = [
     "category": "cosmetic",
     "desc": "RF cautery and CO₂ laser precision removal of benign moles, skin tags, warts, and xanthelasma with minimal scarring.",
     "iconName": "Scissors",
-    "image": "/images/treatments/chemical_peels.png",
+    "image": "/images/medical-services/chemical_peels.png",
     "details": "Single-session painless radiofrequency cautery or laser vaporization of superficial skin growths under topical numbing gel.",
     "benefits": [
       "Painless single session",
@@ -1801,7 +1801,7 @@ export const treatments = [
     ],
     "iconName": "Sparkles",
     "iconFile": "xanthelasma-removal.webp",
-    "image": "/images/treatments/botox_fillers.png"
+    "image": "/images/medical-services/botox_fillers.png"
   },
   {
     "id": "pigmented-nevus-correction",
@@ -1817,7 +1817,7 @@ export const treatments = [
     ],
     "iconName": "Sparkles",
     "iconFile": null,
-    "image": "/images/treatments/botox_fillers.png"
+    "image": "/images/medical-services/botox_fillers.png"
   },
   {
     "id": "removal-of-pigmentation-by-birth",
@@ -1833,7 +1833,7 @@ export const treatments = [
     ],
     "iconName": "Sparkles",
     "iconFile": null,
-    "image": "/images/treatments/botox_fillers.png"
+    "image": "/images/medical-services/botox_fillers.png"
   },
   {
     "id": "rf-cauterization",
@@ -1849,7 +1849,7 @@ export const treatments = [
     ],
     "iconName": "Sparkles",
     "iconFile": null,
-    "image": "/images/treatments/botox_fillers.png"
+    "image": "/images/medical-services/botox_fillers.png"
   },
   {
     "id": "pico-laser-therapy",
@@ -1865,7 +1865,7 @@ export const treatments = [
     ],
     "iconName": "Flame",
     "iconFile": null,
-    "image": "/images/treatments/botox_fillers.png"
+    "image": "/images/medical-services/botox_fillers.png"
   },
   {
     "id": "facial-surgery-treatment",
@@ -1873,7 +1873,7 @@ export const treatments = [
     "category": "cosmetic",
     "desc": "Expert surgical corrective procedures for facial trauma, jaw aesthetics, soft tissue revision, and aesthetic harmony.",
     "iconName": "ShieldCheck",
-    "image": "/images/treatments/dental_implants.png",
+    "image": "/images/medical-services/dental_implants.png",
     "details": "Comprehensive facial reconstructive and cosmetic surgical procedures performed by certified maxillofacial surgeons for functional correction and enhanced facial aesthetics.",
     "benefits": [
       "Board-certified surgical expertise",
@@ -1889,7 +1889,7 @@ export const treatments = [
     "category": "cosmetic",
     "desc": "Aesthetic rhinoplasty, lip reshaping, and scar revision surgeries performed by consultant facial cosmetic surgeons.",
     "iconName": "ShieldCheck",
-    "image": "/images/treatments/dental_implants.png",
+    "image": "/images/medical-services/dental_implants.png",
     "details": "Refined cosmetic surgical procedures designed to reshape nasal structure, enhance lip volume, and minimize surgical or traumatic facial scars.",
     "benefits": [
       "Restores aesthetic proportion",
@@ -1913,7 +1913,7 @@ export const treatments = [
     ],
     "iconName": "Scissors",
     "iconFile": "lip-correction-surgery.webp",
-    "image": "/images/treatments/botox_fillers.png"
+    "image": "/images/medical-services/botox_fillers.png"
   },
   {
     "id": "rhinoplasty-1",
@@ -1921,7 +1921,7 @@ export const treatments = [
     "category": "cosmetic",
     "desc": "Aesthetic rhinoplasty, lip reshaping, and scar revision surgeries performed by consultant facial cosmetic surgeons.",
     "iconName": "ShieldCheck",
-    "image": "/images/treatments/dental_implants.png",
+    "image": "/images/medical-services/dental_implants.png",
     "details": "Refined cosmetic surgical procedures designed to reshape nasal structure, enhance lip volume, and minimize surgical or traumatic facial scars.",
     "benefits": [
       "Restores aesthetic proportion",
@@ -1945,7 +1945,7 @@ export const treatments = [
     ],
     "iconName": "Sparkles",
     "iconFile": "psoriasis-treatment.webp",
-    "image": "/images/treatments/botox_fillers.png"
+    "image": "/images/medical-services/botox_fillers.png"
   },
   {
     "id": "vitiligo-treatment",
@@ -1961,7 +1961,7 @@ export const treatments = [
     ],
     "iconName": "Sparkles",
     "iconFile": "vitiligo-treatment.webp",
-    "image": "/images/treatments/botox_fillers.png"
+    "image": "/images/medical-services/botox_fillers.png"
   },
   {
     "id": "excimer-laser-therapy",
@@ -1969,7 +1969,7 @@ export const treatments = [
     "category": "cosmetic",
     "desc": "Targeted 308nm UVB laser light therapy for effective treatment of vitiligo, psoriasis, atopic dermatitis, and alopecia areata.",
     "iconName": "Flame",
-    "image": "/images/treatments/pico_laser.png",
+    "image": "/images/medical-services/pico_laser.png",
     "details": "308nm monochrome Excimer laser technology delivers high-intensity targeted light to repigment vitiligo patches and clear localized skin lesions without affecting surrounding healthy skin.",
     "benefits": [
       "Precision targeted 308nm beam",
@@ -1993,7 +1993,7 @@ export const treatments = [
     ],
     "iconName": "Sparkles",
     "iconFile": "eczema-dermatitis-treatment.webp",
-    "image": "/images/treatments/botox_fillers.png"
+    "image": "/images/medical-services/botox_fillers.png"
   },
   {
     "id": "keloid-treatment",
@@ -2001,7 +2001,7 @@ export const treatments = [
     "category": "cosmetic",
     "desc": "Steroid micro-injections, cryotherapy, and laser therapy to flatten raised keloids and surgical scars.",
     "iconName": "ShieldCheck",
-    "image": "/images/treatments/fractional_co2_laser.png",
+    "image": "/images/medical-services/fractional_co2_laser.png",
     "details": "Multimodality scar therapy softening tough collagen cords and relieving keloid itching and tenderness.",
     "benefits": [
       "Flattens thick raised keloids",
@@ -2025,7 +2025,7 @@ export const treatments = [
     ],
     "iconName": "Flame",
     "iconFile": "lip-brightening.webp",
-    "image": "/images/treatments/botox_fillers.png"
+    "image": "/images/medical-services/botox_fillers.png"
   },
   {
     "id": "lip-lightening-peel-therapy",
@@ -2041,7 +2041,7 @@ export const treatments = [
     ],
     "iconName": "Heart",
     "iconFile": "lip-brightening.webp",
-    "image": "/images/treatments/chemical_peels.png"
+    "image": "/images/medical-services/chemical_peels.png"
   },
   {
     "id": "gfc-hair",
@@ -2049,7 +2049,7 @@ export const treatments = [
     "category": "hair",
     "desc": "Growth Factor Concentrate therapy using your own blood-derived growth factors to stimulate dormant follicles and promote natural hair regrowth.",
     "iconName": "Activity",
-    "image": "/images/treatments/gfc_hair_therapy.png",
+    "image": "/images/medical-services/gfc_hair_therapy.png",
     "details": "Next-generation autologous therapy where high concentrations of growth factors are extracted from the patient's blood platelets and delivered into the scalp.",
     "benefits": [
       "100% natural autologous therapy",
@@ -2075,7 +2075,7 @@ export const treatments = [
     ],
     "iconName": "Heart",
     "iconFile": "qr678-hair-therapy.webp",
-    "image": "/images/treatments/gfc_hair_therapy.png"
+    "image": "/images/medical-services/gfc_hair_therapy.png"
   },
   {
     "id": "exocell-therapy",
@@ -2091,7 +2091,7 @@ export const treatments = [
     ],
     "iconName": "Heart",
     "iconFile": "exocell-therapy.webp",
-    "image": "/images/treatments/gfc_hair_therapy.png"
+    "image": "/images/medical-services/gfc_hair_therapy.png"
   },
   {
     "id": "bio-cell-therapy",
@@ -2107,7 +2107,7 @@ export const treatments = [
     ],
     "iconName": "Heart",
     "iconFile": "biocell-therapy.webp",
-    "image": "/images/treatments/gfc_hair_therapy.png"
+    "image": "/images/medical-services/gfc_hair_therapy.png"
   },
   {
     "id": "dutacell-therapy",
@@ -2123,7 +2123,7 @@ export const treatments = [
     ],
     "iconName": "Heart",
     "iconFile": null,
-    "image": "/images/treatments/gfc_hair_therapy.png"
+    "image": "/images/medical-services/gfc_hair_therapy.png"
   },
   {
     "id": "hair-transplantation",
@@ -2139,7 +2139,7 @@ export const treatments = [
     ],
     "iconName": "TrendingUp",
     "iconFile": "hair-transplant.webp",
-    "image": "/images/treatments/gfc_hair_therapy.png"
+    "image": "/images/medical-services/gfc_hair_therapy.png"
   },
   {
     "id": "beard-moustache-correction",
@@ -2155,7 +2155,7 @@ export const treatments = [
     ],
     "iconName": "TrendingUp",
     "iconFile": "beard-transplant.webp",
-    "image": "/images/treatments/gfc_hair_therapy.png"
+    "image": "/images/medical-services/gfc_hair_therapy.png"
   },
   {
     "id": "hairline-correction",
@@ -2171,7 +2171,7 @@ export const treatments = [
     ],
     "iconName": "TrendingUp",
     "iconFile": "hairline-correction.webp",
-    "image": "/images/treatments/gfc_hair_therapy.png"
+    "image": "/images/medical-services/gfc_hair_therapy.png"
   },
   {
     "id": "anti-dandruff-treatment",
@@ -2187,7 +2187,7 @@ export const treatments = [
     ],
     "iconName": "TrendingUp",
     "iconFile": "dandruff-treatment.webp",
-    "image": "/images/treatments/gfc_hair_therapy.png"
+    "image": "/images/medical-services/gfc_hair_therapy.png"
   },
   {
     "id": "dandruff-treatment",
@@ -2195,7 +2195,7 @@ export const treatments = [
     "category": "hair",
     "desc": "Dermatological scalp detox removing stubborn flaking, fungal malassezia overgrowth, and seborrheic crusts.",
     "iconName": "Activity",
-    "image": "/images/treatments/qr678_therapy.png",
+    "image": "/images/medical-services/qr678_therapy.png",
     "details": "Medicated scalp peeling combined with high-frequency anti-fungal treatment to calm scalp itchiness and eliminate dandruff scales.",
     "benefits": [
       "Eliminates stubborn scalp flakes",
@@ -2211,7 +2211,7 @@ export const treatments = [
     "category": "hair",
     "desc": "Dermatological scalp detox removing stubborn flaking, fungal malassezia overgrowth, and seborrheic crusts.",
     "iconName": "Activity",
-    "image": "/images/treatments/qr678_therapy.png",
+    "image": "/images/medical-services/qr678_therapy.png",
     "details": "Medicated scalp peeling combined with high-frequency anti-fungal treatment to calm scalp itchiness and eliminate dandruff scales.",
     "benefits": [
       "Eliminates stubborn scalp flakes",
@@ -2227,7 +2227,7 @@ export const treatments = [
     "category": "hair",
     "desc": "Low-level laser therapy (LLLT) for scalp stimulation, improving blood circulation and follicular health for thicker hair.",
     "iconName": "Activity",
-    "image": "/images/treatments/qr678_therapy.png",
+    "image": "/images/medical-services/qr678_therapy.png",
     "details": "Cool-laser light therapy that increases cellular ATP production in hair follicles while clarifying scalp buildup.",
     "benefits": [
       "Non-invasive, drug-free",
@@ -2251,7 +2251,7 @@ export const treatments = [
     ],
     "iconName": "Heart",
     "iconFile": "cryolipolysis-fat-reduction.webp",
-    "image": "/images/treatments/cryo_sculpting.png"
+    "image": "/images/medical-services/cryo_sculpting.png"
   },
   {
     "id": "emsculpt-body-contouring",
@@ -2267,7 +2267,7 @@ export const treatments = [
     ],
     "iconName": "Heart",
     "iconFile": "emsculpt-body-contouring.webp",
-    "image": "/images/treatments/cryo_sculpting.png"
+    "image": "/images/medical-services/cryo_sculpting.png"
   },
   {
     "id": "vaginal-tightening-laser-therapy",
@@ -2283,7 +2283,7 @@ export const treatments = [
     ],
     "iconName": "Flame",
     "iconFile": null,
-    "image": "/images/treatments/cryo_sculpting.png"
+    "image": "/images/medical-services/cryo_sculpting.png"
   },
   {
     "id": "muscle-toning",
@@ -2291,7 +2291,7 @@ export const treatments = [
     "category": "body",
     "desc": "Targeted electromagnetic body sculpting defining abs, glutes, thighs, and arms with high-frequency contractions.",
     "iconName": "Activity",
-    "image": "/images/treatments/cryo_sculpting.png",
+    "image": "/images/medical-services/cryo_sculpting.png",
     "details": "Electromagnetic muscle stimulation targeting specific body zones to firm muscle bundles and sculpt athletic contours without gym strain.",
     "benefits": [
       "Tones abs, glutes & thighs",
@@ -2307,7 +2307,7 @@ export const treatments = [
     "category": "body",
     "desc": "Radiofrequency thermal body sculpting to tighten lax skin and smooth cellulitic dimples post weight loss.",
     "iconName": "TrendingUp",
-    "image": "/images/treatments/cryo_sculpting.png",
+    "image": "/images/medical-services/cryo_sculpting.png",
     "details": "Deep tissue radiofrequency heating stimulates dermal collagen remodeling, firming loose belly, arm, and thigh skin comfortably.",
     "benefits": [
       "Firms loose post-pregnancy skin",
@@ -2331,7 +2331,7 @@ export const treatments = [
     ],
     "iconName": "Heart",
     "iconFile": "emsella-chair-therapy.webp",
-    "image": "/images/treatments/cryo_sculpting.png"
+    "image": "/images/medical-services/cryo_sculpting.png"
   },
   {
     "id": "pelvic-floor-treatment",
@@ -2339,7 +2339,7 @@ export const treatments = [
     "category": "body",
     "desc": "Targeted pelvic floor muscle re-education and core strengthening therapy for women post-childbirth and seniors.",
     "iconName": "UserCheck",
-    "image": "/images/treatments/cryo_sculpting.png",
+    "image": "/images/medical-services/cryo_sculpting.png",
     "details": "Specialized non-invasive electromagnetic pelvic floor rehabilitation improving muscle tone, intimate wellness, and core stability.",
     "benefits": [
       "Post-natal core rehabilitation",
@@ -2363,6 +2363,7 @@ export const treatments = [
     ],
     "iconName": "Heart",
     "iconFile": "clinical-wellness-programs.webp",
-    "image": "/images/treatments/cryo_sculpting.png"
+    "image": "/images/medical-services/cryo_sculpting.png"
   }
 ];
+

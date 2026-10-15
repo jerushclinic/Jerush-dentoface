@@ -54,41 +54,35 @@ export default function HeroSection() {
       </div>
 
       {/* Enclosed Capsule Quick Actions Bar (Desktop Only) */}
-      <div 
-        className={`hidden lg:block z-[999] transition-all duration-500 ease-out px-4 sm:px-6 ${
-          isSticky 
-            ? 'fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-5xl' 
+      <div
+        className={`hidden lg:block z-[999] transition-all duration-500 ease-out px-4 sm:px-6 ${isSticky
+            ? 'fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-5xl'
             : 'absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-5xl'
-        }`}
+          }`}
       >
-        <div className={`grid grid-cols-4 divide-x divide-slate-800/80 overflow-hidden transform transition-all duration-300 ${
-          isSticky 
-            ? 'bg-slate-950/95 backdrop-blur-2xl border-t border-x border-b-0 border-brandSky/40 rounded-t-2xl ring-1 ring-white/10 hover:border-brandSky/60 shadow-[0_-4px_12px_rgba(15,23,42,0.08)]' 
+        <div className={`grid grid-cols-4 divide-x divide-slate-800/80 overflow-hidden transform transition-all duration-300 ${isSticky
+            ? 'bg-slate-950/95 backdrop-blur-2xl border-t border-x border-b-0 border-brandSky/40 rounded-t-2xl ring-1 ring-white/10 hover:border-brandSky/60 shadow-[0_-4px_12px_rgba(15,23,42,0.08)]'
             : 'bg-slate-950/90 backdrop-blur-xl border border-b-0 border-brandSky/30 rounded-t-2xl hover:border-brandSky/50'
-        }`}>
+          }`}>
           {/* Action 1: Book Appointment */}
           <a
             href="#"
             onClick={(e) => handleActionClick('contact', e)}
-            className={`flex items-center justify-between hover:bg-white/[0.06] transition-all duration-300 group ${
-              isSticky ? 'px-4 py-3 lg:px-5 lg:py-3.5' : 'px-5 py-3.5 lg:px-6 lg:py-4.5'
-            }`}
+            className={`flex items-center justify-between hover:bg-white/[0.06] transition-all duration-300 group ${isSticky ? 'px-4 py-3 lg:px-5 lg:py-3.5' : 'px-5 py-3.5 lg:px-6 lg:py-4.5'
+              }`}
           >
             <div className="flex flex-col text-left">
-              <span className={`font-headline font-bold text-white group-hover:text-brandSky transition-colors whitespace-nowrap ${
-                isSticky ? 'text-xs lg:text-[13.5px]' : 'text-sm lg:text-[15px]'
-              }`}>
+              <span className={`font-headline font-bold text-white group-hover:text-brandSky transition-colors whitespace-nowrap ${isSticky ? 'text-xs lg:text-[13.5px]' : 'text-sm lg:text-[15px]'
+                }`}>
                 Book Appointment
               </span>
-              <span className={`text-slate-400 group-hover:text-slate-300 mt-0.5 transition-colors whitespace-nowrap ${
-                isSticky ? 'text-[10.5px] lg:text-[11.5px]' : 'text-xs'
-              }`}>
+              <span className={`text-slate-400 group-hover:text-slate-300 mt-0.5 transition-colors whitespace-nowrap ${isSticky ? 'text-[10.5px] lg:text-[11.5px]' : 'text-xs'
+                }`}>
                 Schedule online
               </span>
             </div>
-            <div className={`rounded-full bg-brandSky/15 text-brandSky flex items-center justify-center shrink-0 group-hover:bg-brandSky group-hover:text-white group-hover:shadow-[0_0_12px_rgba(30,151,212,0.5)] transition-all duration-300 transform group-hover:translate-x-0.5 ml-2.5 ${
-              isSticky ? 'w-6 h-6' : 'w-7 h-7'
-            }`}>
+            <div className={`rounded-full bg-brandSky/15 text-brandSky flex items-center justify-center shrink-0 group-hover:bg-brandSky group-hover:text-white group-hover:shadow-[0_0_12px_rgba(30,151,212,0.5)] transition-all duration-300 transform group-hover:translate-x-0.5 ml-2.5 ${isSticky ? 'w-6 h-6' : 'w-7 h-7'
+              }`}>
               <svg className={isSticky ? 'w-3 h-3' : 'w-3.5 h-3.5'} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
               </svg>
@@ -99,25 +93,21 @@ export default function HeroSection() {
           <a
             href="#"
             onClick={(e) => handleActionClick('contact', e)}
-            className={`flex items-center justify-between hover:bg-white/[0.06] transition-all duration-300 group ${
-              isSticky ? 'px-4 py-3 lg:px-5 lg:py-3.5' : 'px-5 py-3.5 lg:px-6 lg:py-4.5'
-            }`}
+            className={`flex items-center justify-between hover:bg-white/[0.06] transition-all duration-300 group ${isSticky ? 'px-4 py-3 lg:px-5 lg:py-3.5' : 'px-5 py-3.5 lg:px-6 lg:py-4.5'
+              }`}
           >
             <div className="flex flex-col text-left">
-              <span className={`font-headline font-bold text-white group-hover:text-brandSky transition-colors whitespace-nowrap ${
-                isSticky ? 'text-xs lg:text-[13.5px]' : 'text-sm lg:text-[15px]'
-              }`}>
+              <span className={`font-headline font-bold text-white group-hover:text-brandSky transition-colors whitespace-nowrap ${isSticky ? 'text-xs lg:text-[13.5px]' : 'text-sm lg:text-[15px]'
+                }`}>
                 Find Clinics
               </span>
-              <span className={`text-slate-400 group-hover:text-slate-300 mt-0.5 transition-colors whitespace-nowrap ${
-                isSticky ? 'text-[10.5px] lg:text-[11.5px]' : 'text-xs'
-              }`}>
+              <span className={`text-slate-400 group-hover:text-slate-300 mt-0.5 transition-colors whitespace-nowrap ${isSticky ? 'text-[10.5px] lg:text-[11.5px]' : 'text-xs'
+                }`}>
                 Locate centre
               </span>
             </div>
-            <div className={`rounded-full bg-brandSky/15 text-brandSky flex items-center justify-center shrink-0 group-hover:bg-brandSky group-hover:text-white group-hover:shadow-[0_0_12px_rgba(30,151,212,0.5)] transition-all duration-300 transform group-hover:translate-x-0.5 ml-2.5 ${
-              isSticky ? 'w-6 h-6' : 'w-7 h-7'
-            }`}>
+            <div className={`rounded-full bg-brandSky/15 text-brandSky flex items-center justify-center shrink-0 group-hover:bg-brandSky group-hover:text-white group-hover:shadow-[0_0_12px_rgba(30,151,212,0.5)] transition-all duration-300 transform group-hover:translate-x-0.5 ml-2.5 ${isSticky ? 'w-6 h-6' : 'w-7 h-7'
+              }`}>
               <svg className={isSticky ? 'w-3 h-3' : 'w-3.5 h-3.5'} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
               </svg>
@@ -128,25 +118,21 @@ export default function HeroSection() {
           <a
             href="#"
             onClick={(e) => handleActionClick('jerush-treatments', e)}
-            className={`flex items-center justify-between hover:bg-white/[0.06] transition-all duration-300 group ${
-              isSticky ? 'px-4 py-3 lg:px-5 lg:py-3.5' : 'px-5 py-3.5 lg:px-6 lg:py-4.5'
-            }`}
+            className={`flex items-center justify-between hover:bg-white/[0.06] transition-all duration-300 group ${isSticky ? 'px-4 py-3 lg:px-5 lg:py-3.5' : 'px-5 py-3.5 lg:px-6 lg:py-4.5'
+              }`}
           >
             <div className="flex flex-col text-left">
-              <span className={`font-headline font-bold text-white group-hover:text-brandSky transition-colors whitespace-nowrap ${
-                isSticky ? 'text-xs lg:text-[13.5px]' : 'text-sm lg:text-[15px]'
-              }`}>
+              <span className={`font-headline font-bold text-white group-hover:text-brandSky transition-colors whitespace-nowrap ${isSticky ? 'text-xs lg:text-[13.5px]' : 'text-sm lg:text-[15px]'
+                }`}>
                 Treatments
               </span>
-              <span className={`text-slate-400 group-hover:text-slate-300 mt-0.5 transition-colors whitespace-nowrap ${
-                isSticky ? 'text-[10.5px] lg:text-[11.5px]' : 'text-xs'
-              }`}>
+              <span className={`text-slate-400 group-hover:text-slate-300 mt-0.5 transition-colors whitespace-nowrap ${isSticky ? 'text-[10.5px] lg:text-[11.5px]' : 'text-xs'
+                }`}>
                 View medical wings
               </span>
             </div>
-            <div className={`rounded-full bg-brandSky/15 text-brandSky flex items-center justify-center shrink-0 group-hover:bg-brandSky group-hover:text-white group-hover:shadow-[0_0_12px_rgba(30,151,212,0.5)] transition-all duration-300 transform group-hover:translate-x-0.5 ml-2.5 ${
-              isSticky ? 'w-6 h-6' : 'w-7 h-7'
-            }`}>
+            <div className={`rounded-full bg-brandSky/15 text-brandSky flex items-center justify-center shrink-0 group-hover:bg-brandSky group-hover:text-white group-hover:shadow-[0_0_12px_rgba(30,151,212,0.5)] transition-all duration-300 transform group-hover:translate-x-0.5 ml-2.5 ${isSticky ? 'w-6 h-6' : 'w-7 h-7'
+              }`}>
               <svg className={isSticky ? 'w-3 h-3' : 'w-3.5 h-3.5'} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
               </svg>
@@ -157,25 +143,21 @@ export default function HeroSection() {
           <a
             href="#"
             onClick={(e) => handleActionClick('testimonials', e)}
-            className={`flex items-center justify-between hover:bg-white/[0.06] transition-all duration-300 group ${
-              isSticky ? 'px-4 py-3 lg:px-5 lg:py-3.5' : 'px-5 py-3.5 lg:px-6 lg:py-4.5'
-            }`}
+            className={`flex items-center justify-between hover:bg-white/[0.06] transition-all duration-300 group ${isSticky ? 'px-4 py-3 lg:px-5 lg:py-3.5' : 'px-5 py-3.5 lg:px-6 lg:py-4.5'
+              }`}
           >
             <div className="flex flex-col text-left">
-              <span className={`font-headline font-bold text-white group-hover:text-brandSky transition-colors whitespace-nowrap ${
-                isSticky ? 'text-xs lg:text-[13.5px]' : 'text-sm lg:text-[15px]'
-              }`}>
+              <span className={`font-headline font-bold text-white group-hover:text-brandSky transition-colors whitespace-nowrap ${isSticky ? 'text-xs lg:text-[13.5px]' : 'text-sm lg:text-[15px]'
+                }`}>
                 Smile Stories
               </span>
-              <span className={`text-slate-400 group-hover:text-slate-300 mt-0.5 transition-colors whitespace-nowrap ${
-                isSticky ? 'text-[10.5px] lg:text-[11.5px]' : 'text-xs'
-              }`}>
+              <span className={`text-slate-400 group-hover:text-slate-300 mt-0.5 transition-colors whitespace-nowrap ${isSticky ? 'text-[10.5px] lg:text-[11.5px]' : 'text-xs'
+                }`}>
                 Patient reviews
               </span>
             </div>
-            <div className={`rounded-full bg-brandSky/15 text-brandSky flex items-center justify-center shrink-0 group-hover:bg-brandSky group-hover:text-white group-hover:shadow-[0_0_12px_rgba(30,151,212,0.5)] transition-all duration-300 transform group-hover:translate-x-0.5 ml-2.5 ${
-              isSticky ? 'w-6 h-6' : 'w-7 h-7'
-            }`}>
+            <div className={`rounded-full bg-brandSky/15 text-brandSky flex items-center justify-center shrink-0 group-hover:bg-brandSky group-hover:text-white group-hover:shadow-[0_0_12px_rgba(30,151,212,0.5)] transition-all duration-300 transform group-hover:translate-x-0.5 ml-2.5 ${isSticky ? 'w-6 h-6' : 'w-7 h-7'
+              }`}>
               <svg className={isSticky ? 'w-3 h-3' : 'w-3.5 h-3.5'} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
               </svg>

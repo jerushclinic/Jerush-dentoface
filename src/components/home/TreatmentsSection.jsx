@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+﻿import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Smile, Sparkles, Flame, Shield, ArrowRight, ChevronLeft, ChevronRight, ArrowUpRight } from 'lucide-react';
@@ -19,7 +19,7 @@ const CURATED_TREATMENTS = {
       id: 'laser-hair-removal',
       title: 'Laser Hair Removal',
       subtitle: 'Triple-wavelength diode cooling technology',
-      image: '/images/treatments/hydrafacial.png',
+      image: '/images/medical-services/hydrafacial.png',
       path: '/treatments/laser-hair-removal',
       tag: 'Permanent Reduction'
     },
@@ -27,7 +27,7 @@ const CURATED_TREATMENTS = {
       id: 'fractional-co2-laser',
       title: 'Acne Scar Treatment',
       subtitle: 'Fractional CO₂ laser skin resurfacing',
-      image: '/images/treatments/fractional_co2_laser.png',
+      image: '/images/medical-services/fractional_co2_laser.png',
       path: '/cosmetic-dermatology-laser-treatments/fractional-co2-laser',
       tag: 'FDA Approved'
     },
@@ -35,7 +35,7 @@ const CURATED_TREATMENTS = {
       id: 'acne-treatment',
       title: 'Pimples Treatment',
       subtitle: 'Clinical acne control & salicylic peels',
-      image: '/images/treatments/chemical_peels.png',
+      image: '/images/medical-services/chemical_peels.png',
       path: '/treatments/acne-treatment',
       tag: 'Active Acne Care'
     },
@@ -43,7 +43,7 @@ const CURATED_TREATMENTS = {
       id: 'skin-whitening-treatment',
       title: 'Skin Lightening Treatment',
       subtitle: 'Medical brightening & glow therapy',
-      image: '/images/treatments/skin_whitening.png',
+      image: '/images/medical-services/skin_whitening.png',
       path: '/treatments/skin-whitening-treatment',
       tag: 'Radiant Complexion'
     },
@@ -51,7 +51,7 @@ const CURATED_TREATMENTS = {
       id: 'pigmentation-treatment',
       title: 'Pigmentation Treatment',
       subtitle: 'Melasma & dark spot Q-switch toning',
-      image: '/images/treatments/pico_laser.png',
+      image: '/images/medical-services/pico_laser.png',
       path: '/treatments/pigmentation-treatment',
       tag: 'Pico Laser Toning'
     },
@@ -59,7 +59,7 @@ const CURATED_TREATMENTS = {
       id: 'hydrafacial',
       title: 'HydraFacial Deep Glow',
       subtitle: 'Pore vortex detox & antioxidant serum',
-      image: '/images/treatments/hydrafacial.png',
+      image: '/images/medical-services/hydrafacial.png',
       path: '/treatments/hydrafacial',
       tag: 'Instant Radiance'
     },
@@ -67,7 +67,7 @@ const CURATED_TREATMENTS = {
       id: 'carbon-peel-laser-treatment',
       title: 'Carbon Peel Laser',
       subtitle: 'Hollywood porcelain pore refining',
-      image: '/images/treatments/carbon_peel.png',
+      image: '/images/medical-services/carbon_peel.png',
       path: '/treatments/carbon-peel-laser-treatment',
       tag: 'Zero Downtime'
     },
@@ -75,7 +75,7 @@ const CURATED_TREATMENTS = {
       id: 'botox-fillers',
       title: 'Botox & Dermal Fillers',
       subtitle: 'US FDA-approved facial rejuvenation',
-      image: '/images/treatments/botox_fillers.png',
+      image: '/images/medical-services/botox_fillers.png',
       path: '/treatments/botox-fillers',
       tag: 'Youthful Volume'
     }
@@ -85,7 +85,7 @@ const CURATED_TREATMENTS = {
       id: 'clear-aligners',
       title: 'Jerushaligne Clear Aligners',
       subtitle: 'Custom 3D CAD/CAM invisible aligners',
-      image: '/images/treatments/clear_aligners.png',
+      image: '/images/medical-services/clear_aligners.png',
       path: '/dental-treatments/top-quality-invisible-clear-aligners-jerushaligne',
       tag: 'Virtually Invisible'
     },
@@ -93,7 +93,7 @@ const CURATED_TREATMENTS = {
       id: 'dental-implants',
       title: 'Advanced Dental Implants',
       subtitle: 'CBCT-guided permanent titanium roots',
-      image: '/images/treatments/dental_implants.png',
+      image: '/images/medical-services/dental_implants.png',
       path: '/dental-implants',
       tag: 'Lifetime Durability'
     },
@@ -101,7 +101,7 @@ const CURATED_TREATMENTS = {
       id: 'smile-makeover',
       title: 'Cosmetic Smile Makeover',
       subtitle: 'Digital smile design & aesthetic veneers',
-      image: '/images/treatments/teeth_whitening.png',
+      image: '/images/medical-services/teeth_whitening.png',
       path: '/treatments/smile-makeover',
       tag: 'Custom Aesthetics'
     },
@@ -109,7 +109,7 @@ const CURATED_TREATMENTS = {
       id: 'root-canal',
       title: 'Single-Visit Root Canal',
       subtitle: 'Painless rotary endodontics in 1 sitting',
-      image: '/images/treatments/root_canal.png',
+      image: '/images/medical-services/root_canal.png',
       path: '/dental-treatments/root-canal-treatment-in-tamilnadu',
       tag: 'Save Natural Tooth'
     },
@@ -117,7 +117,7 @@ const CURATED_TREATMENTS = {
       id: 'metal-braces',
       title: 'Orthodontic Braces',
       subtitle: 'Tooth-coloured ceramic & precision braces',
-      image: '/images/treatments/orthodontics_braces.png',
+      image: '/images/medical-services/orthodontics_braces.png',
       path: '/treatments/metal-braces',
       tag: 'Precision Alignment'
     },
@@ -125,7 +125,7 @@ const CURATED_TREATMENTS = {
       id: 'teeth-whitening',
       title: 'Laser Teeth Whitening',
       subtitle: 'Up to 8 shades whiter in 45 minutes',
-      image: '/images/treatments/teeth_whitening.png',
+      image: '/images/medical-services/teeth_whitening.png',
       path: '/treatments/teeth-whitening',
       tag: 'Instant Brightness'
     },
@@ -133,7 +133,7 @@ const CURATED_TREATMENTS = {
       id: 'fixed-partial-denture',
       title: 'Crowns & Bridges (FPD)',
       subtitle: 'Premium monolithic zirconia restoration',
-      image: '/images/treatments/fixed_partial_denture.png',
+      image: '/images/medical-services/fixed_partial_denture.png',
       path: '/dental-treatments/best-crowns-and-bridges-treatment',
       tag: 'Zirconia Strength'
     },
@@ -141,7 +141,7 @@ const CURATED_TREATMENTS = {
       id: 'wisdom-tooth',
       title: 'Wisdom Tooth Surgery',
       subtitle: 'Minimally invasive impacted extraction',
-      image: '/images/treatments/wisdom_tooth.png',
+      image: '/images/medical-services/wisdom_tooth.png',
       path: '/treatments/wisdom-tooth',
       tag: 'Painless Relief'
     }
@@ -151,7 +151,7 @@ const CURATED_TREATMENTS = {
       id: 'gfc-hair',
       title: 'GFC Growth Factor Therapy',
       subtitle: 'Concentrated autologous growth serum',
-      image: '/images/treatments/gfc_hair_therapy.png',
+      image: '/images/medical-services/gfc_hair_therapy.png',
       path: '/hair-restoration-treatments/gfc-growth-factor-concentrate',
       tag: 'High Density'
     },
@@ -159,7 +159,7 @@ const CURATED_TREATMENTS = {
       id: 'hair-transplant',
       title: 'FUE Hair Transplant',
       subtitle: 'Artistic hairline micro-extraction',
-      image: '/images/treatments/gfc_hair_therapy.png',
+      image: '/images/medical-services/gfc_hair_therapy.png',
       path: '/hair-restoration-treatments/hair-transplant',
       tag: 'Permanent Growth'
     },
@@ -167,7 +167,7 @@ const CURATED_TREATMENTS = {
       id: 'prp-hair-treatment',
       title: 'Clinical PRP Hair Therapy',
       subtitle: 'Platelet-rich plasma follicle revitalization',
-      image: '/images/treatments/gfc_hair_therapy.png',
+      image: '/images/medical-services/gfc_hair_therapy.png',
       path: '/treatments/prp-hair-treatment',
       tag: 'Root Strengthening'
     },
@@ -175,7 +175,7 @@ const CURATED_TREATMENTS = {
       id: 'qr678-hair',
       title: 'QR 678® Neo Therapy',
       subtitle: 'US FDA-patented peptide formulation',
-      image: '/images/treatments/qr678_therapy.png',
+      image: '/images/medical-services/qr678_therapy.png',
       path: '/treatments/qr678-hair',
       tag: 'Proven Regrowth'
     },
@@ -183,7 +183,7 @@ const CURATED_TREATMENTS = {
       id: 'mesotherapy-hair',
       title: 'Scalp Mesotherapy',
       subtitle: 'Targeted vitamin & peptide micro-dosing',
-      image: '/images/treatments/gfc_hair_therapy.png',
+      image: '/images/medical-services/gfc_hair_therapy.png',
       path: '/treatments/prp-hair-treatment',
       tag: 'Follicle Boost'
     },
@@ -191,7 +191,7 @@ const CURATED_TREATMENTS = {
       id: 'anti-dandruff-scalp',
       title: 'Clinical Scalp Detox',
       subtitle: 'Anti-fungal & sebum rebalancing therapy',
-      image: '/images/treatments/hydrafacial.png',
+      image: '/images/medical-services/hydrafacial.png',
       path: '/treatments/prp-hair-treatment',
       tag: 'Healthy Scalp'
     },
@@ -199,7 +199,7 @@ const CURATED_TREATMENTS = {
       id: 'laser-hair-stimulation',
       title: 'Laser Hair Stimulation',
       subtitle: 'Cold red-light follicle bio-activation',
-      image: '/images/treatments/pico_laser.png',
+      image: '/images/medical-services/pico_laser.png',
       path: '/treatments/prp-hair-treatment',
       tag: 'Light Therapy'
     }
@@ -209,7 +209,7 @@ const CURATED_TREATMENTS = {
       id: 'cryo-sculpting',
       title: 'Cryo CoolSculpting',
       subtitle: 'Targeted non-surgical fat freezing',
-      image: '/images/treatments/cryo_sculpting.png',
+      image: '/images/medical-services/cryo_sculpting.png',
       path: '/body-contouring-wellness/cryo-cool-sculpting',
       tag: 'Stubborn Fat Loss'
     },
@@ -217,7 +217,7 @@ const CURATED_TREATMENTS = {
       id: 'hifu-skin-tightening',
       title: 'HIFU Non-Surgical Facelift',
       subtitle: 'Deep SMAS ultrasound tissue lifting',
-      image: '/images/treatments/botox_fillers.png',
+      image: '/images/medical-services/botox_fillers.png',
       path: '/treatments/hifu-skin-tightening',
       tag: 'Face & Neck Lift'
     },
@@ -225,7 +225,7 @@ const CURATED_TREATMENTS = {
       id: 'botox-fillers',
       title: 'Botox & Dermal Fillers',
       subtitle: 'US FDA-approved wrinkle relaxation',
-      image: '/images/treatments/botox_fillers.png',
+      image: '/images/medical-services/botox_fillers.png',
       path: '/treatments/botox-fillers',
       tag: 'Youthful Volume'
     },
@@ -233,7 +233,7 @@ const CURATED_TREATMENTS = {
       id: 'anti-ageing-facial',
       title: 'Clinical Collagen Therapy',
       subtitle: 'Micro-currents & peptide skin firming',
-      image: '/images/treatments/hydrafacial.png',
+      image: '/images/medical-services/hydrafacial.png',
       path: '/treatments/anti-ageing-facial',
       tag: 'Supple Elasticity'
     },
@@ -241,7 +241,7 @@ const CURATED_TREATMENTS = {
       id: 'rf-body-contouring',
       title: 'RF Body Contouring',
       subtitle: 'Radiofrequency dermal tissue tightening',
-      image: '/images/treatments/cryo_sculpting.png',
+      image: '/images/medical-services/cryo_sculpting.png',
       path: '/body-contouring-wellness/cryo-cool-sculpting',
       tag: 'Tone & Firm'
     },
@@ -249,7 +249,7 @@ const CURATED_TREATMENTS = {
       id: 'double-chin-reduction',
       title: 'Double Chin Sculpting',
       subtitle: 'Submental lipolysis & jaw contouring',
-      image: '/images/treatments/botox_fillers.png',
+      image: '/images/medical-services/botox_fillers.png',
       path: '/body-contouring-wellness/cryo-cool-sculpting',
       tag: 'Jaw Definition'
     },
@@ -257,7 +257,7 @@ const CURATED_TREATMENTS = {
       id: 'stretch-mark-reduction',
       title: 'Stretch Mark Revision',
       subtitle: 'Fractional laser dermal remodeling',
-      image: '/images/treatments/fractional_co2_laser.png',
+      image: '/images/medical-services/fractional_co2_laser.png',
       path: '/cosmetic-dermatology-laser-treatments/fractional-co2-laser',
       tag: 'Texture Renewal'
     }
@@ -319,7 +319,7 @@ export default function TreatmentsSection({ treatments }) {
 
   const handleImageError = (e) => {
     e.target.onerror = null;
-    e.target.src = '/images/treatments/hydrafacial.png';
+    e.target.src = '/images/medical-services/hydrafacial.png';
   };
 
   return (
@@ -486,4 +486,5 @@ export default function TreatmentsSection({ treatments }) {
     </section>
   );
 }
+
 

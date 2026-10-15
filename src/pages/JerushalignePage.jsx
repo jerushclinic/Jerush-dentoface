@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -22,35 +22,35 @@ const BENEFITS = [
   {
     title: '100% In-House Precision',
     desc: 'Manufactured directly in our advanced digital lab under expert orthodontist supervision to ensure maximum quality control and perfect custom fitting.',
-    img: '/images/treatments/dental/jerushaligne/in-house-precision.webp',
+    img: '/images/medical-services/dental-care/jerushaligne/in-house-precision.webp',
     icon: Sparkles,
     tag: '3D CAD/CAM Tech'
   },
   {
     title: 'Virtually Invisible Aesthetics',
     desc: 'Crystal-clear, medical-grade thermoplastic trays that align teeth discreetly without metal brackets or ugly wires.',
-    img: '/images/treatments/dental/jerushaligne/virtually-invisible.webp',
+    img: '/images/medical-services/dental-care/jerushaligne/virtually-invisible.webp',
     icon: ShieldCheck,
     tag: 'Clear Thermoplastic'
   },
   {
     title: '100% Removable & Convenient',
     desc: 'Remove your aligners effortlessly while eating your favorite meals, drinking hot beverages, or during daily oral hygiene routines.',
-    img: '/images/treatments/dental/jerushaligne/removable.webp',
+    img: '/images/medical-services/dental-care/jerushaligne/removable.webp',
     icon: RefreshCw,
     tag: 'Total Convenience'
   },
   {
     title: '2-Days Aligner Kit Delivery',
     desc: 'Get your complete custom-molded Jerushaligne clear aligner kit in just 2 days after your intraoral 3D scan.',
-    img: '/images/treatments/dental/jerushaligne/aligner-kit-delivery.webp',
+    img: '/images/medical-services/dental-care/jerushaligne/aligner-kit-delivery.webp',
     icon: Clock,
     tag: 'Record Speed'
   },
   {
     title: 'Direct Cost Savings',
     desc: 'In-house production eliminates middleman markups, giving you world-class aligner therapy at up to 50% lower costs than imported brands.',
-    img: '/images/treatments/dental/jerushaligne/cost-savings.webp',
+    img: '/images/medical-services/dental-care/jerushaligne/cost-savings.webp',
     icon: Award,
     tag: 'Direct Lab Pricing'
   }
@@ -60,42 +60,42 @@ const CONDITIONS = [
   {
     title: 'Crowded Teeth',
     desc: 'Fixes space shortages to guide squeezed, overlapping teeth into proper linear alignment.',
-    img: '/images/treatments/dental/jerushaligne/crowded-teeth.webp'
+    img: '/images/medical-services/dental-care/jerushaligne/crowded-teeth.webp'
   },
   {
     title: 'Overlapping Teeth',
     desc: 'Straightens twisted or overlapping teeth for easier cleaning and superior oral hygiene.',
-    img: '/images/treatments/dental/jerushaligne/overlap.webp'
+    img: '/images/medical-services/dental-care/jerushaligne/overlap.webp'
   },
   {
     title: 'Teeth Gaps (Diastema)',
     desc: 'Closes unwanted spaces between front or side teeth cleanly and predictably.',
-    img: '/images/treatments/dental/jerushaligne/diastema-teeth-gaps.webp'
+    img: '/images/medical-services/dental-care/jerushaligne/diastema-teeth-gaps.webp'
   },
   {
     title: 'Overbite Alignment',
     desc: 'Reduces excessive upper front tooth overlap over lower teeth for balanced jaw alignment.',
-    img: '/images/treatments/dental/jerushaligne/over-bite.webp'
+    img: '/images/medical-services/dental-care/jerushaligne/over-bite.webp'
   },
   {
     title: 'Underbite Correction',
     desc: 'Realigns lower teeth that project outward past upper front teeth.',
-    img: '/images/treatments/dental/jerushaligne/under-bite.webp'
+    img: '/images/medical-services/dental-care/jerushaligne/under-bite.webp'
   },
   {
     title: 'Crossbite Adjustment',
     desc: 'Fixes upper teeth that sit inside lower teeth when biting, preventing abnormal wear.',
-    img: '/images/treatments/dental/jerushaligne/cross-bite.webp'
+    img: '/images/medical-services/dental-care/jerushaligne/cross-bite.webp'
   },
   {
     title: 'Open Bite Gap',
     desc: 'Closes the vertical gap when upper and lower front teeth fail to meet upon biting.',
-    img: '/images/treatments/dental/jerushaligne/open-bite.webp'
+    img: '/images/medical-services/dental-care/jerushaligne/open-bite.webp'
   },
   {
     title: 'Orthodontic Relapse',
     desc: 'Realigns teeth that shifted back years after wearing traditional metal braces.',
-    img: '/images/treatments/dental/jerushaligne/orthodontic-relapse.webp'
+    img: '/images/medical-services/dental-care/jerushaligne/orthodontic-relapse.webp'
   }
 ];
 
@@ -104,28 +104,28 @@ const PROCEDURE_STEPS = [
     step: '01',
     title: 'Digital Impression & Consultation',
     desc: 'A fast, comfortable 3D intraoral scan captures every micro-detail of your teeth without messy traditional impression pastes.',
-    img: '/images/treatments/dental/jerushaligne/digital-impression-consultation.webp',
+    img: '/images/medical-services/dental-care/jerushaligne/digital-impression-consultation.webp',
     badge: '3D Intraoral Scan'
   },
   {
     step: '02',
     title: '3D CAD Movement Planning',
     desc: 'Our orthodontists map precise micro-movements and generate a 3D digital simulation previewing your smile transformation.',
-    img: '/images/treatments/dental/jerushaligne/3d-post-result.webp',
+    img: '/images/medical-services/dental-care/jerushaligne/3d-post-result.webp',
     badge: 'AI CAD Simulation'
   },
   {
     step: '03',
     title: 'In-House 3D Printing & Laser Finishing',
     desc: 'Your custom Jerushaligne trays are 3D-printed and laser-finished in our dedicated digital lab—ready in just 2 days!',
-    img: '/images/treatments/dental/jerushaligne/3d-printing-thermoform.webp',
+    img: '/images/medical-services/dental-care/jerushaligne/3d-printing-thermoform.webp',
     badge: 'Ready in 2 Days'
   },
   {
     step: '04',
     title: 'Wear & Smile Transformation',
     desc: 'Wear your trays 20–22 hours daily, switching sets as guided while tracking your progress via www.jerushaligne.com.',
-    img: '/images/treatments/dental/jerushaligne/wear-smile.webp',
+    img: '/images/medical-services/dental-care/jerushaligne/wear-smile.webp',
     badge: '20-22 Hours Daily'
   }
 ];
@@ -134,19 +134,19 @@ const REMOTE_FEATURES = [
   {
     title: 'Express Digital Impressions',
     desc: 'Complete your 3D scan during a single short clinic visit and receive your complete custom aligner series within 2 days.',
-    img: '/images/treatments/dental/jerushaligne/express-digital-impression.webp',
+    img: '/images/medical-services/dental-care/jerushaligne/express-digital-impression.webp',
     tag: 'Fast Scan'
   },
   {
     title: 'No Doctor Needed for Follow-ups',
     desc: 'With custom pre-planned aligner series and digital tracking, enjoy total convenience without constant physical clinic visits.',
-    img: '/images/treatments/dental/jerushaligne/no-doctor-need.webp',
+    img: '/images/medical-services/dental-care/jerushaligne/no-doctor-need.webp',
     tag: 'Remote Friendly'
   },
   {
     title: 'International Patient Care',
     desc: 'Overseas patients can complete intraoral scanning and receive their full aligner kit before returning home.',
-    img: '/images/treatments/dental/jerushaligne/international-care.webp',
+    img: '/images/medical-services/dental-care/jerushaligne/international-care.webp',
     tag: 'Global Patients'
   }
 ];
@@ -279,7 +279,7 @@ export default function JerushalignePage() {
           >
             <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-100 bg-white p-2 flex items-center justify-center">
               <img
-                src="/images/treatments/dental/jerushaligne/girl.webp"
+                src="/images/medical-services/dental-care/jerushaligne/girl.webp"
                 alt="Jerushaligne Clear Aligners Patient"
                 className="w-full h-auto max-h-[420px] object-contain rounded-2xl"
               />
@@ -369,7 +369,7 @@ export default function JerushalignePage() {
           <div className="lg:col-span-5">
             <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-100 bg-white p-2 flex items-center justify-center group">
               <img
-                src="/images/treatments/dental/jerushaligne/jerushaligne-overview.webp"
+                src="/images/medical-services/dental-care/jerushaligne/jerushaligne-overview.webp"
                 alt="Jerushaligne Overview - In-house aligner crafting"
                 className="w-full h-auto max-h-[380px] object-contain transform-gpu group-hover:scale-105 transition-transform duration-700 rounded-2xl"
               />
@@ -667,3 +667,4 @@ export default function JerushalignePage() {
     </div>
   );
 }
+

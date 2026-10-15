@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -25,42 +25,42 @@ const COST_FACTORS = [
   {
     title: '1. Types of Dental Implants',
     desc: 'Whether you require a single tooth implant, multiple adjacent replacements, or an advanced All-on-4 / All-on-6 full arch restoration determines the surgical complexity and total cost.',
-    img: '/images/treatments/dental/dental-implants/implant-types.webp',
+    img: '/images/medical-services/dental-care/dental-implants/implant-types.webp',
     tag: 'Configuration',
     color: 'from-blue-500/10 to-cyan-500/10 border-blue-500/20'
   },
   {
     title: '2. Biocompatible Materials Used',
     desc: 'Medical-grade Titanium vs metal-free Zirconia implants. Titanium provides unmatched load-bearing strength, while Zirconia delivers peak aesthetics for visible front teeth.',
-    img: '/images/treatments/dental/dental-implants/materials-used.webp',
+    img: '/images/medical-services/dental-care/dental-implants/materials-used.webp',
     tag: 'Material Choice',
     color: 'from-brandBlue/10 to-cyan-500/10 border-brandBlue/20'
   },
   {
     title: '3. Digital 3D Technology & Guided Surgery',
     desc: 'Advanced CBCT 3D volumetric scanning, computer-guided surgical templates, and digital CAD/CAM impressions ensure millimeter accuracy and faster healing.',
-    img: '/images/treatments/dental/dental-implants/technology.webp',
+    img: '/images/medical-services/dental-care/dental-implants/technology.webp',
     tag: '3D Precision',
     color: 'from-brandSky/10 to-blue-500/10 border-brandSky/20'
   },
   {
     title: '4. Custom Crown & Prosthetic Type',
     desc: 'Your final restoration choice — monolithic Zirconia crowns, aesthetic ceramic bridges, or porcelain-fused restorations — tailored for natural aesthetics and bite strength.',
-    img: '/images/treatments/dental/dental-implants/crown-types.webp',
+    img: '/images/medical-services/dental-care/dental-implants/crown-types.webp',
     tag: 'Prosthetics',
     color: 'from-purple-500/10 to-indigo-500/10 border-purple-500/20'
   },
   {
     title: '5. Pre-Implant Additional Procedures',
     desc: 'If bone volume is depleted, preparatory procedures such as bone grafting, sinus lift elevation, or tooth extraction ensure a rock-solid foundation for the implant.',
-    img: '/images/treatments/dental/dental-implants/additional-procedures.webp',
+    img: '/images/medical-services/dental-care/dental-implants/additional-procedures.webp',
     tag: 'Preparatory Care',
     color: 'from-amber-500/10 to-orange-500/10 border-amber-500/20'
   },
   {
     title: '6. Chennai Clinic Advantage & Pricing',
     desc: 'Jerush Dentofacial in Chennai provides direct hospital-level pricing with 0% interest EMI options and complete cost transparency without hidden clinic overheads.',
-    img: '/images/treatments/dental/dental-implants/price-location.webp',
+    img: '/images/medical-services/dental-care/dental-implants/price-location.webp',
     tag: 'Transparent EMI',
     color: 'from-emerald-500/10 to-teal-500/10 border-emerald-500/20'
   }
@@ -70,21 +70,21 @@ const TYPES = [
   {
     title: 'Single Tooth Implant',
     desc: 'Ideal for replacing one missing tooth without altering or shaving down neighboring healthy teeth. A titanium post replaces the root with a custom crown on top.',
-    img: '/images/treatments/dental/dental-implants/implant-types.webp',
+    img: '/images/medical-services/dental-care/dental-implants/implant-types.webp',
     badge: 'Single Unit',
     points: ['100% preserves adjacent teeth', 'Natural look and chewing feel', 'Permanent, lifetime bond']
   },
   {
     title: 'Multiple Teeth Implants',
     desc: 'Replaces several consecutive missing teeth using strategically spaced implant posts supporting an implant-supported fixed bridge.',
-    img: '/images/treatments/dental/dental-implants/materials-used.webp',
+    img: '/images/medical-services/dental-care/dental-implants/materials-used.webp',
     badge: 'Multi-Unit Bridge',
     points: ['Eliminates partial dentures', 'Prevents bone collapse across gap', 'High bite-force capacity']
   },
   {
     title: 'All-on-4 / All-on-6 Full Arch',
     desc: 'Complete upper or lower arch restoration anchored by 4 or 6 tilted titanium implants for permanent, non-removable full smile transformation.',
-    img: '/images/treatments/dental/dental-implants/full-dental-implant-packages.webp',
+    img: '/images/medical-services/dental-care/dental-implants/full-dental-implant-packages.webp',
     badge: 'Full Arch Restoration',
     points: ['Fixed alternative to loose dentures', 'Same-week smile makeover', 'Maximum stability and confidence']
   },
@@ -95,7 +95,7 @@ const PROCEDURE_STEPS = [
     step: '01',
     title: '3D Diagnostics & Digital Treatment Planning',
     desc: 'Comprehensive oral evaluation with low-radiation 3D CBCT imaging to map bone density, nerve pathways, and precise 3D implant positioning.',
-    img: '/images/treatments/dental/dental-implants/treatment-plan.webp',
+    img: '/images/medical-services/dental-care/dental-implants/treatment-plan.webp',
     highlight: 'CBCT 3D Scan',
     details: 'Digital virtual simulation ensures maximum accuracy before the procedure starts.'
   },
@@ -103,7 +103,7 @@ const PROCEDURE_STEPS = [
     step: '02',
     title: 'Computer-Guided Implant Placement Surgery',
     desc: 'Under gentle local anesthesia, the sterile medical-grade titanium post is accurately placed into the jawbone with micro-surgical precision.',
-    img: '/images/treatments/dental/dental-implants/implant-surgery.webp',
+    img: '/images/medical-services/dental-care/dental-implants/implant-surgery.webp',
     highlight: 'Minimally Invasive',
     details: 'Painless procedure lasting 30–45 minutes per implant with rapid same-day recovery.'
   },
@@ -111,7 +111,7 @@ const PROCEDURE_STEPS = [
     step: '03',
     title: 'Osseointegration (Natural Healing Phase)',
     desc: 'Over 3–6 months, the jawbone cells fuse directly with the biocompatible titanium surface (osseointegration), forming an unbreakable permanent anchor.',
-    img: '/images/treatments/dental/dental-implants/healing-time.webp',
+    img: '/images/medical-services/dental-care/dental-implants/healing-time.webp',
     highlight: '3–6 Months Fusion',
     details: 'A temporary aesthetic crown can be worn during healing so your smile remains complete.'
   },
@@ -119,7 +119,7 @@ const PROCEDURE_STEPS = [
     step: '04',
     title: 'Custom Zirconia Crown Placement',
     desc: 'A custom-shaded, computer-milled monolithic Zirconia or ceramic crown is securely attached to the abutment, perfectly matching your natural teeth.',
-    img: '/images/treatments/dental/dental-implants/crown-placeement.webp',
+    img: '/images/medical-services/dental-care/dental-implants/crown-placeement.webp',
     highlight: 'CAD/CAM Zirconia',
     details: 'Crafted in our advanced dental laboratory for exact bite alignment and lifelike aesthetics.'
   },
@@ -127,7 +127,7 @@ const PROCEDURE_STEPS = [
     step: '05',
     title: 'Routine Follow-Up & Lifetime Maintenance',
     desc: 'Periodic check-ups and professional preventive cleanings ensure healthy gum tissue and lifetime stability for your new smile.',
-    img: '/images/treatments/dental/dental-implants/followup-care.webp',
+    img: '/images/medical-services/dental-care/dental-implants/followup-care.webp',
     highlight: 'Long-Term Success',
     details: 'Regular check-ups at any of our regional centres in Chennai, Trichy, or Thuckalay.'
   },
@@ -164,31 +164,31 @@ const CONDITIONS = [
   {
     title: 'Missing Single or Multiple Teeth',
     desc: 'Restore gaps caused by tooth decay, sports trauma, or extraction with permanent tooth replacements.',
-    img: '/images/treatments/dental/dental-implants/missing-teeth.webp',
+    img: '/images/medical-services/dental-care/dental-implants/missing-teeth.webp',
     tag: 'Gap Restoration'
   },
   {
     title: 'Jawbone Loss Issues',
     desc: 'Halt progressive bone resorption after tooth extraction and preserve your natural facial contour.',
-    img: '/images/treatments/dental/dental-implants/bone%20loss%20issues.webp',
+    img: '/images/medical-services/dental-care/dental-implants/bone%20loss%20issues.webp',
     tag: 'Bone Preservation'
   },
   {
     title: 'Struggling with Loose Dentures',
     desc: 'Eliminate painful friction, clicking sounds, and messy adhesive pastes with fixed implant-anchored teeth.',
-    img: '/images/treatments/dental/dental-implants/unmanaged-dentures.webp',
+    img: '/images/medical-services/dental-care/dental-implants/unmanaged-dentures.webp',
     tag: 'Denture Alternative'
   },
   {
     title: 'Affordable Tooth Replacement',
     desc: 'Accessible pricing, transparent payment schemes, and zero-interest EMI options for every patient.',
-    img: '/images/treatments/dental/dental-implants/affordable-dental-implants.webp',
+    img: '/images/medical-services/dental-care/dental-implants/affordable-dental-implants.webp',
     tag: 'Accessible Care'
   },
   {
     title: 'Full Dental Implant Packages',
     desc: 'Complete arch rehabilitations (All-on-4 / All-on-6) for patients requiring comprehensive whole-mouth restoration.',
-    img: '/images/treatments/dental/dental-implants/full-dental-implant-packages.webp',
+    img: '/images/medical-services/dental-care/dental-implants/full-dental-implant-packages.webp',
     tag: 'Full Arch Makeover'
   },
 ];
@@ -418,7 +418,7 @@ export default function DentalImplantsPage() {
           >
             <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-100 bg-white p-3 flex items-center justify-center">
               <img
-                src="/images/treatments/dental/dental-implants/anatomy-of-healthy-teeth-and-tooth-dental-implant.webp"
+                src="/images/medical-services/dental-care/dental-implants/anatomy-of-healthy-teeth-and-tooth-dental-implant.webp"
                 alt="Anatomy of healthy teeth and dental implant - Jerush Chennai"
                 className="w-full h-auto max-h-[400px] object-contain rounded-2xl"
               />
@@ -473,7 +473,7 @@ export default function DentalImplantsPage() {
             className="rounded-3xl overflow-hidden border border-slate-100 shadow-xl bg-white p-3 flex items-center justify-center"
           >
             <img
-              src="/images/treatments/dental/dental-implants/wmremove-transformed.webp"
+              src="/images/medical-services/dental-care/dental-implants/wmremove-transformed.webp"
               alt="What is a dental implant at Jerush Dentofacial"
               className="w-full h-auto max-h-[380px] object-contain rounded-2xl"
             />
@@ -796,7 +796,7 @@ export default function DentalImplantsPage() {
 
           <div className="rounded-3xl overflow-hidden border border-slate-100 shadow-2xl bg-white p-3 flex items-center justify-center">
             <img
-              src="/images/treatments/dental/dental-implants/patient-checking-his-teeth-mirror.webp"
+              src="/images/medical-services/dental-care/dental-implants/patient-checking-his-teeth-mirror.webp"
               alt="Happy patient checking smile results in mirror - Jerush Chennai"
               className="w-full h-auto max-h-[420px] object-contain rounded-2xl"
             />
@@ -856,7 +856,7 @@ export default function DentalImplantsPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           <div className="rounded-3xl overflow-hidden border border-slate-100 shadow-2xl bg-white p-3 flex items-center justify-center">
             <img
-              src="/images/treatments/dental/dental-implants/choosing-right-clinic.webp"
+              src="/images/medical-services/dental-care/dental-implants/choosing-right-clinic.webp"
               alt="Choosing the right dental implant clinic in Chennai"
               className="w-full h-auto max-h-[420px] object-contain rounded-2xl"
             />
@@ -918,7 +918,7 @@ export default function DentalImplantsPage() {
 
             <div className="rounded-3xl overflow-hidden border border-slate-100 shadow-2xl bg-white p-3 flex items-center justify-center">
               <img
-                src="/images/treatments/dental/dental-implants/post-dental-implant-treatment.webp"
+                src="/images/medical-services/dental-care/dental-implants/post-dental-implant-treatment.webp"
                 alt="Post dental implant care instructions - Jerush Chennai"
                 className="w-full h-auto max-h-[420px] object-contain rounded-2xl"
               />
@@ -1103,3 +1103,4 @@ export default function DentalImplantsPage() {
     </div>
   );
 }
+

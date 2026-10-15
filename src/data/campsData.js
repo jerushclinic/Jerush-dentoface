@@ -1,4 +1,4 @@
-export const CAMP_CATEGORIES = [
+﻿export const CAMP_CATEGORIES = [
   { id: 'all', label: 'All Speciality Camps', icon: 'Sparkles', count: 8 },
   { id: 'dental', label: 'Dental Camps', icon: 'Smile', count: 2 },
   { id: 'aligner', label: 'Aligner Camps', icon: 'Layers', count: 1 },
@@ -191,11 +191,11 @@ export const defaultCamps = [
     expectedBeneficiaries: '300+ Attendees',
     leadDoctors: 'Dr. Aishwarya, MD (Dermatology) & Aesthetic Laser Specialists',
     teamSize: '4 Cosmetic Dermatologists, 5 Clinical Estheticians',
-    coverImage: '/images/treatments/fractional_co2_laser.png',
+    coverImage: '/images/medical-services/fractional_co2_laser.png',
     galleryImages: [
-      '/images/treatments/fractional_co2_laser.png',
-      '/images/treatments/pico_laser.png',
-      '/images/treatments/hydrafacial.png',
+      '/images/medical-services/fractional_co2_laser.png',
+      '/images/medical-services/pico_laser.png',
+      '/images/medical-services/hydrafacial.png',
       '/images/events/dr-bladbin-birthday/jerush-dental-cosmetic-doctors.webp'
     ],
     servicesProvided: [
@@ -228,10 +228,10 @@ export const defaultCamps = [
     expectedBeneficiaries: '220+ Participants',
     leadDoctors: 'Dr. C. Binila Asir, MDS & Cosmetology Clinical Team',
     teamSize: '3 Aesthetic Specialists, 4 Laser Therapists',
-    coverImage: '/images/treatments/skin_whitening.png',
+    coverImage: '/images/medical-services/skin_whitening.png',
     galleryImages: [
-      '/images/treatments/skin_whitening.png',
-      '/images/treatments/carbon_peel.png',
+      '/images/medical-services/skin_whitening.png',
+      '/images/medical-services/carbon_peel.png',
       '/images/events/dr-bladbin-birthday/aishwarya-with-binila-priya-doctor.webp'
     ],
     servicesProvided: [
@@ -265,10 +265,10 @@ export const defaultCamps = [
     expectedBeneficiaries: '350+ Patients',
     leadDoctors: 'Certified Trichology Surgeons & Hair Restoration Specialists',
     teamSize: '4 Hair Surgeons, 4 Scalp Technicians, 3 Patient Counselors',
-    coverImage: '/images/treatments/gfc_hair_therapy.png',
+    coverImage: '/images/medical-services/gfc_hair_therapy.png',
     galleryImages: [
-      '/images/treatments/gfc_hair_therapy.png',
-      '/images/treatments/qr678_therapy.png',
+      '/images/medical-services/gfc_hair_therapy.png',
+      '/images/medical-services/qr678_therapy.png',
       '/images/events/medical-camp/doctors-providing-health-consultation-medical-camp.webp'
     ],
     servicesProvided: [
@@ -303,9 +303,9 @@ export const defaultCamps = [
     expectedBeneficiaries: '280+ Participants',
     leadDoctors: 'Body Contouring Specialists & Clinical Nutritionists',
     teamSize: '3 Aesthetic Physicians, 3 Cryo Technicians, 2 Dieticians',
-    coverImage: '/images/treatments/cryo_sculpting.png',
+    coverImage: '/images/medical-services/cryo_sculpting.png',
     galleryImages: [
-      '/images/treatments/cryo_sculpting.png',
+      '/images/medical-services/cryo_sculpting.png',
       '/images/events/dr-bladbin-birthday/jerush-all-team-thuckalay.webp',
       '/images/events/medical-camp/dr-stalin-medical-camp-press-meet.webp'
     ],
@@ -413,4 +413,5 @@ export const defaultCampInquiries = [
     submittedAt: '2026-08-18T16:20:00'
   }
 ];
+
 
