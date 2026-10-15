@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
-import { ArrowLeft, ChevronRight, Phone, Search, Bell, X, ChevronDown, Building2, Calendar, Sparkles, Check } from 'lucide-react';
+import { ArrowLeft, ChevronRight, Phone, PhoneCall, Globe, Search, Bell, X, ChevronDown, Building2, Calendar, Sparkles, Check } from 'lucide-react';
 import MarqueeNewsBar from '../components/common/MarqueeNewsBar';
 
 const renderDentalIconItem = (to, label, iconFile, handleLinkClick, isMobile = false) => {
@@ -767,9 +767,9 @@ export default function Header() {
           <div className="jerush-container">
             <div className="jerush-navbar jerush-split-navbar">
               {/* Mobile Navigation Header (< xl) */}
-              <div className="flex xl:hidden items-center justify-between w-full h-full px-2">
+              <div className="flex xl:hidden items-center justify-between w-full h-full px-3 sm:px-5">
                 {/* Brand Logo */}
-                <div className="jerush-logo">
+                <div className="jerush-logo shrink-0">
                   <Link to="/" onClick={handleLinkClick} rel="home">
                     <img
                       src="/images/logo/jerush-logo.webp"
@@ -786,27 +786,28 @@ export default function Header() {
                 </div>
 
                 {/* Mobile Right Controls: Book Appt CTA + Language Switcher + Hamburger */}
-                <div className="flex items-center gap-2.5 sm:gap-3.5">
-                  {/* Mobile Book Appointment Pill Button */}
+                <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+                  {/* Mobile Book Appointment Button (Icon on Phone, Full Pill on Tablet) */}
                   <Link
                     to="/contact"
                     onClick={handleLinkClick}
-                    className="jerush-mobile-top-cta inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-gradient-to-r from-brandSky to-[#1686bd] text-white font-headline font-bold text-[11px] sm:text-xs shadow-sm hover:shadow transition-all shrink-0 uppercase tracking-wider"
+                    title="Book Appointment"
+                    className="jerush-mobile-top-cta inline-flex items-center justify-center gap-1.5 w-8 h-8 sm:w-auto px-2 sm:px-3 sm:py-1.5 rounded-full bg-gradient-to-r from-brandSky to-[#1686bd] text-white font-headline font-bold text-xs shadow-sm hover:shadow transition-all shrink-0 uppercase tracking-wider"
                   >
-                    <svg className="w-3 h-3 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <svg className="w-3.5 h-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                       <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                       <line x1="16" y1="2" x2="16" y2="6"></line>
                       <line x1="8" y1="2" x2="8" y2="6"></line>
                       <line x1="3" y1="10" x2="21" y2="10"></line>
                     </svg>
-                    <span>Book Appt</span>
+                    <span className="hidden sm:inline">Book Appt</span>
                   </Link>
 
                   {/* Mobile Language Selector Dropdown */}
                   <div className="jerush-lang-selector relative notranslate z-30">
                     <button
                       id="mobileLangSelectBtn"
-                      className="flex items-center gap-1 px-2 py-1 rounded-full border text-[11px] font-headline font-bold transition-all"
+                      className="flex items-center gap-1 px-2.5 py-1 rounded-full border text-[11px] font-headline font-bold transition-all"
                       onClick={() => setMobileLangOpen(!mobileLangOpen)}
                       aria-haspopup="true"
                       aria-expanded={mobileLangOpen}
@@ -1889,33 +1890,59 @@ export default function Header() {
                 </Link>
               </div>
 
-              {/* Quick Links Section - Jerush Signature Aesthetic */}
+              {/* Quick Helplines & Support - Jerush Luxury Glassmorphic Design */}
               <div className="mt-8 mb-4">
-                <div className="flex items-center gap-2 mb-3.5">
-                  <span className="w-2 h-2 rounded-full bg-brandSky"></span>
-                  <h3 className="font-headline font-bold text-[15px] text-white uppercase tracking-wider">
-                    Quick Helplines & Support
-                  </h3>
+                <div className="flex items-center justify-between mb-3 px-0.5">
+                  <div className="flex items-center gap-2.5">
+                    <span className="relative flex h-2.5 w-2.5">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brandSky opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-brandSky shadow-[0_0_8px_rgba(30,151,212,0.8)]"></span>
+                    </span>
+                    <h3 className="font-headline font-black text-[13px] sm:text-[14px] text-white uppercase tracking-[0.14em]">
+                      Quick Helplines & Support
+                    </h3>
+                  </div>
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-[10px] font-bold text-emerald-300 tracking-wider uppercase">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    24/7 Live
+                  </span>
                 </div>
 
                 <div className="space-y-3">
-                  {/* Card 1: Emergency & Apex Support */}
+                  {/* Card 1: Emergency & Apex Hospital */}
                   <a
                     href="tel:+919489160055"
-                    className="block p-3.5 sm:p-4 rounded-2xl bg-white/[0.06] hover:bg-white/[0.1] border border-white/10 hover:border-brandSky/50 backdrop-blur-md shadow-lg transition-all group"
+                    className="relative block overflow-hidden rounded-2xl bg-gradient-to-r from-slate-900/90 via-[#141b2d]/85 to-slate-900/90 border border-white/10 hover:border-rose-500/50 p-3.5 sm:p-4 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.35)] hover:shadow-[0_8px_25px_rgba(244,63,94,0.22)] transition-all duration-300 group"
                   >
+                    {/* Ambient glow in corner */}
+                    <div className="pointer-events-none absolute -right-6 -bottom-6 w-24 h-24 bg-rose-500/10 rounded-full blur-2xl group-hover:bg-rose-500/20 group-hover:scale-125 transition-all duration-500"></div>
+
+                    {/* Top Metadata Pill Row */}
+                    <div className="flex items-center justify-between mb-2.5">
+                      <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-rose-500/15 border border-rose-500/30 text-[10px] font-extrabold uppercase tracking-wider text-rose-300">
+                        <span className="w-1.5 h-1.5 rounded-full bg-rose-400 animate-pulse"></span>
+                        Emergency & Apex Hospital
+                      </span>
+                      <span className="text-[10px] font-semibold text-rose-200/70 tracking-wide">
+                        24/7 Trauma
+                      </span>
+                    </div>
+
+                    {/* Content Row */}
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brandSky to-brandBlue text-white flex items-center justify-center shrink-0 shadow-[0_2px_8px_rgba(30,151,212,0.3)]">
-                        <Phone className="w-4 h-4 text-white fill-white" />
+                      <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-rose-500 via-rose-600 to-red-700 text-white flex items-center justify-center shrink-0 shadow-[0_4px_14px_rgba(244,63,94,0.4)] group-hover:scale-105 group-hover:shadow-[0_6px_18px_rgba(244,63,94,0.55)] transition-all">
+                        <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-white fill-white" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <div className="text-[11px] font-bold text-brandSky uppercase tracking-wider">
-                          Emergency & Apex Hospital
-                        </div>
-                        <div className="text-base sm:text-lg font-bold text-white group-hover:text-brandSky transition-colors tracking-tight">
+                        <div className="text-base sm:text-lg font-black text-white group-hover:text-rose-200 transition-colors tracking-tight font-headline leading-tight">
                           +91 94891 60055
                         </div>
-                        <div className="text-[11px] text-slate-400">Thuckalay Apex Facility • 24/7 Trauma Care</div>
+                        <div className="text-[11px] sm:text-[11.5px] text-slate-400 group-hover:text-slate-300 transition-colors truncate mt-0.5">
+                          Thuckalay Apex Facility • 24/7 Trauma Care
+                        </div>
+                      </div>
+                      <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/[0.06] border border-white/10 group-hover:bg-rose-600 group-hover:border-rose-400 flex items-center justify-center text-slate-300 group-hover:text-white transition-all shrink-0 shadow-inner group-hover:scale-105">
+                        <PhoneCall className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                       </div>
                     </div>
                   </a>
@@ -1923,20 +1950,37 @@ export default function Header() {
                   {/* Card 2: Regional Centres Helpline */}
                   <a
                     href="tel:+919489160011"
-                    className="block p-3.5 sm:p-4 rounded-2xl bg-white/[0.06] hover:bg-white/[0.1] border border-white/10 hover:border-brandSky/50 backdrop-blur-md shadow-lg transition-all group"
+                    className="relative block overflow-hidden rounded-2xl bg-gradient-to-r from-slate-900/90 via-[#0d2242]/85 to-slate-900/90 border border-white/10 hover:border-brandSky/60 p-3.5 sm:p-4 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.35)] hover:shadow-[0_8px_25px_rgba(30,151,212,0.25)] transition-all duration-300 group"
                   >
+                    {/* Ambient glow in corner */}
+                    <div className="pointer-events-none absolute -right-6 -bottom-6 w-24 h-24 bg-brandSky/10 rounded-full blur-2xl group-hover:bg-brandSky/20 group-hover:scale-125 transition-all duration-500"></div>
+
+                    {/* Top Metadata Pill Row */}
+                    <div className="flex items-center justify-between mb-2.5">
+                      <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-sky-500/15 border border-sky-400/30 text-[10px] font-extrabold uppercase tracking-wider text-sky-300">
+                        <Building2 className="w-3 h-3 text-sky-300" />
+                        Regional Centres Helpline
+                      </span>
+                      <span className="text-[10px] font-semibold text-sky-200/70 tracking-wide">
+                        Trichy & Chennai
+                      </span>
+                    </div>
+
+                    {/* Content Row */}
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#1E97D4] to-[#2853A4] text-white flex items-center justify-center shrink-0 shadow-[0_2px_8px_rgba(14,39,82,0.3)]">
-                        <Building2 className="w-4 h-4 text-white" />
+                      <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-brandSky via-[#198BC8] to-brandBlue text-white flex items-center justify-center shrink-0 shadow-[0_4px_14px_rgba(30,151,212,0.4)] group-hover:scale-105 group-hover:shadow-[0_6px_18px_rgba(30,151,212,0.55)] transition-all">
+                        <Building2 className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <div className="text-[11px] font-bold text-sky-300 uppercase tracking-wider">
-                          Regional Centres Helpline
-                        </div>
-                        <div className="text-base sm:text-lg font-bold text-white group-hover:text-brandSky transition-colors tracking-tight">
+                        <div className="text-base sm:text-lg font-black text-white group-hover:text-brandSky transition-colors tracking-tight font-headline leading-tight">
                           +91 94891 60011
                         </div>
-                        <div className="text-[11px] text-slate-400">Trichy & Chennai Regional Centres</div>
+                        <div className="text-[11px] sm:text-[11.5px] text-slate-400 group-hover:text-slate-300 transition-colors truncate mt-0.5">
+                          Trichy & Chennai Regional Centres
+                        </div>
+                      </div>
+                      <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/[0.06] border border-white/10 group-hover:bg-brandSky group-hover:border-sky-300 flex items-center justify-center text-slate-300 group-hover:text-white transition-all shrink-0 shadow-inner group-hover:scale-105">
+                        <PhoneCall className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                       </div>
                     </div>
                   </a>
@@ -1944,44 +1988,76 @@ export default function Header() {
                   {/* Card 3: Dubai Liaison & International Patients */}
                   <a
                     href="tel:+971507253105"
-                    className="block p-3.5 sm:p-4 rounded-2xl bg-white/[0.06] hover:bg-white/[0.1] border border-white/10 hover:border-purple-400/50 backdrop-blur-md shadow-lg transition-all group"
+                    className="relative block overflow-hidden rounded-2xl bg-gradient-to-r from-slate-900/90 via-[#1b1338]/85 to-slate-900/90 border border-white/10 hover:border-purple-400/60 p-3.5 sm:p-4 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.35)] hover:shadow-[0_8px_25px_rgba(168,85,247,0.25)] transition-all duration-300 group"
                   >
+                    {/* Ambient glow in corner */}
+                    <div className="pointer-events-none absolute -right-6 -bottom-6 w-24 h-24 bg-purple-500/10 rounded-full blur-2xl group-hover:bg-purple-500/20 group-hover:scale-125 transition-all duration-500"></div>
+
+                    {/* Top Metadata Pill Row */}
+                    <div className="flex items-center justify-between mb-2.5">
+                      <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-purple-500/15 border border-purple-400/30 text-[10px] font-extrabold uppercase tracking-wider text-purple-300">
+                        <Globe className="w-3 h-3 text-purple-300" />
+                        International Patients
+                      </span>
+                      <span className="text-[9.5px] font-black uppercase px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-200 border border-purple-400/30 tracking-wider flex items-center gap-1">
+                        🇦🇪 Dubai Desk
+                      </span>
+                    </div>
+
+                    {/* Content Row */}
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-brandBlue text-white flex items-center justify-center shrink-0 shadow-[0_2px_8px_rgba(147,51,234,0.3)]">
-                        <Phone className="w-4 h-4 text-white" />
+                      <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-purple-600 via-indigo-600 to-purple-800 text-white flex items-center justify-center shrink-0 shadow-[0_4px_14px_rgba(147,51,234,0.4)] group-hover:scale-105 group-hover:shadow-[0_6px_18px_rgba(147,51,234,0.55)] transition-all">
+                        <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-2">
-                          <span className="text-[11px] font-bold text-purple-300 uppercase tracking-wider">
-                            International Patients
-                          </span>
-                          <span className="text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded-full bg-purple-500/20 text-purple-200 border border-purple-400/30">Dubai</span>
-                        </div>
-                        <div className="text-base sm:text-lg font-bold text-white group-hover:text-purple-300 transition-colors tracking-tight">
+                        <div className="text-base sm:text-lg font-black text-white group-hover:text-purple-300 transition-colors tracking-tight font-headline leading-tight">
                           +971 50725 3105
                         </div>
-                        <div className="text-[11px] text-slate-400">Dubai Healthcare City Liaison Office</div>
+                        <div className="text-[11px] sm:text-[11.5px] text-slate-400 group-hover:text-slate-300 transition-colors truncate mt-0.5">
+                          Dubai Healthcare City Liaison Office
+                        </div>
+                      </div>
+                      <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/[0.06] border border-white/10 group-hover:bg-purple-600 group-hover:border-purple-300 flex items-center justify-center text-slate-300 group-hover:text-white transition-all shrink-0 shadow-inner group-hover:scale-105">
+                        <PhoneCall className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                       </div>
                     </div>
                   </a>
                 </div>
               </div>
 
-              {/* Primary Book Appointment CTA Gradient Button at the very last */}
+              {/* Primary Book Appointment CTA Button - High-Impact Glowing Radiant Pill */}
               <div className="mt-6 mb-2">
-                <Link
-                  to="/contact"
-                  onClick={handleLinkClick}
-                  className="w-full py-3.5 px-5 rounded-2xl bg-gradient-to-r from-brandSky via-[#198BC8] to-brandBlue hover:from-[#38BDF8] hover:via-brandSky hover:to-brandBlue text-white font-headline font-bold text-sm sm:text-[15px] uppercase tracking-wider flex items-center justify-between shadow-[0_4px_18px_rgba(30,151,212,0.45)] hover:shadow-[0_6px_24px_rgba(30,151,212,0.6)] active:scale-[0.98] transition-all group border border-white/20"
-                >
-                  <div className="flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center shrink-0 shadow-inner group-hover:scale-105 transition-transform">
-                      <Calendar className="w-4 h-4 text-white" />
+                <div className="relative group">
+                  {/* Atmospheric neon aura glow */}
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-brandSky via-[#198BC8] to-brandBlue rounded-2xl blur-md opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                  <Link
+                    to="/contact"
+                    onClick={handleLinkClick}
+                    className="relative w-full py-3.5 px-4 rounded-2xl bg-gradient-to-r from-brandSky via-[#198BC8] to-brandBlue hover:from-[#25a9ea] hover:via-[#1da0e0] hover:to-[#2853A4] text-white flex items-center justify-between border border-white/25 shadow-[0_4px_22px_rgba(30,151,212,0.45)] hover:shadow-[0_6px_28px_rgba(30,151,212,0.65)] active:scale-[0.98] transition-all overflow-hidden"
+                  >
+                    {/* Shimmer sweep effect */}
+                    <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full duration-1000 bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform ease-out pointer-events-none"></div>
+
+                    <div className="flex items-center gap-3 relative z-10">
+                      <span className="w-10 h-10 rounded-xl bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center shrink-0 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4)] group-hover:scale-105 group-hover:rotate-3 transition-transform">
+                        <Calendar className="w-5 h-5 text-white" />
+                      </span>
+                      <div className="text-left">
+                        <span className="block font-headline font-black text-[14.5px] sm:text-[15.5px] tracking-wider uppercase text-white drop-shadow-sm leading-tight">
+                          Book Appointment
+                        </span>
+                        <span className="block text-[10.5px] font-medium text-sky-100/90 tracking-wide mt-0.5">
+                          Instant Online Slot Confirmation
+                        </span>
+                      </div>
+                    </div>
+
+                    <span className="relative z-10 w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm border border-white/25 flex items-center justify-center group-hover:bg-white group-hover:text-brandBlue text-white transition-all shrink-0 group-hover:translate-x-0.5 shadow-sm">
+                      <ChevronRight className="w-4 h-4 stroke-[2.5]" />
                     </span>
-                    <span className="text-white drop-shadow-xs">Book Appointment</span>
-                  </div>
-                  <ChevronRight className="w-4 h-4 text-white/90 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                  </Link>
+                </div>
               </div>
             </div>
           )}
