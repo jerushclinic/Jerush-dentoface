@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { 
-  Building2, 
-  ShieldCheck, 
-  AlertCircle, 
-  CheckCircle2, 
-  Phone, 
-  Mail, 
+import {
+  Building2,
+  ShieldCheck,
+  AlertCircle,
+  CheckCircle2,
+  Phone,
+  Mail,
   FileText,
   Scale
 } from 'lucide-react';
@@ -100,12 +100,12 @@ export default function TermsConditionsPage() {
   return (
     <div className="w-full bg-[#F8FAFC] font-body text-slate-800 text-left relative pt-0">
       {/* ─── Breadcrumb Hero ─── */}
-      <PageBreadcrumbHero 
-        title="Terms & Conditions: Clinical Authorization & Service Agreement" 
+      <PageBreadcrumbHero
+        title="Terms & Conditions: Clinical Authorization & Service Agreement"
         breadcrumbs={[
           { label: 'About Jerush', path: '/about' },
           { label: 'Terms & Conditions', active: true }
-        ]} 
+        ]}
       />
 
       {/* ─── Main Document Canvas ─── */}
@@ -165,11 +165,10 @@ export default function TermsConditionsPage() {
                 <button
                   key={item.id}
                   onClick={() => handleScrollTo(item.id)}
-                  className={`w-full text-left px-3 py-2 rounded-lg font-medium transition-all duration-150 leading-snug flex items-center justify-between group ${
-                    activeSection === item.id
-                      ? 'bg-brandBlue/10 text-brandBlue font-bold'
-                      : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
-                  }`}
+                  className={`w-full text-left px-3 py-2 rounded-lg font-medium transition-all duration-150 leading-snug flex items-center justify-between group ${activeSection === item.id
+                    ? 'bg-brandBlue/10 text-brandBlue font-bold'
+                    : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+                    }`}
                 >
                   <span className="truncate">{item.label}</span>
                   <span className={`text-[10px] transition-transform ${activeSection === item.id ? 'text-brandBlue font-bold' : 'text-slate-300 group-hover:text-slate-400'}`}>
@@ -373,7 +372,7 @@ export default function TermsConditionsPage() {
               <ul className="list-disc pl-5 space-y-2 text-xs sm:text-sm">
                 <li>Information provided via website inquiry forms must be accurate and truthful;</li>
                 <li>Online preliminary evaluations represent advisory screenings and cannot substitute for an in-person physical clinical examination and tactile palpation;</li>
-                <li>Jerush digital assets, articles, procedural graphics, and trademarked names (including Jerushaligne) are protected intellectual property and may not be reproduced without written permission.</li>
+                <li>Jerush digital assets, articles, procedural graphics and trademarked names (including Jerushaligne) are protected intellectual property and may not be reproduced without written permission.</li>
               </ul>
             </section>
 
@@ -386,13 +385,13 @@ export default function TermsConditionsPage() {
                 </h2>
               </div>
               <p className="text-xs sm:text-sm">
-                Inquiries, grievances, or formal concerns regarding clinical services, billing, or patient records should be directed to our designated Patient Grievance Officer:
+                Inquiries, grievances or formal concerns regarding clinical services, billing or patient records should be directed to our designated Patient Grievance Officer:
               </p>
               <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 text-xs sm:text-sm space-y-1.5">
                 <p className="font-bold text-slate-900">Patient Relations & Grievance Desk</p>
                 <p className="text-slate-600">Jerush Groups and Hospitals (Jerush Dentofacial & Cosmetic Laser Centre)</p>
                 <p className="text-slate-600">Central Inquiries: <a href="mailto:enquiry@jerushdentoface.com" className="text-brandBlue font-semibold hover:underline">enquiry@jerushdentoface.com</a></p>
-                <p className="text-slate-600">Helpline: <a href="tel:+919489160055" className="text-brandBlue font-semibold hover:underline">+91 94891 60055</a> / <a href="tel:+919489160000" className="text-brandBlue font-semibold hover:underline">+91 94891 60000</a></p>
+                <p className="text-slate-600">Helpline: <a href="tel:+918925689769" className="text-brandBlue font-semibold hover:underline">+91 89256 89769</a> / <a href="tel:+919443147724" className="text-brandBlue font-semibold hover:underline">+91 94431 47724</a></p>
                 <p className="text-slate-600">Headquarters Address: Near Bus Stand, Brammapuram South, Thuckalay, Tamil Nadu – 629175, India.</p>
               </div>
               <p className="text-xs text-slate-500 pt-1">
@@ -430,7 +429,7 @@ export default function TermsConditionsPage() {
         primaryBtnText="Consult a Specialist"
         onPrimaryClick={handleBookClick}
         secondaryBtnText="Call Support Helpline"
-        secondaryBtnPhone="+919489160055"
+        secondaryBtnPhone="+918925689769"
         doctorImage="/images/adminstration/prabin-chief-executive-officer.webp"
         doctorName="DR. A. PRABIN"
         doctorRole="Chief Executive Officer"

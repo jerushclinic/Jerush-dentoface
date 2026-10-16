@@ -13,3 +13,21 @@
 
 ## Language & Terminology
 - **Spelling Convention**: Always use British English spelling for **"Centre"** and **"Centres"** (never "Center" or "Centers") when referring to hospital wings, medical facilities, regional branches ("4 Regional Centres"), excellence centres ("Centres of Excellence"), or the organization name ("Jerush Dentofacial & Cosmetic Laser Centre").
+
+## Two-Color Title Convention
+- **Style Requirement**: All page headlines and section titles (`h1`, `h2`) on treatment pages and landing pages MUST follow the two-color format:
+  - Base text: Dark slate `text-slate-900` (or `text-white` on dark backgrounds).
+  - Highlighted keyword phrase: `<span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">...</span>` (or `<span className="bg-gradient-to-r from-brandSky via-sky-300 to-white bg-clip-text text-transparent">...</span>` on dark backgrounds).
+  - Never render major section titles in a single flat solid color.
+
+## Counter & Key Stats Section Design
+- **Gradient Background**: All full-width stats / counter bars MUST use our signature Jerush royal blue gradient:
+  - Container: `bg-gradient-to-r from-brandBlue to-[#1b4393] py-10 sm:py-12 px-4 sm:px-6 text-white shadow-inner relative overflow-hidden`.
+  - Values: Crisp white bold typography (`font-headline font-black text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight`).
+  - Labels: Uppercase tracking text (`text-white/80 text-xs sm:text-sm font-semibold uppercase tracking-wider mt-1`).
+  - Never use dark navy/black (`from-slate-900 via-[#071324] to-slate-900`) for the counter section.
+
+## Clean Hero Section & No Unwanted Badges
+- **Hero Title Clearance**: Do not clutter the hero with excessive pill badges, category chips, or tags above the title (e.g., avoid "Category: ..." and "Custom Precision Fit" pills above headlines). Lead cleanly with the clinic branding and title.
+- **Hero Image Presentation**: Keep hero image cards clean and frame-focused. Do not add top banner header strips with labels or pulsing status dots (e.g., avoid "Clinical Dental Model", "Prosthodontic Care" top tags on image cards).
+
