@@ -41,6 +41,7 @@ import EditorialStandardsPage from '../pages/EditorialStandardsPage.jsx';
 import TermsConditionsPage from '../pages/TermsConditionsPage.jsx';
 import PrivacyPolicyPage from '../pages/PrivacyPolicyPage.jsx';
 import TechnologiesPage from '../pages/TechnologiesPage.jsx';
+import RemovablePartialDenturesPage from '../pages/RemovablePartialDenturesPage.jsx';
 
 export default function AppRoutes() {
   return (
@@ -75,6 +76,16 @@ export default function AppRoutes() {
       <Route path="/dental-crowns-bridges" element={<CrownsBridgesPage />} />
       <Route path="/best-crowns-and-bridges-treatment" element={<CrownsBridgesPage />} />
       <Route path="/dental-treatments/best-crowns-and-bridges-treatment" element={<CrownsBridgesPage />} />
+
+      {/* Removable Partial Dentures Routes */}
+      <Route path="/dental-care/prosthodontic-care/removable-partial-dentures" element={<RemovablePartialDenturesPage />} />
+      <Route path="/dental-care/prosthodontic-care/removable-partial-dentures/" element={<RemovablePartialDenturesPage />} />
+      <Route path="/dental-treatments/removable-partial-dentures" element={<RemovablePartialDenturesPage />} />
+      <Route path="/dental-treatments/removable-partial-dentures/" element={<RemovablePartialDenturesPage />} />
+      <Route path="/treatments/removable-partial-dentures" element={<RemovablePartialDenturesPage />} />
+      <Route path="/treatments/dentures" element={<RemovablePartialDenturesPage />} />
+      <Route path="/removable-partial-dentures" element={<RemovablePartialDenturesPage />} />
+
       <Route path="/treatments/:id" element={<TreatmentDetailPage />} />
       <Route path="/treatments/:id/" element={<TreatmentDetailPage />} />
       <Route path="/services" element={<Navigate to="/treatments" replace />} />

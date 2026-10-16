@@ -1097,7 +1097,7 @@ export default function Header() {
                                     <ul>
                                       <li>{renderDentalIconItem('/dental-implants', 'Dental Implants & All-on-4', 'dental-implant.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/dental-crowns-bridges', 'Crowns & Bridges', 'dental-crown-bridge.webp', handleLinkClick)}</li>
-                                      <li>{renderDentalIconItem('/treatments/dentures', 'Precision Complete Dentures', 'denture.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/dental-care/prosthodontic-care/removable-partial-dentures', 'Removable Partial Dentures', 'denture.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/fixed-partial-denture', 'Fixed Partial Dentures', 'fixed-partial-dentures.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
@@ -2553,7 +2553,7 @@ export default function Header() {
                 <div className="grid grid-cols-2 gap-2">
                   {renderMobileTreatmentItem('/dental-implants', 'Dental Implants & All-on-4', 'dental-implant.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/dental-crowns-bridges', 'Crowns & Bridges', 'dental-crown-bridge.webp', 'dental', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/dentures', 'Complete Dentures', 'denture.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/dental-care/prosthodontic-care/removable-partial-dentures', 'Removable Partials', 'denture.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/fixed-partial-denture', 'Fixed Partials', 'fixed-partial-dentures.webp', 'dental', handleLinkClick)}
                 </div>
               </div>
