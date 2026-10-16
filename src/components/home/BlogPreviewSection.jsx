@@ -86,7 +86,10 @@ export default function BlogPreviewSection({ blogs }) {
             </div>
 
             {/* Headline with Gradient Text Accent */}
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-headline text-slate-900 leading-[1.15] tracking-tight">
+            <h2
+              style={{ lineHeight: 1.4 }}
+              className="text-3xl sm:text-4xl lg:text-5xl font-black font-headline text-slate-900 leading-[1.4] tracking-tight"
+            >
               Expert Knowledge for Your{' '}
               <span className="bg-gradient-to-r from-brandBlue via-[#198BC8] to-brandSky bg-clip-text text-transparent">
                 Smile & Skin Health

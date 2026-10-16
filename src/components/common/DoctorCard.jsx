@@ -14,11 +14,17 @@ export default function DoctorCard({ doctor, onClick, className = '' }) {
 
       <div className="relative z-10 flex flex-col">
         {/* Clean Photo Container — no floating badges or icons over face */}
-        <div className="aspect-[4/5] rounded-2xl overflow-hidden mb-4 bg-slate-100/70 relative border border-slate-200/50">
+        <div className="aspect-[4/5] rounded-2xl overflow-hidden mb-4 bg-slate-100/70 relative border border-slate-200/50 isolate transform-gpu [contain:paint]">
           <img
             src={doctor.image || doctor.fallbackImg}
             alt={doctor.name}
-            className="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105"
+            className="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105 transform-gpu [transform:translateZ(0)] [backface-visibility:hidden] will-change-transform"
+            style={{
+              transform: 'translateZ(0)',
+              WebkitBackfaceVisibility: 'hidden',
+              backfaceVisibility: 'hidden',
+              imageRendering: 'auto'
+            }}
             loading="lazy"
             onError={(e) => {
               if (doctor.fallbackImg && e.target.src !== doctor.fallbackImg) {

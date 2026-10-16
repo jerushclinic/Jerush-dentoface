@@ -47,7 +47,10 @@ export default function DentalAppointmentBanner({
             </div>
 
             {/* Headline with Brush Accent */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-headline text-white leading-[1.15] mb-5 tracking-tight">
+            <h2
+              style={{ lineHeight: 1.4 }}
+              className="text-3xl sm:text-4xl md:text-5xl font-black font-headline text-white leading-[1.4] mb-5 tracking-tight"
+            >
               {titlePrefix}{' '}
               <span className="relative inline-block text-white">
                 {highlightWord}

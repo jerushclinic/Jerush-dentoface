@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -379,7 +379,10 @@ export default function DentalImplantsPage() {
             <span className="inline-block text-[10px] font-bold text-brandSky uppercase tracking-widest bg-brandSky/8 px-3.5 py-1.5 rounded-full border border-brandSky/15">
               Advanced Implantology & Full-Mouth Rehabilitation
             </span>
-            <h1 className="font-headline font-black text-3xl sm:text-4xl text-slate-900 leading-tight">
+            <h1
+              style={{ lineHeight: 1.4 }}
+              className="font-headline font-black text-3xl sm:text-4xl text-slate-900 leading-[1.4]"
+            >
               Permanent Dental Implants at{' '}
               <span className="text-gradient bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
                 Jerush Dentofacial Centre
@@ -489,7 +492,10 @@ export default function DentalImplantsPage() {
             <span className="inline-block text-[10px] font-bold text-brandSky uppercase tracking-widest bg-brandSky/8 px-3.5 py-1.5 rounded-full border border-brandSky/15">
               Permanent Artificial Root
             </span>
-            <h2 className="font-headline font-black text-2xl sm:text-3xl text-slate-900 leading-tight">
+            <h2
+              style={{ lineHeight: 1.4 }}
+              className="font-headline font-black text-2xl sm:text-3xl text-slate-900 leading-[1.4]"
+            >
               What Is a Dental Implant?
             </h2>
             <p className="text-slate-600 leading-relaxed text-sm sm:text-base">

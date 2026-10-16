@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -344,7 +344,10 @@ export default function CrownsBridgesPage() {
             <span className="inline-block text-[11px] font-bold text-brandSky uppercase tracking-widest bg-brandSky/8 px-3.5 py-1.5 rounded-full border border-brandSky/15">
               Jerush Dentofacial & Cosmetic Laser Centre
             </span>
-            <h1 className="font-headline font-black text-3xl sm:text-4xl lg:text-5xl leading-tight">
+            <h1
+              style={{ lineHeight: 1.4 }}
+              className="font-headline font-black text-3xl sm:text-4xl lg:text-5xl leading-[1.4]"
+            >
               <span className="bg-gradient-to-r from-brandBlue via-brandSky to-blue-600 bg-clip-text text-transparent">
                 World-Class Dental Crowns & Bridges
               </span>
@@ -908,7 +911,10 @@ export default function CrownsBridgesPage() {
                 <span className="text-xs font-bold text-brandSky uppercase tracking-widest bg-brandSky/10 px-3 py-1 rounded-full border border-brandSky/20 inline-block">
                   International Standard Restorative Care
                 </span>
-                <h2 className="font-headline font-black text-2xl sm:text-4xl text-white leading-tight">
+                <h2
+                  style={{ lineHeight: 1.4 }}
+                  className="font-headline font-black text-2xl sm:text-4xl text-white leading-[1.4]"
+                >
                   <span className="bg-gradient-to-r from-white via-slate-100 to-brandSky bg-clip-text text-transparent">
                     Dental Tourism Support
                   </span>

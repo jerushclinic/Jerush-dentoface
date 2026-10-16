@@ -36,6 +36,41 @@
   --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ==========================================================================
+   Global Title Line-Height Standard: 1.40
+   Ensures spacious, non-congested multi-line titles across all pages
+   ========================================================================== */
+h1, h2,
+.title-leading,
+.leading-headline,
+.section-title,
+.hero-title {
+  line-height: 1.4 !important;
+}
+
+/* Doctor Card Portrait Rendering & Anti-Aliasing (eliminates subpixel shimmering/glitching) */
+.jerush-doctor-card {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  isolation: isolate;
+}
+
+.jerush-doctor-card img,
+.jerush-doctor-modal-img {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: auto;
+  will-change: transform;
+}
+
+.jerush-doctor-card:hover img {
+  transform: scale(1.05) translateZ(0);
+  -webkit-transform: scale(1.05) translateZ(0);
+}
+
 /* Reset / Containers */
 .jerush-wrapper {
   font-family: var(--font-body);

@@ -31,3 +31,9 @@
 - **Hero Title Clearance**: Do not clutter the hero with excessive pill badges, category chips, or tags above the title (e.g., avoid "Category: ..." and "Custom Precision Fit" pills above headlines). Lead cleanly with the clinic branding and title.
 - **Hero Image Presentation**: Keep hero image cards clean and frame-focused. Do not add top banner header strips with labels or pulsing status dots (e.g., avoid "Clinical Dental Model", "Prosthodontic Care" top tags on image cards).
 
+## Title Typography & Line Spacing (1.40 Line-Height Convention)
+- **Ratio Standard**: All `h1`, `h2`, and multi-line display headlines across all current and upcoming treatment pages and landing pages MUST maintain a clean **1.40 line-height ratio** (`line-height: 1.4` or `leading-[1.4]`).
+- **Rationale**: Never use cramped ratios (such as `leading-tight`, `leading-[1.15]`, `leading-[1.18]`, `leading-[1.2]`) which cause descenders ('g', 'p', 'y', 'j') to collide with capital letters on subsequent lines, nor overly loose ratios (such as `1.48`+). 1.40 gives optimal breathability, modern editorial elegance, and flawless legibility.
+- **Implementation**: Enforce with `leading-[1.4]` class and `style={{ lineHeight: 1.4 }}` on all `h1` and `h2` elements, supported by the global CSS rule in `src/input.css`.
+
+

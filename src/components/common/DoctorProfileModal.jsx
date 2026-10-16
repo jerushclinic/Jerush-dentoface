@@ -71,11 +71,16 @@ export default function DoctorProfileModal({ doctor, onClose }) {
         <div className="overflow-y-auto p-6 sm:p-8 pt-5 sm:pt-6 flex-grow scrollbar-hide">
           <div className="flex flex-col sm:flex-row gap-6">
             {/* Profile Image */}
-            <div className="w-28 h-36 sm:w-36 sm:h-48 rounded-xl overflow-hidden bg-slate-100 shrink-0 mx-auto sm:mx-0 shadow-md border border-slate-200">
+            <div className="w-28 h-36 sm:w-36 sm:h-48 rounded-xl overflow-hidden bg-slate-100 shrink-0 mx-auto sm:mx-0 shadow-md border border-slate-200 isolate transform-gpu [contain:paint]">
               <img
                 src={doctor.image || doctor.fallbackImg}
                 alt={doctor.name}
-                className="w-full h-full object-cover object-top"
+                className="jerush-doctor-modal-img w-full h-full object-cover object-top transform-gpu [transform:translateZ(0)] [backface-visibility:hidden]"
+                style={{
+                  transform: 'translateZ(0)',
+                  WebkitBackfaceVisibility: 'hidden',
+                  imageRendering: 'auto'
+                }}
                 onError={(e) => {
                   e.target.src = doctor.fallbackImg;
                 }}

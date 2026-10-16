@@ -29,6 +29,7 @@ const SUBCATEGORY_MAP = {
   'dental-implants': 'Tooth Replacement & Implants',
   'fixed-partial-denture': 'Tooth Replacement & Crowns',
   'dentures': 'Tooth Replacement & Dentures',
+  'removable-partial-dentures': 'Tooth Replacement & Dentures',
   'root-canal': 'Root Canal & Tooth Repair',
   'tooth-coloured-fillings': 'Root Canal & Tooth Repair',
   'post-and-core': 'Root Canal & Tooth Repair',

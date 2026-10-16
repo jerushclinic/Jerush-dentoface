@@ -54,7 +54,7 @@ export default function TreatmentCtaBanner({
               <img
                 src={doctorImage}
                 alt={doctorAlt || doctorName || "Specialist Doctor"}
-                className={`relative z-10 ${imageClassName || (isCover ? 'w-full h-full min-h-[340px] lg:min-h-full object-cover object-top' : 'h-[320px] lg:h-[390px] w-auto object-contain object-bottom')} transition-transform duration-500 hover:scale-[1.02] drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)]`}
+                className={`relative z-10 ${imageClassName || (isCover ? 'w-full h-full min-h-[340px] lg:min-h-full object-cover object-top' : 'h-[290px] sm:h-[350px] lg:h-[410px] xl:h-[440px] max-h-[90%] w-auto object-contain object-bottom')} transition-transform duration-500 hover:scale-[1.02] drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)]`}
               />
 
               {/* Doctor Name & Role Overlay Tag */}
@@ -91,7 +91,10 @@ export default function TreatmentCtaBanner({
               </div>
 
               {/* Headline with Curved Underline Accent */}
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black font-headline text-white leading-[1.18] tracking-tight">
+              <h2
+                style={{ lineHeight: 1.4 }}
+                className="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-headline text-white leading-[1.4] tracking-tight"
+              >
                 {titlePrefix}{' '}
                 <span className="relative inline-block text-white">
                   {highlightWord}
@@ -180,7 +183,10 @@ export default function TreatmentCtaBanner({
               </div>
 
               {/* Headline with Brush Accent */}
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-headline text-white leading-[1.15] mb-5 tracking-tight">
+              <h2
+                style={{ lineHeight: 1.4 }}
+                className="text-3xl sm:text-4xl md:text-5xl font-black font-headline text-white leading-[1.4] mb-5 tracking-tight"
+              >
                 {titlePrefix}{' '}
                 <span className="relative inline-block text-white">
                   {highlightWord}

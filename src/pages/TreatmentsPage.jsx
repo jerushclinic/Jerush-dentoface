@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useNavigate, useSearchParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -99,6 +99,7 @@ export default function TreatmentsPage() {
     if (id === 'dental-implants') return '/dental-implants';
     if (id === 'root-canal') return '/dental-treatments/root-canal-treatment-in-tamilnadu';
     if (id === 'metal-braces') return '/treatments/metal-braces';
+    if (id === 'dentures' || id === 'removable-partial-dentures') return '/dental-care/prosthodontic-care/removable-partial-dentures';
     return `/treatments/${id}`;
   };
 

@@ -80,11 +80,11 @@ export default function AppRoutes() {
       {/* Removable Partial Dentures Routes */}
       <Route path="/dental-care/prosthodontic-care/removable-partial-dentures" element={<RemovablePartialDenturesPage />} />
       <Route path="/dental-care/prosthodontic-care/removable-partial-dentures/" element={<RemovablePartialDenturesPage />} />
-      <Route path="/dental-treatments/removable-partial-dentures" element={<RemovablePartialDenturesPage />} />
-      <Route path="/dental-treatments/removable-partial-dentures/" element={<RemovablePartialDenturesPage />} />
-      <Route path="/treatments/removable-partial-dentures" element={<RemovablePartialDenturesPage />} />
-      <Route path="/treatments/dentures" element={<RemovablePartialDenturesPage />} />
-      <Route path="/removable-partial-dentures" element={<RemovablePartialDenturesPage />} />
+      <Route path="/treatments/removable-partial-dentures" element={<Navigate to="/dental-care/prosthodontic-care/removable-partial-dentures" replace />} />
+      <Route path="/treatments/dentures" element={<Navigate to="/dental-care/prosthodontic-care/removable-partial-dentures" replace />} />
+      <Route path="/dental-treatments/removable-partial-dentures" element={<Navigate to="/dental-care/prosthodontic-care/removable-partial-dentures" replace />} />
+      <Route path="/dental-treatments/removable-partial-dentures/" element={<Navigate to="/dental-care/prosthodontic-care/removable-partial-dentures" replace />} />
+      <Route path="/removable-partial-dentures" element={<Navigate to="/dental-care/prosthodontic-care/removable-partial-dentures" replace />} />
 
       <Route path="/treatments/:id" element={<TreatmentDetailPage />} />
       <Route path="/treatments/:id/" element={<TreatmentDetailPage />} />

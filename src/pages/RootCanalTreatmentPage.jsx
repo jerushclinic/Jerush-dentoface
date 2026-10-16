@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -187,7 +187,10 @@ export default function RootCanalTreatmentPage() {
             <span className="inline-block text-[11px] font-bold text-brandSky uppercase tracking-widest bg-brandSky/8 px-3.5 py-1.5 rounded-full border border-brandSky/15">
               Advanced Endodontics
             </span>
-            <h1 className="font-headline font-black text-3xl sm:text-4xl text-slate-900 leading-tight">
+            <h1
+              style={{ lineHeight: 1.4 }}
+              className="font-headline font-black text-3xl sm:text-4xl text-slate-900 leading-[1.4]"
+            >
               Painless Single-Visit{' '}
               <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
                 Root Canal Treatment

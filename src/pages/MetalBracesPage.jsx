@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -303,7 +303,10 @@ export default function MetalBracesPage() {
               </div>
 
               {/* Main Title */}
-              <h1 className="font-headline font-black text-3xl sm:text-4xl lg:text-[42px] text-slate-900 leading-[1.15] tracking-tight">
+              <h1
+                style={{ lineHeight: 1.4 }}
+                className="font-headline font-black text-3xl sm:text-4xl lg:text-[42px] text-slate-900 leading-[1.4] tracking-tight"
+              >
                 Heavy-Duty Precision.{' '}
                 <span className="bg-gradient-to-r from-brandBlue via-[#1479BD] to-brandSky bg-clip-text text-transparent">
                   Unstoppable Confidence.
@@ -432,7 +435,10 @@ export default function MetalBracesPage() {
                 <span>01 &bull; Modern Metal Upgrade</span>
               </div>
 
-              <h2 className="font-headline font-black text-3xl sm:text-4xl text-slate-900 leading-tight">
+              <h2
+                style={{ lineHeight: 1.4 }}
+                className="font-headline font-black text-3xl sm:text-4xl text-slate-900 leading-[1.4]"
+              >
                 The Modern Metal{' '}
                 <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
                   Upgrade
@@ -487,7 +493,10 @@ export default function MetalBracesPage() {
                 <span>02 &bull; Clinical Superiority</span>
               </div>
 
-              <h2 className="font-headline font-black text-3xl sm:text-4xl text-slate-900 leading-tight">
+              <h2
+                style={{ lineHeight: 1.4 }}
+                className="font-headline font-black text-3xl sm:text-4xl text-slate-900 leading-[1.4]"
+              >
                 Why Steel Still Rules{' '}
                 <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
                   the Smile Game
@@ -556,7 +565,10 @@ export default function MetalBracesPage() {
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brandBlue/5 border border-brandBlue/15 text-brandBlue text-[11px] font-bold uppercase tracking-wider font-headline mb-4">
               <span>03 &bull; Real Clinical Outcomes</span>
             </div>
-            <h2 className="font-headline font-black text-3xl sm:text-4xl lg:text-5xl text-slate-900 leading-tight">
+            <h2
+              style={{ lineHeight: 1.4 }}
+              className="font-headline font-black text-3xl sm:text-4xl lg:text-5xl text-slate-900 leading-[1.4]"
+            >
               Real Patient{' '}
               <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
                 Transformations
@@ -767,7 +779,10 @@ export default function MetalBracesPage() {
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brandSky/15 border border-brandSky/30 text-brandSky text-[11px] font-bold uppercase tracking-wider font-headline mb-4">
               <span>04 &bull; Advanced Hardware Options</span>
             </div>
-            <h2 className="font-headline font-black text-3xl sm:text-4xl lg:text-5xl text-white leading-tight">
+            <h2
+              style={{ lineHeight: 1.4 }}
+              className="font-headline font-black text-3xl sm:text-4xl lg:text-5xl text-white leading-[1.4]"
+            >
               Advanced Hardware{' '}
               <span className="bg-gradient-to-r from-brandSky to-[#198BC8] bg-clip-text text-transparent">
                 Options
@@ -844,7 +859,10 @@ export default function MetalBracesPage() {
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brandBlue/5 border border-brandBlue/15 text-brandBlue text-[11px] font-bold uppercase tracking-wider font-headline mb-4">
               <span>05 &bull; What We Fix</span>
             </div>
-            <h2 className="font-headline font-black text-3xl sm:text-4xl lg:text-5xl text-slate-900 leading-tight">
+            <h2
+              style={{ lineHeight: 1.4 }}
+              className="font-headline font-black text-3xl sm:text-4xl lg:text-5xl text-slate-900 leading-[1.4]"
+            >
               What We Fix{' '}
               <span className="bg-gradient-to-r from-brandBlue via-[#1479BD] to-brandSky bg-clip-text text-transparent">
                 (The 6-Point Alignment Check)
@@ -908,7 +926,10 @@ export default function MetalBracesPage() {
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brandBlue/5 border border-brandBlue/15 text-brandBlue text-[11px] font-bold uppercase tracking-wider font-headline mb-4">
               <span>06 &bull; Treatment Pathway</span>
             </div>
-            <h2 className="font-headline font-black text-3xl sm:text-4xl lg:text-5xl text-slate-900 leading-tight">
+            <h2
+              style={{ lineHeight: 1.4 }}
+              className="font-headline font-black text-3xl sm:text-4xl lg:text-5xl text-slate-900 leading-[1.4]"
+            >
               Your 4-Step Journey{' '}
               <span className="bg-gradient-to-r from-brandBlue via-[#1479BD] to-brandSky bg-clip-text text-transparent">
                 to Perfection
@@ -974,7 +995,10 @@ export default function MetalBracesPage() {
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brandBlue/5 border border-brandBlue/15 text-brandBlue text-[11px] font-bold uppercase tracking-wider font-headline mb-4">
               <span>07 &bull; Frequently Asked Questions</span>
             </div>
-            <h2 className="font-headline font-black text-3xl sm:text-4xl text-slate-900 leading-tight">
+            <h2
+              style={{ lineHeight: 1.4 }}
+              className="font-headline font-black text-3xl sm:text-4xl text-slate-900 leading-[1.4]"
+            >
               Frequently Asked{' '}
               <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
                 Questions (FAQs)
