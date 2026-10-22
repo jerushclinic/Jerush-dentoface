@@ -441,7 +441,115 @@ export default function PediatricDentalCarePage() {
         onTabClick={scrollToSection}
       />
 
-      {/* ─── SECTION 1: What Does Pediatric Dental Care Include? (Pure Crisp Canvas with Subtle Sky Glow) ─── */}
+      {/* ─── SECTION 1: Clinical Overview (id="overview") ─── */}
+      <section
+        id="overview"
+        className="w-full py-16 lg:py-20 bg-gradient-to-b from-slate-50 via-sky-50/20 to-white relative scroll-mt-28 border-b border-slate-200/70 overflow-hidden"
+      >
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-brandSky/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-brandBlue/5 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl mb-12">
+            <span className="text-xs font-bold text-brandBlue uppercase tracking-wider font-headline block mb-2.5">
+              Clinical Overview
+            </span>
+            <h2
+              style={{ lineHeight: 1.4 }}
+              className="text-2xl sm:text-3xl lg:text-[36px] font-extrabold font-headline text-slate-900 tracking-tight leading-[1.4]"
+            >
+              Understanding{' '}
+              <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
+                Pediatric Dental Care
+              </span>
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed mt-3.5">
+              Children need dental care that supports healthy teeth, comfortable eating, clear speech, and proper oral development. Pediatric dental care focuses on protecting children's teeth and gums from infancy through adolescence, while helping them build positive dental habits for life.
+            </p>
+            <p className="text-slate-600 text-sm sm:text-base leading-relaxed mt-2.5">
+              At Jerush Dentofacial &amp; Cosmetic Laser Centre, pediatric dental care focuses on each child's age, dental development, and individual needs. A calm, child-friendly approach helps children feel more comfortable during dental visits and makes oral care a familiar, stress-free part of their everyday routine.
+            </p>
+          </div>
+
+          {/* 4 Core Clinical Pillars */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="p-6 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md hover:border-brandSky/50 transition-all group">
+              <div className="w-12 h-12 rounded-2xl bg-blue-50 text-brandBlue flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <Baby className="w-6 h-6" />
+              </div>
+              <h3 className="font-headline font-bold text-slate-900 text-lg mb-2 group-hover:text-brandBlue transition-colors">
+                From Infancy to Teens
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Tailored care for each milestone, guiding children gently from their very first baby tooth eruption through secondary school and adolescence.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md hover:border-cyan-400/50 transition-all group">
+              <div className="w-12 h-12 rounded-2xl bg-cyan-50 text-cyan-700 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <ShieldCheck className="w-6 h-6" />
+              </div>
+              <h3 className="font-headline font-bold text-slate-900 text-lg mb-2 group-hover:text-cyan-700 transition-colors">
+                Baby Tooth Preservation
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Baby teeth aren't just temporary; they hold critical space for adult teeth, assist speech clarity, and enable comfortable, nutritious chewing.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md hover:border-emerald-400/50 transition-all group">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <Smile className="w-6 h-6" />
+              </div>
+              <h3 className="font-headline font-bold text-slate-900 text-lg mb-2 group-hover:text-emerald-700 transition-colors">
+                Fear-Free Positive Visits
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Our gentle "tell-show-do" approach and calm, patient-led pacing replace fear and anxiety with cheerful confidence and proud smiles.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md hover:border-indigo-400/50 transition-all group">
+              <div className="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-700 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <Sparkles className="w-6 h-6" />
+              </div>
+              <h3 className="font-headline font-bold text-slate-900 text-lg mb-2 group-hover:text-indigo-700 transition-colors">
+                Early Cavity Prevention
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Proactive enamel mineralisation, painless protective sealants, and personalised parent brushing advice protect teeth before decay begins.
+              </p>
+            </div>
+          </div>
+
+          {/* Quick Informational Highlight Banner */}
+          <div className="mt-8 p-5 sm:p-6 rounded-3xl bg-white/90 backdrop-blur-sm border border-brandSky/30 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div className="flex items-start gap-3.5">
+              <div className="w-9 h-9 rounded-xl bg-brandSky/10 text-brandBlue flex items-center justify-center shrink-0 mt-0.5">
+                <Info className="w-5 h-5 text-brandSky" />
+              </div>
+              <div>
+                <h4 className="font-headline font-bold text-sm sm:text-base text-slate-900">
+                  Did You Know? Primary Enamel is Thinner Than Adult Enamel
+                </h4>
+                <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
+                  Because primary tooth enamel is only half as thick as adult enamel, minor cavities can advance rapidly. Early check-ups detect enamel changes long before tooth pain develops.
+                </p>
+              </div>
+            </div>
+            <button
+              type="button"
+              onClick={() => scrollToSection('included-services')}
+              className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-slate-100 hover:bg-brandBlue text-slate-700 hover:text-white font-headline text-xs font-bold transition-all shrink-0 cursor-pointer self-start sm:self-center"
+            >
+              <span>Explore Services</span>
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── SECTION 2: What Does Pediatric Dental Care Include? (Pure Crisp Canvas with Subtle Sky Glow) ─── */}
       <section id="included-services" className="w-full py-16 lg:py-24 bg-white relative scroll-mt-28 border-b border-slate-200/70 overflow-hidden">
         {/* Soft background glow accents */}
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-brandSky/5 rounded-full blur-3xl pointer-events-none" />
