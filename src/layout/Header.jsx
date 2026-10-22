@@ -1054,7 +1054,7 @@ export default function Header() {
                                       </Link>
                                     </h5>
                                     <ul>
-                                      <li>{renderDentalIconItem('/treatments/pediatric-dentistry', 'Pediatric Dental Care', 'pediatric-dental-care.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/dental-care/kids-dentistry/pediatric-dental-care', 'Pediatric Dental Care', 'pediatric-dental-care.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/pulpectomy', 'Painless Root Canal', 'pulpectomy.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/pit-fissure-sealants', 'Pit & Fissure Sealants', 'pit-fissure-sealants.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/habit-breaking-appliances', 'Habit Appliances', 'habit-breaking-appliances.webp', handleLinkClick)}</li>
@@ -1079,8 +1079,8 @@ export default function Header() {
                                       </Link>
                                     </h5>
                                     <ul>
-                                      <li>{renderDentalIconItem('/dental-treatments/top-quality-invisible-clear-aligners-jerushaligne', 'Jerushaligne Aligners', 'clear-aligner.webp', handleLinkClick)}</li>
-                                      <li>{renderDentalIconItem('/treatments/metal-braces', 'Metal Braces', 'metal-braces.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/dental-care/orthodontic-care/clear-aligners-jerushaligne', 'Jerushaligne Aligners', 'clear-aligner.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/dental-care/orthodontic-care/metal-braces', 'Metal Braces', 'metal-braces.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/ceramic-braces', 'Ceramic & Lingual Braces', 'ceramic-braces.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
@@ -1095,8 +1095,8 @@ export default function Header() {
                                       </Link>
                                     </h5>
                                     <ul>
-                                      <li>{renderDentalIconItem('/dental-implants', 'Dental Implants & All-on-4', 'dental-implant.webp', handleLinkClick)}</li>
-                                      <li>{renderDentalIconItem('/treatments/dental-crowns-bridges', 'Crowns & Bridges', 'dental-crown-bridge.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/dental-care/implantology/dental-implants', 'Dental Implants & All-on-4', 'dental-implant.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/dental-care/prosthodontic-care/dental-crowns-bridges', 'Crowns & Bridges', 'dental-crown-bridge.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/dental-care/prosthodontic-care/removable-partial-dentures', 'Removable Partial Dentures', 'denture.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/fixed-partial-denture', 'Fixed Partial Dentures', 'fixed-partial-dentures.webp', handleLinkClick)}</li>
                                     </ul>
@@ -1108,7 +1108,7 @@ export default function Header() {
                                       </Link>
                                     </h5>
                                     <ul>
-                                      <li>{renderDentalIconItem('/dental-treatments/root-canal-treatment-in-tamilnadu', 'Single Visit Rotary RCT', 'root-canal.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/dental-care/endodontic-care/root-canal-treatment', 'Single Visit Rotary RCT', 'root-canal.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/tooth-coloured-fillings', 'Tooth Restorations', 'tooth-colored-fillings.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/post-and-core', 'Post & Core Reconstruction', 'teeth-post-core.webp', handleLinkClick)}</li>
                                     </ul>
@@ -1201,7 +1201,7 @@ export default function Header() {
                                     </h5>
                                     <ul>
                                       <li>{renderDentalIconItem('/treatments/dental-health-camps', 'Dental Health Camps', 'dental-health-camps.webp', handleLinkClick)}</li>
-                                      <li>{renderDentalIconItem('/dental-treatments/oral-pathology-screening', 'Oral Cancer Screening', 'oral-cancer-screen.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/dental-care/oral-pathology/oral-pathology-screening', 'Oral Cancer Screening', 'oral-cancer-screen.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/oral-health-care', 'Community Oral Health Care', 'oral-health-care.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
@@ -1242,7 +1242,7 @@ export default function Header() {
                                     <h5>Acne & Scar Revision</h5>
                                     <ul>
                                       <li>{renderSkinIconItem('/treatments/acne-treatment', 'Active Acne Clearance', 'acne-treatment.webp', handleLinkClick)}</li>
-                                      <li>{renderSkinIconItem('/cosmetic-dermatology-laser-treatments/fractional-co2-laser', 'Fractional CO2 Laser', 'acne-scar.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/skin-care/laser-treatments/fractional-co2-laser', 'Fractional CO2 Laser', 'acne-scar.webp', handleLinkClick)}</li>
                                       <li>{renderSkinIconItem('/treatments/tca-cross-peel', 'TCA Cross Peel for Scars', 'carbon-peel-laser.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
@@ -1355,7 +1355,7 @@ export default function Header() {
                                     <h5>Regenerative Therapies</h5>
                                     <ul>
                                       <li>{renderHairIconItem('/treatments/prp-hair-treatment', 'PRP Hair Therapy', 'prp-hair-therapy.webp', handleLinkClick)}</li>
-                                      <li>{renderHairIconItem('/hair-restoration-treatments/gfc-growth-factor-concentrate', 'GFC Growth Factor Therapy', 'gfc-hair-therapy.webp', handleLinkClick)}</li>
+                                      <li>{renderHairIconItem('/hair-care/growth-factor-therapy/gfc-hair', 'GFC Growth Factor Therapy', 'gfc-hair-therapy.webp', handleLinkClick)}</li>
                                       <li>{renderHairIconItem('/treatments/qr678-hair-treatment', 'QR678 Neo Bio-Therapy', 'qr678-hair-therapy.webp', handleLinkClick)}</li>
                                       <li>{renderHairIconItem('/treatments/exocell-hair-treatment', 'Exocell Cellular Therapy', 'exocell-therapy.webp', handleLinkClick)}</li>
                                       <li>{renderHairIconItem('/treatments/biocell-hair-treatment', 'Bio Cell Regenerative Care', 'biocell-therapy.webp', handleLinkClick)}</li>
@@ -1366,7 +1366,7 @@ export default function Header() {
                                   <div className="jerush-megamenu-subgroup">
                                     <h5>Hair Transplantation</h5>
                                     <ul>
-                                      <li>{renderHairIconItem('/hair-restoration-treatments/hair-transplant', 'Micro-FUE Hair Transplant', 'hair-transplant.webp', handleLinkClick)}</li>
+                                      <li>{renderHairIconItem('/hair-care/hair-transplant/fue-hair-transplant', 'Micro-FUE Hair Transplant', 'hair-transplant.webp', handleLinkClick)}</li>
                                       <li>{renderHairIconItem('/treatments/beard-transplant', 'Beard & Moustache Transplant', 'beard-transplant.webp', handleLinkClick)}</li>
                                       <li>{renderHairIconItem('/treatments/hairline-correction', 'Natural Hairline Design', 'hairline-correction.webp', handleLinkClick)}</li>
                                     </ul>
@@ -1439,7 +1439,7 @@ export default function Header() {
                                   <div className="jerush-megamenu-subgroup">
                                     <h5>Fat Reduction</h5>
                                     <ul>
-                                      <li>{renderBodyIconItem('/body-contouring-wellness/cryo-cool-sculpting', 'Cryolipolysis 360° Fat Freeze', 'cryolipolysis-fat-reduction.webp', handleLinkClick)}</li>
+                                      <li>{renderBodyIconItem('/body-contouring/cryo-sculpting/cool-sculpting', 'Cryolipolysis 360° Fat Freeze', 'cryolipolysis-fat-reduction.webp', handleLinkClick)}</li>
                                       <li>{renderBodyIconItem('/treatments/emsculpt-body-contouring', 'EMSculpt Body Contouring', 'emsculpt-body-contouring.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
@@ -2482,7 +2482,7 @@ export default function Header() {
                   <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover/hdr:text-brandSky transition-colors" />
                 </Link>
                 <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/treatments/pediatric-dentistry', 'Pediatric Care', 'pediatric-dental-care.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/dental-care/kids-dentistry/pediatric-dental-care', 'Pediatric Care', 'pediatric-dental-care.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/pulpectomy', 'Painless Root Canal', 'pulpectomy.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/pit-fissure-sealants', 'Pit & Fissure Sealants', 'pit-fissure-sealants.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/habit-breaking-appliances', 'Habit Appliances', 'habit-breaking-appliances.webp', 'dental', handleLinkClick)}
@@ -2528,8 +2528,8 @@ export default function Header() {
                   <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover/hdr:text-brandSky transition-colors" />
                 </Link>
                 <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/dental-treatments/top-quality-invisible-clear-aligners-jerushaligne', 'Jerushaligne Aligners', 'clear-aligner.webp', 'dental', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/metal-braces', 'Metal Braces', 'metal-braces.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/dental-care/orthodontic-care/clear-aligners-jerushaligne', 'Jerushaligne Aligners', 'clear-aligner.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/dental-care/orthodontic-care/metal-braces', 'Metal Braces', 'metal-braces.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/ceramic-braces', 'Ceramic Braces', 'ceramic-braces.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/self-ligating-braces', 'Self-Ligating Braces', 'ligating-braces.webp', 'dental', handleLinkClick)}
                 </div>
@@ -2551,8 +2551,8 @@ export default function Header() {
                   <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover/hdr:text-brandSky transition-colors" />
                 </Link>
                 <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/dental-implants', 'Dental Implants & All-on-4', 'dental-implant.webp', 'dental', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/dental-crowns-bridges', 'Crowns & Bridges', 'dental-crown-bridge.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/dental-care/implantology/dental-implants', 'Dental Implants & All-on-4', 'dental-implant.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/dental-care/prosthodontic-care/dental-crowns-bridges', 'Crowns & Bridges', 'dental-crown-bridge.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/dental-care/prosthodontic-care/removable-partial-dentures', 'Removable Partials', 'denture.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/fixed-partial-denture', 'Fixed Partials', 'fixed-partial-dentures.webp', 'dental', handleLinkClick)}
                 </div>
@@ -2574,7 +2574,7 @@ export default function Header() {
                   <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover/hdr:text-brandSky transition-colors" />
                 </Link>
                 <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/dental-treatments/root-canal-treatment-in-tamilnadu', 'Single Visit RCT', 'root-canal.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/dental-care/endodontic-care/root-canal-treatment', 'Single Visit RCT', 'root-canal.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/multiple-visit-root-canal', 'Multiple-Visit RCT', 'root-canal.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/tooth-coloured-fillings', 'Tooth Restorations', 'tooth-colored-fillings.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/post-and-core', 'Post & Core', 'teeth-post-core.webp', 'dental', handleLinkClick)}
@@ -2667,7 +2667,7 @@ export default function Header() {
                   {renderMobileTreatmentItem('/treatments/oral-disease-management', 'Disease Management', 'pediatric-dental-care.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/oral-health-evaluation', 'Oral Health Evaluation', 'pediatric-dental-care.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/precancerous-lesion-management', 'Precancerous Lesions', 'oral-cancer-screen.webp', 'dental', handleLinkClick)}
-                  {renderMobileTreatmentItem('/dental-treatments/oral-pathology-screening', 'Pathology Screening', 'oral-cancer-screen.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/dental-care/oral-pathology/oral-pathology-screening', 'Pathology Screening', 'oral-cancer-screen.webp', 'dental', handleLinkClick)}
                 </div>
               </div>
 
@@ -2734,7 +2734,7 @@ export default function Header() {
                 </Link>
                 <div className="grid grid-cols-2 gap-2">
                   {renderMobileTreatmentItem('/treatments/dental-health-camps', 'Dental Health Camps', 'dental-health-camps.webp', 'dental', handleLinkClick)}
-                  {renderMobileTreatmentItem('/dental-treatments/oral-pathology-screening', 'Oral Cancer Screening', 'oral-cancer-screen.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/dental-care/oral-pathology/oral-pathology-screening', 'Oral Cancer Screening', 'oral-cancer-screen.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/oral-health-care', 'Community Oral Care', 'oral-health-care.webp', 'dental', handleLinkClick)}
                 </div>
               </div>
@@ -2779,7 +2779,7 @@ export default function Header() {
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   {renderMobileTreatmentItem('/treatments/acne-treatment', 'Acne Treatment', 'acne-treatment.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/cosmetic-dermatology-laser-treatments/fractional-co2-laser', 'Acne Scars', 'acne-scar.webp', 'skin', handleLinkClick)}
+                  {renderMobileTreatmentItem('/skin-care/laser-treatments/fractional-co2-laser', 'Acne Scars', 'acne-scar.webp', 'skin', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/pigmentation-treatment', 'Pigmentation', 'pigmentation-treatment.webp', 'skin', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/melasma-treatment', 'Melasma Care', 'melasma-teatment.webp', 'skin', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/uneven-skin-tone', 'Uneven Skin Tone', 'uneven-skin-tone.webp', 'skin', handleLinkClick)}
@@ -2925,7 +2925,7 @@ export default function Header() {
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   {renderMobileTreatmentItem('/treatments/prp-hair-treatment', 'PRP Hair Therapy', 'prp-hair-therapy.webp', 'hair', handleLinkClick)}
-                  {renderMobileTreatmentItem('/hair-restoration-treatments/gfc-growth-factor-concentrate', 'GFC Growth Factor', 'gfc-hair-therapy.webp', 'hair', handleLinkClick)}
+                  {renderMobileTreatmentItem('/hair-care/growth-factor-therapy/gfc-hair', 'GFC Growth Factor', 'gfc-hair-therapy.webp', 'hair', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/qr678-hair-treatment', 'QR678 Hair Therapy', 'qr678-hair-therapy.webp', 'hair', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/exocell-hair-treatment', 'Exocell Therapy', 'exocell-therapy.webp', 'hair', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/biocell-hair-treatment', 'Bio Cell Therapy', 'biocell-therapy.webp', 'hair', handleLinkClick)}
@@ -2941,7 +2941,7 @@ export default function Header() {
                   </h5>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/hair-restoration-treatments/hair-transplant', 'Micro-FUE Transplant', 'hair-transplant.webp', 'hair', handleLinkClick)}
+                  {renderMobileTreatmentItem('/hair-care/hair-transplant/fue-hair-transplant', 'Micro-FUE Transplant', 'hair-transplant.webp', 'hair', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/beard-transplant', 'Beard Transplant', 'beard-transplant.webp', 'hair', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/hairline-correction', 'Hairline Correction', 'hairline-correction.webp', 'hair', handleLinkClick)}
                 </div>
@@ -3001,7 +3001,7 @@ export default function Header() {
                   </h5>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/body-contouring-wellness/cryo-cool-sculpting', 'Cryo Fat Freeze', 'cryolipolysis-fat-reduction.webp', 'body', handleLinkClick)}
+                  {renderMobileTreatmentItem('/body-contouring/cryo-sculpting/cool-sculpting', 'Cryo Fat Freeze', 'cryolipolysis-fat-reduction.webp', 'body', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/emsculpt-body-contouring', 'EMSculpt Contouring', 'emsculpt-body-contouring.webp', 'body', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/muscle-toning', 'Muscle Toning', 'muscle-toning.webp', 'body', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/rf-body-tightening', 'RF Tightening', 'rf-body-tightening.webp', 'body', handleLinkClick)}

@@ -1,8 +1,24 @@
-﻿// Comprehensive Medical Services Catalogue for Jerush Dentofacial & Cosmetic Laser Centre
+// Comprehensive Medical Services Catalogue for Jerush Dentofacial & Cosmetic Laser Centre
 // Total Clinical Procedures: 147
 // Structured by Department & Subspecialty
 
 export const treatments = [
+  {
+    "id": "pediatric-dental-care",
+    "title": "Pediatric Dental Care",
+    "category": "dental",
+    "subcategory": "Kids Dentistry / Pedodontics",
+    "desc": "Child-friendly dental care focusing on protecting children's teeth, comfortable eating, clear speech, and proper oral development from infancy through adolescence.",
+    "details": "At Jerush Dentofacial & Cosmetic Laser Centre, pediatric dental care focuses on each child's age, dental development and individual needs with a calm, reassuring, child-friendly approach.",
+    "benefits": [
+      "Child-friendly gentle environment",
+      "Cavity prevention & fluoride protection",
+      "Dental development monitoring"
+    ],
+    "iconName": "Smile",
+    "iconFile": "pediatric-dental-care.webp",
+    "image": "/images/medical-services/dental-care/kids-dentistry-pedodontics/pediatric-dental-care/pediatric-dental.webp"
+  },
   {
     "id": "dental-consultation",
     "title": "Dental Consultation",

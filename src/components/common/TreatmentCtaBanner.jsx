@@ -39,22 +39,22 @@ export default function TreatmentCtaBanner({
 
         {hasDoctor ? (
           /* Grid with Doctor Cutout on Left */
-          <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_2fr] gap-8 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.12fr_2fr] gap-8 items-stretch">
             {/* Left side: Doctor Cutout */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className={`relative flex ${isCover ? 'items-stretch' : 'items-end'} justify-center overflow-hidden border-b lg:border-b-0 lg:border-r border-white/10 bg-black/15 min-h-[320px] lg:min-h-full ${isCover ? 'p-0' : 'pt-8 lg:pt-0'}`}
+              className={`relative flex ${isCover ? 'items-stretch' : 'items-end'} justify-center overflow-hidden border-b lg:border-b-0 lg:border-r border-white/10 bg-black/15 min-h-[320px] sm:min-h-[380px] lg:min-h-full ${isCover ? 'p-0' : 'pt-6 lg:pt-0'}`}
             >
               {/* Doctor background ambient glow */}
-              <div className="absolute w-64 h-64 bg-gradient-to-tr from-brandSky/20 to-brandBlue/30 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute w-72 h-72 lg:w-96 lg:h-96 bg-gradient-to-tr from-brandSky/20 to-brandBlue/30 rounded-full blur-3xl pointer-events-none" />
 
               <img
                 src={doctorImage}
                 alt={doctorAlt || doctorName || "Specialist Doctor"}
-                className={`relative z-10 ${imageClassName || (isCover ? 'w-full h-full min-h-[340px] lg:min-h-full object-cover object-top' : 'h-[290px] sm:h-[350px] lg:h-[410px] xl:h-[440px] max-h-[90%] w-auto object-contain object-bottom')} transition-transform duration-500 hover:scale-[1.02] drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)]`}
+                className={`relative z-10 ${imageClassName || (isCover ? 'w-full h-full min-h-[340px] lg:min-h-full object-cover object-top' : 'h-[320px] sm:h-[380px] lg:h-[445px] xl:h-[475px] max-h-[91%] w-auto object-contain object-bottom')} transition-transform duration-500 hover:scale-[1.02] drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)]`}
               />
 
               {/* Doctor Name & Role Overlay Tag */}

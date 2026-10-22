@@ -21,11 +21,10 @@
   - Never render major section titles in a single flat solid color.
 
 ## Counter & Key Stats Section Design
-- **Gradient Background**: All full-width stats / counter bars MUST use our signature Jerush royal blue gradient:
-  - Container: `bg-gradient-to-r from-brandBlue to-[#1b4393] py-10 sm:py-12 px-4 sm:px-6 text-white shadow-inner relative overflow-hidden`.
+- **Gradient Background**: All full-width stats / counter bars MUST use our signature Jerush deep-navy to royal-blue center gradient:
+  - Container: `bg-gradient-to-r from-[#0F172A] via-[#2852A3] to-[#0F172A] py-10 sm:py-12 px-4 sm:px-6 text-white shadow-inner relative overflow-hidden`.
   - Values: Crisp white bold typography (`font-headline font-black text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight`).
-  - Labels: Uppercase tracking text (`text-white/80 text-xs sm:text-sm font-semibold uppercase tracking-wider mt-1`).
-  - Never use dark navy/black (`from-slate-900 via-[#071324] to-slate-900`) for the counter section.
+  - Labels: Glowing sky-blue uppercase tracking text (`text-brandSky text-xs sm:text-sm font-bold uppercase tracking-wider mt-1`).
 
 ## Clean Hero Section & No Unwanted Badges
 - **Hero Title Clearance**: Do not clutter the hero with excessive pill badges, category chips, or tags above the title (e.g., avoid "Category: ..." and "Custom Precision Fit" pills above headlines). Lead cleanly with the clinic branding and title.

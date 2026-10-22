@@ -7,6 +7,7 @@ import {
   Info, Globe, Plane, Check, Cpu, Layers, X, Zap, Target, Eye, Sparkle
 } from 'lucide-react';
 import PageBreadcrumbHero from '../components/common/PageBreadcrumbHero';
+import TreatmentAppointmentForm from '../components/common/TreatmentAppointmentForm';
 import TreatmentCtaBanner from '../components/common/TreatmentCtaBanner';
 import TreatmentSectionNav from '../components/common/TreatmentSectionNav';
 import useTreatmentScrollSpy from '../hooks/useTreatmentScrollSpy';
@@ -317,8 +318,15 @@ export default function CrownsBridgesPage() {
   );
 
   const handleBookClick = () => {
-    navigate('/contact');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const el = document.getElementById('treatment-appointment-section');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const nameInput = document.getElementById('treatment-form-name');
+      if (nameInput) nameInput.focus();
+    } else {
+      navigate('/contact');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   return (
@@ -412,9 +420,40 @@ export default function CrownsBridgesPage() {
         </div>
       </section>
 
-      {/* ─── Stats Bar ─── */}
-      <section className="bg-gradient-to-r from-brandBlue to-[#1b4393] py-12 px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
+      {/* ─── Top Appointment Consultation Section ─── */}
+      <TreatmentAppointmentForm
+        treatmentName="Dental Crowns & Bridges"
+        treatmentCategory="dental"
+        title="Book a Dental Crowns & Bridges Consultation"
+        highlightWord="Near You"
+        subtitle="Consult with experienced prosthodontic and restorative dental specialists at Jerush Dentofacial & Cosmetic Laser Centre."
+        features={[
+          {
+            icon: ShieldCheck,
+            title: '15,000+ Teeth Restored',
+            desc: 'Over two decades of precision crowns, jacket restorations, and fixed partial bridges.'
+          },
+          {
+            icon: Cpu,
+            title: 'In-House CAD/CAM Milling',
+            desc: 'Sub-millimeter 3D intraoral digital impressions with 3 to 5 business day delivery.'
+          },
+          {
+            icon: Sparkles,
+            title: 'Monolithic Zirconia & E-Max',
+            desc: '100% metal-free biocompatible restorations with lifelike natural shade match.'
+          },
+          {
+            icon: Globe,
+            title: 'Global Standards & Tourism',
+            desc: 'Save 60-70% on international restorative costs with comprehensive treatment warranty.'
+          }
+        ]}
+      />
+
+      {/* ─── Key Stats Bar ─── */}
+      <section className="bg-gradient-to-r from-[#0F172A] via-[#2852A3] to-[#0F172A] py-10 sm:py-12 px-4 sm:px-6 text-white shadow-inner relative overflow-hidden">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white relative z-10">
           {STATS.map((s, i) => (
             <motion.div
               key={i}
@@ -422,9 +461,14 @@ export default function CrownsBridgesPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
+              className="space-y-1"
             >
-              <p className="font-headline font-black text-3xl sm:text-4xl">{s.value}</p>
-              <p className="text-white/70 text-xs sm:text-sm font-semibold uppercase tracking-wider mt-1">{s.label}</p>
+              <p className="font-headline font-black text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight">
+                {s.value}
+              </p>
+              <p className="text-brandSky text-xs sm:text-sm font-bold uppercase tracking-wider mt-1">
+                {s.label}
+              </p>
             </motion.div>
           ))}
         </div>

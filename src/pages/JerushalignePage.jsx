@@ -7,6 +7,7 @@ import {
   ExternalLink, Play, Zap, RefreshCw, Smile, FileText, Check, Shield
 } from 'lucide-react';
 import PageBreadcrumbHero from '../components/common/PageBreadcrumbHero';
+import TreatmentAppointmentForm from '../components/common/TreatmentAppointmentForm';
 import TreatmentCtaBanner from '../components/common/TreatmentCtaBanner';
 import TreatmentSectionNav from '../components/common/TreatmentSectionNav';
 import useTreatmentScrollSpy from '../hooks/useTreatmentScrollSpy';
@@ -194,8 +195,15 @@ export default function JerushalignePage() {
   );
 
   const handleBookClick = () => {
-    navigate('/contact');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const el = document.getElementById('treatment-appointment-section');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const nameInput = document.getElementById('treatment-form-name');
+      if (nameInput) nameInput.focus();
+    } else {
+      navigate('/contact');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   return (
@@ -300,9 +308,40 @@ export default function JerushalignePage() {
         </div>
       </section>
 
-      {/* ─── Stats Bar ─── */}
-      <section className="bg-gradient-to-r from-brandBlue to-[#1b4393] py-10 px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
+      {/* ─── Top Appointment Consultation Section ─── */}
+      <TreatmentAppointmentForm
+        treatmentName="Jerushaligne Clear Aligners"
+        treatmentCategory="dental"
+        title="Book a Jerushaligne 3D Digital Scan"
+        highlightWord="Near You"
+        subtitle="Experience next-generation invisible teeth alignment manufactured directly in our high-precision digital orthodontics lab."
+        features={[
+          {
+            icon: ShieldCheck,
+            title: '5,000+ Clear Aligners Crafted',
+            desc: 'Custom engineered in-house under senior orthodontist supervision for optimal biomechanical tooth movement.'
+          },
+          {
+            icon: Clock,
+            title: 'Express 2-Day Kit Delivery',
+            desc: 'Digital intraoral 3D scanning allows instant manufacturing without multi-week overseas waiting.'
+          },
+          {
+            icon: Sparkles,
+            title: '100% Invisible & Removable',
+            desc: 'Crystal-clear medical polymer trays you can remove comfortably while eating and brushing.'
+          },
+          {
+            icon: MapPin,
+            title: '4 Regional Centres & Global Remote Care',
+            desc: 'Digital check-in appointments and direct specialist support across Tamil Nadu and worldwide.'
+          }
+        ]}
+      />
+
+      {/* ─── Key Stats Bar ─── */}
+      <section className="bg-gradient-to-r from-[#0F172A] via-[#2852A3] to-[#0F172A] py-10 sm:py-12 px-4 sm:px-6 text-white shadow-inner relative overflow-hidden">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white relative z-10">
           {STATS.map((s, i) => (
             <motion.div
               key={i}
@@ -310,9 +349,14 @@ export default function JerushalignePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
+              className="space-y-1"
             >
-              <p className="font-headline font-black text-3xl sm:text-4xl">{s.value}</p>
-              <p className="text-white/70 text-xs font-semibold uppercase tracking-wider mt-1">{s.label}</p>
+              <p className="font-headline font-black text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight">
+                {s.value}
+              </p>
+              <p className="text-brandSky text-xs sm:text-sm font-bold uppercase tracking-wider mt-1">
+                {s.label}
+              </p>
             </motion.div>
           ))}
         </div>

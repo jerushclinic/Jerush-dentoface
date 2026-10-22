@@ -42,6 +42,7 @@ import TermsConditionsPage from '../pages/TermsConditionsPage.jsx';
 import PrivacyPolicyPage from '../pages/PrivacyPolicyPage.jsx';
 import TechnologiesPage from '../pages/TechnologiesPage.jsx';
 import RemovablePartialDenturesPage from '../pages/RemovablePartialDenturesPage.jsx';
+import PediatricDentalCarePage from '../pages/PediatricDentalCarePage.jsx';
 
 export default function AppRoutes() {
   return (
@@ -56,28 +57,43 @@ export default function AppRoutes() {
       <Route path="/advanced-technologies" element={<Navigate to="/technologies" replace />} />
       <Route path="/about/technologies" element={<Navigate to="/technologies" replace />} />
       <Route path="/treatments" element={<TreatmentsPage />} />
-      <Route path="/treatments/metal-braces" element={<MetalBracesPage />} />
-      <Route path="/dental-treatments/best-metal-orthodontic-braces" element={<MetalBracesPage />} />
-      <Route path="/dental-treatments/best-metal-orthodontic-braces/" element={<MetalBracesPage />} />
-      <Route path="/dental-treatments/metal-braces" element={<MetalBracesPage />} />
-      <Route path="/metal-braces" element={<MetalBracesPage />} />
-      <Route path="/treatments/clear-aligners" element={<Navigate to="/dental-treatments/top-quality-invisible-clear-aligners-jerushaligne" replace />} />
-      <Route path="/dental-treatments/top-quality-invisible-clear-aligners-jerushaligne" element={<JerushalignePage />} />
-      <Route path="/dental-treatments/top-quality-invisible-clear-aligners-jerushaligne/" element={<JerushalignePage />} />
-      <Route path="/treatments/top-quality-invisible-clear-aligners-jerushaligne" element={<JerushalignePage />} />
-      <Route path="/top-quality-invisible-clear-aligners-jerushaligne" element={<JerushalignePage />} />
-      <Route path="/top-quality-invisible-clear-aligners-jerushaligne/" element={<JerushalignePage />} />
-      <Route path="/jerushaligne-clear-aligners" element={<JerushalignePage />} />
-      <Route path="/jerushaligne" element={<JerushalignePage />} />
-      <Route path="/clear-aligners" element={<JerushalignePage />} />
-      <Route path="/treatments/dental-crowns-bridges" element={<CrownsBridgesPage />} />
-      <Route path="/treatments/jacket-crowns" element={<CrownsBridgesPage />} />
-      <Route path="/treatments/fixed-partial-denture" element={<CrownsBridgesPage />} />
-      <Route path="/dental-crowns-bridges" element={<CrownsBridgesPage />} />
-      <Route path="/best-crowns-and-bridges-treatment" element={<CrownsBridgesPage />} />
-      <Route path="/dental-treatments/best-crowns-and-bridges-treatment" element={<CrownsBridgesPage />} />
 
-      {/* Removable Partial Dentures Routes */}
+      {/* ─── DENTAL CARE HIERARCHICAL ROUTES ─── */}
+      {/* Kids Dentistry / Pediatric Dental Care */}
+      <Route path="/dental-care/kids-dentistry/pediatric-dental-care" element={<PediatricDentalCarePage />} />
+      <Route path="/dental-care/kids-dentistry/pediatric-dental-care/" element={<PediatricDentalCarePage />} />
+      <Route path="/dental-care/kids-dentistry" element={<Navigate to="/dental-care/kids-dentistry/pediatric-dental-care" replace />} />
+      <Route path="/dental-care/kids-dentistry/" element={<Navigate to="/dental-care/kids-dentistry/pediatric-dental-care" replace />} />
+      <Route path="/dental-care/pedodontics/pediatric-dental-care" element={<PediatricDentalCarePage />} />
+      <Route path="/dental-care/pedodontics/pediatric-dental-care/" element={<PediatricDentalCarePage />} />
+      <Route path="/dental-care/pediatric-dental-care" element={<PediatricDentalCarePage />} />
+      <Route path="/dental-care/pediatric-dental-care/" element={<PediatricDentalCarePage />} />
+      <Route path="/treatments/pediatric-dental-care" element={<Navigate to="/dental-care/kids-dentistry/pediatric-dental-care" replace />} />
+      <Route path="/treatments/pediatric-dentistry" element={<Navigate to="/dental-care/kids-dentistry/pediatric-dental-care" replace />} />
+      <Route path="/treatments/kids-dentistry" element={<Navigate to="/dental-care/kids-dentistry/pediatric-dental-care" replace />} />
+      <Route path="/dental-treatments/pediatric-dental-care" element={<Navigate to="/dental-care/kids-dentistry/pediatric-dental-care" replace />} />
+      <Route path="/pediatric-dental-care" element={<Navigate to="/dental-care/kids-dentistry/pediatric-dental-care" replace />} />
+      <Route path="/pediatric-dentistry" element={<Navigate to="/dental-care/kids-dentistry/pediatric-dental-care" replace />} />
+
+      {/* Dental Implants */}
+      <Route path="/dental-care/implantology/dental-implants" element={<DentalImplantsPage />} />
+      <Route path="/dental-care/implantology/dental-implants/" element={<DentalImplantsPage />} />
+      <Route path="/dental-care/prosthodontic-care/dental-implants" element={<DentalImplantsPage />} />
+      <Route path="/dental-implants" element={<Navigate to="/dental-care/implantology/dental-implants" replace />} />
+      <Route path="/dental-treatments/dental-implants-in-chennai" element={<Navigate to="/dental-care/implantology/dental-implants" replace />} />
+
+      {/* Crowns & Bridges */}
+      <Route path="/dental-care/prosthodontic-care/dental-crowns-bridges" element={<CrownsBridgesPage />} />
+      <Route path="/dental-care/prosthodontic-care/dental-crowns-bridges/" element={<CrownsBridgesPage />} />
+      <Route path="/dental-care/prosthodontic-care/crowns-bridges" element={<CrownsBridgesPage />} />
+      <Route path="/treatments/dental-crowns-bridges" element={<Navigate to="/dental-care/prosthodontic-care/dental-crowns-bridges" replace />} />
+      <Route path="/treatments/jacket-crowns" element={<Navigate to="/dental-care/prosthodontic-care/dental-crowns-bridges" replace />} />
+      <Route path="/treatments/fixed-partial-denture" element={<Navigate to="/dental-care/prosthodontic-care/dental-crowns-bridges" replace />} />
+      <Route path="/dental-crowns-bridges" element={<Navigate to="/dental-care/prosthodontic-care/dental-crowns-bridges" replace />} />
+      <Route path="/best-crowns-and-bridges-treatment" element={<Navigate to="/dental-care/prosthodontic-care/dental-crowns-bridges" replace />} />
+      <Route path="/dental-treatments/best-crowns-and-bridges-treatment" element={<Navigate to="/dental-care/prosthodontic-care/dental-crowns-bridges" replace />} />
+
+      {/* Removable Partial Dentures */}
       <Route path="/dental-care/prosthodontic-care/removable-partial-dentures" element={<RemovablePartialDenturesPage />} />
       <Route path="/dental-care/prosthodontic-care/removable-partial-dentures/" element={<RemovablePartialDenturesPage />} />
       <Route path="/treatments/removable-partial-dentures" element={<Navigate to="/dental-care/prosthodontic-care/removable-partial-dentures" replace />} />
@@ -86,20 +102,83 @@ export default function AppRoutes() {
       <Route path="/dental-treatments/removable-partial-dentures/" element={<Navigate to="/dental-care/prosthodontic-care/removable-partial-dentures" replace />} />
       <Route path="/removable-partial-dentures" element={<Navigate to="/dental-care/prosthodontic-care/removable-partial-dentures" replace />} />
 
+      {/* Root Canal Treatment */}
+      <Route path="/dental-care/endodontic-care/root-canal-treatment" element={<RootCanalTreatmentPage />} />
+      <Route path="/dental-care/endodontic-care/root-canal-treatment/" element={<RootCanalTreatmentPage />} />
+      <Route path="/dental-care/endodontic-care/root-canal-treatment-in-tamilnadu" element={<RootCanalTreatmentPage />} />
+      <Route path="/dental-treatments/root-canal-treatment-in-tamilnadu" element={<Navigate to="/dental-care/endodontic-care/root-canal-treatment" replace />} />
+      <Route path="/root-canal-treatment-in-tamilnadu" element={<Navigate to="/dental-care/endodontic-care/root-canal-treatment" replace />} />
+
+      {/* Metal Braces */}
+      <Route path="/dental-care/orthodontic-care/metal-braces" element={<MetalBracesPage />} />
+      <Route path="/dental-care/orthodontic-care/metal-braces/" element={<MetalBracesPage />} />
+      <Route path="/treatments/metal-braces" element={<Navigate to="/dental-care/orthodontic-care/metal-braces" replace />} />
+      <Route path="/dental-treatments/best-metal-orthodontic-braces" element={<Navigate to="/dental-care/orthodontic-care/metal-braces" replace />} />
+      <Route path="/dental-treatments/best-metal-orthodontic-braces/" element={<Navigate to="/dental-care/orthodontic-care/metal-braces" replace />} />
+      <Route path="/dental-treatments/metal-braces" element={<Navigate to="/dental-care/orthodontic-care/metal-braces" replace />} />
+      <Route path="/metal-braces" element={<Navigate to="/dental-care/orthodontic-care/metal-braces" replace />} />
+
+      {/* Jerushaligne Clear Aligners */}
+      <Route path="/dental-care/orthodontic-care/clear-aligners-jerushaligne" element={<JerushalignePage />} />
+      <Route path="/dental-care/orthodontic-care/clear-aligners-jerushaligne/" element={<JerushalignePage />} />
+      <Route path="/dental-care/orthodontic-care/top-quality-invisible-clear-aligners-jerushaligne" element={<JerushalignePage />} />
+      <Route path="/treatments/clear-aligners" element={<Navigate to="/dental-care/orthodontic-care/clear-aligners-jerushaligne" replace />} />
+      <Route path="/dental-treatments/top-quality-invisible-clear-aligners-jerushaligne" element={<Navigate to="/dental-care/orthodontic-care/clear-aligners-jerushaligne" replace />} />
+      <Route path="/dental-treatments/top-quality-invisible-clear-aligners-jerushaligne/" element={<Navigate to="/dental-care/orthodontic-care/clear-aligners-jerushaligne" replace />} />
+      <Route path="/treatments/top-quality-invisible-clear-aligners-jerushaligne" element={<Navigate to="/dental-care/orthodontic-care/clear-aligners-jerushaligne" replace />} />
+      <Route path="/top-quality-invisible-clear-aligners-jerushaligne" element={<Navigate to="/dental-care/orthodontic-care/clear-aligners-jerushaligne" replace />} />
+      <Route path="/top-quality-invisible-clear-aligners-jerushaligne/" element={<Navigate to="/dental-care/orthodontic-care/clear-aligners-jerushaligne" replace />} />
+      <Route path="/jerushaligne-clear-aligners" element={<Navigate to="/dental-care/orthodontic-care/clear-aligners-jerushaligne" replace />} />
+      <Route path="/jerushaligne" element={<Navigate to="/dental-care/orthodontic-care/clear-aligners-jerushaligne" replace />} />
+      <Route path="/clear-aligners" element={<Navigate to="/dental-care/orthodontic-care/clear-aligners-jerushaligne" replace />} />
+
+      {/* Oral Pathology Screening */}
+      <Route path="/dental-care/oral-pathology/oral-pathology-screening" element={<OralPathologyPage />} />
+      <Route path="/dental-care/oral-pathology/oral-pathology-screening/" element={<OralPathologyPage />} />
+      <Route path="/dental-treatments/oral-pathology-screening" element={<Navigate to="/dental-care/oral-pathology/oral-pathology-screening" replace />} />
+
+      {/* ─── SKIN CARE HIERARCHICAL ROUTES ─── */}
+      <Route path="/skin-care/laser-treatments/fractional-co2-laser" element={<FractionalCo2LaserPage />} />
+      <Route path="/skin-care/laser-treatments/fractional-co2-laser/" element={<FractionalCo2LaserPage />} />
+      <Route path="/skin-care/acne-scar-revision/fractional-co2-laser" element={<FractionalCo2LaserPage />} />
+      <Route path="/cosmetic-care/laser-treatments/fractional-co2-laser" element={<FractionalCo2LaserPage />} />
+      <Route path="/cosmetic-dermatology-laser-treatments/fractional-co2-laser" element={<Navigate to="/skin-care/laser-treatments/fractional-co2-laser" replace />} />
+      <Route path="/fractional-co2-laser" element={<Navigate to="/skin-care/laser-treatments/fractional-co2-laser" replace />} />
+
+      {/* ─── HAIR CARE HIERARCHICAL ROUTES ─── */}
+      <Route path="/hair-care/growth-factor-therapy/gfc-hair" element={<GfcHairPage />} />
+      <Route path="/hair-care/growth-factor-therapy/gfc-hair/" element={<GfcHairPage />} />
+      <Route path="/hair-care/growth-factor-therapy/gfc-growth-factor-concentrate" element={<GfcHairPage />} />
+      <Route path="/hair-restoration-treatments/gfc-growth-factor-concentrate" element={<Navigate to="/hair-care/growth-factor-therapy/gfc-hair" replace />} />
+      <Route path="/gfc-hair" element={<Navigate to="/hair-care/growth-factor-therapy/gfc-hair" replace />} />
+
+      <Route path="/hair-care/hair-transplant/fue-hair-transplant" element={<HairTransplantPage />} />
+      <Route path="/hair-care/hair-transplant/fue-hair-transplant/" element={<HairTransplantPage />} />
+      <Route path="/hair-care/hair-transplant/hair-transplant" element={<HairTransplantPage />} />
+      <Route path="/hair-restoration-treatments/hair-transplant" element={<Navigate to="/hair-care/hair-transplant/fue-hair-transplant" replace />} />
+      <Route path="/hair-transplant" element={<Navigate to="/hair-care/hair-transplant/fue-hair-transplant" replace />} />
+
+      {/* ─── BODY CONTOURING HIERARCHICAL ROUTES ─── */}
+      <Route path="/body-contouring/cryo-sculpting/cool-sculpting" element={<CryoSculptingPage />} />
+      <Route path="/body-contouring/cryo-sculpting/cool-sculpting/" element={<CryoSculptingPage />} />
+      <Route path="/body-contouring/cryo-sculpting/cryo-cool-sculpting" element={<CryoSculptingPage />} />
+      <Route path="/body-contouring-wellness/cryo-cool-sculpting" element={<Navigate to="/body-contouring/cryo-sculpting/cool-sculpting" replace />} />
+      <Route path="/cosmetic-dermatology-laser-treatments/cryo-cool-sculpting" element={<Navigate to="/body-contouring/cryo-sculpting/cool-sculpting" replace />} />
+      <Route path="/cryo-sculpting" element={<Navigate to="/body-contouring/cryo-sculpting/cool-sculpting" replace />} />
+
+      {/* Dynamic Departmental Category Routes */}
+      <Route path="/dental-care/:subcategory/:id" element={<TreatmentDetailPage />} />
+      <Route path="/skin-care/:subcategory/:id" element={<TreatmentDetailPage />} />
+      <Route path="/hair-care/:subcategory/:id" element={<TreatmentDetailPage />} />
+      <Route path="/body-contouring/:subcategory/:id" element={<TreatmentDetailPage />} />
+      <Route path="/cosmetic-care/:subcategory/:id" element={<TreatmentDetailPage />} />
+
+      {/* Generic Catalog Routes */}
       <Route path="/treatments/:id" element={<TreatmentDetailPage />} />
       <Route path="/treatments/:id/" element={<TreatmentDetailPage />} />
       <Route path="/services" element={<Navigate to="/treatments" replace />} />
       <Route path="/services/:id" element={<TreatmentDetailPage />} />
       <Route path="/services/:id/" element={<TreatmentDetailPage />} />
-      <Route path="/dental-implants" element={<DentalImplantsPage />} />
-      <Route path="/dental-treatments/dental-implants-in-chennai" element={<Navigate to="/dental-implants" replace />} />
-      <Route path="/dental-treatments/root-canal-treatment-in-tamilnadu" element={<RootCanalTreatmentPage />} />
-      <Route path="/dental-treatments/oral-pathology-screening" element={<OralPathologyPage />} />
-      <Route path="/cosmetic-dermatology-laser-treatments/fractional-co2-laser" element={<FractionalCo2LaserPage />} />
-      <Route path="/hair-restoration-treatments/gfc-growth-factor-concentrate" element={<GfcHairPage />} />
-      <Route path="/body-contouring-wellness/cryo-cool-sculpting" element={<CryoSculptingPage />} />
-      <Route path="/cosmetic-dermatology-laser-treatments/cryo-cool-sculpting" element={<CryoSculptingPage />} />
-      <Route path="/hair-restoration-treatments/hair-transplant" element={<HairTransplantPage />} />
 
       <Route path="/leadership/dr-a-bladbin-chairman-founder" element={<DrBladbinPage />} />
       <Route path="/leadership/dr-c-binila-bladbin-managing-director" element={<DrBinilaPage />} />

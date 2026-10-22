@@ -16,14 +16,14 @@ const DEFAULT_CATEGORIES = ['Orthodontics', 'Dermatology', 'Hair Care', 'Oral Su
 
 const WEBSITE_INTERLINKS = [
   { label: 'All Treatments Catalogue', url: '/treatments' },
-  { label: 'Anti-Dandruff Treatment', url: '/treatments/anti-dandruff-treatment' },
-  { label: 'GFC Hair Therapy', url: '/hair-restoration-treatments/gfc-growth-factor-concentrate' },
-  { label: 'Hair Transplantation', url: '/hair-restoration-treatments/hair-transplant' },
-  { label: 'Clear Aligners (Jerushaligne)', url: '/dental-treatments/top-quality-invisible-clear-aligners-jerushaligne' },
-  { label: 'Dental Implants', url: '/dental-implants' },
-  { label: 'Root Canal Treatment', url: '/dental-treatments/root-canal-treatment-in-tamilnadu' },
-  { label: 'Fractional CO2 Laser', url: '/cosmetic-dermatology-laser-treatments/fractional-co2-laser' },
-  { label: 'Oral Pathology Screening', url: '/dental-treatments/oral-pathology-screening' },
+  { label: 'Anti-Dandruff Treatment', url: '/hair-care/growth-factor-therapy/gfc-hair' },
+  { label: 'GFC Hair Therapy', url: '/hair-care/growth-factor-therapy/gfc-hair' },
+  { label: 'Hair Transplantation', url: '/hair-care/hair-transplant/fue-hair-transplant' },
+  { label: 'Clear Aligners (Jerushaligne)', url: '/dental-care/orthodontic-care/clear-aligners-jerushaligne' },
+  { label: 'Dental Implants', url: '/dental-care/implantology/dental-implants' },
+  { label: 'Root Canal Treatment', url: '/dental-care/endodontic-care/root-canal-treatment' },
+  { label: 'Fractional CO2 Laser', url: '/skin-care/laser-treatments/fractional-co2-laser' },
+  { label: 'Oral Pathology Screening', url: '/dental-care/oral-pathology/oral-pathology-screening' },
   { label: 'Smile Transformations', url: '/smile-transformations' },
   { label: 'Meet Our Doctors', url: '/doctors' },
   { label: 'Book Appointment / Contact', url: '/contact' }

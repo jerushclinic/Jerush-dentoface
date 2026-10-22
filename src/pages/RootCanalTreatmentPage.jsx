@@ -6,6 +6,7 @@ import {
   CheckCircle2, Clock, Award, Heart, Shield, Activity, Smile
 } from 'lucide-react';
 import PageBreadcrumbHero from '../components/common/PageBreadcrumbHero';
+import TreatmentAppointmentForm from '../components/common/TreatmentAppointmentForm';
 import TreatmentCtaBanner from '../components/common/TreatmentCtaBanner';
 import TreatmentSectionNav from '../components/common/TreatmentSectionNav';
 import useTreatmentScrollSpy from '../hooks/useTreatmentScrollSpy';
@@ -160,8 +161,15 @@ export default function RootCanalTreatmentPage() {
   );
 
   const handleBookClick = () => {
-    navigate('/contact');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const el = document.getElementById('treatment-appointment-section');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const nameInput = document.getElementById('treatment-form-name');
+      if (nameInput) nameInput.focus();
+    } else {
+      navigate('/contact');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   return (
@@ -247,9 +255,40 @@ export default function RootCanalTreatmentPage() {
         </div>
       </section>
 
-      {/* ─── Stats Bar ─── */}
-      <section className="bg-gradient-to-r from-brandBlue to-[#1b4393] py-12 px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
+      {/* ─── Top Appointment Consultation Section ─── */}
+      <TreatmentAppointmentForm
+        treatmentName="Root Canal Treatment"
+        treatmentCategory="dental"
+        title="Book a Painless Root Canal Consultation"
+        highlightWord="Near You"
+        subtitle="Consult with experienced endodontic specialists at Jerush Dentofacial & Cosmetic Laser Centre across Tamil Nadu."
+        features={[
+          {
+            icon: ShieldCheck,
+            title: '15,000+ Root Canals Saved',
+            desc: 'Over 22+ years saving natural teeth from extraction with 99% clinical success.'
+          },
+          {
+            icon: Clock,
+            title: 'Single-Visit Rotary RCT',
+            desc: 'Advanced digital apex locators and rotary files complete treatment in under 60 minutes.'
+          },
+          {
+            icon: Award,
+            title: 'Zero Pain & Anxiety Protocol',
+            desc: 'Computerised painless local anaesthesia and gentle, soothing patient care.'
+          },
+          {
+            icon: Smile,
+            title: 'Custom Zirconia Cap Match',
+            desc: 'In-house CAD/CAM crown placement for lifelong structural strength and chewing comfort.'
+          }
+        ]}
+      />
+
+      {/* ─── Key Stats Bar ─── */}
+      <section className="bg-gradient-to-r from-[#0F172A] via-[#2852A3] to-[#0F172A] py-10 sm:py-12 px-4 sm:px-6 text-white shadow-inner relative overflow-hidden">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white relative z-10">
           {STATS.map((s, i) => (
             <motion.div
               key={i}
@@ -257,9 +296,14 @@ export default function RootCanalTreatmentPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
+              className="space-y-1"
             >
-              <p className="font-headline font-black text-3xl sm:text-4xl">{s.value}</p>
-              <p className="text-white/70 text-xs sm:text-sm font-semibold uppercase tracking-wider mt-1">{s.label}</p>
+              <p className="font-headline font-black text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight">
+                {s.value}
+              </p>
+              <p className="text-brandSky text-xs sm:text-sm font-bold uppercase tracking-wider mt-1">
+                {s.label}
+              </p>
             </motion.div>
           ))}
         </div>

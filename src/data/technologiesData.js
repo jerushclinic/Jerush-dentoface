@@ -1,4 +1,4 @@
-﻿export const TECHNOLOGIES_DATA = [
+export const TECHNOLOGIES_DATA = [
   // ─── DENTAL CARE ───
   {
     id: 'cad-cam-aligners',
@@ -24,7 +24,7 @@
       'Complete quality control from 3D diagnostic design to final aligner fabrication'
     ],
     relatedTreatment: 'Clear Aligners & Dental Implants',
-    relatedLink: '/dental-treatments/top-quality-invisible-clear-aligners-jerushaligne'
+    relatedLink: '/dental-care/orthodontic-care/clear-aligners-jerushaligne'
   },
   {
     id: 'cbct-3d-imaging',
@@ -104,7 +104,7 @@
       'Significantly tightens lax skin and minimizes enlarged pores'
     ],
     relatedTreatment: 'Acne Scar Resurfacing & Anti-Aging',
-    relatedLink: '/cosmetic-dermatology-laser-treatments/fractional-co2-laser'
+    relatedLink: '/skin-care/laser-treatments/fractional-co2-laser'
   },
   {
     id: 'pico-ndyag-laser',
@@ -184,7 +184,7 @@
       'Noticeable reduction in hair fall within 3 to 4 clinical sessions'
     ],
     relatedTreatment: 'GFC Hair Regrowth Therapy',
-    relatedLink: '/hair-restoration-treatments/gfc-growth-factor-concentrate'
+    relatedLink: '/hair-care/growth-factor-therapy/gfc-hair'
   },
   {
     id: 'bio-fue-transplant',
@@ -210,7 +210,7 @@
       'Fast recovery with minimal post-operative downtime'
     ],
     relatedTreatment: 'Bio-FUE Hair Restoration',
-    relatedLink: '/hair-restoration-treatments/hair-transplant'
+    relatedLink: '/hair-care/hair-transplant/fue-hair-transplant'
   },
   {
     id: 'qr678-lllt-hair',

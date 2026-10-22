@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Smile, Sparkles, Flame, Shield, ArrowRight, ChevronLeft, ChevronRight, ArrowUpRight } from 'lucide-react';
@@ -28,7 +28,7 @@ const CURATED_TREATMENTS = {
       title: 'Acne Scar Treatment',
       subtitle: 'Fractional CO₂ laser skin resurfacing',
       image: '/images/medical-services/fractional_co2_laser.png',
-      path: '/cosmetic-dermatology-laser-treatments/fractional-co2-laser',
+      path: '/skin-care/laser-treatments/fractional-co2-laser',
       tag: 'FDA Approved'
     },
     {
@@ -86,7 +86,7 @@ const CURATED_TREATMENTS = {
       title: 'Jerushaligne Clear Aligners',
       subtitle: 'Custom 3D CAD/CAM invisible aligners',
       image: '/images/medical-services/clear_aligners.png',
-      path: '/dental-treatments/top-quality-invisible-clear-aligners-jerushaligne',
+      path: '/dental-care/orthodontic-care/clear-aligners-jerushaligne',
       tag: 'Virtually Invisible'
     },
     {
@@ -94,7 +94,7 @@ const CURATED_TREATMENTS = {
       title: 'Advanced Dental Implants',
       subtitle: 'CBCT-guided permanent titanium roots',
       image: '/images/medical-services/dental_implants.png',
-      path: '/dental-implants',
+      path: '/dental-care/implantology/dental-implants',
       tag: 'Lifetime Durability'
     },
     {
@@ -110,7 +110,7 @@ const CURATED_TREATMENTS = {
       title: 'Single-Visit Root Canal',
       subtitle: 'Painless rotary endodontics in 1 sitting',
       image: '/images/medical-services/root_canal.png',
-      path: '/dental-treatments/root-canal-treatment-in-tamilnadu',
+      path: '/dental-care/endodontic-care/root-canal-treatment',
       tag: 'Save Natural Tooth'
     },
     {
@@ -118,7 +118,7 @@ const CURATED_TREATMENTS = {
       title: 'Orthodontic Braces',
       subtitle: 'Tooth-coloured ceramic & precision braces',
       image: '/images/medical-services/orthodontics_braces.png',
-      path: '/treatments/metal-braces',
+      path: '/dental-care/orthodontic-care/metal-braces',
       tag: 'Precision Alignment'
     },
     {
@@ -134,7 +134,7 @@ const CURATED_TREATMENTS = {
       title: 'Crowns & Bridges (FPD)',
       subtitle: 'Premium monolithic zirconia restoration',
       image: '/images/medical-services/fixed_partial_denture.png',
-      path: '/dental-treatments/best-crowns-and-bridges-treatment',
+      path: '/dental-care/prosthodontic-care/dental-crowns-bridges',
       tag: 'Zirconia Strength'
     },
     {
@@ -152,7 +152,7 @@ const CURATED_TREATMENTS = {
       title: 'GFC Growth Factor Therapy',
       subtitle: 'Concentrated autologous growth serum',
       image: '/images/medical-services/gfc_hair_therapy.png',
-      path: '/hair-restoration-treatments/gfc-growth-factor-concentrate',
+      path: '/hair-care/growth-factor-therapy/gfc-hair',
       tag: 'High Density'
     },
     {
@@ -160,7 +160,7 @@ const CURATED_TREATMENTS = {
       title: 'FUE Hair Transplant',
       subtitle: 'Artistic hairline micro-extraction',
       image: '/images/medical-services/gfc_hair_therapy.png',
-      path: '/hair-restoration-treatments/hair-transplant',
+      path: '/hair-care/hair-transplant/fue-hair-transplant',
       tag: 'Permanent Growth'
     },
     {
@@ -168,7 +168,7 @@ const CURATED_TREATMENTS = {
       title: 'Clinical PRP Hair Therapy',
       subtitle: 'Platelet-rich plasma follicle revitalization',
       image: '/images/medical-services/gfc_hair_therapy.png',
-      path: '/treatments/prp-hair-treatment',
+      path: '/hair-care/growth-factor-therapy/gfc-hair',
       tag: 'Root Strengthening'
     },
     {
@@ -176,7 +176,7 @@ const CURATED_TREATMENTS = {
       title: 'QR 678® Neo Therapy',
       subtitle: 'US FDA-patented peptide formulation',
       image: '/images/medical-services/qr678_therapy.png',
-      path: '/treatments/qr678-hair',
+      path: '/hair-care/growth-factor-therapy/gfc-hair',
       tag: 'Proven Regrowth'
     },
     {
@@ -184,7 +184,7 @@ const CURATED_TREATMENTS = {
       title: 'Scalp Mesotherapy',
       subtitle: 'Targeted vitamin & peptide micro-dosing',
       image: '/images/medical-services/gfc_hair_therapy.png',
-      path: '/treatments/prp-hair-treatment',
+      path: '/hair-care/growth-factor-therapy/gfc-hair',
       tag: 'Follicle Boost'
     },
     {
@@ -192,7 +192,7 @@ const CURATED_TREATMENTS = {
       title: 'Clinical Scalp Detox',
       subtitle: 'Anti-fungal & sebum rebalancing therapy',
       image: '/images/medical-services/hydrafacial.png',
-      path: '/treatments/prp-hair-treatment',
+      path: '/hair-care/growth-factor-therapy/gfc-hair',
       tag: 'Healthy Scalp'
     },
     {
@@ -200,7 +200,7 @@ const CURATED_TREATMENTS = {
       title: 'Laser Hair Stimulation',
       subtitle: 'Cold red-light follicle bio-activation',
       image: '/images/medical-services/pico_laser.png',
-      path: '/treatments/prp-hair-treatment',
+      path: '/hair-care/growth-factor-therapy/gfc-hair',
       tag: 'Light Therapy'
     }
   ],
@@ -210,7 +210,7 @@ const CURATED_TREATMENTS = {
       title: 'Cryo CoolSculpting',
       subtitle: 'Targeted non-surgical fat freezing',
       image: '/images/medical-services/cryo_sculpting.png',
-      path: '/body-contouring-wellness/cryo-cool-sculpting',
+      path: '/body-contouring/cryo-sculpting/cool-sculpting',
       tag: 'Stubborn Fat Loss'
     },
     {
@@ -242,7 +242,7 @@ const CURATED_TREATMENTS = {
       title: 'RF Body Contouring',
       subtitle: 'Radiofrequency dermal tissue tightening',
       image: '/images/medical-services/cryo_sculpting.png',
-      path: '/body-contouring-wellness/cryo-cool-sculpting',
+      path: '/body-contouring/cryo-sculpting/cool-sculpting',
       tag: 'Tone & Firm'
     },
     {
@@ -250,7 +250,7 @@ const CURATED_TREATMENTS = {
       title: 'Double Chin Sculpting',
       subtitle: 'Submental lipolysis & jaw contouring',
       image: '/images/medical-services/botox_fillers.png',
-      path: '/body-contouring-wellness/cryo-cool-sculpting',
+      path: '/body-contouring/cryo-sculpting/cool-sculpting',
       tag: 'Jaw Definition'
     },
     {
@@ -258,7 +258,7 @@ const CURATED_TREATMENTS = {
       title: 'Stretch Mark Revision',
       subtitle: 'Fractional laser dermal remodeling',
       image: '/images/medical-services/fractional_co2_laser.png',
-      path: '/cosmetic-dermatology-laser-treatments/fractional-co2-laser',
+      path: '/skin-care/laser-treatments/fractional-co2-laser',
       tag: 'Texture Renewal'
     }
   ]

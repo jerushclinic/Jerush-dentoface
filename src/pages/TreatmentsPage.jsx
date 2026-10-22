@@ -90,16 +90,26 @@ export default function TreatmentsPage() {
     setMobileFilterOpen(false);
   };
 
-  const getTreatmentPath = (id) => {
-    if (id === 'gfc-hair') return '/hair-restoration-treatments/gfc-growth-factor-concentrate';
-    if (id === 'fractional-co2-laser') return '/cosmetic-dermatology-laser-treatments/fractional-co2-laser';
-    if (id === 'cryo-sculpting') return '/body-contouring-wellness/cryo-cool-sculpting';
-    if (id === 'hair-transplant' || id === 'fue-transplant') return '/hair-restoration-treatments/hair-transplant';
-    if (id === 'oral-pathology') return '/dental-treatments/oral-pathology-screening';
-    if (id === 'dental-implants') return '/dental-implants';
-    if (id === 'root-canal') return '/dental-treatments/root-canal-treatment-in-tamilnadu';
-    if (id === 'metal-braces') return '/treatments/metal-braces';
+  const getTreatmentPath = (id, item) => {
+    if (id === 'gfc-hair') return '/hair-care/growth-factor-therapy/gfc-hair';
+    if (id === 'fractional-co2-laser') return '/skin-care/laser-treatments/fractional-co2-laser';
+    if (id === 'cryo-sculpting') return '/body-contouring/cryo-sculpting/cool-sculpting';
+    if (id === 'hair-transplant' || id === 'fue-transplant') return '/hair-care/hair-transplant/fue-hair-transplant';
+    if (id === 'oral-pathology') return '/dental-care/oral-pathology/oral-pathology-screening';
+    if (id === 'dental-implants') return '/dental-care/implantology/dental-implants';
+    if (id === 'crowns-bridges' || id === 'dental-crowns-bridges') return '/dental-care/prosthodontic-care/dental-crowns-bridges';
+    if (id === 'root-canal' || id === 'root-canal-treatment-in-tamilnadu') return '/dental-care/endodontic-care/root-canal-treatment';
+    if (id === 'metal-braces') return '/dental-care/orthodontic-care/metal-braces';
+    if (id === 'jerushaligne' || id === 'clear-aligners' || id === 'top-quality-invisible-clear-aligners-jerushaligne') return '/dental-care/orthodontic-care/clear-aligners-jerushaligne';
     if (id === 'dentures' || id === 'removable-partial-dentures') return '/dental-care/prosthodontic-care/removable-partial-dentures';
+    if (id === 'pediatric-dental-care' || id === 'pediatric-dentistry' || id === 'dental-consultation') return '/dental-care/kids-dentistry/pediatric-dental-care';
+    
+    // Dynamic hierarchy for all other catalogue treatments
+    if (item && item.category && item.subcategory) {
+      const catSlug = item.category === 'dental' ? 'dental-care' : item.category === 'cosmetic' ? 'skin-care' : item.category === 'hair' ? 'hair-care' : 'body-contouring';
+      const subSlug = item.subcategory.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+      return `/${catSlug}/${subSlug}/${id}`;
+    }
     return `/treatments/${id}`;
   };
 
@@ -732,7 +742,7 @@ export default function TreatmentsPage() {
                         <div className="px-3.5 sm:px-4 py-2.5 mt-auto border-t border-slate-100 flex items-center justify-between gap-2 bg-slate-50/50">
                           <button
                             onClick={() => {
-                              navigate(getTreatmentPath(treatment.id));
+                              navigate(getTreatmentPath(treatment.id, treatment));
                               window.scrollTo({ top: 0, behavior: 'smooth' });
                             }}
                             className="text-xs font-headline font-bold text-slate-700 hover:text-brandBlue flex items-center gap-1 transition-colors cursor-pointer group-hover:translate-x-0.5"
@@ -823,7 +833,7 @@ export default function TreatmentsPage() {
                         <div className="flex sm:flex-col items-center justify-end gap-2 shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-100">
                           <button
                             onClick={() => {
-                              navigate(getTreatmentPath(treatment.id));
+                              navigate(getTreatmentPath(treatment.id, treatment));
                               window.scrollTo({ top: 0, behavior: 'smooth' });
                             }}
                             className="flex-1 sm:flex-initial px-3 py-1.5 rounded-lg border border-slate-200 text-slate-700 hover:text-brandBlue hover:border-brandSky/60 text-xs font-headline font-bold transition-colors cursor-pointer"

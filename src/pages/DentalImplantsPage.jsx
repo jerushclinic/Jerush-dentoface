@@ -8,6 +8,7 @@ import {
   Stethoscope, Building2, Zap, ArrowUpRight
 } from 'lucide-react';
 import PageBreadcrumbHero from '../components/common/PageBreadcrumbHero';
+import TreatmentAppointmentForm from '../components/common/TreatmentAppointmentForm';
 import TreatmentCtaBanner from '../components/common/TreatmentCtaBanner';
 import TreatmentSectionNav from '../components/common/TreatmentSectionNav';
 import useTreatmentScrollSpy from '../hooks/useTreatmentScrollSpy';
@@ -351,8 +352,15 @@ export default function DentalImplantsPage() {
   );
 
   const handleBookClick = () => {
-    navigate('/contact');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const el = document.getElementById('treatment-appointment-section');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const nameInput = document.getElementById('treatment-form-name');
+      if (nameInput) nameInput.focus();
+    } else {
+      navigate('/contact');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   return (
@@ -439,9 +447,40 @@ export default function DentalImplantsPage() {
         </div>
       </section>
 
-      {/* ─── Stats Bar ─── */}
-      <section className="bg-gradient-to-r from-slate-900 via-brandBlue to-slate-900 py-10 px-6 text-white shadow-inner">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
+      {/* ─── Top Appointment Consultation Section ─── */}
+      <TreatmentAppointmentForm
+        treatmentName="Dental Implants"
+        treatmentCategory="dental"
+        title="Book a Dental Implant Consultation"
+        highlightWord="Near You"
+        subtitle="Get personalised guidance from Jerush Dentofacial & Cosmetic Laser Centre's leading maxillofacial surgeons and implantologists."
+        features={[
+          {
+            icon: ShieldCheck,
+            title: '52,000+ Implants Placed',
+            desc: 'Over 22+ years of surgical precision led by Dr. A. Bladbin and senior oral implantologists.'
+          },
+          {
+            icon: Award,
+            title: '3D CBCT Guided Surgery',
+            desc: 'Millimeter-accurate computer guided stent placement for painless healing and high success.'
+          },
+          {
+            icon: Sparkles,
+            title: 'Lifetime Titanium & Zirconia',
+            desc: 'FDA & CE approved biocompatible implants backed by comprehensive long-term warranty.'
+          },
+          {
+            icon: MapPin,
+            title: '4 Regional Centres',
+            desc: 'World-class surgical suites and express dental clinics across Tamil Nadu.'
+          }
+        ]}
+      />
+
+      {/* ─── Key Stats Bar ─── */}
+      <section className="bg-gradient-to-r from-[#0F172A] via-[#2852A3] to-[#0F172A] py-10 sm:py-12 px-4 sm:px-6 text-white shadow-inner relative overflow-hidden">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center text-white relative z-10">
           {STATS.map((s, i) => (
             <motion.div
               key={i}
@@ -451,8 +490,12 @@ export default function DentalImplantsPage() {
               transition={{ duration: 0.4, delay: i * 0.08 }}
               className="space-y-1"
             >
-              <p className="font-headline font-black text-2xl sm:text-3xl text-white">{s.value}</p>
-              <p className="text-brandSky text-[11px] font-bold uppercase tracking-wider">{s.label}</p>
+              <p className="font-headline font-black text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight">
+                {s.value}
+              </p>
+              <p className="text-brandSky text-xs sm:text-sm font-bold uppercase tracking-wider mt-1">
+                {s.label}
+              </p>
             </motion.div>
           ))}
         </div>

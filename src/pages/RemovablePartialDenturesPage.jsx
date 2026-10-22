@@ -374,7 +374,7 @@ export default function RemovablePartialDenturesPage() {
       />
 
       {/* ─── Key Stats Bar ─── */}
-      <section className="bg-gradient-to-r from-brandBlue to-[#1b4393] py-10 sm:py-12 px-4 sm:px-6 text-white shadow-inner relative overflow-hidden">
+      <section className="bg-gradient-to-r from-[#0F172A] via-[#2852A3] to-[#0F172A] py-10 sm:py-12 px-4 sm:px-6 text-white shadow-inner relative overflow-hidden">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white relative z-10">
           {STATS.map((stat, idx) => (
             <motion.div
@@ -388,7 +388,7 @@ export default function RemovablePartialDenturesPage() {
               <p className="font-headline font-black text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight">
                 {stat.value}
               </p>
-              <p className="text-white/80 text-xs sm:text-sm font-semibold uppercase tracking-wider mt-1">
+              <p className="text-brandSky text-xs sm:text-sm font-bold uppercase tracking-wider mt-1">
                 {stat.label}
               </p>
             </motion.div>

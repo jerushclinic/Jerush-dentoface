@@ -8,6 +8,7 @@ import {
   Layers, CheckCircle, MessageCircle, ChevronLeft, ChevronRight, Quote
 } from 'lucide-react';
 import PageBreadcrumbHero from '../components/common/PageBreadcrumbHero';
+import TreatmentAppointmentForm from '../components/common/TreatmentAppointmentForm';
 import TreatmentCtaBanner from '../components/common/TreatmentCtaBanner';
 import TreatmentSectionNav from '../components/common/TreatmentSectionNav';
 import useTreatmentScrollSpy from '../hooks/useTreatmentScrollSpy';
@@ -264,8 +265,15 @@ export default function MetalBracesPage() {
   };
 
   const handleBookClick = () => {
-    navigate('/contact');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const el = document.getElementById('treatment-appointment-section');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const nameInput = document.getElementById('treatment-form-name');
+      if (nameInput) nameInput.focus();
+    } else {
+      navigate('/contact');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   return (
@@ -382,24 +390,60 @@ export default function MetalBracesPage() {
           </div>
         </div>
 
-        {/* Quick Stats Bar */}
-        <div className="bg-slate-50/80 border-t border-slate-200/80 py-6 sm:py-7">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 divide-y sm:divide-y-0 sm:divide-x divide-slate-200/60">
-              {STATS.map((stat, idx) => (
-                <div key={idx} className="flex flex-col items-center text-center p-2 pt-4 sm:pt-2">
-                  <span className="font-headline font-black text-2xl sm:text-3xl lg:text-4xl text-brandBlue tracking-tight">
-                    {stat.value}
-                  </span>
-                  <span className="text-xs sm:text-sm font-semibold text-slate-500 mt-1 uppercase tracking-wider">
-                    {stat.label}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+      </section>
 
+      {/* ─── Top Appointment Consultation Section ─── */}
+      <TreatmentAppointmentForm
+        treatmentName="Precision Metal Braces"
+        treatmentCategory="dental"
+        title="Book a Precision Metal Braces Consultation"
+        highlightWord="Near You"
+        subtitle="Get a personalized orthodontic roadmap and 3D digital smile scan from Jerush Dentofacial & Cosmetic Laser Centre's specialist orthodontic team."
+        features={[
+          {
+            icon: ShieldCheck,
+            title: '25,000+ Smiles Aligned',
+            desc: 'Over 22+ years of clinical excellence treating complex malocclusion and crowded teeth.'
+          },
+          {
+            icon: Zap,
+            title: '30% Smaller German Brackets',
+            desc: 'Ultra-low profile medical grade stainless steel brackets engineered for comfort and low friction.'
+          },
+          {
+            icon: Clock,
+            title: '0% Interest EMI Options',
+            desc: 'Transparent budget-friendly monthly payment plans tailored for students and working professionals.'
+          },
+          {
+            icon: MapPin,
+            title: '4 Regional Centres',
+            desc: 'Specialist orthodontists available across Nagercoil, Thuckalay, Trichy and Chennai.'
+          }
+        ]}
+      />
+
+      {/* ─── Key Stats Bar ─── */}
+      <section className="bg-gradient-to-r from-[#0F172A] via-[#2852A3] to-[#0F172A] py-10 sm:py-12 px-4 sm:px-6 text-white shadow-inner relative overflow-hidden">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white relative z-10">
+          {STATS.map((stat, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: idx * 0.08 }}
+              className="space-y-1"
+            >
+              <p className="font-headline font-black text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight">
+                {stat.value}
+              </p>
+              <p className="text-brandSky text-xs sm:text-sm font-bold uppercase tracking-wider mt-1">
+                {stat.label}
+              </p>
+            </motion.div>
+          ))}
+        </div>
       </section>
 
       {/* ─── 2. PAGE NAVIGATION INDEX (STICKY CAPSULE BUTTONS) ─── */}
@@ -1059,7 +1103,7 @@ export default function MetalBracesPage() {
         titleSuffix="Today"
         subtitle="Join thousands of happy patients across Tamil Nadu and globally who achieved lifetime smile confidence at Jerush Dentofacial & Cosmetic Laser Centre."
         primaryBtnText="Book 3D Smile Scan"
-        primaryBtnLink="/contact"
+        onPrimaryClick={handleBookClick}
         secondaryBtnText="Call +91 94891 60055"
         secondaryBtnPhone="+919489160055"
         doctorImage="/images/doctors/ajai-shalu2.webp"
