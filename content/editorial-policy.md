@@ -103,7 +103,7 @@ Content is published only after completing the applicable editorial, clinical, o
 Published content is monitored and updated in response to new evidence, guideline changes, regulatory action, medical developments, service changes, user feedback and identified inaccuracies.
 
  
-
+ 
 ## 6. Medical Review
 
 Apollo Hospitals recognizes clinical review as a core safeguard for patient-facing medical information.  

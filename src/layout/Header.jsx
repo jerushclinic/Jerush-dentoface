@@ -1054,12 +1054,17 @@ export default function Header() {
                                       </Link>
                                     </h5>
                                     <ul>
+<<<<<<< HEAD
                                       <li>{renderDentalIconItem('/dental-care/kids-dentistry/pediatric-dental-care', 'Pediatric Dental Care', 'pediatric-dental-care.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/pulpectomy', 'Painless Root Canal', 'pulpectomy.webp', handleLinkClick)}</li>
+=======
+                                      <li>{renderDentalIconItem('/treatments/pediatric-dentistry', 'Pediatric Dental Care', 'pediatric-dental-care.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/treatments/dental-consultation', 'Dental Consultation', 'dental-consultation.webp', handleLinkClick)}</li>
+>>>>>>> 0cd31ce1da94cde79c07060d5a4f0898f85f12cf
                                       <li>{renderDentalIconItem('/treatments/pit-fissure-sealants', 'Pit & Fissure Sealants', 'pit-fissure-sealants.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/habit-breaking-appliances', 'Habit Appliances', 'habit-breaking-appliances.webp', handleLinkClick)}</li>
-                                    </ul>
-                                  </div>
+                                    </ul >
+                                  </div >
                                   <div className="jerush-megamenu-subgroup">
                                     <h5>
                                       <Link to="/treatments?category=dental&sub=Cosmetic%20Dentistry" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
@@ -1084,10 +1089,10 @@ export default function Header() {
                                       <li>{renderDentalIconItem('/treatments/ceramic-braces', 'Ceramic & Lingual Braces', 'ceramic-braces.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
-                                </div>
+                                </div >
 
-                                {/* Column 2: Prosthodontic, Endodontic, Geriatric */}
-                                <div className="jerush-grid-column">
+    {/* Column 2: Prosthodontic, Endodontic, Geriatric */ }
+    < div className = "jerush-grid-column" >
                                   <div className="jerush-megamenu-subgroup">
                                     <h5>
                                       <Link to="/treatments?category=dental&sub=Prosthodontic%20Care%20%2F%20Tooth%20Replacement" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
@@ -1124,10 +1129,10 @@ export default function Header() {
                                       <li>{renderDentalIconItem('/treatments/dentures', 'Complete & Flexible Dentures', 'denture.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
-                                </div>
+                                </div >
 
-                                {/* Column 3: Periodontal, Maxillofacial, Oral Medicine */}
-                                <div className="jerush-grid-column">
+    {/* Column 3: Periodontal, Maxillofacial, Oral Medicine */ }
+    < div className = "jerush-grid-column" >
                                   <div className="jerush-megamenu-subgroup">
                                     <h5>
                                       <Link to="/treatments?category=dental&sub=Periodontal%20%2F%20Gum%20Care" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
@@ -1165,10 +1170,10 @@ export default function Header() {
                                       <li>{renderDentalIconItem('/treatments/precancerous-lesion-management', 'Precancerous Lesion Care', 'oral-cancer-screen.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
-                                </div>
+                                </div >
 
-                                {/* Column 4: Dental Radiology, TMJ Care, Community Dentistry */}
-                                <div className="jerush-grid-column">
+    {/* Column 4: Dental Radiology, TMJ Care, Community Dentistry */ }
+    < div className = "jerush-grid-column" >
                                   <div className="jerush-megamenu-subgroup">
                                     <h5>
                                       <Link to="/treatments?category=dental&sub=Radiology" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
@@ -1205,21 +1210,22 @@ export default function Header() {
                                       <li>{renderDentalIconItem('/treatments/oral-health-care', 'Community Oral Health Care', 'oral-health-care.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
-                                </div>
-                              </div>
+                                </div >
+                              </div >
 
-                              {/* Bottom Highlight Strip */}
-                              <div className="mt-3.5 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs">
+    {/* Bottom Highlight Strip */ }
+    < div className = "mt-3.5 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs" >
                                 <span className="text-slate-500 font-medium">Looking for a specialized dental procedure? Search our complete clinical database.</span>
                                 <Link to="/treatments?category=dental" onClick={handleLinkClick} className="font-bold text-brandBlue hover:text-brandSky flex items-center gap-1 transition-colors">
                                   <span>View All Dental Procedures</span>
                                   <ChevronRight className="w-3.5 h-3.5" />
                                 </Link>
-                              </div>
-                            </div>
+                              </div >
+                            </div >
 
-                            {/* Skin & Laser Treatments Pane */}
-                            <div className={`jerush-megamenu-pane ${treatmentsActiveTab === 'cosmetic-dermatology' ? 'active' : ''}`}>
+    {/* Skin & Laser Treatments Pane */ }
+    < div className = {`jerush-megamenu-pane ${treatmentsActiveTab === 'cosmetic-dermatology' ? 'active' : ''}`
+}>
                               <div className="flex items-center justify-between pb-3 mb-3.5 border-b border-slate-100">
                                 <div>
                                   <h4 className="jerush-pane-title !mb-0.5">Skin & Laser Treatments</h4>
@@ -1322,18 +1328,18 @@ export default function Header() {
                                 </div>
                               </div>
 
-                              {/* Bottom Highlight Strip */}
-                              <div className="mt-3.5 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs">
-                                <span className="text-slate-500 font-medium">Looking for customized laser or skin rejuvenation? View the complete dermatology suite.</span>
-                                <Link to="/treatments?category=cosmetic" onClick={handleLinkClick} className="font-bold text-brandBlue hover:text-brandSky flex items-center gap-1 transition-colors">
-                                  <span>Search Dermatology Catalogue</span>
-                                  <ChevronRight className="w-3.5 h-3.5" />
-                                </Link>
-                              </div>
-                            </div>
+{/* Bottom Highlight Strip */ }
+<div className="mt-3.5 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs">
+  <span className="text-slate-500 font-medium">Looking for customized laser or skin rejuvenation? View the complete dermatology suite.</span>
+  <Link to="/treatments?category=cosmetic" onClick={handleLinkClick} className="font-bold text-brandBlue hover:text-brandSky flex items-center gap-1 transition-colors">
+    <span>Search Dermatology Catalogue</span>
+    <ChevronRight className="w-3.5 h-3.5" />
+  </Link>
+</div>
+                            </div >
 
-                            {/* Hair Restoration Pane */}
-                            <div className={`jerush-megamenu-pane ${treatmentsActiveTab === 'hair-restoration' ? 'active' : ''}`}>
+  {/* Hair Restoration Pane */ }
+  < div className = {`jerush-megamenu-pane ${treatmentsActiveTab === 'hair-restoration' ? 'active' : ''}`}>
                               <div className="flex items-center justify-between pb-3 mb-3.5 border-b border-slate-100">
                                 <div>
                                   <h4 className="jerush-pane-title !mb-0.5">Hair Restoration</h4>
@@ -1415,10 +1421,10 @@ export default function Header() {
                                   </div>
                                 </div>
                               </div>
-                            </div>
+                            </div >
 
-                            {/* Body Contouring Pane */}
-                            <div className={`jerush-megamenu-pane ${treatmentsActiveTab === 'body-contouring' ? 'active' : ''}`}>
+  {/* Body Contouring Pane */ }
+  < div className = {`jerush-megamenu-pane ${treatmentsActiveTab === 'body-contouring' ? 'active' : ''}`}>
                               <div className="flex items-center justify-between pb-3 mb-3.5 border-b border-slate-100">
                                 <div>
                                   <h4 className="jerush-pane-title !mb-0.5">Body Contouring & Wellness</h4>
@@ -1496,1001 +1502,1023 @@ export default function Header() {
                                   </div>
                                 </div>
                               </div>
-                            </div>
-                          </div>
+                            </div >
+                          </div >
 
-                          {/* Right Sidebar: Quick Links */}
-                          {renderQuickLinks()}
-                        </div>
-                      </div>
-                    </li>
+  {/* Right Sidebar: Quick Links */ }
+{ renderQuickLinks() }
+                        </div >
+                      </div >
+                    </li >
 
-                    {/* Smile Stories Mega Menu Trigger */}
-                    <li className={`jerush-nav-item jerush-mega-trigger ${activeHoverMenu === 'gallery' ? 'open' : ''}`} onMouseEnter={() => handleMenuEnter('gallery')} onMouseLeave={handleMenuLeave}>
-                      <Link to="/smile-stories" onClick={handleLinkClick} className="jerush-nav-link font-headline">
-                        Smile Stories <span className="jerush-arrow"></span>
-                      </Link>
+  {/* Smile Stories Mega Menu Trigger */ }
+  < li className = {`jerush-nav-item jerush-mega-trigger ${activeHoverMenu === 'gallery' ? 'open' : ''}`} onMouseEnter = {() => handleMenuEnter('gallery')} onMouseLeave = { handleMenuLeave } >
+    <Link to="/smile-stories" onClick={handleLinkClick} className="jerush-nav-link font-headline">
+      Smile Stories <span className="jerush-arrow"></span>
+    </Link>
 
-                      {/* Gallery Mega Menu Panel */}
-                      <div className={`jerush-megamenu ${isForceClosed ? 'force-closed' : ''}`}>
-                        <div className="jerush-megamenu-inner">
-                          {/* Left Sidebar Categories */}
-                          <div className="jerush-megamenu-sidebar">
-                            <button
-                              className={`jerush-category-tab ${galleryActiveTab === 'gallery-cases' ? 'active' : ''}`}
-                              onMouseEnter={() => setGalleryActiveTab('gallery-cases')}
-                            >
-                              Transformations
-                              <span className="jerush-tab-arrow"></span>
-                            </button>
-                            <button
-                              className={`jerush-category-tab ${galleryActiveTab === 'gallery-media' ? 'active' : ''}`}
-                              onMouseEnter={() => setGalleryActiveTab('gallery-media')}
-                            >
-                              Media & Events
-                              <span className="jerush-tab-arrow"></span>
-                            </button>
-                            <button
-                              className={`jerush-category-tab ${galleryActiveTab === 'gallery-reviews' ? 'active' : ''}`}
-                              onMouseEnter={() => setGalleryActiveTab('gallery-reviews')}
-                            >
-                              Patient Stories
-                              <span className="jerush-tab-arrow"></span>
-                            </button>
-                          </div>
+{/* Gallery Mega Menu Panel */ }
+<div className={`jerush-megamenu ${isForceClosed ? 'force-closed' : ''}`}>
+  <div className="jerush-megamenu-inner">
+    {/* Left Sidebar Categories */}
+    <div className="jerush-megamenu-sidebar">
+      <button
+        className={`jerush-category-tab ${galleryActiveTab === 'gallery-cases' ? 'active' : ''}`}
+        onMouseEnter={() => setGalleryActiveTab('gallery-cases')}
+      >
+        Transformations
+        <span className="jerush-tab-arrow"></span>
+      </button>
+      <button
+        className={`jerush-category-tab ${galleryActiveTab === 'gallery-media' ? 'active' : ''}`}
+        onMouseEnter={() => setGalleryActiveTab('gallery-media')}
+      >
+        Media & Events
+        <span className="jerush-tab-arrow"></span>
+      </button>
+      <button
+        className={`jerush-category-tab ${galleryActiveTab === 'gallery-reviews' ? 'active' : ''}`}
+        onMouseEnter={() => setGalleryActiveTab('gallery-reviews')}
+      >
+        Patient Stories
+        <span className="jerush-tab-arrow"></span>
+      </button>
+    </div>
 
-                          {/* Right Content Panel */}
-                          <div className="jerush-megamenu-content">
-                            {/* Transformations Pane */}
-                            <div className={`jerush-megamenu-pane ${galleryActiveTab === 'gallery-cases' ? 'active' : ''}`}>
-                              <h4 className="jerush-pane-title">Before & After Results</h4>
-                              <div className="jerush-grid-3cols">
-                                <div className="jerush-grid-column">
-                                  <h5>Dentistry</h5>
-                                  <ul>
-                                    <li><Link to="/smile-transformations" onClick={handleLinkClick}>Smile Transformations</Link></li>
-                                  </ul>
-                                </div>
-                                <div className="jerush-grid-column">
-                                  <h5>Aesthetics</h5>
-                                  <ul>
-                                    <li><Link to="/cosmetic-resurfacing" onClick={handleLinkClick}>Cosmetic Resurfacing</Link></li>
-                                    <li><Link to="/hair-regrowth-results" onClick={handleLinkClick}>Hair Regrowth Results</Link></li>
-                                    <li><Link to="/body-contouring-cases" onClick={handleLinkClick}>Body Contouring Cases</Link></li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-
-                            {/* Media & Tours Pane */}
-                            <div className={`jerush-megamenu-pane ${galleryActiveTab === 'gallery-media' ? 'active' : ''}`}>
-                              <h4 className="jerush-pane-title">Tours & Outreach</h4>
-                              <div className="jerush-grid-3cols">
-                                <div className="jerush-grid-column">
-                                  <h5>Hospital Tours</h5>
-                                  <ul>
-                                    <li><Link to="/video-testimonials" onClick={handleLinkClick}>Clinic Video Tour</Link></li>
-                                    <li><Link to="/events" onClick={handleLinkClick}>Hospital Facilities</Link></li>
-                                  </ul>
-                                </div>
-                                <div className="jerush-grid-column">
-                                  <h5>Community</h5>
-                                  <ul>
-                                    <li><Link to="/camps" onClick={handleLinkClick}>Dental Health Camps</Link></li>
-                                    <li><Link to="/events" onClick={handleLinkClick}>Wellness Seminars</Link></li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-
-                            {/* Patient Stories Pane */}
-                            <div className={`jerush-megamenu-pane ${galleryActiveTab === 'gallery-reviews' ? 'active' : ''}`}>
-                              <h4 className="jerush-pane-title">Patient Testimonials</h4>
-                              <div className="jerush-grid-3cols">
-                                <div className="jerush-grid-column">
-                                  <h5>Direct Reviews</h5>
-                                  <ul>
-                                    <li><Link to="/video-testimonials" onClick={handleLinkClick}>Video Testimonials</Link></li>
-                                    <li><Link to="/smile-transformations" onClick={handleLinkClick}>Photo Stories</Link></li>
-                                  </ul>
-                                </div>
-                                <div className="jerush-grid-column">
-                                  <h5>Third Party Feed</h5>
-                                  <ul>
-                                    <li><Link to="/reviews" onClick={handleLinkClick}>Google Reviews Feed</Link></li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          {/* Right Sidebar: Quick Links */}
-                          {renderQuickLinks()}
-                        </div>
-                      </div>
-                    </li>
-
-                  </ul>
-                </nav>
-              </div>
-
-              {/* Desktop Center: Prominent Enlarged Logo */}
-              <div className="jerush-logo jerush-logo-center hidden xl:flex">
-                <Link to="/" onClick={handleLinkClick} rel="home" className="flex items-center group">
-                  <img
-                    src="/images/logo/jerush-logo.webp"
-                    alt="Jerush Logo"
-                    className="jerush-logo-img group-hover:scale-105 transition-transform duration-300"
-                    onError={(e) => {
-                      e.target.style.display = 'none';
-                      const fallback = document.getElementById('logo-text-fallback');
-                      if (fallback) fallback.style.display = 'block';
-                    }}
-                  />
-                  <span id="logo-text-fallback" style={{ display: 'none' }} className="jerush-logo-text">JERUSH DENTOFACE</span>
-                </Link>
-              </div>
-
-              {/* Desktop Right Wing (4 Tabs): Medical Insights, Careers, Jerush Events, Contact Us */}
-              <div className="hidden xl:flex jerush-nav-wing jerush-nav-wing-right">
-                <nav className="jerush-nav" aria-label="Main Navigation Right Wing" onMouseLeave={handleMenuLeave}>
-                  <ul className="jerush-nav-list">
-                    <li className="jerush-nav-item" onMouseEnter={() => handleMenuEnter(null)}>
-                      <NavLink to="/blog" className={({ isActive }) => `jerush-nav-link ${isActive ? 'active-trigger' : ''}`} onClick={handleLinkClick}>
-                        Medical Insights
-                      </NavLink>
-                    </li>
-                    <li className="jerush-nav-item" onMouseEnter={() => handleMenuEnter(null)}>
-                      <NavLink to="/careers" className={({ isActive }) => `jerush-nav-link ${isActive ? 'active-trigger' : ''}`} onClick={handleLinkClick}>
-                        Careers
-                      </NavLink>
-                    </li>
-                    <li className="jerush-nav-item" onMouseEnter={() => handleMenuEnter(null)}>
-                      <NavLink to="/events" state={{ reset: Date.now() }} className={({ isActive }) => `jerush-nav-link ${isActive ? 'active-trigger' : ''}`} onClick={handleLinkClick}>
-                        Jerush Events
-                      </NavLink>
-                    </li>
-                    <li className="jerush-nav-item" onMouseEnter={() => handleMenuEnter(null)}>
-                      <NavLink to="/contact" className={({ isActive }) => `jerush-nav-link ${isActive ? 'active-trigger' : ''}`} onClick={handleLinkClick}>
-                        Contact Us
-                      </NavLink>
-                    </li>
-                  </ul>
-                </nav>
-
-                {/* Action Buttons: Language Selector Dropdown & Book Appointment CTA */}
-                <div className="jerush-nav-cta flex items-center gap-2 shrink-0">
-                  {/* Language Selector Dropdown */}
-                  <div className="jerush-lang-selector notranslate z-30 mr-1">
-                    <button
-                      id="langSelectBtn"
-                      onClick={toggleLangDropdown}
-                      aria-haspopup="true"
-                      aria-expanded={langDropdownOpen}
-                    >
-                      <span className="flex items-center gap-0.5">
-                        <span className="text-[10px] text-slate-400 font-semibold lowercase">{langRegions[selectedLang]}</span>
-                        <span className="font-bold uppercase ml-0.5">{langLabels[selectedLang]}</span>
-                      </span>
-                      <svg className="arrow-icon" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </button>
-
-                    {langDropdownOpen && (
-                      <div id="langDropdown" className="block">
-                        <a href="#" onClick={(e) => { e.preventDefault(); selectLanguage('en'); }} className={`lang-dropdown-item ${selectedLang === 'en' ? 'active' : ''}`}>
-                          <span className="flex items-center gap-3">
-                            <span className="lang-country-code">US</span>
-                            <span className="lang-name">English</span>
-                          </span>
-                          {selectedLang === 'en' && <span className="lang-checkmark">✓</span>}
-                        </a>
-                        <a href="#" onClick={(e) => { e.preventDefault(); selectLanguage('ta'); }} className={`lang-dropdown-item ${selectedLang === 'ta' ? 'active' : ''}`}>
-                          <span className="flex items-center gap-3">
-                            <span className="lang-country-code">IN</span>
-                            <span className="lang-name">Tamil</span>
-                          </span>
-                          {selectedLang === 'ta' && <span className="lang-checkmark">✓</span>}
-                        </a>
-                        <a href="#" onClick={(e) => { e.preventDefault(); selectLanguage('ar'); }} className={`lang-dropdown-item ${selectedLang === 'ar' ? 'active' : ''}`}>
-                          <span className="flex items-center gap-3">
-                            <span className="lang-country-code">AE</span>
-                            <span className="lang-name">Arabic</span>
-                          </span>
-                          {selectedLang === 'ar' && <span className="lang-checkmark">✓</span>}
-                        </a>
-                        <a href="#" onClick={(e) => { e.preventDefault(); selectLanguage('hi'); }} className={`lang-dropdown-item ${selectedLang === 'hi' ? 'active' : ''}`}>
-                          <span className="flex items-center gap-3">
-                            <span className="lang-country-code">IN</span>
-                            <span className="lang-name">Hindi</span>
-                          </span>
-                          {selectedLang === 'hi' && <span className="lang-checkmark">✓</span>}
-                        </a>
-                        <a href="#" onClick={(e) => { e.preventDefault(); selectLanguage('ml'); }} className={`lang-dropdown-item ${selectedLang === 'ml' ? 'active' : ''}`}>
-                          <span className="flex items-center gap-3">
-                            <span className="lang-country-code">IN</span>
-                            <span className="lang-name">Malayalam</span>
-                          </span>
-                          {selectedLang === 'ml' && <span className="lang-checkmark">✓</span>}
-                        </a>
-                        <a href="#" onClick={(e) => { e.preventDefault(); selectLanguage('te'); }} className={`lang-dropdown-item ${selectedLang === 'te' ? 'active' : ''}`}>
-                          <span className="flex items-center gap-3">
-                            <span className="lang-country-code">IN</span>
-                            <span className="lang-name">Telugu</span>
-                          </span>
-                          {selectedLang === 'te' && <span className="lang-checkmark">✓</span>}
-                        </a>
-                      </div>
-                    )}
-                  </div>
-
-                  <Link to="/contact" onClick={handleLinkClick} className="jerush-cta-btn-premium whitespace-nowrap shrink-0">
-                    <span className="cta-icon-wrapper shrink-0">
-                      <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                        <line x1="16" y1="2" x2="16" y2="6"></line>
-                        <line x1="8" y1="2" x2="8" y2="6"></line>
-                        <line x1="3" y1="10" x2="21" y2="10"></line>
-                      </svg>
-                    </span>
-                    <span className="cta-text-wrapper whitespace-nowrap">Book Appointment</span>
-                  </Link>
-                </div>
-              </div>
-            </div>
+    {/* Right Content Panel */}
+    <div className="jerush-megamenu-content">
+      {/* Transformations Pane */}
+      <div className={`jerush-megamenu-pane ${galleryActiveTab === 'gallery-cases' ? 'active' : ''}`}>
+        <h4 className="jerush-pane-title">Before & After Results</h4>
+        <div className="jerush-grid-3cols">
+          <div className="jerush-grid-column">
+            <h5>Dentistry</h5>
+            <ul>
+              <li><Link to="/smile-transformations" onClick={handleLinkClick}>Smile Transformations</Link></li>
+            </ul>
           </div>
-        </header>
-      </div>
-
-      {/* Mobile Navigation Drawer Overlay */}
-      <div
-        className={`jerush-mobile-overlay ${isMobileMenuOpen ? 'active' : ''}`}
-        onClick={() => setIsMobileMenuOpen(false)}
-      ></div>
-
-      {/* Mobile Navigation Drawer Container - Apollo Style Drill-down Navigation */}
-      <div className={`jerush-mobile-drawer ${isMobileMenuOpen ? 'active' : ''}`}>
-        {/* Top Header Bar */}
-        <div className="flex items-center justify-between px-4 sm:px-5 py-3.5 border-b border-white/10 bg-[#071324]/95 backdrop-blur-xl sticky top-0 z-20 shrink-0">
-          {/* Logo - Enlarged for Prominence & Clarity */}
-          <Link to="/" onClick={handleLinkClick} className="flex items-center pl-0.5 shrink-0">
-            <img
-              src="/images/logo/jerush-logo.webp"
-              alt="Jerush Dentofacial Logo"
-              className="h-11 sm:h-12 w-auto object-contain brightness-0 invert transition-all"
-              onError={(e) => { e.target.style.display = 'none'; }}
-            />
-          </Link>
-
-          {/* Action Buttons Right - Phone & Close with generous spacing */}
-          <div className="flex items-center gap-3.5 sm:gap-4">
-            {/* Phone Call Button - Jerush Blue Gradient */}
-            <a
-              href="tel:+919489160055"
-              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-r from-brandSky via-[#198BC8] to-brandBlue text-white flex items-center justify-center shadow-[0_2px_10px_rgba(30,151,212,0.4)] hover:scale-105 active:scale-95 transition-transform shrink-0"
-              title="Call Jerush Hospital"
-              aria-label="Call Jerush Hospital"
-            >
-              <Phone className="w-4 h-4 text-white fill-white" />
-            </a>
-
-            {/* Close Button - X */}
-            <button
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white hover:text-brandSky active:scale-95 transition-all shrink-0"
-              aria-label="Close Navigation Drawer"
-            >
-              <X className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
-            </button>
+          <div className="jerush-grid-column">
+            <h5>Aesthetics</h5>
+            <ul>
+              <li><Link to="/cosmetic-resurfacing" onClick={handleLinkClick}>Cosmetic Resurfacing</Link></li>
+              <li><Link to="/hair-regrowth-results" onClick={handleLinkClick}>Hair Regrowth Results</Link></li>
+              <li><Link to="/body-contouring-cases" onClick={handleLinkClick}>Body Contouring Cases</Link></li>
+            </ul>
           </div>
         </div>
+      </div>
 
-        {/* Drawer Scrollable Body with Clean Drill-down Navigation */}
-        <div className="flex-1 overflow-y-auto px-5 sm:px-6 py-4 pb-16 bg-transparent text-left">
-          {/* Submenu "GO BACK" Bar with Jerush Accent */}
-          {currentScreen !== 'root' && (
-            <div className="pt-1 pb-3 mb-4 border-b border-white/10 flex items-center">
-              <button
-                onClick={popNav}
-                className="inline-flex items-center gap-2.5 text-brandSky hover:text-white transition-colors group cursor-pointer py-1"
-              >
-                <span className="w-7 h-7 rounded-full bg-white/10 border border-white/20 group-hover:bg-brandSky group-hover:border-brandSky flex items-center justify-center transition-all shadow-2xs">
-                  <ArrowLeft className="w-3.5 h-3.5 text-brandSky group-hover:text-white transition-colors stroke-[2.5]" />
-                </span>
-                <span className="font-headline font-bold text-xs sm:text-sm tracking-wider uppercase text-slate-200 group-hover:text-white transition-colors">
-                  GO BACK
-                </span>
-              </button>
+      {/* Media & Tours Pane */}
+      <div className={`jerush-megamenu-pane ${galleryActiveTab === 'gallery-media' ? 'active' : ''}`}>
+        <h4 className="jerush-pane-title">Tours & Outreach</h4>
+        <div className="jerush-grid-3cols">
+          <div className="jerush-grid-column">
+            <h5>Hospital Tours</h5>
+            <ul>
+              <li><Link to="/video-testimonials" onClick={handleLinkClick}>Clinic Video Tour</Link></li>
+              <li><Link to="/events" onClick={handleLinkClick}>Hospital Facilities</Link></li>
+            </ul>
+          </div>
+          <div className="jerush-grid-column">
+            <h5>Community</h5>
+            <ul>
+              <li><Link to="/camps" onClick={handleLinkClick}>Dental Health Camps</Link></li>
+              <li><Link to="/events" onClick={handleLinkClick}>Wellness Seminars</Link></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Patient Stories Pane */}
+      <div className={`jerush-megamenu-pane ${galleryActiveTab === 'gallery-reviews' ? 'active' : ''}`}>
+        <h4 className="jerush-pane-title">Patient Testimonials</h4>
+        <div className="jerush-grid-3cols">
+          <div className="jerush-grid-column">
+            <h5>Direct Reviews</h5>
+            <ul>
+              <li><Link to="/video-testimonials" onClick={handleLinkClick}>Video Testimonials</Link></li>
+              <li><Link to="/smile-transformations" onClick={handleLinkClick}>Photo Stories</Link></li>
+            </ul>
+          </div>
+          <div className="jerush-grid-column">
+            <h5>Third Party Feed</h5>
+            <ul>
+              <li><Link to="/reviews" onClick={handleLinkClick}>Google Reviews Feed</Link></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Right Sidebar: Quick Links */}
+    {renderQuickLinks()}
+  </div>
+</div>
+                    </li >
+
+                  </ul >
+                </nav >
+              </div >
+
+  {/* Desktop Center: Prominent Enlarged Logo */ }
+  < div className = "jerush-logo jerush-logo-center hidden xl:flex" >
+    <Link to="/" onClick={handleLinkClick} rel="home" className="flex items-center group">
+      <img
+        src="/images/logo/jerush-logo.webp"
+        alt="Jerush Logo"
+        className="jerush-logo-img group-hover:scale-105 transition-transform duration-300"
+        onError={(e) => {
+          e.target.style.display = 'none';
+          const fallback = document.getElementById('logo-text-fallback');
+          if (fallback) fallback.style.display = 'block';
+        }}
+      />
+      <span id="logo-text-fallback" style={{ display: 'none' }} className="jerush-logo-text">JERUSH DENTOFACE</span>
+    </Link>
+              </div >
+
+  {/* Desktop Right Wing (4 Tabs): Medical Insights, Careers, Jerush Events, Contact Us */ }
+  < div className = "hidden xl:flex jerush-nav-wing jerush-nav-wing-right" >
+    <nav className="jerush-nav" aria-label="Main Navigation Right Wing" onMouseLeave={handleMenuLeave}>
+      <ul className="jerush-nav-list">
+        <li className="jerush-nav-item" onMouseEnter={() => handleMenuEnter(null)}>
+          <NavLink to="/blog" className={({ isActive }) => `jerush-nav-link ${isActive ? 'active-trigger' : ''}`} onClick={handleLinkClick}>
+            Medical Insights
+          </NavLink>
+        </li>
+        <li className="jerush-nav-item" onMouseEnter={() => handleMenuEnter(null)}>
+          <NavLink to="/careers" className={({ isActive }) => `jerush-nav-link ${isActive ? 'active-trigger' : ''}`} onClick={handleLinkClick}>
+            Careers
+          </NavLink>
+        </li>
+        <li className="jerush-nav-item" onMouseEnter={() => handleMenuEnter(null)}>
+          <NavLink to="/events" state={{ reset: Date.now() }} className={({ isActive }) => `jerush-nav-link ${isActive ? 'active-trigger' : ''}`} onClick={handleLinkClick}>
+            Jerush Events
+          </NavLink>
+        </li>
+        <li className="jerush-nav-item" onMouseEnter={() => handleMenuEnter(null)}>
+          <NavLink to="/contact" className={({ isActive }) => `jerush-nav-link ${isActive ? 'active-trigger' : ''}`} onClick={handleLinkClick}>
+            Contact Us
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
+
+{/* Action Buttons: Language Selector Dropdown & Book Appointment CTA */ }
+<div className="jerush-nav-cta flex items-center gap-2 shrink-0">
+  {/* Language Selector Dropdown */}
+  <div className="jerush-lang-selector notranslate z-30 mr-1">
+    <button
+      id="langSelectBtn"
+      onClick={toggleLangDropdown}
+      aria-haspopup="true"
+      aria-expanded={langDropdownOpen}
+    >
+      <span className="flex items-center gap-0.5">
+        <span className="text-[10px] text-slate-400 font-semibold lowercase">{langRegions[selectedLang]}</span>
+        <span className="font-bold uppercase ml-0.5">{langLabels[selectedLang]}</span>
+      </span>
+      <svg className="arrow-icon" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+      </svg>
+    </button>
+
+    {langDropdownOpen && (
+      <div id="langDropdown" className="block">
+        <a href="#" onClick={(e) => { e.preventDefault(); selectLanguage('en'); }} className={`lang-dropdown-item ${selectedLang === 'en' ? 'active' : ''}`}>
+          <span className="flex items-center gap-3">
+            <span className="lang-country-code">US</span>
+            <span className="lang-name">English</span>
+          </span>
+          {selectedLang === 'en' && <span className="lang-checkmark">✓</span>}
+        </a>
+        <a href="#" onClick={(e) => { e.preventDefault(); selectLanguage('ta'); }} className={`lang-dropdown-item ${selectedLang === 'ta' ? 'active' : ''}`}>
+          <span className="flex items-center gap-3">
+            <span className="lang-country-code">IN</span>
+            <span className="lang-name">Tamil</span>
+          </span>
+          {selectedLang === 'ta' && <span className="lang-checkmark">✓</span>}
+        </a>
+        <a href="#" onClick={(e) => { e.preventDefault(); selectLanguage('ar'); }} className={`lang-dropdown-item ${selectedLang === 'ar' ? 'active' : ''}`}>
+          <span className="flex items-center gap-3">
+            <span className="lang-country-code">AE</span>
+            <span className="lang-name">Arabic</span>
+          </span>
+          {selectedLang === 'ar' && <span className="lang-checkmark">✓</span>}
+        </a>
+        <a href="#" onClick={(e) => { e.preventDefault(); selectLanguage('hi'); }} className={`lang-dropdown-item ${selectedLang === 'hi' ? 'active' : ''}`}>
+          <span className="flex items-center gap-3">
+            <span className="lang-country-code">IN</span>
+            <span className="lang-name">Hindi</span>
+          </span>
+          {selectedLang === 'hi' && <span className="lang-checkmark">✓</span>}
+        </a>
+        <a href="#" onClick={(e) => { e.preventDefault(); selectLanguage('ml'); }} className={`lang-dropdown-item ${selectedLang === 'ml' ? 'active' : ''}`}>
+          <span className="flex items-center gap-3">
+            <span className="lang-country-code">IN</span>
+            <span className="lang-name">Malayalam</span>
+          </span>
+          {selectedLang === 'ml' && <span className="lang-checkmark">✓</span>}
+        </a>
+        <a href="#" onClick={(e) => { e.preventDefault(); selectLanguage('te'); }} className={`lang-dropdown-item ${selectedLang === 'te' ? 'active' : ''}`}>
+          <span className="flex items-center gap-3">
+            <span className="lang-country-code">IN</span>
+            <span className="lang-name">Telugu</span>
+          </span>
+          {selectedLang === 'te' && <span className="lang-checkmark">✓</span>}
+        </a>
+      </div>
+    )}
+  </div>
+
+  <Link to="/contact" onClick={handleLinkClick} className="jerush-cta-btn-premium whitespace-nowrap shrink-0">
+    <span className="cta-icon-wrapper shrink-0">
+      <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+    </span>
+    <span className="cta-text-wrapper whitespace-nowrap">Book Appointment</span>
+  </Link>
+</div>
+              </div >
+            </div >
+          </div >
+        </header >
+      </div >
+
+  {/* Mobile Navigation Drawer Overlay */ }
+  < div
+className = {`jerush-mobile-overlay ${isMobileMenuOpen ? 'active' : ''}`}
+onClick = {() => setIsMobileMenuOpen(false)}
+      ></div >
+
+  {/* Mobile Navigation Drawer Container - Apollo Style Drill-down Navigation */ }
+  < div className = {`jerush-mobile-drawer ${isMobileMenuOpen ? 'active' : ''}`}>
+    {/* Top Header Bar */ }
+    < div className = "flex items-center justify-between px-4 sm:px-5 py-3.5 border-b border-white/10 bg-[#071324]/95 backdrop-blur-xl sticky top-0 z-20 shrink-0" >
+      {/* Logo - Enlarged for Prominence & Clarity */ }
+      < Link to = "/" onClick = { handleLinkClick } className = "flex items-center pl-0.5 shrink-0" >
+        <img
+          src="/images/logo/jerush-logo.webp"
+          alt="Jerush Dentofacial Logo"
+          className="h-11 sm:h-12 w-auto object-contain brightness-0 invert transition-all"
+          onError={(e) => { e.target.style.display = 'none'; }}
+        />
+          </Link >
+
+  {/* Action Buttons Right - Phone & Close with generous spacing */ }
+  < div className = "flex items-center gap-3.5 sm:gap-4" >
+    {/* Phone Call Button - Jerush Blue Gradient */ }
+    < a
+href = "tel:+919489160055"
+className = "w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-r from-brandSky via-[#198BC8] to-brandBlue text-white flex items-center justify-center shadow-[0_2px_10px_rgba(30,151,212,0.4)] hover:scale-105 active:scale-95 transition-transform shrink-0"
+title = "Call Jerush Hospital"
+aria - label="Call Jerush Hospital"
+  >
+  <Phone className="w-4 h-4 text-white fill-white" />
+            </a >
+
+  {/* Close Button - X */ }
+  < button
+onClick = {() => setIsMobileMenuOpen(false)}
+className = "w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white hover:text-brandSky active:scale-95 transition-all shrink-0"
+aria - label="Close Navigation Drawer"
+  >
+  <X className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
+            </button >
+          </div >
+        </div >
+
+  {/* Drawer Scrollable Body with Clean Drill-down Navigation */ }
+  < div className = "flex-1 overflow-y-auto px-5 sm:px-6 py-4 pb-16 bg-transparent text-left" >
+    {/* Submenu "GO BACK" Bar with Jerush Accent */ }
+{
+  currentScreen !== 'root' && (
+    <div className="pt-1 pb-3 mb-4 border-b border-white/10 flex items-center">
+      <button
+        onClick={popNav}
+        className="inline-flex items-center gap-2.5 text-brandSky hover:text-white transition-colors group cursor-pointer py-1"
+      >
+        <span className="w-7 h-7 rounded-full bg-white/10 border border-white/20 group-hover:bg-brandSky group-hover:border-brandSky flex items-center justify-center transition-all shadow-2xs">
+          <ArrowLeft className="w-3.5 h-3.5 text-brandSky group-hover:text-white transition-colors stroke-[2.5]" />
+        </span>
+        <span className="font-headline font-bold text-xs sm:text-sm tracking-wider uppercase text-slate-200 group-hover:text-white transition-colors">
+          GO BACK
+        </span>
+      </button>
+    </div>
+  )
+}
+
+{/* ───────── SCREEN 1: ROOT MENU (Jerush Signature Design) ───────── */ }
+{
+  currentScreen === 'root' && (
+    <div className="jerush-mobile-screen">
+      {/* Primary Navigation Items with Jerush Chevrons */}
+      <div className="space-y-1">
+        <button
+          onClick={() => pushNav('about')}
+          className="w-full flex items-center justify-between py-3.5 sm:py-4 text-left font-headline font-bold text-[15px] sm:text-base tracking-wide text-white hover:text-brandSky uppercase group transition-colors"
+        >
+          <span className="group-hover:translate-x-1 transition-transform">ABOUT JERUSH</span>
+          <span className="w-7 h-7 rounded-full bg-white/10 border border-white/15 group-hover:bg-brandSky group-hover:border-brandSky flex items-center justify-center transition-all shadow-2xs">
+            <ChevronRight className="w-3.5 h-3.5 text-brandSky group-hover:text-white transition-colors" />
+          </span>
+        </button>
+
+        <button
+          onClick={() => pushNav('centres')}
+          className="w-full flex items-center justify-between py-3.5 sm:py-4 text-left font-headline font-bold text-[15px] sm:text-base tracking-wide text-white hover:text-brandSky uppercase group transition-colors"
+        >
+          <span className="group-hover:translate-x-1 transition-transform">FIND A CENTRE</span>
+          <span className="w-7 h-7 rounded-full bg-white/10 border border-white/15 group-hover:bg-brandSky group-hover:border-brandSky flex items-center justify-center transition-all shadow-2xs">
+            <ChevronRight className="w-3.5 h-3.5 text-brandSky group-hover:text-white transition-colors" />
+          </span>
+        </button>
+
+        <button
+          onClick={() => pushNav('services')}
+          className="w-full flex items-center justify-between py-3.5 sm:py-4 text-left font-headline font-bold text-[15px] sm:text-base tracking-wide text-white hover:text-brandSky uppercase group transition-colors"
+        >
+          <span className="group-hover:translate-x-1 transition-transform">MEDICAL SERVICES</span>
+          <span className="w-7 h-7 rounded-full bg-white/10 border border-white/15 group-hover:bg-brandSky group-hover:border-brandSky flex items-center justify-center transition-all shadow-2xs">
+            <ChevronRight className="w-3.5 h-3.5 text-brandSky group-hover:text-white transition-colors" />
+          </span>
+        </button>
+
+        <button
+          onClick={() => pushNav('stories')}
+          className="w-full flex items-center justify-between py-3.5 sm:py-4 text-left font-headline font-bold text-[15px] sm:text-base tracking-wide text-white hover:text-brandSky uppercase group transition-colors"
+        >
+          <span className="group-hover:translate-x-1 transition-transform">SMILE STORIES & RESULTS</span>
+          <span className="w-7 h-7 rounded-full bg-white/10 border border-white/15 group-hover:bg-brandSky group-hover:border-brandSky flex items-center justify-center transition-all shadow-2xs">
+            <ChevronRight className="w-3.5 h-3.5 text-brandSky group-hover:text-white transition-colors" />
+          </span>
+        </button>
+      </div>
+
+      {/* Direct Action Links */}
+      <div className="mt-3 space-y-0.5 border-t border-white/10 pt-3">
+        <Link
+          to="/doctors"
+          onClick={handleLinkClick}
+          className="block py-2.5 text-[14.5px] font-medium text-slate-300 hover:text-white hover:translate-x-1 transition-all"
+        >
+          Meet Our Doctors
+        </Link>
+        <Link
+          to="/meet-our-team"
+          onClick={handleLinkClick}
+          className="block py-2.5 text-[14.5px] font-medium text-slate-300 hover:text-white hover:translate-x-1 transition-all"
+        >
+          Clinical Team & Specialists
+        </Link>
+        <Link
+          to="/blog"
+          onClick={handleLinkClick}
+          className="block py-2.5 text-[14.5px] font-medium text-slate-300 hover:text-white hover:translate-x-1 transition-all"
+        >
+          Medical Insights & Blog
+        </Link>
+        <Link
+          to="/careers"
+          onClick={handleLinkClick}
+          className="block py-2.5 text-[14.5px] font-medium text-slate-300 hover:text-white hover:translate-x-1 transition-all"
+        >
+          Careers at Jerush
+        </Link>
+        <Link
+          to="/contact"
+          onClick={handleLinkClick}
+          className="block py-2.5 text-[14.5px] font-medium text-slate-300 hover:text-white hover:translate-x-1 transition-all"
+        >
+          Contact Us
+        </Link>
+      </div>
+
+      {/* Quick Helplines & Support - Jerush Luxury Glassmorphic Design */}
+      <div className="mt-8 mb-4">
+        <div className="flex items-center justify-between mb-3 px-0.5">
+          <div className="flex items-center gap-2.5">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brandSky opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-brandSky shadow-[0_0_8px_rgba(30,151,212,0.8)]"></span>
+            </span>
+            <h3 className="font-headline font-black text-[13px] sm:text-[14px] text-white uppercase tracking-[0.14em]">
+              Quick Helplines & Support
+            </h3>
+          </div>
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-[10px] font-bold text-emerald-300 tracking-wider uppercase">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            24/7 Live
+          </span>
+        </div>
+
+        <div className="space-y-3">
+          {/* Card 1: Emergency & Apex Hospital */}
+          <a
+            href="tel:+919489160055"
+            className="relative block overflow-hidden rounded-2xl bg-gradient-to-r from-slate-900/90 via-[#141b2d]/85 to-slate-900/90 border border-white/10 hover:border-rose-500/50 p-3.5 sm:p-4 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.35)] hover:shadow-[0_8px_25px_rgba(244,63,94,0.22)] transition-all duration-300 group"
+          >
+            {/* Ambient glow in corner */}
+            <div className="pointer-events-none absolute -right-6 -bottom-6 w-24 h-24 bg-rose-500/10 rounded-full blur-2xl group-hover:bg-rose-500/20 group-hover:scale-125 transition-all duration-500"></div>
+
+            {/* Top Metadata Pill Row */}
+            <div className="flex items-center justify-between mb-2.5">
+              <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-rose-500/15 border border-rose-500/30 text-[10px] font-extrabold uppercase tracking-wider text-rose-300">
+                <span className="w-1.5 h-1.5 rounded-full bg-rose-400 animate-pulse"></span>
+                Emergency & Apex Hospital
+              </span>
+              <span className="text-[10px] font-semibold text-rose-200/70 tracking-wide">
+                24/7 Trauma
+              </span>
             </div>
-          )}
 
-          {/* ───────── SCREEN 1: ROOT MENU (Jerush Signature Design) ───────── */}
-          {currentScreen === 'root' && (
-            <div className="jerush-mobile-screen">
-              {/* Primary Navigation Items with Jerush Chevrons */}
-              <div className="space-y-1">
-                <button
-                  onClick={() => pushNav('about')}
-                  className="w-full flex items-center justify-between py-3.5 sm:py-4 text-left font-headline font-bold text-[15px] sm:text-base tracking-wide text-white hover:text-brandSky uppercase group transition-colors"
-                >
-                  <span className="group-hover:translate-x-1 transition-transform">ABOUT JERUSH</span>
-                  <span className="w-7 h-7 rounded-full bg-white/10 border border-white/15 group-hover:bg-brandSky group-hover:border-brandSky flex items-center justify-center transition-all shadow-2xs">
-                    <ChevronRight className="w-3.5 h-3.5 text-brandSky group-hover:text-white transition-colors" />
-                  </span>
-                </button>
-
-                <button
-                  onClick={() => pushNav('centres')}
-                  className="w-full flex items-center justify-between py-3.5 sm:py-4 text-left font-headline font-bold text-[15px] sm:text-base tracking-wide text-white hover:text-brandSky uppercase group transition-colors"
-                >
-                  <span className="group-hover:translate-x-1 transition-transform">FIND A CENTRE</span>
-                  <span className="w-7 h-7 rounded-full bg-white/10 border border-white/15 group-hover:bg-brandSky group-hover:border-brandSky flex items-center justify-center transition-all shadow-2xs">
-                    <ChevronRight className="w-3.5 h-3.5 text-brandSky group-hover:text-white transition-colors" />
-                  </span>
-                </button>
-
-                <button
-                  onClick={() => pushNav('services')}
-                  className="w-full flex items-center justify-between py-3.5 sm:py-4 text-left font-headline font-bold text-[15px] sm:text-base tracking-wide text-white hover:text-brandSky uppercase group transition-colors"
-                >
-                  <span className="group-hover:translate-x-1 transition-transform">MEDICAL SERVICES</span>
-                  <span className="w-7 h-7 rounded-full bg-white/10 border border-white/15 group-hover:bg-brandSky group-hover:border-brandSky flex items-center justify-center transition-all shadow-2xs">
-                    <ChevronRight className="w-3.5 h-3.5 text-brandSky group-hover:text-white transition-colors" />
-                  </span>
-                </button>
-
-                <button
-                  onClick={() => pushNav('stories')}
-                  className="w-full flex items-center justify-between py-3.5 sm:py-4 text-left font-headline font-bold text-[15px] sm:text-base tracking-wide text-white hover:text-brandSky uppercase group transition-colors"
-                >
-                  <span className="group-hover:translate-x-1 transition-transform">SMILE STORIES & RESULTS</span>
-                  <span className="w-7 h-7 rounded-full bg-white/10 border border-white/15 group-hover:bg-brandSky group-hover:border-brandSky flex items-center justify-center transition-all shadow-2xs">
-                    <ChevronRight className="w-3.5 h-3.5 text-brandSky group-hover:text-white transition-colors" />
-                  </span>
-                </button>
+            {/* Content Row */}
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-rose-500 via-rose-600 to-red-700 text-white flex items-center justify-center shrink-0 shadow-[0_4px_14px_rgba(244,63,94,0.4)] group-hover:scale-105 group-hover:shadow-[0_6px_18px_rgba(244,63,94,0.55)] transition-all">
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-white fill-white" />
               </div>
-
-              {/* Direct Action Links */}
-              <div className="mt-3 space-y-0.5 border-t border-white/10 pt-3">
-                <Link
-                  to="/doctors"
-                  onClick={handleLinkClick}
-                  className="block py-2.5 text-[14.5px] font-medium text-slate-300 hover:text-white hover:translate-x-1 transition-all"
-                >
-                  Meet Our Doctors
-                </Link>
-                <Link
-                  to="/meet-our-team"
-                  onClick={handleLinkClick}
-                  className="block py-2.5 text-[14.5px] font-medium text-slate-300 hover:text-white hover:translate-x-1 transition-all"
-                >
-                  Clinical Team & Specialists
-                </Link>
-                <Link
-                  to="/blog"
-                  onClick={handleLinkClick}
-                  className="block py-2.5 text-[14.5px] font-medium text-slate-300 hover:text-white hover:translate-x-1 transition-all"
-                >
-                  Medical Insights & Blog
-                </Link>
-                <Link
-                  to="/careers"
-                  onClick={handleLinkClick}
-                  className="block py-2.5 text-[14.5px] font-medium text-slate-300 hover:text-white hover:translate-x-1 transition-all"
-                >
-                  Careers at Jerush
-                </Link>
-                <Link
-                  to="/contact"
-                  onClick={handleLinkClick}
-                  className="block py-2.5 text-[14.5px] font-medium text-slate-300 hover:text-white hover:translate-x-1 transition-all"
-                >
-                  Contact Us
-                </Link>
-              </div>
-
-              {/* Quick Helplines & Support - Jerush Luxury Glassmorphic Design */}
-              <div className="mt-8 mb-4">
-                <div className="flex items-center justify-between mb-3 px-0.5">
-                  <div className="flex items-center gap-2.5">
-                    <span className="relative flex h-2.5 w-2.5">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brandSky opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-brandSky shadow-[0_0_8px_rgba(30,151,212,0.8)]"></span>
-                    </span>
-                    <h3 className="font-headline font-black text-[13px] sm:text-[14px] text-white uppercase tracking-[0.14em]">
-                      Quick Helplines & Support
-                    </h3>
-                  </div>
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-[10px] font-bold text-emerald-300 tracking-wider uppercase">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                    24/7 Live
-                  </span>
+              <div className="flex-1 min-w-0">
+                <div className="text-base sm:text-lg font-black text-white group-hover:text-rose-200 transition-colors tracking-tight font-headline leading-tight">
+                  +91 94891 60055
                 </div>
-
-                <div className="space-y-3">
-                  {/* Card 1: Emergency & Apex Hospital */}
-                  <a
-                    href="tel:+919489160055"
-                    className="relative block overflow-hidden rounded-2xl bg-gradient-to-r from-slate-900/90 via-[#141b2d]/85 to-slate-900/90 border border-white/10 hover:border-rose-500/50 p-3.5 sm:p-4 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.35)] hover:shadow-[0_8px_25px_rgba(244,63,94,0.22)] transition-all duration-300 group"
-                  >
-                    {/* Ambient glow in corner */}
-                    <div className="pointer-events-none absolute -right-6 -bottom-6 w-24 h-24 bg-rose-500/10 rounded-full blur-2xl group-hover:bg-rose-500/20 group-hover:scale-125 transition-all duration-500"></div>
-
-                    {/* Top Metadata Pill Row */}
-                    <div className="flex items-center justify-between mb-2.5">
-                      <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-rose-500/15 border border-rose-500/30 text-[10px] font-extrabold uppercase tracking-wider text-rose-300">
-                        <span className="w-1.5 h-1.5 rounded-full bg-rose-400 animate-pulse"></span>
-                        Emergency & Apex Hospital
-                      </span>
-                      <span className="text-[10px] font-semibold text-rose-200/70 tracking-wide">
-                        24/7 Trauma
-                      </span>
-                    </div>
-
-                    {/* Content Row */}
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-rose-500 via-rose-600 to-red-700 text-white flex items-center justify-center shrink-0 shadow-[0_4px_14px_rgba(244,63,94,0.4)] group-hover:scale-105 group-hover:shadow-[0_6px_18px_rgba(244,63,94,0.55)] transition-all">
-                        <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-white fill-white" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="text-base sm:text-lg font-black text-white group-hover:text-rose-200 transition-colors tracking-tight font-headline leading-tight">
-                          +91 94891 60055
-                        </div>
-                        <div className="text-[11px] sm:text-[11.5px] text-slate-400 group-hover:text-slate-300 transition-colors truncate mt-0.5">
-                          Thuckalay Apex Facility • 24/7 Trauma Care
-                        </div>
-                      </div>
-                      <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/[0.06] border border-white/10 group-hover:bg-rose-600 group-hover:border-rose-400 flex items-center justify-center text-slate-300 group-hover:text-white transition-all shrink-0 shadow-inner group-hover:scale-105">
-                        <PhoneCall className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                      </div>
-                    </div>
-                  </a>
-
-                  {/* Card 2: Regional Centres Helpline */}
-                  <a
-                    href="tel:+919489160011"
-                    className="relative block overflow-hidden rounded-2xl bg-gradient-to-r from-slate-900/90 via-[#0d2242]/85 to-slate-900/90 border border-white/10 hover:border-brandSky/60 p-3.5 sm:p-4 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.35)] hover:shadow-[0_8px_25px_rgba(30,151,212,0.25)] transition-all duration-300 group"
-                  >
-                    {/* Ambient glow in corner */}
-                    <div className="pointer-events-none absolute -right-6 -bottom-6 w-24 h-24 bg-brandSky/10 rounded-full blur-2xl group-hover:bg-brandSky/20 group-hover:scale-125 transition-all duration-500"></div>
-
-                    {/* Top Metadata Pill Row */}
-                    <div className="flex items-center justify-between mb-2.5">
-                      <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-sky-500/15 border border-sky-400/30 text-[10px] font-extrabold uppercase tracking-wider text-sky-300">
-                        <Building2 className="w-3 h-3 text-sky-300" />
-                        Regional Centres Helpline
-                      </span>
-                      <span className="text-[10px] font-semibold text-sky-200/70 tracking-wide">
-                        Trichy & Chennai
-                      </span>
-                    </div>
-
-                    {/* Content Row */}
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-brandSky via-[#198BC8] to-brandBlue text-white flex items-center justify-center shrink-0 shadow-[0_4px_14px_rgba(30,151,212,0.4)] group-hover:scale-105 group-hover:shadow-[0_6px_18px_rgba(30,151,212,0.55)] transition-all">
-                        <Building2 className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="text-base sm:text-lg font-black text-white group-hover:text-brandSky transition-colors tracking-tight font-headline leading-tight">
-                          +91 94891 60011
-                        </div>
-                        <div className="text-[11px] sm:text-[11.5px] text-slate-400 group-hover:text-slate-300 transition-colors truncate mt-0.5">
-                          Trichy & Chennai Regional Centres
-                        </div>
-                      </div>
-                      <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/[0.06] border border-white/10 group-hover:bg-brandSky group-hover:border-sky-300 flex items-center justify-center text-slate-300 group-hover:text-white transition-all shrink-0 shadow-inner group-hover:scale-105">
-                        <PhoneCall className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                      </div>
-                    </div>
-                  </a>
-
-                  {/* Card 3: Dubai Liaison & International Patients */}
-                  <a
-                    href="tel:+971507253105"
-                    className="relative block overflow-hidden rounded-2xl bg-gradient-to-r from-slate-900/90 via-[#1b1338]/85 to-slate-900/90 border border-white/10 hover:border-purple-400/60 p-3.5 sm:p-4 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.35)] hover:shadow-[0_8px_25px_rgba(168,85,247,0.25)] transition-all duration-300 group"
-                  >
-                    {/* Ambient glow in corner */}
-                    <div className="pointer-events-none absolute -right-6 -bottom-6 w-24 h-24 bg-purple-500/10 rounded-full blur-2xl group-hover:bg-purple-500/20 group-hover:scale-125 transition-all duration-500"></div>
-
-                    {/* Top Metadata Pill Row */}
-                    <div className="flex items-center justify-between mb-2.5">
-                      <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-purple-500/15 border border-purple-400/30 text-[10px] font-extrabold uppercase tracking-wider text-purple-300">
-                        <Globe className="w-3 h-3 text-purple-300" />
-                        International Patients
-                      </span>
-                      <span className="text-[9.5px] font-black uppercase px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-200 border border-purple-400/30 tracking-wider flex items-center gap-1">
-                        🇦🇪 Dubai Desk
-                      </span>
-                    </div>
-
-                    {/* Content Row */}
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-purple-600 via-indigo-600 to-purple-800 text-white flex items-center justify-center shrink-0 shadow-[0_4px_14px_rgba(147,51,234,0.4)] group-hover:scale-105 group-hover:shadow-[0_6px_18px_rgba(147,51,234,0.55)] transition-all">
-                        <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="text-base sm:text-lg font-black text-white group-hover:text-purple-300 transition-colors tracking-tight font-headline leading-tight">
-                          +971 50725 3105
-                        </div>
-                        <div className="text-[11px] sm:text-[11.5px] text-slate-400 group-hover:text-slate-300 transition-colors truncate mt-0.5">
-                          Dubai Healthcare City Liaison Office
-                        </div>
-                      </div>
-                      <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/[0.06] border border-white/10 group-hover:bg-purple-600 group-hover:border-purple-300 flex items-center justify-center text-slate-300 group-hover:text-white transition-all shrink-0 shadow-inner group-hover:scale-105">
-                        <PhoneCall className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                      </div>
-                    </div>
-                  </a>
+                <div className="text-[11px] sm:text-[11.5px] text-slate-400 group-hover:text-slate-300 transition-colors truncate mt-0.5">
+                  Thuckalay Apex Facility • 24/7 Trauma Care
                 </div>
               </div>
-
-              {/* Primary Book Appointment CTA Button - High-Impact Glowing Radiant Pill */}
-              <div className="mt-6 mb-2">
-                <div className="relative group">
-                  {/* Atmospheric neon aura glow */}
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-brandSky via-[#198BC8] to-brandBlue rounded-2xl blur-md opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-                  <Link
-                    to="/contact"
-                    onClick={handleLinkClick}
-                    className="relative w-full py-3.5 px-4 rounded-2xl bg-gradient-to-r from-brandSky via-[#198BC8] to-brandBlue hover:from-[#25a9ea] hover:via-[#1da0e0] hover:to-[#2853A4] text-white flex items-center justify-between border border-white/25 shadow-[0_4px_22px_rgba(30,151,212,0.45)] hover:shadow-[0_6px_28px_rgba(30,151,212,0.65)] active:scale-[0.98] transition-all overflow-hidden"
-                  >
-                    {/* Shimmer sweep effect */}
-                    <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full duration-1000 bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform ease-out pointer-events-none"></div>
-
-                    <div className="flex items-center gap-3 relative z-10">
-                      <span className="w-10 h-10 rounded-xl bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center shrink-0 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4)] group-hover:scale-105 group-hover:rotate-3 transition-transform">
-                        <Calendar className="w-5 h-5 text-white" />
-                      </span>
-                      <div className="text-left">
-                        <span className="block font-headline font-black text-[14.5px] sm:text-[15.5px] tracking-wider uppercase text-white drop-shadow-sm leading-tight">
-                          Book Appointment
-                        </span>
-                        <span className="block text-[10.5px] font-medium text-sky-100/90 tracking-wide mt-0.5">
-                          Instant Online Slot Confirmation
-                        </span>
-                      </div>
-                    </div>
-
-                    <span className="relative z-10 w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm border border-white/25 flex items-center justify-center group-hover:bg-white group-hover:text-brandBlue text-white transition-all shrink-0 group-hover:translate-x-0.5 shadow-sm">
-                      <ChevronRight className="w-4 h-4 stroke-[2.5]" />
-                    </span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* ───────── SCREEN 2: SUBMENU ABOUT JERUSH (Matching Apollo Screenshot 2) ───────── */}
-          {currentScreen === 'about' && (
-            <div className="jerush-mobile-screen space-y-1">
-              <button
-                onClick={() => pushNav('about-story')}
-                className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
-              >
-                <span>The Jerush Story</span>
-                <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
-              </button>
-
-              <button
-                onClick={() => pushNav('about-leadership')}
-                className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
-              >
-                <span>Leadership</span>
-                <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
-              </button>
-
-              <button
-                onClick={() => pushNav('about-team')}
-                className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
-              >
-                <span>Doctors & Specialists</span>
-                <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
-              </button>
-
-              <Link
-                to="/about/milestones-legacy"
-                onClick={handleLinkClick}
-                className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
-              >
-                <span>Milestones & Legacy</span>
-                <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
-              </Link>
-
-              <Link
-                to="/technologies"
-                onClick={handleLinkClick}
-                className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
-              >
-                <span>Advanced Technologies</span>
-                <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
-              </Link>
-
-              <Link
-                to="/about/clinical-excellence"
-                onClick={handleLinkClick}
-                className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
-              >
-                <span>Clinical Excellence</span>
-                <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
-              </Link>
-
-              <Link
-                to="/about/ethical-healthcare"
-                onClick={handleLinkClick}
-                className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
-              >
-                <span>Ethical Healthcare</span>
-                <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
-              </Link>
-
-              <Link
-                to="/editorial-standards"
-                onClick={handleLinkClick}
-                className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
-              >
-                <span>Editorial Standards</span>
-                <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
-              </Link>
-
-              <Link
-                to="/reviews"
-                onClick={handleLinkClick}
-                className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
-              >
-                <span>Patient Testimonials & Reviews</span>
-                <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
-              </Link>
-            </div>
-          )}
-
-          {/* ───────── SCREEN 3: THE JERUSH STORY (Matching Apollo Screenshot 3 - Clean 2-Column Grid!) ───────── */}
-          {currentScreen === 'about-story' && (
-            <div className="jerush-mobile-screen py-2">
-              <div className="grid grid-cols-2 gap-x-6 gap-y-4">
-                <Link to="/about" onClick={handleLinkClick} className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
-                  Overview
-                </Link>
-                <Link to="/about" onClick={handleLinkClick} className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
-                  Vision & Mission
-                </Link>
-
-                <Link to="/about" onClick={handleLinkClick} className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
-                  Our History
-                </Link>
-                <Link to="/about/milestones-legacy" onClick={handleLinkClick} className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
-                  Milestones & Legacy
-                </Link>
-
-                <Link to="/about/clinical-excellence" onClick={handleLinkClick} className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
-                  Clinical Excellence
-                </Link>
-                <Link to="/about/ethical-healthcare" onClick={handleLinkClick} className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
-                  Ethical Healthcare
-                </Link>
-
-                <Link to="/about" onClick={handleLinkClick} className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
-                  Hospital Facilities
-                </Link>
-                <Link to="/technologies" onClick={handleLinkClick} className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
-                  Technologies
-                </Link>
-                <Link to="/editorial-standards" onClick={handleLinkClick} className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
-                  Editorial Standards
-                </Link>
-
-                <Link to="/reviews" onClick={handleLinkClick} className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
-                  Patient Reviews
-                </Link>
-                <Link to="/careers" onClick={handleLinkClick} className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
-                  Careers
-                </Link>
+              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/[0.06] border border-white/10 group-hover:bg-rose-600 group-hover:border-rose-400 flex items-center justify-center text-slate-300 group-hover:text-white transition-all shrink-0 shadow-inner group-hover:scale-105">
+                <PhoneCall className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </div>
             </div>
-          )}
+          </a>
 
-          {/* ───────── SCREEN: LEADERSHIP (Clean 2-Column Grid!) ───────── */}
-          {currentScreen === 'about-leadership' && (
-            <div className="jerush-mobile-screen py-2">
-              <div className="grid grid-cols-2 gap-x-6 gap-y-4">
-                <Link
-                  to="/leadership/dr-a-bladbin-chairman-founder"
-                  onClick={handleLinkClick}
-                  className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug"
-                >
-                  <div>Dr. A. Bladbin</div>
-                  <div className="text-xs text-brandSky font-medium mt-0.5">Chairman & Founder</div>
-                </Link>
+          {/* Card 2: Regional Centres Helpline */}
+          <a
+            href="tel:+919489160011"
+            className="relative block overflow-hidden rounded-2xl bg-gradient-to-r from-slate-900/90 via-[#0d2242]/85 to-slate-900/90 border border-white/10 hover:border-brandSky/60 p-3.5 sm:p-4 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.35)] hover:shadow-[0_8px_25px_rgba(30,151,212,0.25)] transition-all duration-300 group"
+          >
+            {/* Ambient glow in corner */}
+            <div className="pointer-events-none absolute -right-6 -bottom-6 w-24 h-24 bg-brandSky/10 rounded-full blur-2xl group-hover:bg-brandSky/20 group-hover:scale-125 transition-all duration-500"></div>
 
-                <Link
-                  to="/leadership/dr-c-binila-bladbin-managing-director"
-                  onClick={handleLinkClick}
-                  className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug"
-                >
-                  <div>Dr. C. Binila Bladbin</div>
-                  <div className="text-xs text-brandSky font-medium mt-0.5">Managing Director</div>
-                </Link>
+            {/* Top Metadata Pill Row */}
+            <div className="flex items-center justify-between mb-2.5">
+              <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-sky-500/15 border border-sky-400/30 text-[10px] font-extrabold uppercase tracking-wider text-sky-300">
+                <Building2 className="w-3 h-3 text-sky-300" />
+                Regional Centres Helpline
+              </span>
+              <span className="text-[10px] font-semibold text-sky-200/70 tracking-wide">
+                Trichy & Chennai
+              </span>
+            </div>
 
-                <Link
-                  to="/leadership/dr-a-prabin-chief-executive-officer"
-                  onClick={handleLinkClick}
-                  className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug"
-                >
-                  <div>Dr. A. Prabin</div>
-                  <div className="text-xs text-brandSky font-medium mt-0.5">Chief Executive Officer</div>
-                </Link>
-
-                <Link
-                  to="/meet-our-team"
-                  onClick={handleLinkClick}
-                  className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug"
-                >
-                  <div>Specialist Faculty</div>
-                  <div className="text-xs text-brandSky font-medium mt-0.5">Clinical Leadership</div>
-                </Link>
+            {/* Content Row */}
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-brandSky via-[#198BC8] to-brandBlue text-white flex items-center justify-center shrink-0 shadow-[0_4px_14px_rgba(30,151,212,0.4)] group-hover:scale-105 group-hover:shadow-[0_6px_18px_rgba(30,151,212,0.55)] transition-all">
+                <Building2 className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
               </div>
-
-              <div className="mt-6 pt-3.5 border-t border-white/10">
-                <Link
-                  to="/meet-our-team"
-                  onClick={handleLinkClick}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-brandSky hover:text-white uppercase tracking-wider transition-colors"
-                >
-                  <span>Meet Complete Leadership & Faculty</span>
-                  <ChevronRight className="w-3.5 h-3.5" />
-                </Link>
+              <div className="flex-1 min-w-0">
+                <div className="text-base sm:text-lg font-black text-white group-hover:text-brandSky transition-colors tracking-tight font-headline leading-tight">
+                  +91 94891 60011
+                </div>
+                <div className="text-[11px] sm:text-[11.5px] text-slate-400 group-hover:text-slate-300 transition-colors truncate mt-0.5">
+                  Trichy & Chennai Regional Centres
+                </div>
+              </div>
+              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/[0.06] border border-white/10 group-hover:bg-brandSky group-hover:border-sky-300 flex items-center justify-center text-slate-300 group-hover:text-white transition-all shrink-0 shadow-inner group-hover:scale-105">
+                <PhoneCall className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </div>
             </div>
-          )}
+          </a>
 
-          {/* ───────── SCREEN: DOCTORS & SPECIALISTS (Clean 2-Column Grid!) ───────── */}
-          {currentScreen === 'about-team' && (
-            <div className="jerush-mobile-screen py-2">
-              <div className="grid grid-cols-2 gap-x-6 gap-y-4">
-                <Link
-                  to="/doctors"
-                  onClick={handleLinkClick}
-                  className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug"
-                >
-                  <div>Senior Surgeons</div>
-                  <div className="text-xs text-slate-400 mt-0.5">Maxillofacial & Dental</div>
-                </Link>
+          {/* Card 3: Dubai Liaison & International Patients */}
+          <a
+            href="tel:+971507253105"
+            className="relative block overflow-hidden rounded-2xl bg-gradient-to-r from-slate-900/90 via-[#1b1338]/85 to-slate-900/90 border border-white/10 hover:border-purple-400/60 p-3.5 sm:p-4 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.35)] hover:shadow-[0_8px_25px_rgba(168,85,247,0.25)] transition-all duration-300 group"
+          >
+            {/* Ambient glow in corner */}
+            <div className="pointer-events-none absolute -right-6 -bottom-6 w-24 h-24 bg-purple-500/10 rounded-full blur-2xl group-hover:bg-purple-500/20 group-hover:scale-125 transition-all duration-500"></div>
 
-                <Link
-                  to="/doctors"
-                  onClick={handleLinkClick}
-                  className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug"
-                >
-                  <div>Aesthetic Doctors</div>
-                  <div className="text-xs text-slate-400 mt-0.5">Dermatology & Lasers</div>
-                </Link>
+            {/* Top Metadata Pill Row */}
+            <div className="flex items-center justify-between mb-2.5">
+              <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-purple-500/15 border border-purple-400/30 text-[10px] font-extrabold uppercase tracking-wider text-purple-300">
+                <Globe className="w-3 h-3 text-purple-300" />
+                International Patients
+              </span>
+              <span className="text-[9.5px] font-black uppercase px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-200 border border-purple-400/30 tracking-wider flex items-center gap-1">
+                🇦🇪 Dubai Desk
+              </span>
+            </div>
 
-                <Link
-                  to="/doctors"
-                  onClick={handleLinkClick}
-                  className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug"
-                >
-                  <div>Hair Specialists</div>
-                  <div className="text-xs text-slate-400 mt-0.5">Transplants & Bio-PRP</div>
-                </Link>
-
-                <Link
-                  to="/meet-our-team"
-                  onClick={handleLinkClick}
-                  className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug"
-                >
-                  <div>Clinical Care Team</div>
-                  <div className="text-xs text-slate-400 mt-0.5">4 Regional Centres</div>
-                </Link>
+            {/* Content Row */}
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-purple-600 via-indigo-600 to-purple-800 text-white flex items-center justify-center shrink-0 shadow-[0_4px_14px_rgba(147,51,234,0.4)] group-hover:scale-105 group-hover:shadow-[0_6px_18px_rgba(147,51,234,0.55)] transition-all">
+                <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
               </div>
-
-              <div className="mt-6 pt-3.5 border-t border-white/10">
-                <Link
-                  to="/doctors"
-                  onClick={handleLinkClick}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-brandSky hover:text-white uppercase tracking-wider transition-colors"
-                >
-                  <span>View All Doctors & Specialists</span>
-                  <ChevronRight className="w-3.5 h-3.5" />
-                </Link>
+              <div className="flex-1 min-w-0">
+                <div className="text-base sm:text-lg font-black text-white group-hover:text-purple-300 transition-colors tracking-tight font-headline leading-tight">
+                  +971 50725 3105
+                </div>
+                <div className="text-[11px] sm:text-[11.5px] text-slate-400 group-hover:text-slate-300 transition-colors truncate mt-0.5">
+                  Dubai Healthcare City Liaison Office
+                </div>
+              </div>
+              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/[0.06] border border-white/10 group-hover:bg-purple-600 group-hover:border-purple-300 flex items-center justify-center text-slate-300 group-hover:text-white transition-all shrink-0 shadow-inner group-hover:scale-105">
+                <PhoneCall className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </div>
             </div>
-          )}
+          </a>
+        </div>
+      </div>
 
-          {/* ───────── SCREEN: FIND A CENTRE ───────── */}
-          {currentScreen === 'centres' && (
-            <div className="jerush-mobile-screen py-1 space-y-3">
-              <Link
-                to="/centres/thuckalay"
-                onClick={handleLinkClick}
-                className="block p-3.5 rounded-xl bg-white/[0.06] hover:bg-white/[0.1] border border-white/10 hover:border-brandSky/50 backdrop-blur-md transition-all group"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="font-headline font-bold text-[15px] text-white group-hover:text-brandSky transition-colors">
-                    Thuckalay Centre (Apex Facility)
-                  </span>
-                  <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky transition-transform group-hover:translate-x-0.5" />
-                </div>
-                <p className="text-xs text-slate-400 mt-0.5">Jerush Nagar, Thuckalay, Kanyakumari</p>
-                <div className="text-xs font-semibold text-brandSky mt-1.5 flex items-center gap-1.5">
-                  <Phone className="w-3 h-3 fill-brandSky" /> +91 94891 60055
-                </div>
-              </Link>
+      {/* Primary Book Appointment CTA Button - High-Impact Glowing Radiant Pill */}
+      <div className="mt-6 mb-2">
+        <div className="relative group">
+          {/* Atmospheric neon aura glow */}
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-brandSky via-[#198BC8] to-brandBlue rounded-2xl blur-md opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-              <Link
-                to="/centres/trichy"
-                onClick={handleLinkClick}
-                className="block p-3.5 rounded-xl bg-white/[0.06] hover:bg-white/[0.1] border border-white/10 hover:border-brandSky/50 backdrop-blur-md transition-all group"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="font-headline font-bold text-[15px] text-white group-hover:text-brandSky transition-colors">
-                    Trichy Regional Centre
-                  </span>
-                  <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky transition-transform group-hover:translate-x-0.5" />
-                </div>
-                <p className="text-xs text-slate-400 mt-0.5">Central Bus Stand Road, Cantonment, Trichy</p>
-                <div className="text-xs font-semibold text-brandSky mt-1.5 flex items-center gap-1.5">
-                  <Phone className="w-3 h-3 fill-brandSky" /> +91 94891 60011
-                </div>
-              </Link>
+          <Link
+            to="/contact"
+            onClick={handleLinkClick}
+            className="relative w-full py-3.5 px-4 rounded-2xl bg-gradient-to-r from-brandSky via-[#198BC8] to-brandBlue hover:from-[#25a9ea] hover:via-[#1da0e0] hover:to-[#2853A4] text-white flex items-center justify-between border border-white/25 shadow-[0_4px_22px_rgba(30,151,212,0.45)] hover:shadow-[0_6px_28px_rgba(30,151,212,0.65)] active:scale-[0.98] transition-all overflow-hidden"
+          >
+            {/* Shimmer sweep effect */}
+            <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full duration-1000 bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform ease-out pointer-events-none"></div>
 
-              <Link
-                to="/centres/chennai"
-                onClick={handleLinkClick}
-                className="block p-3.5 rounded-xl bg-white/[0.06] hover:bg-white/[0.1] border border-white/10 hover:border-brandSky/50 backdrop-blur-md transition-all group"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="font-headline font-bold text-[15px] text-white group-hover:text-brandSky transition-colors">
-                    Chennai Regional Clinic
-                  </span>
-                  <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky transition-transform group-hover:translate-x-0.5" />
-                </div>
-                <p className="text-xs text-slate-400 mt-0.5">Nungambakkam High Road, Chennai</p>
-                <div className="text-xs font-semibold text-brandSky mt-1.5 flex items-center gap-1.5">
-                  <Phone className="w-3 h-3 fill-brandSky" /> +91 97510 10107
-                </div>
-              </Link>
-
-              <div className="block p-3.5 rounded-xl bg-white/[0.06] hover:bg-white/[0.1] border border-white/10 hover:border-purple-400/50 backdrop-blur-md transition-all">
-                <div className="flex items-center justify-between">
-                  <span className="font-headline font-bold text-[15px] text-white">
-                    Dubai Patient Liaison
-                  </span>
-                  <span className="text-[10px] font-bold text-purple-200 uppercase bg-purple-500/20 border border-purple-400/30 px-2 py-0.5 rounded-full">International</span>
-                </div>
-                <p className="text-xs text-slate-400 mt-0.5">Dubai Healthcare City, UAE</p>
-                <div className="text-xs font-semibold text-purple-300 mt-1.5 flex items-center gap-1.5">
-                  <Phone className="w-3 h-3 fill-purple-300" /> +971 50725 3105
-                </div>
+            <div className="flex items-center gap-3 relative z-10">
+              <span className="w-10 h-10 rounded-xl bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center shrink-0 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4)] group-hover:scale-105 group-hover:rotate-3 transition-transform">
+                <Calendar className="w-5 h-5 text-white" />
+              </span>
+              <div className="text-left">
+                <span className="block font-headline font-black text-[14.5px] sm:text-[15.5px] tracking-wider uppercase text-white drop-shadow-sm leading-tight">
+                  Book Appointment
+                </span>
+                <span className="block text-[10.5px] font-medium text-sky-100/90 tracking-wide mt-0.5">
+                  Instant Online Slot Confirmation
+                </span>
               </div>
             </div>
-          )}
 
-          {/* ───────── SCREEN: MEDICAL SERVICES (Submenu Level 1 - Animated GIFs) ───────── */}
-          {currentScreen === 'services' && (
-            <div className="jerush-mobile-screen space-y-1.5">
-              <button
-                onClick={() => pushNav('services-dental')}
-                className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
-              >
-                <span className="flex items-center gap-3">
-                  <span className="relative flex items-center justify-center w-7 h-7 rounded-full bg-slate-950 border border-brandSky/60 shadow-[0_0_8px_rgba(30,151,212,0.35)] overflow-hidden shrink-0">
-                    <img src="/gifs/dental-care.gif" alt="Dental Treatments" className="w-full h-full object-cover scale-110" />
-                  </span>
-                  <div>
-                    <span className="block text-[15px] font-semibold text-white group-hover:text-brandSky transition-colors">Dental Treatments</span>
-                    <span className="text-[11px] font-medium text-sky-300">Clinical Departments & Procedures</span>
-                  </div>
-                </span>
-                <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
-              </button>
+            <span className="relative z-10 w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm border border-white/25 flex items-center justify-center group-hover:bg-white group-hover:text-brandBlue text-white transition-all shrink-0 group-hover:translate-x-0.5 shadow-sm">
+              <ChevronRight className="w-4 h-4 stroke-[2.5]" />
+            </span>
+          </Link>
+        </div>
+      </div>
+    </div>
+  )
+}
 
-              <button
-                onClick={() => pushNav('services-skin')}
-                className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
-              >
-                <span className="flex items-center gap-3">
-                  <span className="relative flex items-center justify-center w-7 h-7 rounded-full bg-slate-950 border border-brandSky/60 shadow-[0_0_8px_rgba(30,151,212,0.35)] overflow-hidden shrink-0">
-                    <img src="/gifs/cosmetic.gif" alt="Skin & Laser Treatments" className="w-full h-full object-cover scale-110" />
-                  </span>
-                  <div>
-                    <span className="block text-[15px] font-semibold text-white group-hover:text-brandSky transition-colors">Skin & Laser Treatments</span>
-                    <span className="text-[11px] font-medium text-sky-300">8 Departments • 41 Procedures</span>
-                  </div>
-                </span>
-                <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
-              </button>
+{/* ───────── SCREEN 2: SUBMENU ABOUT JERUSH (Matching Apollo Screenshot 2) ───────── */ }
+{
+  currentScreen === 'about' && (
+    <div className="jerush-mobile-screen space-y-1">
+      <button
+        onClick={() => pushNav('about-story')}
+        className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
+      >
+        <span>The Jerush Story</span>
+        <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
+      </button>
 
-              <button
-                onClick={() => pushNav('services-hair')}
-                className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
-              >
-                <span className="flex items-center gap-3">
-                  <span className="relative flex items-center justify-center w-7 h-7 rounded-full bg-slate-950 border border-amber-400/60 shadow-[0_0_8px_rgba(245,158,11,0.35)] overflow-hidden shrink-0">
-                    <img src="/gifs/hair.gif" alt="Hair Restoration" className="w-full h-full object-cover scale-110" />
-                  </span>
-                  <div>
-                    <span className="block text-[15px] font-semibold text-white group-hover:text-brandSky transition-colors">Hair Restoration</span>
-                    <span className="text-[11px] font-medium text-amber-300">3 Departments • 12 Procedures</span>
-                  </div>
-                </span>
-                <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
-              </button>
+      <button
+        onClick={() => pushNav('about-leadership')}
+        className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
+      >
+        <span>Leadership</span>
+        <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
+      </button>
 
-              <button
-                onClick={() => pushNav('services-body')}
-                className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
-              >
-                <span className="flex items-center gap-3">
-                  <span className="relative flex items-center justify-center w-7 h-7 rounded-full bg-slate-950 border border-emerald-400/60 shadow-[0_0_8px_rgba(16,185,129,0.35)] overflow-hidden shrink-0">
-                    <img src="/gifs/body-reduction.gif" alt="Body Contouring & Wellness" className="w-full h-full object-cover scale-110" />
-                  </span>
-                  <div>
-                    <span className="block text-[15px] font-semibold text-white group-hover:text-brandSky transition-colors">Body Contouring & Wellness</span>
-                    <span className="text-[11px] font-medium text-emerald-300">3 Departments • 8 Procedures</span>
-                  </div>
-                </span>
-                <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
-              </button>
+      <button
+        onClick={() => pushNav('about-team')}
+        className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
+      >
+        <span>Doctors & Specialists</span>
+        <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
+      </button>
 
-              <Link
-                to="/treatments"
-                onClick={handleLinkClick}
-                className="w-full flex items-center justify-between py-3.5 text-left font-headline font-bold text-[15px] text-brandSky hover:text-white group mt-2 pt-3.5 border-t border-white/10 transition-colors"
-              >
-                <span className="flex items-center gap-3">
-                  <span className="w-7 h-7 rounded-full bg-white/10 border border-white/15 flex items-center justify-center text-brandSky shrink-0">
-                    <Sparkles className="w-4 h-4 text-brandSky" />
-                  </span>
-                  <span>Explore All Medical Treatments</span>
-                </span>
-                <ChevronRight className="w-4 h-4 text-brandSky group-hover:translate-x-0.5 transition-all" />
-              </Link>
-            </div>
-          )}
+      <Link
+        to="/about/milestones-legacy"
+        onClick={handleLinkClick}
+        className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
+      >
+        <span>Milestones & Legacy</span>
+        <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
+      </Link>
 
-          {/* ───────── SCREEN: DENTAL TREATMENTS (All 12 Clinical Categories!) ───────── */}
-          {currentScreen === 'services-dental' && (
-            <div className="jerush-mobile-screen py-1">
-              {/* Department Header Banner */}
-              <div className="flex items-center gap-3 mb-3.5 p-3 rounded-2xl bg-gradient-to-r from-blue-50/90 via-sky-50/50 to-white border border-sky-100">
-                <span className="relative flex items-center justify-center w-8 h-8 rounded-full bg-slate-950 border border-brandSky/60 shadow-[0_0_8px_rgba(30,151,212,0.35)] overflow-hidden shrink-0">
-                  <img src="/gifs/dental-care.gif" alt="Dental Care" className="w-full h-full object-cover scale-110" />
-                </span>
-                <div>
-                  <h4 className="font-headline font-bold text-sm text-[#0E2752] uppercase tracking-wide">
-                    Dental Treatments
-                  </h4>
-                  <p className="text-[11px] text-slate-500 font-medium">Specialized Departments & Clinical Procedures</p>
-                </div>
-              </div>
+      <Link
+        to="/technologies"
+        onClick={handleLinkClick}
+        className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
+      >
+        <span>Advanced Technologies</span>
+        <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
+      </Link>
 
-              {/* Kids Dentistry / Pedodontics */}
-              <div className="mb-3.5">
-                <Link
-                  to="/treatments?category=dental&sub=Kids%20Dentistry%20%2F%20Pedodontics"
-                  onClick={handleLinkClick}
-                  className="flex items-center justify-between gap-2 mb-2 pb-1 border-b border-white/10 group/hdr"
-                >
-                  <div className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-brandSky group-hover/hdr:scale-125 transition-transform"></span>
-                    <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200 group-hover/hdr:text-brandSky transition-colors">
-                      Kids Dentistry / Pedodontics
-                    </h5>
-                  </div>
-                  <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover/hdr:text-brandSky transition-colors" />
-                </Link>
-                <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/dental-care/kids-dentistry/pediatric-dental-care', 'Pediatric Care', 'pediatric-dental-care.webp', 'dental', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/pulpectomy', 'Painless Root Canal', 'pulpectomy.webp', 'dental', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/pit-fissure-sealants', 'Pit & Fissure Sealants', 'pit-fissure-sealants.webp', 'dental', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/habit-breaking-appliances', 'Habit Appliances', 'habit-breaking-appliances.webp', 'dental', handleLinkClick)}
-                </div>
-              </div>
+      <Link
+        to="/about/clinical-excellence"
+        onClick={handleLinkClick}
+        className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
+      >
+        <span>Clinical Excellence</span>
+        <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
+      </Link>
 
-              {/* Cosmetic Dentistry */}
-              <div className="mb-3.5">
+      <Link
+        to="/about/ethical-healthcare"
+        onClick={handleLinkClick}
+        className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
+      >
+        <span>Ethical Healthcare</span>
+        <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
+      </Link>
+
+      <Link
+        to="/editorial-standards"
+        onClick={handleLinkClick}
+        className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
+      >
+        <span>Editorial Standards</span>
+        <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
+      </Link>
+
+      <Link
+        to="/reviews"
+        onClick={handleLinkClick}
+        className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
+      >
+        <span>Patient Testimonials & Reviews</span>
+        <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
+      </Link>
+    </div>
+  )
+}
+
+{/* ───────── SCREEN 3: THE JERUSH STORY (Matching Apollo Screenshot 3 - Clean 2-Column Grid!) ───────── */ }
+{
+  currentScreen === 'about-story' && (
+    <div className="jerush-mobile-screen py-2">
+      <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+        <Link to="/about" onClick={handleLinkClick} className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
+          Overview
+        </Link>
+        <Link to="/about" onClick={handleLinkClick} className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
+          Vision & Mission
+        </Link>
+
+        <Link to="/about" onClick={handleLinkClick} className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
+          Our History
+        </Link>
+        <Link to="/about/milestones-legacy" onClick={handleLinkClick} className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
+          Milestones & Legacy
+        </Link>
+
+        <Link to="/about/clinical-excellence" onClick={handleLinkClick} className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
+          Clinical Excellence
+        </Link>
+        <Link to="/about/ethical-healthcare" onClick={handleLinkClick} className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
+          Ethical Healthcare
+        </Link>
+
+        <Link to="/about" onClick={handleLinkClick} className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
+          Hospital Facilities
+        </Link>
+        <Link to="/technologies" onClick={handleLinkClick} className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
+          Technologies
+        </Link>
+        <Link to="/editorial-standards" onClick={handleLinkClick} className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
+          Editorial Standards
+        </Link>
+
+        <Link to="/reviews" onClick={handleLinkClick} className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
+          Patient Reviews
+        </Link>
+        <Link to="/careers" onClick={handleLinkClick} className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
+          Careers
+        </Link>
+      </div>
+    </div>
+  )
+}
+
+{/* ───────── SCREEN: LEADERSHIP (Clean 2-Column Grid!) ───────── */ }
+{
+  currentScreen === 'about-leadership' && (
+    <div className="jerush-mobile-screen py-2">
+      <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+        <Link
+          to="/leadership/dr-a-bladbin-chairman-founder"
+          onClick={handleLinkClick}
+          className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug"
+        >
+          <div>Dr. A. Bladbin</div>
+          <div className="text-xs text-brandSky font-medium mt-0.5">Chairman & Founder</div>
+        </Link>
+
+        <Link
+          to="/leadership/dr-c-binila-bladbin-managing-director"
+          onClick={handleLinkClick}
+          className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug"
+        >
+          <div>Dr. C. Binila Bladbin</div>
+          <div className="text-xs text-brandSky font-medium mt-0.5">Managing Director</div>
+        </Link>
+
+        <Link
+          to="/leadership/dr-a-prabin-chief-executive-officer"
+          onClick={handleLinkClick}
+          className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug"
+        >
+          <div>Dr. A. Prabin</div>
+          <div className="text-xs text-brandSky font-medium mt-0.5">Chief Executive Officer</div>
+        </Link>
+
+        <Link
+          to="/meet-our-team"
+          onClick={handleLinkClick}
+          className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug"
+        >
+          <div>Specialist Faculty</div>
+          <div className="text-xs text-brandSky font-medium mt-0.5">Clinical Leadership</div>
+        </Link>
+      </div>
+
+      <div className="mt-6 pt-3.5 border-t border-white/10">
+        <Link
+          to="/meet-our-team"
+          onClick={handleLinkClick}
+          className="inline-flex items-center gap-1.5 text-xs font-bold text-brandSky hover:text-white uppercase tracking-wider transition-colors"
+        >
+          <span>Meet Complete Leadership & Faculty</span>
+          <ChevronRight className="w-3.5 h-3.5" />
+        </Link>
+      </div>
+    </div>
+  )
+}
+
+{/* ───────── SCREEN: DOCTORS & SPECIALISTS (Clean 2-Column Grid!) ───────── */ }
+{
+  currentScreen === 'about-team' && (
+    <div className="jerush-mobile-screen py-2">
+      <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+        <Link
+          to="/doctors"
+          onClick={handleLinkClick}
+          className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug"
+        >
+          <div>Senior Surgeons</div>
+          <div className="text-xs text-slate-400 mt-0.5">Maxillofacial & Dental</div>
+        </Link>
+
+        <Link
+          to="/doctors"
+          onClick={handleLinkClick}
+          className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug"
+        >
+          <div>Aesthetic Doctors</div>
+          <div className="text-xs text-slate-400 mt-0.5">Dermatology & Lasers</div>
+        </Link>
+
+        <Link
+          to="/doctors"
+          onClick={handleLinkClick}
+          className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug"
+        >
+          <div>Hair Specialists</div>
+          <div className="text-xs text-slate-400 mt-0.5">Transplants & Bio-PRP</div>
+        </Link>
+
+        <Link
+          to="/meet-our-team"
+          onClick={handleLinkClick}
+          className="block text-[14px] font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug"
+        >
+          <div>Clinical Care Team</div>
+          <div className="text-xs text-slate-400 mt-0.5">4 Regional Centres</div>
+        </Link>
+      </div>
+
+      <div className="mt-6 pt-3.5 border-t border-white/10">
+        <Link
+          to="/doctors"
+          onClick={handleLinkClick}
+          className="inline-flex items-center gap-1.5 text-xs font-bold text-brandSky hover:text-white uppercase tracking-wider transition-colors"
+        >
+          <span>View All Doctors & Specialists</span>
+          <ChevronRight className="w-3.5 h-3.5" />
+        </Link>
+      </div>
+    </div>
+  )
+}
+
+{/* ───────── SCREEN: FIND A CENTRE ───────── */ }
+{
+  currentScreen === 'centres' && (
+    <div className="jerush-mobile-screen py-1 space-y-3">
+      <Link
+        to="/centres/thuckalay"
+        onClick={handleLinkClick}
+        className="block p-3.5 rounded-xl bg-white/[0.06] hover:bg-white/[0.1] border border-white/10 hover:border-brandSky/50 backdrop-blur-md transition-all group"
+      >
+        <div className="flex items-center justify-between">
+          <span className="font-headline font-bold text-[15px] text-white group-hover:text-brandSky transition-colors">
+            Thuckalay Centre (Apex Facility)
+          </span>
+          <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky transition-transform group-hover:translate-x-0.5" />
+        </div>
+        <p className="text-xs text-slate-400 mt-0.5">Jerush Nagar, Thuckalay, Kanyakumari</p>
+        <div className="text-xs font-semibold text-brandSky mt-1.5 flex items-center gap-1.5">
+          <Phone className="w-3 h-3 fill-brandSky" /> +91 94891 60055
+        </div>
+      </Link>
+
+      <Link
+        to="/centres/trichy"
+        onClick={handleLinkClick}
+        className="block p-3.5 rounded-xl bg-white/[0.06] hover:bg-white/[0.1] border border-white/10 hover:border-brandSky/50 backdrop-blur-md transition-all group"
+      >
+        <div className="flex items-center justify-between">
+          <span className="font-headline font-bold text-[15px] text-white group-hover:text-brandSky transition-colors">
+            Trichy Regional Centre
+          </span>
+          <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky transition-transform group-hover:translate-x-0.5" />
+        </div>
+        <p className="text-xs text-slate-400 mt-0.5">Central Bus Stand Road, Cantonment, Trichy</p>
+        <div className="text-xs font-semibold text-brandSky mt-1.5 flex items-center gap-1.5">
+          <Phone className="w-3 h-3 fill-brandSky" /> +91 94891 60011
+        </div>
+      </Link>
+
+      <Link
+        to="/centres/chennai"
+        onClick={handleLinkClick}
+        className="block p-3.5 rounded-xl bg-white/[0.06] hover:bg-white/[0.1] border border-white/10 hover:border-brandSky/50 backdrop-blur-md transition-all group"
+      >
+        <div className="flex items-center justify-between">
+          <span className="font-headline font-bold text-[15px] text-white group-hover:text-brandSky transition-colors">
+            Chennai Regional Clinic
+          </span>
+          <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky transition-transform group-hover:translate-x-0.5" />
+        </div>
+        <p className="text-xs text-slate-400 mt-0.5">Nungambakkam High Road, Chennai</p>
+        <div className="text-xs font-semibold text-brandSky mt-1.5 flex items-center gap-1.5">
+          <Phone className="w-3 h-3 fill-brandSky" /> +91 97510 10107
+        </div>
+      </Link>
+
+      <div className="block p-3.5 rounded-xl bg-white/[0.06] hover:bg-white/[0.1] border border-white/10 hover:border-purple-400/50 backdrop-blur-md transition-all">
+        <div className="flex items-center justify-between">
+          <span className="font-headline font-bold text-[15px] text-white">
+            Dubai Patient Liaison
+          </span>
+          <span className="text-[10px] font-bold text-purple-200 uppercase bg-purple-500/20 border border-purple-400/30 px-2 py-0.5 rounded-full">International</span>
+        </div>
+        <p className="text-xs text-slate-400 mt-0.5">Dubai Healthcare City, UAE</p>
+        <div className="text-xs font-semibold text-purple-300 mt-1.5 flex items-center gap-1.5">
+          <Phone className="w-3 h-3 fill-purple-300" /> +971 50725 3105
+        </div>
+      </div>
+    </div>
+  )
+}
+
+{/* ───────── SCREEN: MEDICAL SERVICES (Submenu Level 1 - Animated GIFs) ───────── */ }
+{
+  currentScreen === 'services' && (
+    <div className="jerush-mobile-screen space-y-1.5">
+      <button
+        onClick={() => pushNav('services-dental')}
+        className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
+      >
+        <span className="flex items-center gap-3">
+          <span className="relative flex items-center justify-center w-7 h-7 rounded-full bg-slate-950 border border-brandSky/60 shadow-[0_0_8px_rgba(30,151,212,0.35)] overflow-hidden shrink-0">
+            <img src="/gifs/dental-care.gif" alt="Dental Treatments" className="w-full h-full object-cover scale-110" />
+          </span>
+          <div>
+            <span className="block text-[15px] font-semibold text-white group-hover:text-brandSky transition-colors">Dental Treatments</span>
+            <span className="text-[11px] font-medium text-sky-300">Clinical Departments & Procedures</span>
+          </div>
+        </span>
+        <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
+      </button>
+
+      <button
+        onClick={() => pushNav('services-skin')}
+        className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
+      >
+        <span className="flex items-center gap-3">
+          <span className="relative flex items-center justify-center w-7 h-7 rounded-full bg-slate-950 border border-brandSky/60 shadow-[0_0_8px_rgba(30,151,212,0.35)] overflow-hidden shrink-0">
+            <img src="/gifs/cosmetic.gif" alt="Skin & Laser Treatments" className="w-full h-full object-cover scale-110" />
+          </span>
+          <div>
+            <span className="block text-[15px] font-semibold text-white group-hover:text-brandSky transition-colors">Skin & Laser Treatments</span>
+            <span className="text-[11px] font-medium text-sky-300">8 Departments • 41 Procedures</span>
+          </div>
+        </span>
+        <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
+      </button>
+
+      <button
+        onClick={() => pushNav('services-hair')}
+        className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
+      >
+        <span className="flex items-center gap-3">
+          <span className="relative flex items-center justify-center w-7 h-7 rounded-full bg-slate-950 border border-amber-400/60 shadow-[0_0_8px_rgba(245,158,11,0.35)] overflow-hidden shrink-0">
+            <img src="/gifs/hair.gif" alt="Hair Restoration" className="w-full h-full object-cover scale-110" />
+          </span>
+          <div>
+            <span className="block text-[15px] font-semibold text-white group-hover:text-brandSky transition-colors">Hair Restoration</span>
+            <span className="text-[11px] font-medium text-amber-300">3 Departments • 12 Procedures</span>
+          </div>
+        </span>
+        <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
+      </button>
+
+      <button
+        onClick={() => pushNav('services-body')}
+        className="w-full flex items-center justify-between py-3.5 text-left font-headline font-semibold text-[15px] text-slate-200 hover:text-brandSky group"
+      >
+        <span className="flex items-center gap-3">
+          <span className="relative flex items-center justify-center w-7 h-7 rounded-full bg-slate-950 border border-emerald-400/60 shadow-[0_0_8px_rgba(16,185,129,0.35)] overflow-hidden shrink-0">
+            <img src="/gifs/body-reduction.gif" alt="Body Contouring & Wellness" className="w-full h-full object-cover scale-110" />
+          </span>
+          <div>
+            <span className="block text-[15px] font-semibold text-white group-hover:text-brandSky transition-colors">Body Contouring & Wellness</span>
+            <span className="text-[11px] font-medium text-emerald-300">3 Departments • 8 Procedures</span>
+          </div>
+        </span>
+        <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-brandSky group-hover:translate-x-0.5 transition-all" />
+      </button>
+
+      <Link
+        to="/treatments"
+        onClick={handleLinkClick}
+        className="w-full flex items-center justify-between py-3.5 text-left font-headline font-bold text-[15px] text-brandSky hover:text-white group mt-2 pt-3.5 border-t border-white/10 transition-colors"
+      >
+        <span className="flex items-center gap-3">
+          <span className="w-7 h-7 rounded-full bg-white/10 border border-white/15 flex items-center justify-center text-brandSky shrink-0">
+            <Sparkles className="w-4 h-4 text-brandSky" />
+          </span>
+          <span>Explore All Medical Treatments</span>
+        </span>
+        <ChevronRight className="w-4 h-4 text-brandSky group-hover:translate-x-0.5 transition-all" />
+      </Link>
+    </div>
+  )
+}
+
+{/* ───────── SCREEN: DENTAL TREATMENTS (All 12 Clinical Categories!) ───────── */ }
+{
+  currentScreen === 'services-dental' && (
+    <div className="jerush-mobile-screen py-1">
+      {/* Department Header Banner */}
+      <div className="flex items-center gap-3 mb-3.5 p-3 rounded-2xl bg-gradient-to-r from-blue-50/90 via-sky-50/50 to-white border border-sky-100">
+        <span className="relative flex items-center justify-center w-8 h-8 rounded-full bg-slate-950 border border-brandSky/60 shadow-[0_0_8px_rgba(30,151,212,0.35)] overflow-hidden shrink-0">
+          <img src="/gifs/dental-care.gif" alt="Dental Care" className="w-full h-full object-cover scale-110" />
+        </span>
+        <div>
+          <h4 className="font-headline font-bold text-sm text-[#0E2752] uppercase tracking-wide">
+            Dental Treatments
+          </h4>
+          <p className="text-[11px] text-slate-500 font-medium">Specialized Departments & Clinical Procedures</p>
+        </div>
+      </div>
+
+      {/* Kids Dentistry / Pedodontics */}
+      <div className="mb-3.5">
+        <Link
+          to="/treatments?category=dental&sub=Kids%20Dentistry%20%2F%20Pedodontics"
+          onClick={handleLinkClick}
+          className="flex items-center justify-between gap-2 mb-2 pb-1 border-b border-white/10 group/hdr"
+        >
+          <div className="flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-brandSky group-hover/hdr:scale-125 transition-transform"></span>
+            <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200 group-hover/hdr:text-brandSky transition-colors">
+              Kids Dentistry / Pedodontics
+            </h5>
+          </div>
+          <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover/hdr:text-brandSky transition-colors" />
+        </Link>
+        <div className="grid grid-cols-2 gap-2">
+<<<<<<< HEAD
+  { renderMobileTreatmentItem('/dental-care/kids-dentistry/pediatric-dental-care', 'Pediatric Care', 'pediatric-dental-care.webp', 'dental', handleLinkClick) }
+  { renderMobileTreatmentItem('/treatments/pulpectomy', 'Painless Root Canal', 'pulpectomy.webp', 'dental', handleLinkClick) }
+=======
+                  {renderMobileTreatmentItem('/treatments/pediatric-dentistry', 'Pediatric Care', 'pediatric-dental-care.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/treatments/dental-consultation', 'Dental Consultation', 'dental-consultation.webp', 'dental', handleLinkClick)}
+>>>>>>> 0cd31ce1da94cde79c07060d5a4f0898f85f12cf
+  { renderMobileTreatmentItem('/treatments/pit-fissure-sealants', 'Pit & Fissure Sealants', 'pit-fissure-sealants.webp', 'dental', handleLinkClick) }
+  { renderMobileTreatmentItem('/treatments/habit-breaking-appliances', 'Habit Appliances', 'habit-breaking-appliances.webp', 'dental', handleLinkClick) }
+                </div >
+              </div >
+
+    {/* Cosmetic Dentistry */ }
+    < div className = "mb-3.5" >
                 <Link
                   to="/treatments?category=dental&sub=Cosmetic%20Dentistry"
                   onClick={handleLinkClick}
@@ -2510,10 +2538,10 @@ export default function Header() {
                   {renderMobileTreatmentItem('/treatments/tooth-jewellery', 'Tooth Jewellery', 'tooth-jewellery.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/full-mouth-rehabilitation', 'Full Mouth Rehab', 'full-mouth-rehabilitation.webp', 'dental', handleLinkClick)}
                 </div>
-              </div>
+              </div >
 
-              {/* Orthodontic Care */}
-              <div className="mb-3.5">
+    {/* Orthodontic Care */ }
+    < div className = "mb-3.5" >
                 <Link
                   to="/treatments?category=dental&sub=Orthodontic%20Care"
                   onClick={handleLinkClick}
@@ -2533,10 +2561,10 @@ export default function Header() {
                   {renderMobileTreatmentItem('/treatments/ceramic-braces', 'Ceramic Braces', 'ceramic-braces.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/self-ligating-braces', 'Self-Ligating Braces', 'ligating-braces.webp', 'dental', handleLinkClick)}
                 </div>
-              </div>
+              </div >
 
-              {/* Prosthodontic Care */}
-              <div className="mb-3.5">
+    {/* Prosthodontic Care */ }
+    < div className = "mb-3.5" >
                 <Link
                   to="/treatments?category=dental&sub=Prosthodontic%20Care%20%2F%20Tooth%20Replacement"
                   onClick={handleLinkClick}
@@ -2556,10 +2584,10 @@ export default function Header() {
                   {renderMobileTreatmentItem('/dental-care/prosthodontic-care/removable-partial-dentures', 'Removable Partials', 'denture.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/fixed-partial-denture', 'Fixed Partials', 'fixed-partial-dentures.webp', 'dental', handleLinkClick)}
                 </div>
-              </div>
+              </div >
 
-              {/* Endodontic Care */}
-              <div className="mb-3.5">
+    {/* Endodontic Care */ }
+    < div className = "mb-3.5" >
                 <Link
                   to="/treatments?category=dental&sub=Endodontic%20Care"
                   onClick={handleLinkClick}
@@ -2579,10 +2607,10 @@ export default function Header() {
                   {renderMobileTreatmentItem('/treatments/tooth-coloured-fillings', 'Tooth Restorations', 'tooth-colored-fillings.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/post-and-core', 'Post & Core', 'teeth-post-core.webp', 'dental', handleLinkClick)}
                 </div>
-              </div>
+              </div >
 
-              {/* Geriatric Dentistry */}
-              <div className="mb-3.5">
+    {/* Geriatric Dentistry */ }
+    < div className = "mb-3.5" >
                 <Link
                   to="/treatments?category=dental&sub=Geriatric%20Dentistry"
                   onClick={handleLinkClick}
@@ -2600,10 +2628,10 @@ export default function Header() {
                   {renderMobileTreatmentItem('/treatments/geriatric-dental-care', 'Geriatric Dental Care', 'denture.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/dentures', 'Complete & Flexible Dentures', 'denture.webp', 'dental', handleLinkClick)}
                 </div>
-              </div>
+              </div >
 
-              {/* Periodontal / Gum Care */}
-              <div className="mb-3.5">
+    {/* Periodontal / Gum Care */ }
+    < div className = "mb-3.5" >
                 <Link
                   to="/treatments?category=dental&sub=Periodontal%20%2F%20Gum%20Care"
                   onClick={handleLinkClick}
@@ -2623,10 +2651,10 @@ export default function Header() {
                   {renderMobileTreatmentItem('/treatments/gum-grafting', 'Bone Grafting', 'gum-grafting.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/crown-lengthening', 'Crown Lengthening', 'crown-lengthening.webp', 'dental', handleLinkClick)}
                 </div>
-              </div>
+              </div >
 
-              {/* Oral & Maxillofacial Care */}
-              <div className="mb-3.5">
+    {/* Oral & Maxillofacial Care */ }
+    < div className = "mb-3.5" >
                 <Link
                   to="/treatments?category=dental&sub=Oral%20%26%20Maxillofacial%20Care"
                   onClick={handleLinkClick}
@@ -2646,10 +2674,10 @@ export default function Header() {
                   {renderMobileTreatmentItem('/treatments/cleft-lip-palate', 'Cleft Lip & Palate', 'cleft-lip-palate.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/cyst-tumour-surgery', 'Cyst & Tumour Surgery', 'cyst-tumour-surgery.webp', 'dental', handleLinkClick)}
                 </div>
-              </div>
+              </div >
 
-              {/* Oral Medicine */}
-              <div className="mb-3.5">
+    {/* Oral Medicine */ }
+    < div className = "mb-3.5" >
                 <Link
                   to="/treatments?category=dental&sub=Oral%20Medicine"
                   onClick={handleLinkClick}
@@ -2669,10 +2697,10 @@ export default function Header() {
                   {renderMobileTreatmentItem('/treatments/precancerous-lesion-management', 'Precancerous Lesions', 'oral-cancer-screen.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/dental-care/oral-pathology/oral-pathology-screening', 'Pathology Screening', 'oral-cancer-screen.webp', 'dental', handleLinkClick)}
                 </div>
-              </div>
+              </div >
 
-              {/* Dental Radiology */}
-              <div className="mb-3.5">
+    {/* Dental Radiology */ }
+    < div className = "mb-3.5" >
                 <Link
                   to="/treatments?category=dental&sub=Radiology"
                   onClick={handleLinkClick}
@@ -2692,10 +2720,10 @@ export default function Header() {
                   {renderMobileTreatmentItem('/treatments/cephalo-frontal-view', 'Cephalo Views', 'cephalo-frontal-view.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/water-s-view', 'Water’s Sinus View', 'water-s-view.webp', 'dental', handleLinkClick)}
                 </div>
-              </div>
+              </div >
 
-              {/* TMJ Care */}
-              <div className="mb-3.5">
+    {/* TMJ Care */ }
+    < div className = "mb-3.5" >
                 <Link
                   to="/treatments?category=dental&sub=Temporomandibular%20Joint%20(TMJ)%20Care"
                   onClick={handleLinkClick}
@@ -2715,10 +2743,10 @@ export default function Header() {
                   {renderMobileTreatmentItem('/treatments/botox', 'TMJ Botox Therapy', 'botox-treatment.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/tmj-appliances', 'TMJ Appliances', 'tmj-appliances.webp', 'dental', handleLinkClick)}
                 </div>
-              </div>
+              </div >
 
-              {/* Community Dentistry */}
-              <div className="mb-3.5">
+    {/* Community Dentistry */ }
+    < div className = "mb-3.5" >
                 <Link
                   to="/treatments?category=dental&sub=Community%20Dentistry"
                   onClick={handleLinkClick}
@@ -2737,342 +2765,351 @@ export default function Header() {
                   {renderMobileTreatmentItem('/dental-care/oral-pathology/oral-pathology-screening', 'Oral Cancer Screening', 'oral-cancer-screen.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/oral-health-care', 'Community Oral Care', 'oral-health-care.webp', 'dental', handleLinkClick)}
                 </div>
-              </div>
+              </div >
 
-              {/* Bottom CTA to view all treatments */}
-              <div className="mt-5 pt-3.5 border-t border-white/10">
-                <Link
-                  to="/treatments?category=dental"
-                  onClick={handleLinkClick}
-                  className="w-full py-2.5 px-4 rounded-xl bg-white/[0.08] hover:bg-white/[0.14] text-white font-headline font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 border border-white/15 backdrop-blur-md transition-colors"
-                >
-                  <span>Explore All Dental Procedures</span>
-                  <ChevronRight className="w-3.5 h-3.5 text-brandSky" />
-                </Link>
-              </div>
-            </div>
-          )}
+    {/* Bottom CTA to view all treatments */ }
+    < div className = "mt-5 pt-3.5 border-t border-white/10" >
+      <Link
+        to="/treatments?category=dental"
+        onClick={handleLinkClick}
+        className="w-full py-2.5 px-4 rounded-xl bg-white/[0.08] hover:bg-white/[0.14] text-white font-headline font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 border border-white/15 backdrop-blur-md transition-colors"
+      >
+        <span>Explore All Dental Procedures</span>
+        <ChevronRight className="w-3.5 h-3.5 text-brandSky" />
+      </Link>
+              </div >
+            </div >
+          )
+}
 
-          {/* ───────── SCREEN: SKIN & LASER TREATMENTS (Categorized 2-Column Grid with WebP Icons!) ───────── */}
-          {currentScreen === 'services-skin' && (
-            <div className="jerush-mobile-screen py-1">
-              {/* Department Header Banner */}
-              <div className="flex items-center gap-3 mb-4 p-3 rounded-2xl bg-white/[0.07] border border-white/10 backdrop-blur-md">
-                <span className="relative flex items-center justify-center w-8 h-8 rounded-full bg-slate-950 border border-brandSky/60 shadow-[0_0_8px_rgba(30,151,212,0.35)] overflow-hidden shrink-0">
-                  <img src="/gifs/cosmetic.gif" alt="Skin & Laser" className="w-full h-full object-cover scale-110" />
-                </span>
-                <div>
-                  <h4 className="font-headline font-bold text-sm text-white uppercase tracking-wide">
-                    Skin & Laser Treatments
-                  </h4>
-                  <p className="text-[11px] text-slate-400 font-medium">Cosmetic Dermatology & Advanced Laser Technology</p>
-                </div>
-              </div>
-
-              {/* Group 1: Acne & Pigmentation */}
-              <div className="mb-4">
-                <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
-                  <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
-                    Acne & Pigmentation
-                  </h5>
-                </div>
-                <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/treatments/acne-treatment', 'Acne Treatment', 'acne-treatment.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/skin-care/laser-treatments/fractional-co2-laser', 'Acne Scars', 'acne-scar.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/pigmentation-treatment', 'Pigmentation', 'pigmentation-treatment.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/melasma-treatment', 'Melasma Care', 'melasma-teatment.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/uneven-skin-tone', 'Uneven Skin Tone', 'uneven-skin-tone.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/freckles-removal', 'Freckles Removal', 'freckles-removal.webp', 'skin', handleLinkClick)}
-                </div>
-              </div>
-
-              {/* Group 2: Skin Glow & Rejuvenation */}
-              <div className="mb-4">
-                <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
-                  <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
-                    Skin Glow & Rejuvenation
-                  </h5>
-                </div>
-                <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/treatments/hydrafacial', 'HydraFacial', 'hydrafacial.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/carbon-peel-laser', 'Carbon Laser Peel', 'carbon-peel-laser.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/chemical-peel', 'Chemical Peel', 'carbon-peel-laser.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/skin-whitening', 'Skin Whitening', 'skin-whitening.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/skin-brightening', 'Skin Brightening', 'skin-brightening.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/anti-ageing-facial', 'Anti-Ageing Facial', 'anti-ageing-facial.webp', 'skin', handleLinkClick)}
-                </div>
-              </div>
-
-              {/* Group 3: Laser Hair Removal */}
-              <div className="mb-4">
-                <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
-                  <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
-                    Laser Hair Removal
-                  </h5>
-                </div>
-                <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/treatments/laser-hair-removal', 'Full Body Laser', 'full-body-laser-hair-removal.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/facial-laser-hair-removal', 'Facial Hair Removal', 'facial-hair-removal.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/lip-brightening', 'Lip Brightening', 'lip-brightening.webp', 'skin', handleLinkClick)}
-                </div>
-              </div>
-
-              {/* Group 4: Cosmetic Surgery */}
-              <div className="mb-4">
-                <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
-                  <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
-                    Cosmetic Surgery
-                  </h5>
-                </div>
-                <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/treatments/facial-surgery', 'Facial Surgery', 'facial-surgery-icon.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/rhinoplasty', 'Rhinoplasty', 'rhinoplasty.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/lip-correction-surgery', 'Lip Correction', 'lip-correction-surgery.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/scar-revision-surgery', 'Scar Revision', 'scar-revision-surgery.webp', 'skin', handleLinkClick)}
-                </div>
-              </div>
-
-              {/* Group 5: Anti-Ageing & Aesthetics */}
-              <div className="mb-4">
-                <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
-                  <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
-                    Anti-Ageing & Aesthetics
-                  </h5>
-                </div>
-                <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/treatments/wrinkle-treatment', 'Wrinkle Reduction', 'wrinkle-reduction.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/botox', 'Botox Treatment', 'botox-treatment.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/dermal-fillers', 'Dermal Fillers', 'dermal-fillers.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/hifu-skin-tightening', 'HIFU Tightening', 'hifu-skin-tightening.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/microdermabrasion', 'Microdermabrasion', 'microdermabrasion.webp', 'skin', handleLinkClick)}
-                </div>
-              </div>
-
-              {/* Group 6: Mole & Skin Growth Removal */}
-              <div className="mb-4">
-                <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
-                  <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
-                    Mole & Skin Growth Removal
-                  </h5>
-                </div>
-                <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/treatments/mole-removal', 'Mole Removal', 'mole-removal.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/wart-removal', 'Wart Removal', 'wart-removal-treatment.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/skin-tag-removal', 'Skin Tag Removal', 'benign-skin-growth-removal.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/xanthelasma-removal', 'Xanthelasma', 'xanthelasma-removal.webp', 'skin', handleLinkClick)}
-                </div>
-              </div>
-
-              {/* Group 7: Medical Skin Care */}
-              <div className="mb-4">
-                <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
-                  <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
-                    Medical Skin Care
-                  </h5>
-                </div>
-                <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/treatments/psoriasis-treatment', 'Psoriasis Care', 'psoriasis-treatment.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/vitiligo-treatment', 'Vitiligo Care', 'vitiligo-treatment.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/excimer-laser-therapy', 'Excimer Laser', 'excimer-laser-therapy.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/keloid-treatment', 'Keloid Treatment', 'keloid-treatment.webp', 'skin', handleLinkClick)}
-                </div>
-              </div>
-
-              {/* Bottom CTA to view all treatments */}
-              <div className="mt-5 pt-3.5 border-t border-white/10">
-                <Link
-                  to="/treatments?category=cosmetic"
-                  onClick={handleLinkClick}
-                  className="w-full py-2.5 px-4 rounded-xl bg-white/[0.08] hover:bg-white/[0.14] text-white font-headline font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 border border-white/15 backdrop-blur-md transition-colors"
-                >
-                  <span>Explore All 41 Skin & Laser Procedures</span>
-                  <ChevronRight className="w-3.5 h-3.5 text-brandSky" />
-                </Link>
-              </div>
-            </div>
-          )}
-
-          {/* ───────── SCREEN: HAIR RESTORATION (Categorized 2-Column Grid with WebP Icons!) ───────── */}
-          {currentScreen === 'services-hair' && (
-            <div className="jerush-mobile-screen py-1">
-              {/* Department Header Banner */}
-              <div className="flex items-center gap-3 mb-4 p-3 rounded-2xl bg-white/[0.07] border border-white/10 backdrop-blur-md">
-                <span className="relative flex items-center justify-center w-8 h-8 rounded-full bg-slate-950 border border-brandSky/60 shadow-[0_0_8px_rgba(30,151,212,0.35)] overflow-hidden shrink-0">
-                  <img src="/gifs/hair.gif" alt="Hair Restoration" className="w-full h-full object-cover scale-110" />
-                </span>
-                <div>
-                  <h4 className="font-headline font-bold text-sm text-white uppercase tracking-wide">
-                    Hair Restoration
-                  </h4>
-                  <p className="text-[11px] text-slate-400 font-medium">Transplants, Regenerative Therapies & Scalp Care</p>
-                </div>
-              </div>
-
-              {/* Group 1: Hair Fall Treatments */}
-              <div className="mb-4">
-                <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
-                  <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
-                    Hair Fall Therapies
-                  </h5>
-                </div>
-                <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/treatments/prp-hair-treatment', 'PRP Hair Therapy', 'prp-hair-therapy.webp', 'hair', handleLinkClick)}
-                  {renderMobileTreatmentItem('/hair-care/growth-factor-therapy/gfc-hair', 'GFC Growth Factor', 'gfc-hair-therapy.webp', 'hair', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/qr678-hair-treatment', 'QR678 Hair Therapy', 'qr678-hair-therapy.webp', 'hair', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/exocell-hair-treatment', 'Exocell Therapy', 'exocell-therapy.webp', 'hair', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/biocell-hair-treatment', 'Bio Cell Therapy', 'biocell-therapy.webp', 'hair', handleLinkClick)}
-                </div>
-              </div>
-
-              {/* Group 2: Hair Transplant */}
-              <div className="mb-4">
-                <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
-                  <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
-                    Hair Transplant
-                  </h5>
-                </div>
-                <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/hair-care/hair-transplant/fue-hair-transplant', 'Micro-FUE Transplant', 'hair-transplant.webp', 'hair', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/beard-transplant', 'Beard Transplant', 'beard-transplant.webp', 'hair', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/hairline-correction', 'Hairline Correction', 'hairline-correction.webp', 'hair', handleLinkClick)}
-                </div>
-              </div>
-
-              {/* Group 3: Scalp Care */}
-              <div className="mb-4">
-                <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
-                  <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
-                    Scalp Care & Boosters
-                  </h5>
-                </div>
-                <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/treatments/dandruff-treatment', 'Dandruff Treatment', 'dandruff-treatment.webp', 'hair', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/scalp-cleansing', 'Scalp Cleansing', 'scalp-cleansing-treatment.webp', 'hair', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/hair-growth-booster', 'Hair Growth Booster', 'hair-growth-booster.webp', 'hair', handleLinkClick)}
-                </div>
-              </div>
-
-              {/* Bottom CTA to view all treatments */}
-              <div className="mt-5 pt-3.5 border-t border-white/10">
-                <Link
-                  to="/treatments?category=hair"
-                  onClick={handleLinkClick}
-                  className="w-full py-2.5 px-4 rounded-xl bg-white/[0.08] hover:bg-white/[0.14] text-white font-headline font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 border border-white/15 backdrop-blur-md transition-colors"
-                >
-                  <span>Explore All 12 Hair Procedures</span>
-                  <ChevronRight className="w-3.5 h-3.5 text-brandSky" />
-                </Link>
-              </div>
-            </div>
-          )}
-
-          {/* ───────── SCREEN: BODY CONTOURING & WELLNESS (Categorized 2-Column Grid with WebP Icons!) ───────── */}
-          {currentScreen === 'services-body' && (
-            <div className="jerush-mobile-screen py-1">
-              {/* Department Header Banner */}
-              <div className="flex items-center gap-3 mb-4 p-3 rounded-2xl bg-white/[0.07] border border-white/10 backdrop-blur-md">
-                <span className="relative flex items-center justify-center w-8 h-8 rounded-full bg-slate-950 border border-brandSky/60 shadow-[0_0_8px_rgba(30,151,212,0.35)] overflow-hidden shrink-0">
-                  <img src="/gifs/body-reduction.gif" alt="Body Contouring" className="w-full h-full object-cover scale-110" />
-                </span>
-                <div>
-                  <h4 className="font-headline font-bold text-sm text-white uppercase tracking-wide">
-                    Body Contouring & Wellness
-                  </h4>
-                  <p className="text-[11px] text-slate-400 font-medium">Non-Invasive Sculpting & Pelvic Rehabilitation</p>
-                </div>
-              </div>
-
-              {/* Group 1: Fat Reduction & Sculpting */}
-              <div className="mb-4">
-                <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
-                  <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
-                    Fat Reduction & Sculpting
-                  </h5>
-                </div>
-                <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/body-contouring/cryo-sculpting/cool-sculpting', 'Cryo Fat Freeze', 'cryolipolysis-fat-reduction.webp', 'body', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/emsculpt-body-contouring', 'EMSculpt Contouring', 'emsculpt-body-contouring.webp', 'body', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/muscle-toning', 'Muscle Toning', 'muscle-toning.webp', 'body', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/rf-body-tightening', 'RF Tightening', 'rf-body-tightening.webp', 'body', handleLinkClick)}
-                </div>
-              </div>
-
-              {/* Group 2: Women's Wellness & Therapy */}
-              <div className="mb-4">
-                <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
-                  <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
-                    Women's Wellness & Therapy
-                  </h5>
-                </div>
-                <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/treatments/emsella-chair', 'Emsella Chair', 'emsella-chair-therapy.webp', 'body', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/pelvic-floor-treatment', 'Pelvic Floor Care', 'pelvic-floor-strengthening.webp', 'body', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/clinical-wellness', 'Clinical Wellness', 'clinical-wellness-programs.webp', 'body', handleLinkClick)}
-                </div>
-              </div>
-
-              {/* Bottom CTA to view all treatments */}
-              <div className="mt-5 pt-3.5 border-t border-white/10">
-                <Link
-                  to="/treatments?category=body"
-                  onClick={handleLinkClick}
-                  className="w-full py-2.5 px-4 rounded-xl bg-white/[0.08] hover:bg-white/[0.14] text-white font-headline font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 border border-white/15 backdrop-blur-md transition-colors"
-                >
-                  <span>Explore All 8 Body Procedures</span>
-                  <ChevronRight className="w-3.5 h-3.5 text-brandSky" />
-                </Link>
-              </div>
-            </div>
-          )}
-
-          {/* ───────── SCREEN: SMILE STORIES & RESULTS (2-Column Grid!) ───────── */}
-          {currentScreen === 'stories' && (
-            <div className="jerush-mobile-screen py-2">
-              <div className="grid grid-cols-2 gap-x-5 gap-y-3.5">
-                <Link to="/smile-transformations" onClick={handleLinkClick} className="block text-xs sm:text-sm font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
-                  Smile Transformations
-                </Link>
-                <Link to="/video-testimonials" onClick={handleLinkClick} className="block text-xs sm:text-sm font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
-                  Video Testimonials
-                </Link>
-
-                <Link to="/cosmetic-resurfacing" onClick={handleLinkClick} className="block text-xs sm:text-sm font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
-                  Cosmetic Resurfacing
-                </Link>
-                <Link to="/reviews" onClick={handleLinkClick} className="block text-xs sm:text-sm font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
-                  Google Reviews Feed
-                </Link>
-
-                <Link to="/hair-regrowth-results" onClick={handleLinkClick} className="block text-xs sm:text-sm font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
-                  Hair Regrowth Cases
-                </Link>
-                <Link to="/events" onClick={handleLinkClick} className="block text-xs sm:text-sm font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
-                  Hospital Facilities
-                </Link>
-
-                <Link to="/body-contouring-cases" onClick={handleLinkClick} className="block text-xs sm:text-sm font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
-                  Body Contouring Cases
-                </Link>
-                <Link to="/camps" onClick={handleLinkClick} className="block text-xs sm:text-sm font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
-                  Community Outreach
-                </Link>
-              </div>
-            </div>
-          )}
+{/* ───────── SCREEN: SKIN & LASER TREATMENTS (Categorized 2-Column Grid with WebP Icons!) ───────── */ }
+{
+  currentScreen === 'services-skin' && (
+    <div className="jerush-mobile-screen py-1">
+      {/* Department Header Banner */}
+      <div className="flex items-center gap-3 mb-4 p-3 rounded-2xl bg-white/[0.07] border border-white/10 backdrop-blur-md">
+        <span className="relative flex items-center justify-center w-8 h-8 rounded-full bg-slate-950 border border-brandSky/60 shadow-[0_0_8px_rgba(30,151,212,0.35)] overflow-hidden shrink-0">
+          <img src="/gifs/cosmetic.gif" alt="Skin & Laser" className="w-full h-full object-cover scale-110" />
+        </span>
+        <div>
+          <h4 className="font-headline font-bold text-sm text-white uppercase tracking-wide">
+            Skin & Laser Treatments
+          </h4>
+          <p className="text-[11px] text-slate-400 font-medium">Cosmetic Dermatology & Advanced Laser Technology</p>
         </div>
       </div>
+
+      {/* Group 1: Acne & Pigmentation */}
+      <div className="mb-4">
+        <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
+          <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
+          <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
+            Acne & Pigmentation
+          </h5>
+        </div>
+        <div className="grid grid-cols-2 gap-2">
+          {renderMobileTreatmentItem('/treatments/acne-treatment', 'Acne Treatment', 'acne-treatment.webp', 'skin', handleLinkClick)}
+          {renderMobileTreatmentItem('/skin-care/laser-treatments/fractional-co2-laser', 'Acne Scars', 'acne-scar.webp', 'skin', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/pigmentation-treatment', 'Pigmentation', 'pigmentation-treatment.webp', 'skin', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/melasma-treatment', 'Melasma Care', 'melasma-teatment.webp', 'skin', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/uneven-skin-tone', 'Uneven Skin Tone', 'uneven-skin-tone.webp', 'skin', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/freckles-removal', 'Freckles Removal', 'freckles-removal.webp', 'skin', handleLinkClick)}
+        </div>
+      </div>
+
+      {/* Group 2: Skin Glow & Rejuvenation */}
+      <div className="mb-4">
+        <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
+          <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
+          <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
+            Skin Glow & Rejuvenation
+          </h5>
+        </div>
+        <div className="grid grid-cols-2 gap-2">
+          {renderMobileTreatmentItem('/treatments/hydrafacial', 'HydraFacial', 'hydrafacial.webp', 'skin', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/carbon-peel-laser', 'Carbon Laser Peel', 'carbon-peel-laser.webp', 'skin', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/chemical-peel', 'Chemical Peel', 'carbon-peel-laser.webp', 'skin', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/skin-whitening', 'Skin Whitening', 'skin-whitening.webp', 'skin', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/skin-brightening', 'Skin Brightening', 'skin-brightening.webp', 'skin', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/anti-ageing-facial', 'Anti-Ageing Facial', 'anti-ageing-facial.webp', 'skin', handleLinkClick)}
+        </div>
+      </div>
+
+      {/* Group 3: Laser Hair Removal */}
+      <div className="mb-4">
+        <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
+          <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
+          <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
+            Laser Hair Removal
+          </h5>
+        </div>
+        <div className="grid grid-cols-2 gap-2">
+          {renderMobileTreatmentItem('/treatments/laser-hair-removal', 'Full Body Laser', 'full-body-laser-hair-removal.webp', 'skin', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/facial-laser-hair-removal', 'Facial Hair Removal', 'facial-hair-removal.webp', 'skin', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/lip-brightening', 'Lip Brightening', 'lip-brightening.webp', 'skin', handleLinkClick)}
+        </div>
+      </div>
+
+      {/* Group 4: Cosmetic Surgery */}
+      <div className="mb-4">
+        <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
+          <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
+          <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
+            Cosmetic Surgery
+          </h5>
+        </div>
+        <div className="grid grid-cols-2 gap-2">
+          {renderMobileTreatmentItem('/treatments/facial-surgery', 'Facial Surgery', 'facial-surgery-icon.webp', 'skin', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/rhinoplasty', 'Rhinoplasty', 'rhinoplasty.webp', 'skin', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/lip-correction-surgery', 'Lip Correction', 'lip-correction-surgery.webp', 'skin', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/scar-revision-surgery', 'Scar Revision', 'scar-revision-surgery.webp', 'skin', handleLinkClick)}
+        </div>
+      </div>
+
+      {/* Group 5: Anti-Ageing & Aesthetics */}
+      <div className="mb-4">
+        <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
+          <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
+          <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
+            Anti-Ageing & Aesthetics
+          </h5>
+        </div>
+        <div className="grid grid-cols-2 gap-2">
+          {renderMobileTreatmentItem('/treatments/wrinkle-treatment', 'Wrinkle Reduction', 'wrinkle-reduction.webp', 'skin', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/botox', 'Botox Treatment', 'botox-treatment.webp', 'skin', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/dermal-fillers', 'Dermal Fillers', 'dermal-fillers.webp', 'skin', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/hifu-skin-tightening', 'HIFU Tightening', 'hifu-skin-tightening.webp', 'skin', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/microdermabrasion', 'Microdermabrasion', 'microdermabrasion.webp', 'skin', handleLinkClick)}
+        </div>
+      </div>
+
+      {/* Group 6: Mole & Skin Growth Removal */}
+      <div className="mb-4">
+        <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
+          <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
+          <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
+            Mole & Skin Growth Removal
+          </h5>
+        </div>
+        <div className="grid grid-cols-2 gap-2">
+          {renderMobileTreatmentItem('/treatments/mole-removal', 'Mole Removal', 'mole-removal.webp', 'skin', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/wart-removal', 'Wart Removal', 'wart-removal-treatment.webp', 'skin', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/skin-tag-removal', 'Skin Tag Removal', 'benign-skin-growth-removal.webp', 'skin', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/xanthelasma-removal', 'Xanthelasma', 'xanthelasma-removal.webp', 'skin', handleLinkClick)}
+        </div>
+      </div>
+
+      {/* Group 7: Medical Skin Care */}
+      <div className="mb-4">
+        <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
+          <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
+          <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
+            Medical Skin Care
+          </h5>
+        </div>
+        <div className="grid grid-cols-2 gap-2">
+          {renderMobileTreatmentItem('/treatments/psoriasis-treatment', 'Psoriasis Care', 'psoriasis-treatment.webp', 'skin', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/vitiligo-treatment', 'Vitiligo Care', 'vitiligo-treatment.webp', 'skin', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/excimer-laser-therapy', 'Excimer Laser', 'excimer-laser-therapy.webp', 'skin', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/keloid-treatment', 'Keloid Treatment', 'keloid-treatment.webp', 'skin', handleLinkClick)}
+        </div>
+      </div>
+
+      {/* Bottom CTA to view all treatments */}
+      <div className="mt-5 pt-3.5 border-t border-white/10">
+        <Link
+          to="/treatments?category=cosmetic"
+          onClick={handleLinkClick}
+          className="w-full py-2.5 px-4 rounded-xl bg-white/[0.08] hover:bg-white/[0.14] text-white font-headline font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 border border-white/15 backdrop-blur-md transition-colors"
+        >
+          <span>Explore All 41 Skin & Laser Procedures</span>
+          <ChevronRight className="w-3.5 h-3.5 text-brandSky" />
+        </Link>
+      </div>
     </div>
+  )
+}
+
+{/* ───────── SCREEN: HAIR RESTORATION (Categorized 2-Column Grid with WebP Icons!) ───────── */ }
+{
+  currentScreen === 'services-hair' && (
+    <div className="jerush-mobile-screen py-1">
+      {/* Department Header Banner */}
+      <div className="flex items-center gap-3 mb-4 p-3 rounded-2xl bg-white/[0.07] border border-white/10 backdrop-blur-md">
+        <span className="relative flex items-center justify-center w-8 h-8 rounded-full bg-slate-950 border border-brandSky/60 shadow-[0_0_8px_rgba(30,151,212,0.35)] overflow-hidden shrink-0">
+          <img src="/gifs/hair.gif" alt="Hair Restoration" className="w-full h-full object-cover scale-110" />
+        </span>
+        <div>
+          <h4 className="font-headline font-bold text-sm text-white uppercase tracking-wide">
+            Hair Restoration
+          </h4>
+          <p className="text-[11px] text-slate-400 font-medium">Transplants, Regenerative Therapies & Scalp Care</p>
+        </div>
+      </div>
+
+      {/* Group 1: Hair Fall Treatments */}
+      <div className="mb-4">
+        <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
+          <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
+          <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
+            Hair Fall Therapies
+          </h5>
+        </div>
+        <div className="grid grid-cols-2 gap-2">
+          {renderMobileTreatmentItem('/treatments/prp-hair-treatment', 'PRP Hair Therapy', 'prp-hair-therapy.webp', 'hair', handleLinkClick)}
+          {renderMobileTreatmentItem('/hair-care/growth-factor-therapy/gfc-hair', 'GFC Growth Factor', 'gfc-hair-therapy.webp', 'hair', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/qr678-hair-treatment', 'QR678 Hair Therapy', 'qr678-hair-therapy.webp', 'hair', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/exocell-hair-treatment', 'Exocell Therapy', 'exocell-therapy.webp', 'hair', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/biocell-hair-treatment', 'Bio Cell Therapy', 'biocell-therapy.webp', 'hair', handleLinkClick)}
+        </div>
+      </div>
+
+      {/* Group 2: Hair Transplant */}
+      <div className="mb-4">
+        <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
+          <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
+          <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
+            Hair Transplant
+          </h5>
+        </div>
+        <div className="grid grid-cols-2 gap-2">
+          {renderMobileTreatmentItem('/hair-care/hair-transplant/fue-hair-transplant', 'Micro-FUE Transplant', 'hair-transplant.webp', 'hair', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/beard-transplant', 'Beard Transplant', 'beard-transplant.webp', 'hair', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/hairline-correction', 'Hairline Correction', 'hairline-correction.webp', 'hair', handleLinkClick)}
+        </div>
+      </div>
+
+      {/* Group 3: Scalp Care */}
+      <div className="mb-4">
+        <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
+          <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
+          <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
+            Scalp Care & Boosters
+          </h5>
+        </div>
+        <div className="grid grid-cols-2 gap-2">
+          {renderMobileTreatmentItem('/treatments/dandruff-treatment', 'Dandruff Treatment', 'dandruff-treatment.webp', 'hair', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/scalp-cleansing', 'Scalp Cleansing', 'scalp-cleansing-treatment.webp', 'hair', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/hair-growth-booster', 'Hair Growth Booster', 'hair-growth-booster.webp', 'hair', handleLinkClick)}
+        </div>
+      </div>
+
+      {/* Bottom CTA to view all treatments */}
+      <div className="mt-5 pt-3.5 border-t border-white/10">
+        <Link
+          to="/treatments?category=hair"
+          onClick={handleLinkClick}
+          className="w-full py-2.5 px-4 rounded-xl bg-white/[0.08] hover:bg-white/[0.14] text-white font-headline font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 border border-white/15 backdrop-blur-md transition-colors"
+        >
+          <span>Explore All 12 Hair Procedures</span>
+          <ChevronRight className="w-3.5 h-3.5 text-brandSky" />
+        </Link>
+      </div>
+    </div>
+  )
+}
+
+{/* ───────── SCREEN: BODY CONTOURING & WELLNESS (Categorized 2-Column Grid with WebP Icons!) ───────── */ }
+{
+  currentScreen === 'services-body' && (
+    <div className="jerush-mobile-screen py-1">
+      {/* Department Header Banner */}
+      <div className="flex items-center gap-3 mb-4 p-3 rounded-2xl bg-white/[0.07] border border-white/10 backdrop-blur-md">
+        <span className="relative flex items-center justify-center w-8 h-8 rounded-full bg-slate-950 border border-brandSky/60 shadow-[0_0_8px_rgba(30,151,212,0.35)] overflow-hidden shrink-0">
+          <img src="/gifs/body-reduction.gif" alt="Body Contouring" className="w-full h-full object-cover scale-110" />
+        </span>
+        <div>
+          <h4 className="font-headline font-bold text-sm text-white uppercase tracking-wide">
+            Body Contouring & Wellness
+          </h4>
+          <p className="text-[11px] text-slate-400 font-medium">Non-Invasive Sculpting & Pelvic Rehabilitation</p>
+        </div>
+      </div>
+
+      {/* Group 1: Fat Reduction & Sculpting */}
+      <div className="mb-4">
+        <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
+          <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
+          <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
+            Fat Reduction & Sculpting
+          </h5>
+        </div>
+        <div className="grid grid-cols-2 gap-2">
+          {renderMobileTreatmentItem('/body-contouring/cryo-sculpting/cool-sculpting', 'Cryo Fat Freeze', 'cryolipolysis-fat-reduction.webp', 'body', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/emsculpt-body-contouring', 'EMSculpt Contouring', 'emsculpt-body-contouring.webp', 'body', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/muscle-toning', 'Muscle Toning', 'muscle-toning.webp', 'body', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/rf-body-tightening', 'RF Tightening', 'rf-body-tightening.webp', 'body', handleLinkClick)}
+        </div>
+      </div>
+
+      {/* Group 2: Women's Wellness & Therapy */}
+      <div className="mb-4">
+        <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
+          <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
+          <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
+            Women's Wellness & Therapy
+          </h5>
+        </div>
+        <div className="grid grid-cols-2 gap-2">
+          {renderMobileTreatmentItem('/treatments/emsella-chair', 'Emsella Chair', 'emsella-chair-therapy.webp', 'body', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/pelvic-floor-treatment', 'Pelvic Floor Care', 'pelvic-floor-strengthening.webp', 'body', handleLinkClick)}
+          {renderMobileTreatmentItem('/treatments/clinical-wellness', 'Clinical Wellness', 'clinical-wellness-programs.webp', 'body', handleLinkClick)}
+        </div>
+      </div>
+
+      {/* Bottom CTA to view all treatments */}
+      <div className="mt-5 pt-3.5 border-t border-white/10">
+        <Link
+          to="/treatments?category=body"
+          onClick={handleLinkClick}
+          className="w-full py-2.5 px-4 rounded-xl bg-white/[0.08] hover:bg-white/[0.14] text-white font-headline font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 border border-white/15 backdrop-blur-md transition-colors"
+        >
+          <span>Explore All 8 Body Procedures</span>
+          <ChevronRight className="w-3.5 h-3.5 text-brandSky" />
+        </Link>
+      </div>
+    </div>
+  )
+}
+
+{/* ───────── SCREEN: SMILE STORIES & RESULTS (2-Column Grid!) ───────── */ }
+{
+  currentScreen === 'stories' && (
+    <div className="jerush-mobile-screen py-2">
+      <div className="grid grid-cols-2 gap-x-5 gap-y-3.5">
+        <Link to="/smile-transformations" onClick={handleLinkClick} className="block text-xs sm:text-sm font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
+          Smile Transformations
+        </Link>
+        <Link to="/video-testimonials" onClick={handleLinkClick} className="block text-xs sm:text-sm font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
+          Video Testimonials
+        </Link>
+
+        <Link to="/cosmetic-resurfacing" onClick={handleLinkClick} className="block text-xs sm:text-sm font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
+          Cosmetic Resurfacing
+        </Link>
+        <Link to="/reviews" onClick={handleLinkClick} className="block text-xs sm:text-sm font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
+          Google Reviews Feed
+        </Link>
+
+        <Link to="/hair-regrowth-results" onClick={handleLinkClick} className="block text-xs sm:text-sm font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
+          Hair Regrowth Cases
+        </Link>
+        <Link to="/events" onClick={handleLinkClick} className="block text-xs sm:text-sm font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
+          Hospital Facilities
+        </Link>
+
+        <Link to="/body-contouring-cases" onClick={handleLinkClick} className="block text-xs sm:text-sm font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
+          Body Contouring Cases
+        </Link>
+        <Link to="/camps" onClick={handleLinkClick} className="block text-xs sm:text-sm font-semibold text-slate-200 hover:text-brandSky transition-colors leading-snug">
+          Community Outreach
+        </Link>
+      </div>
+    </div>
+  )
+}
+        </div >
+      </div >
+    </div >
   );
 }

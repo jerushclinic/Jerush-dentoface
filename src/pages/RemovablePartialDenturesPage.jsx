@@ -12,7 +12,6 @@ import {
 import PageBreadcrumbHero from '../components/common/PageBreadcrumbHero';
 import TreatmentCtaBanner from '../components/common/TreatmentCtaBanner';
 import TreatmentSectionNav from '../components/common/TreatmentSectionNav';
-import TreatmentAppointmentForm from '../components/common/TreatmentAppointmentForm';
 import useTreatmentScrollSpy from '../hooks/useTreatmentScrollSpy';
 
 const STATS = [
@@ -221,15 +220,8 @@ export default function RemovablePartialDenturesPage() {
   }, []);
 
   const handleBookClick = () => {
-    const el = document.getElementById('treatment-appointment-section');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      const nameInput = document.getElementById('treatment-form-name');
-      if (nameInput) nameInput.focus();
-    } else {
-      navigate('/contact');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    navigate('/contact');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -253,31 +245,28 @@ export default function RemovablePartialDenturesPage() {
             initial={{ opacity: 0, x: -24 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-7 space-y-5"
+            className="lg:col-span-7 space-y-6"
           >
             {/* Main Title & Headline */}
-            <div>
-              <span className="text-xs sm:text-sm font-bold text-brandBlue uppercase tracking-wider block font-headline mb-2.5">
+            <div className="space-y-3">
+              <span className="text-xs sm:text-sm font-bold text-slate-500 uppercase tracking-widest block font-headline">
                 Jerush Dentofacial & Cosmetic Laser Centre
               </span>
-              <h1
-                style={{ lineHeight: 1.4 }}
-                className="text-3xl sm:text-4xl lg:text-[38px] xl:text-[42px] font-extrabold font-headline tracking-tight leading-[1.4] text-slate-900"
-              >
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black font-headline tracking-tight leading-[1.18] text-slate-900">
                 Replacing Missing Teeth With a{' '}
                 <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
-                  Comfortable, Removable&nbsp;Solution
+                  Comfortable, Removable Solution
                 </span>
               </h1>
-              <p className="text-slate-600 text-base sm:text-lg leading-relaxed mt-4">
-                Missing teeth can affect more than your smile. They can make chewing difficult, affect speech and leave noticeable gaps between your teeth.
-              </p>
-              <div className="mt-3.5 p-4 rounded-2xl bg-white/80 backdrop-blur-sm border border-slate-200/80 shadow-xs">
-                <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
-                  <strong className="text-slate-900 font-semibold">Removable partial dentures</strong> are custom-made dental appliances designed to replace one or more missing teeth while using the remaining natural teeth for support. They can be removed for cleaning and are a practical tooth-replacement option for suitable patients.
-                </p>
-              </div>
             </div>
+
+            {/* Verbatim Intro Text from PDF */}
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
+              Missing teeth can affect more than your smile. They can make chewing difficult, affect speech and leave noticeable gaps between your teeth.
+            </p>
+            <p className="text-slate-600 text-sm sm:text-base leading-relaxed bg-white/70 backdrop-blur-sm p-4 rounded-2xl border border-slate-200/80 shadow-sm">
+              <strong className="text-slate-900 font-semibold">Removable partial dentures</strong> are custom-made dental appliances designed to replace one or more missing teeth while using the remaining natural teeth for support. They can be removed for cleaning and are a practical tooth-replacement option for suitable patients.
+            </p>
 
             {/* Quick Action Buttons */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -329,49 +318,46 @@ export default function RemovablePartialDenturesPage() {
             {/* Ambient Lighting Gradients */}
             <div className="absolute -inset-4 bg-gradient-to-tr from-brandSky/20 via-brandBlue/15 to-transparent rounded-3xl blur-2xl -z-10" />
 
-            <div className="relative rounded-3xl overflow-hidden bg-white border border-slate-200/90 shadow-2xl p-2.5 sm:p-3 group">
-              {/* Dental Model Landscape Image - Clean Frame */}
-              <div className="relative rounded-2xl overflow-hidden bg-slate-50 aspect-[16/10]">
+            <div className="relative rounded-3xl overflow-hidden bg-white border border-slate-200/90 shadow-2xl p-4 sm:p-5">
+              {/* Dental Model Image */}
+              <div className="relative rounded-2xl overflow-hidden bg-slate-50 group">
                 <img
                   src="/images/medical-services/dental-care/prosthodontic-care-tooth-replacement/removable-partial-dentures/removable-partial-denture-dental-model.webp"
                   alt="Removable partial denture on dental model - Jerush Dentofacial"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-[320px] sm:h-[380px] object-contain p-2 group-hover:scale-105 transition-transform duration-500"
                 />
+
+                {/* Subtle Overlay Badge on Image */}
+                <div className="absolute bottom-3 left-3 right-3 bg-slate-900/85 backdrop-blur-md rounded-xl p-3 border border-white/10 text-white flex items-center justify-between">
+                  <div>
+                    <p className="text-[11px] font-medium text-brandSky uppercase tracking-wider">
+                      Removable Appliance Design
+                    </p>
+                    <p className="text-xs font-bold font-headline text-white mt-0.5">
+                      Precision Clasps & Natural Tooth Match
+                    </p>
+                  </div>
+                  <div className="w-8 h-8 rounded-full bg-brandSky/20 flex items-center justify-center shrink-0">
+                    <SparklesIcon className="w-4 h-4 text-brandSky" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Card Footer Features */}
+              <div className="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-slate-100 text-left">
+                <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-100">
+                  <span className="text-[10px] text-slate-500 block uppercase font-bold">Anchorage</span>
+                  <span className="text-xs font-bold text-slate-800">Remaining Natural Teeth</span>
+                </div>
+                <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-100">
+                  <span className="text-[10px] text-slate-500 block uppercase font-bold">Maintenance</span>
+                  <span className="text-xs font-bold text-slate-800">Easy Daily Cleaning</span>
+                </div>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
-
-      {/* ─── Top Appointment Consultation Section (Section Template) ─── */}
-      <TreatmentAppointmentForm
-        treatmentName="Removable Partial Dentures"
-        title="Book a Removable Partial Dentures Consultation"
-        highlightWord="Near You"
-        subtitle="Get personalised advice from Jerush Dentofacial & Cosmetic Laser Centre's leading prosthodontic specialists across Tamil Nadu."
-        features={[
-          {
-            icon: Smile,
-            title: 'Custom Precision Fit',
-            desc: 'Shade-matched teeth and anatomical moulds aligned to your natural gum contours.'
-          },
-          {
-            icon: Award,
-            title: 'Specialist Prosthodontists',
-            desc: 'Clinical consultations supervised by experienced prosthodontic specialists and dental surgeons.'
-          },
-          {
-            icon: Layers,
-            title: 'In-House Prosthetics Lab',
-            desc: 'Fast turnaround times with dedicated CAD/CAM acrylic and metal-framework fabrication.'
-          },
-          {
-            icon: MapPin,
-            title: '3 Regional Centres',
-            desc: 'Direct clinical consultations available in Thuckalay, Trichy, and Chennai.'
-          }
-        ]}
-      />
 
       {/* ─── Key Stats Bar ─── */}
       <section className="bg-gradient-to-r from-[#0F172A] via-[#2852A3] to-[#0F172A] py-10 sm:py-12 px-4 sm:px-6 text-white shadow-inner relative overflow-hidden">
@@ -406,20 +392,17 @@ export default function RemovablePartialDenturesPage() {
       {/* ─── Section 1: Overview & What Are Partial Dentures ─── */}
       <section id="overview" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 scroll-mt-28">
         <div className="bg-white rounded-3xl p-6 sm:p-10 lg:p-12 border border-slate-200/80 shadow-sm relative overflow-hidden">
-          <div className="max-w-3xl mb-10">
-            <span className="text-xs font-bold text-brandBlue uppercase tracking-wider font-headline block mb-2.5">
+          <div className="max-w-3xl space-y-4">
+            <span className="text-xs font-bold text-brandBlue uppercase tracking-wider font-headline">
               Treatment Understanding
             </span>
-            <h2
-              style={{ lineHeight: 1.4 }}
-              className="text-2xl sm:text-3xl lg:text-[36px] font-extrabold font-headline text-slate-900 tracking-tight leading-[1.4]"
-            >
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black font-headline text-slate-900 tracking-tight">
               Understanding{' '}
               <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
                 Removable Partial Dentures
               </span>
             </h2>
-            <p className="text-slate-600 text-sm sm:text-base leading-relaxed mt-3.5">
+            <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
               When one or several teeth are lost, the surrounding teeth can gradually shift, bite alignment becomes unbalanced, and facial muscle support can lessen. A removable partial denture is a custom-engineered dental prosthetic that fills empty spaces without altering or filing down your remaining healthy teeth.
             </p>
           </div>
@@ -446,7 +429,7 @@ export default function RemovablePartialDenturesPage() {
                 2. Shade-Matched Teeth
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                High-grade prosthetic teeth matched to your natural dental colour, anatomy and size so your smile appears seamless and lifelike.
+                High-grade prosthetic teeth matched to your natural dental colour, anatomy, and size so your smile appears seamless and lifelike.
               </p>
             </div>
 
@@ -471,27 +454,27 @@ export default function RemovablePartialDenturesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
 
             {/* Left: Content & Bullet Points from PDF */}
-            <div className="lg:col-span-7">
-              <div className="mb-6">
-                <span className="text-xs font-bold text-brandBlue uppercase tracking-wider font-headline block mb-2.5">
+            <div className="lg:col-span-7 space-y-6">
+              <div className="space-y-2">
+                <span className="text-xs font-bold text-brandBlue uppercase tracking-wider font-headline">
                   Candidate Evaluation
                 </span>
-                <h2
-                  style={{ lineHeight: 1.4 }}
-                  className="text-2xl sm:text-3xl lg:text-[36px] font-extrabold font-headline text-slate-900 tracking-tight leading-[1.4]"
-                >
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black font-headline text-slate-900 tracking-tight">
                   When Are Removable Partial Dentures{' '}
                   <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
                     Recommended?
                   </span>
                 </h2>
-                <p className="text-slate-700 text-base sm:text-lg leading-relaxed font-medium mt-3.5">
-                  A removable partial denture may be considered when you have several missing teeth but still have healthy natural teeth that can provide support.
-                </p>
-                <p className="text-slate-600 text-sm sm:text-base leading-relaxed mt-2">
-                  They are clinically recommended for:
-                </p>
               </div>
+
+              {/* Exact Text from PDF */}
+              <p className="text-slate-700 text-base sm:text-lg leading-relaxed font-medium">
+                A removable partial denture may be considered when you have several missing teeth but still have healthy natural teeth that can provide support.
+              </p>
+
+              <p className="text-slate-600 text-sm sm:text-base">
+                They may be suitable for:
+              </p>
 
               {/* 6 Suitability Points */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -515,6 +498,13 @@ export default function RemovablePartialDenturesPage() {
                 ))}
               </div>
 
+              {/* Clinical Assessment Box from PDF */}
+              <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-blue-50 to-sky-50 border border-brandSky/30 flex items-start gap-3.5">
+                <Stethoscope className="w-5 h-5 text-brandBlue shrink-0 mt-0.5" />
+                <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-medium">
+                  <strong>Specialist Clinical Guidance:</strong> Your dentist will assess your gums, remaining teeth, bite and overall oral health before recommending the most appropriate solution.
+                </p>
+              </div>
             </div>
 
             {/* Right: Accompanying Image from PDF */}
@@ -546,20 +536,17 @@ export default function RemovablePartialDenturesPage() {
 
       {/* ─── Section 3: What Are the Key Benefits? ─── */}
       <section id="benefits" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 scroll-mt-28">
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-          <span className="text-xs font-bold text-brandBlue uppercase tracking-wider font-headline block mb-2.5">
+        <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
+          <span className="text-xs font-bold text-brandBlue uppercase tracking-wider font-headline">
             Clinical Advantages
           </span>
-          <h2
-            style={{ lineHeight: 1.4 }}
-            className="text-2xl sm:text-3xl lg:text-[36px] font-extrabold font-headline text-slate-900 tracking-tight leading-[1.4]"
-          >
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black font-headline text-slate-900 tracking-tight">
             What Are the{' '}
             <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
               Key Benefits?
             </span>
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base leading-relaxed mt-3.5">
+          <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
             A well-designed partial denture can help restore both function and appearance.
           </p>
         </div>
@@ -602,6 +589,11 @@ export default function RemovablePartialDenturesPage() {
                     {benefit.desc}
                   </p>
                 </div>
+
+                <div className="pt-2 border-t border-slate-100 flex items-center gap-1.5 text-xs text-brandBlue font-semibold">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                  <span>Clinical Benefit Verified</span>
+                </div>
               </div>
             </motion.div>
           ))}
@@ -622,20 +614,17 @@ export default function RemovablePartialDenturesPage() {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-brandBlue/15 rounded-full blur-[140px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-            <span className="text-xs font-bold text-brandSky uppercase tracking-widest font-headline block mb-2.5">
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-3">
+            <span className="text-xs font-bold text-brandSky uppercase tracking-widest font-headline">
               The Clinical Pathway
             </span>
-            <h2
-              style={{ lineHeight: 1.4 }}
-              className="text-2xl sm:text-3xl lg:text-[36px] font-extrabold font-headline text-white tracking-tight leading-[1.4]"
-            >
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black font-headline text-white tracking-tight">
               How Are Removable Partial Dentures{' '}
               <span className="bg-gradient-to-r from-brandSky via-sky-300 to-white bg-clip-text text-transparent">
                 Made?
               </span>
             </h2>
-            <p className="text-slate-300 text-sm sm:text-base leading-relaxed mt-3.5">
+            <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
               At <strong className="text-white">Jerush Dentofacial & Cosmetic Laser Centre</strong>, treatment begins with a detailed examination of your teeth, gums and bite. Depending on your needs, the process includes four structured clinical stages:
             </p>
           </div>
@@ -647,20 +636,15 @@ export default function RemovablePartialDenturesPage() {
                 key={index}
                 className="rounded-3xl bg-slate-800/80 border border-white/10 overflow-hidden flex flex-col hover:border-brandSky/50 hover:bg-slate-800 transition-all duration-300 group"
               >
-                {/* Step Image Presentation - 100% visible without clipping */}
-                <div className="relative pt-6 pb-3 px-4 flex items-center justify-center bg-gradient-to-b from-slate-950/90 to-slate-900/40 border-b border-white/10 overflow-hidden">
-                  <div className="absolute w-36 h-36 rounded-full bg-brandSky/15 blur-2xl pointer-events-none group-hover:bg-brandSky/30 transition-all duration-500" />
-
-                  <div className="relative w-44 h-44 sm:w-48 sm:h-48 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
-                    <img
-                      src={step.img}
-                      alt={`${step.title} - Jerush Dentofacial`}
-                      className="w-full h-full object-contain filter drop-shadow-[0_10px_25px_rgba(0,0,0,0.6)]"
-                    />
-                  </div>
-
-                  <div className="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-3 py-1 rounded-full border border-brandSky/30 shadow-md">
-                    <span className="font-headline font-black text-xs text-brandSky tracking-wider">
+                {/* Step Image */}
+                <div className="relative h-48 overflow-hidden bg-slate-950">
+                  <img
+                    src={step.img}
+                    alt={`${step.title} - Jerush Dentofacial`}
+                    className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"
+                  />
+                  <div className="absolute top-3 left-3 bg-slate-900/85 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+                    <span className="font-headline font-black text-xs text-brandSky">
                       STEP {step.step}
                     </span>
                   </div>
@@ -726,27 +710,27 @@ export default function RemovablePartialDenturesPage() {
           </div>
 
           {/* Right: Text & Recommendations from PDF */}
-          <div className="lg:col-span-7 order-1 lg:order-2">
-            <div className="mb-6">
-              <span className="text-xs font-bold text-brandBlue uppercase tracking-wider font-headline block mb-2.5">
+          <div className="lg:col-span-7 order-1 lg:order-2 space-y-6">
+            <div className="space-y-2">
+              <span className="text-xs font-bold text-brandBlue uppercase tracking-wider font-headline">
                 Patient Comfort & Adaptation
               </span>
-              <h2
-                style={{ lineHeight: 1.4 }}
-                className="text-2xl sm:text-3xl lg:text-[36px] font-extrabold font-headline text-slate-900 tracking-tight leading-[1.4]"
-              >
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black font-headline text-slate-900 tracking-tight">
                 Living With & Caring for{' '}
                 <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
                   Your Denture
                 </span>
               </h2>
-              <p className="text-slate-600 text-sm sm:text-base leading-relaxed mt-3.5">
-                It can take a little time to become comfortable with a new removable partial denture. With regular use and proper care, most patients gradually adapt to it.
-              </p>
-              <h3 className="text-sm sm:text-base font-bold text-slate-800 font-headline mt-4">
-                To keep your denture comfortable:
-              </h3>
             </div>
+
+            {/* Verbatim Intro Text from PDF */}
+            <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+              It can take a little time to become comfortable with a new removable partial denture. With regular use and proper care, most patients gradually adapt to it.
+            </p>
+
+            <h3 className="text-sm sm:text-base font-bold text-slate-800 font-headline">
+              To keep your denture comfortable:
+            </h3>
 
             {/* 6 Guidelines Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -780,20 +764,17 @@ export default function RemovablePartialDenturesPage() {
       {/* ─── Section 6: Before & After Section (Showcase Section from PDF) ─── */}
       <section id="transformations" className="bg-slate-100 py-16 lg:py-20 border-y border-slate-200/70 scroll-mt-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-            <span className="text-xs font-bold text-brandBlue uppercase tracking-wider font-headline block mb-2.5">
+          <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
+            <span className="text-xs font-bold text-brandBlue uppercase tracking-wider font-headline">
               Clinical Case Showcase
             </span>
-            <h2
-              style={{ lineHeight: 1.4 }}
-              className="text-2xl sm:text-3xl lg:text-[36px] font-extrabold font-headline text-slate-900 tracking-tight leading-[1.4]"
-            >
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black font-headline text-slate-900 tracking-tight">
               Before & After{' '}
               <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
                 Clinical Outcomes
               </span>
             </h2>
-            <p className="text-slate-600 text-sm sm:text-base leading-relaxed mt-3.5">
+            <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
               See how custom removable partial dentures restore dental symmetry, chewing capability, and aesthetic lip support.
             </p>
           </div>
@@ -862,42 +843,39 @@ export default function RemovablePartialDenturesPage() {
 
       {/* ─── Section 7: Why Choose Jerush Dentofacial & Global Patient Care ─── */}
       <section id="advantage" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 scroll-mt-28">
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-          <span className="text-xs font-bold text-brandBlue uppercase tracking-wider font-headline block mb-2.5">
+        <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
+          <span className="text-xs font-bold text-brandBlue uppercase tracking-wider font-headline">
             Excellence & Global Reach
           </span>
-          <h2
-            style={{ lineHeight: 1.4 }}
-            className="text-2xl sm:text-3xl lg:text-[36px] font-extrabold font-headline text-slate-900 tracking-tight leading-[1.4]"
-          >
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black font-headline text-slate-900 tracking-tight">
             Why Choose Jerush for{' '}
             <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
               Prosthodontic Care?
             </span>
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base leading-relaxed mt-3.5">
+          <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
             With 27+ years of legacy in dental and maxillofacial care, Jerush Dentofacial provides world-class prosthodontic treatments across Tamil Nadu and for international patients.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
 
-          {/* Card 1: Specialist Prosthodontic Excellence */}
+          {/* Card 1: Specialist Prosthodontists */}
           <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm flex flex-col justify-between space-y-4 hover:shadow-lg hover:border-brandSky/40 transition-all">
             <div className="space-y-3">
               <div className="w-12 h-12 rounded-2xl bg-brandBlue/10 text-brandBlue flex items-center justify-center">
                 <Award className="w-6 h-6" />
               </div>
               <h3 className="font-headline font-black text-slate-900 text-lg">
-                Prosthodontic & Restorative Excellence
+                Specialist Prosthodontic Leadership
               </h3>
               <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                Our tooth-replacement procedures follow strict evidence-based clinical protocols, utilizing advanced dental impressions and digital bite registrations for optimal fit, comfort, and longevity.
+                Led by Dr. Sherine Ponraj (MDS Prosthodontics & Crown and Bridge), our tooth-replacement procedures follow strict evidence-based clinical protocols for fit, bite, and longevity.
               </p>
             </div>
             <div className="pt-3 border-t border-slate-100 text-xs text-brandBlue font-semibold flex items-center gap-1.5">
               <Check className="w-4 h-4 text-emerald-500" />
-              <span>Evidence-Based Clinical Protocols</span>
+              <span>CMC Ludhiana & CMC Vellore Trained</span>
             </div>
           </div>
 
@@ -945,20 +923,17 @@ export default function RemovablePartialDenturesPage() {
       {/* ─── Section 8: Frequently Asked Questions ─── */}
       <section id="faqs" className="bg-slate-100/70 py-16 lg:py-20 border-t border-slate-200/70 scroll-mt-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10 sm:mb-12">
-            <span className="text-xs font-bold text-brandBlue uppercase tracking-wider font-headline block mb-2.5">
+          <div className="text-center mb-12 space-y-3">
+            <span className="text-xs font-bold text-brandBlue uppercase tracking-wider font-headline">
               Patient Guidance & Answers
             </span>
-            <h2
-              style={{ lineHeight: 1.4 }}
-              className="text-2xl sm:text-3xl lg:text-[36px] font-extrabold font-headline text-slate-900 tracking-tight leading-[1.4]"
-            >
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black font-headline text-slate-900 tracking-tight">
               Frequently Asked{' '}
               <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
                 Questions
               </span>
             </h2>
-            <p className="text-slate-600 text-sm sm:text-base leading-relaxed mt-3.5">
+            <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
               Find answers to the most common queries regarding removable partial dentures, daily maintenance, and clinical outcomes.
             </p>
           </div>
