@@ -42,6 +42,8 @@ const SUBCATEGORY_MAP = {
   'facial-surgery-treatment': 'Facial & Maxillofacial Surgery',
   'cleft-lip-palate': 'Cleft Lip & Palate Surgery',
   'pediatric-dentistry': 'Kids & Pediatric Dentistry',
+  'dental-consultation': 'Kids & Pediatric Dentistry',
+  'pulpectomy': 'Kids & Pediatric Dentistry',
   'oral-pathology': 'Oral Health & Cancer Screening',
   'acne-treatment': 'Acne & Skin Care',
   'fractional-co2-laser': 'Acne & Pigmentation',

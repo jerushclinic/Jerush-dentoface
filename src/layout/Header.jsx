@@ -1055,7 +1055,7 @@ export default function Header() {
                                     </h5>
                                     <ul>
                                       <li>{renderDentalIconItem('/treatments/pediatric-dentistry', 'Pediatric Dental Care', 'pediatric-dental-care.webp', handleLinkClick)}</li>
-                                      <li>{renderDentalIconItem('/treatments/pulpectomy', 'Painless Root Canal', 'pulpectomy.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/treatments/dental-consultation', 'Dental Consultation', 'dental-consultation.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/pit-fissure-sealants', 'Pit & Fissure Sealants', 'pit-fissure-sealants.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/habit-breaking-appliances', 'Habit Appliances', 'habit-breaking-appliances.webp', handleLinkClick)}</li>
                                     </ul>
@@ -2483,7 +2483,7 @@ export default function Header() {
                 </Link>
                 <div className="grid grid-cols-2 gap-2">
                   {renderMobileTreatmentItem('/treatments/pediatric-dentistry', 'Pediatric Care', 'pediatric-dental-care.webp', 'dental', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/pulpectomy', 'Painless Root Canal', 'pulpectomy.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/treatments/dental-consultation', 'Dental Consultation', 'dental-consultation.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/pit-fissure-sealants', 'Pit & Fissure Sealants', 'pit-fissure-sealants.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/habit-breaking-appliances', 'Habit Appliances', 'habit-breaking-appliances.webp', 'dental', handleLinkClick)}
                 </div>
