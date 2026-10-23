@@ -65,8 +65,8 @@ const INCLUDED_SERVICES = [
     img: '/images/medical-services/dental-care/kids-dentistry-pedodontics/pediatric-dental-care/monitoring-dental-development.webp',
     alt: 'Monitoring children dental development and tooth eruption patterns',
     tag: 'Growth Tracking',
-    badgeColor: 'bg-emerald-50 text-emerald-700 border-emerald-500/20',
-    accentBorder: 'hover:border-emerald-400/60'
+    badgeColor: 'bg-indigo-50 text-indigo-700 border-indigo-500/20',
+    accentBorder: 'hover:border-indigo-400/60'
   }
 ];
 
@@ -344,15 +344,15 @@ export default function PediatricDentalCarePage() {
               {/* Trust Points */}
               <div className="pt-2 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-slate-600">
                 <div className="flex items-center gap-1.5">
-                  <Check className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <Check className="w-4 h-4 text-brandBlue shrink-0" />
                   <span>Child-Friendly & Fear-Free Environment</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <Check className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <Check className="w-4 h-4 text-brandBlue shrink-0" />
                   <span>Focus on Early Prevention & Comfort</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <Check className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <Check className="w-4 h-4 text-brandBlue shrink-0" />
                   <span>Tailored for Growing Smiles</span>
                 </div>
               </div>
@@ -497,11 +497,11 @@ export default function PediatricDentalCarePage() {
               </p>
             </div>
 
-            <div className="p-6 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md hover:border-emerald-400/50 transition-all group">
-              <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <div className="p-6 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-md hover:border-brandSky/50 transition-all group">
+              <div className="w-12 h-12 rounded-2xl bg-sky-50 text-brandBlue flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Smile className="w-6 h-6" />
               </div>
-              <h3 className="font-headline font-bold text-slate-900 text-lg mb-2 group-hover:text-emerald-700 transition-colors">
+              <h3 className="font-headline font-bold text-slate-900 text-lg mb-2 group-hover:text-brandBlue transition-colors">
                 Fear-Free Positive Visits
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -612,7 +612,7 @@ export default function PediatricDentalCarePage() {
 
                   <div className="mt-6 pt-4 border-t border-slate-200/60 flex items-center justify-between text-xs font-bold text-brandBlue">
                     <span className="flex items-center gap-1.5">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                      <CheckCircle2 className="w-4 h-4 text-brandBlue" />
                       Pediatric Protocol
                     </span>
                     <button
@@ -843,15 +843,19 @@ export default function PediatricDentalCarePage() {
         </div>
       </section>
 
-      {/* ─── SECTION 4: Helping Children Maintain Healthy Teeth at Home (Fresh Wellness Tone: Emerald/Teal to Sky) ─── */}
-      <section id="home-care-tips" className="w-full py-16 lg:py-24 bg-gradient-to-b from-emerald-50/40 via-teal-50/20 to-sky-50/30 relative scroll-mt-28 border-b border-teal-100/70 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* ─── SECTION 4: Helping Children Maintain Healthy Teeth at Home (Crisp Brand Sky & Royal Blue Styling) ─── */}
+      <section id="home-care-tips" className="w-full py-16 lg:py-24 bg-gradient-to-b from-sky-50/50 via-slate-50 to-white relative scroll-mt-28 border-b border-slate-200/80 overflow-hidden">
+        {/* Soft background glow accents */}
+        <div className="absolute top-0 right-1/4 w-80 h-80 bg-brandSky/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-brandBlue/5 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
 
             {/* Left: Home Habits Card Showcase */}
             <div className="lg:col-span-7 space-y-6">
               <div>
-                <span className="text-xs font-bold text-teal-700 uppercase tracking-wider font-headline block mb-2.5">
+                <span className="text-xs font-bold text-brandBlue uppercase tracking-wider font-headline block mb-2.5">
                   Daily Oral Hygiene Routine
                 </span>
                 <h2
@@ -859,7 +863,7 @@ export default function PediatricDentalCarePage() {
                   className="text-2xl sm:text-3xl lg:text-[36px] font-extrabold font-headline text-slate-900 tracking-tight leading-[1.4]"
                 >
                   Helping Children Maintain{' '}
-                  <span className="bg-gradient-to-r from-teal-600 via-brandBlue to-brandSky bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
                     Healthy Teeth at Home
                   </span>
                 </h2>
@@ -868,18 +872,18 @@ export default function PediatricDentalCarePage() {
                 </p>
               </div>
 
-              {/* 6 Habits Grid on Crisp White Cards with Teal/Emerald Accents */}
+              {/* 6 Habits Grid on Crisp White Cards with Jerush Blue/Sky Accents */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {HOME_HABITS.map((habit, idx) => (
                   <div
                     key={idx}
-                    className="p-4.5 rounded-2xl bg-white border border-teal-100/80 hover:border-teal-300 hover:shadow-md transition-all space-y-2 group"
+                    className="p-4.5 rounded-2xl bg-white border border-slate-200/90 hover:border-brandSky/60 hover:shadow-md transition-all space-y-2 group"
                   >
-                    <div className="flex items-center gap-2">
-                      <span className="w-6 h-6 rounded-full bg-teal-100 text-teal-800 font-headline font-bold text-xs flex items-center justify-center group-hover:bg-teal-600 group-hover:text-white transition-colors">
+                    <div className="flex items-center gap-2.5">
+                      <span className="w-6 h-6 rounded-full bg-blue-50 text-brandBlue font-headline font-bold text-xs flex items-center justify-center border border-blue-100 group-hover:bg-gradient-to-r group-hover:from-brandBlue group-hover:to-brandSky group-hover:text-white group-hover:border-transparent transition-all">
                         {habit.number}
                       </span>
-                      <h4 className="font-headline font-bold text-sm sm:text-base text-slate-900 group-hover:text-teal-700 transition-colors">
+                      <h4 className="font-headline font-bold text-sm sm:text-base text-slate-900 group-hover:text-brandBlue transition-colors">
                         {habit.title}
                       </h4>
                     </div>
@@ -891,16 +895,17 @@ export default function PediatricDentalCarePage() {
               </div>
 
               {/* Highlight Philosophy Box */}
-              <div className="p-5 rounded-2xl bg-white/90 border border-teal-200/80 shadow-xs">
-                <p className="text-slate-800 text-sm sm:text-base font-semibold italic text-center text-teal-950">
-                  "The aim is to make dental care a consistent, positive routine rather than something children associate only with pain."
+              <div className="p-5 rounded-2xl bg-white border border-blue-100/80 shadow-xs relative overflow-hidden">
+                <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-brandSky to-brandBlue" />
+                <p className="text-slate-700 text-sm sm:text-base font-semibold italic text-center pl-2">
+                  &ldquo;The aim is to make dental care a consistent, positive routine rather than something children associate only with pain.&rdquo;
                 </p>
               </div>
             </div>
 
             {/* Right: Home Care Photo */}
             <div className="lg:col-span-5 relative">
-              <div className="relative rounded-3xl overflow-hidden bg-white border border-teal-200/70 shadow-xl p-2.5 group">
+              <div className="relative rounded-3xl overflow-hidden bg-white border border-slate-200/80 shadow-xl p-2.5 group">
                 <div className="aspect-square rounded-2xl overflow-hidden bg-slate-50">
                   <img
                     src="/images/medical-services/dental-care/kids-dentistry-pedodontics/pediatric-dental-care/maintain-healthy-teeth-at-home.webp"
@@ -911,9 +916,9 @@ export default function PediatricDentalCarePage() {
               </div>
 
               {/* Pro Parent Tips */}
-              <div className="mt-4 p-4 rounded-2xl bg-white border border-teal-100 shadow-xs space-y-2">
-                <div className="flex items-center gap-2 text-xs font-bold text-teal-800 uppercase tracking-wider font-headline">
-                  <Lightbulb className="w-4 h-4 text-amber-500" />
+              <div className="mt-4 p-4 rounded-2xl bg-white border border-blue-100/90 shadow-xs space-y-2">
+                <div className="flex items-center gap-2 text-xs font-bold text-brandBlue uppercase tracking-wider font-headline">
+                  <Lightbulb className="w-4 h-4 text-amber-500 shrink-0" />
                   <span>Pediatrician & Dentist Recommendation</span>
                 </div>
                 <p className="text-xs text-slate-600 leading-relaxed">
