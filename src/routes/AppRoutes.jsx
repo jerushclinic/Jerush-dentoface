@@ -43,6 +43,8 @@ import PrivacyPolicyPage from '../pages/PrivacyPolicyPage.jsx';
 import TechnologiesPage from '../pages/TechnologiesPage.jsx';
 import RemovablePartialDenturesPage from '../pages/RemovablePartialDenturesPage.jsx';
 import PediatricDentalCarePage from '../pages/PediatricDentalCarePage.jsx';
+import PedoExtractionsPage from '../pages/PedoExtractionsPage.jsx';
+import PitFissureSealantsPage from '../pages/PitFissureSealantsPage.jsx';
 
 export default function AppRoutes() {
   return (
@@ -74,6 +76,28 @@ export default function AppRoutes() {
       <Route path="/dental-treatments/pediatric-dental-care" element={<Navigate to="/dental-care/kids-dentistry/pediatric-dental-care" replace />} />
       <Route path="/pediatric-dental-care" element={<Navigate to="/dental-care/kids-dentistry/pediatric-dental-care" replace />} />
       <Route path="/pediatric-dentistry" element={<Navigate to="/dental-care/kids-dentistry/pediatric-dental-care" replace />} />
+
+      {/* Pedo Extractions */}
+      <Route path="/dental-care/kids-dentistry/pedo-extractions" element={<PedoExtractionsPage />} />
+      <Route path="/dental-care/kids-dentistry/pedo-extractions/" element={<PedoExtractionsPage />} />
+      <Route path="/treatments/pedo-extractions" element={<PedoExtractionsPage />} />
+      <Route path="/treatments/pedo-extractions/" element={<PedoExtractionsPage />} />
+      <Route path="/dental-care/pedodontics/pedo-extractions" element={<PedoExtractionsPage />} />
+      <Route path="/dental-care/pedodontics/pedo-extractions/" element={<PedoExtractionsPage />} />
+      <Route path="/dental-care/pedo-extractions" element={<PedoExtractionsPage />} />
+      <Route path="/dental-care/pedo-extractions/" element={<PedoExtractionsPage />} />
+      <Route path="/pedo-extractions" element={<Navigate to="/dental-care/kids-dentistry/pedo-extractions" replace />} />
+
+      {/* Pit & Fissure Sealants */}
+      <Route path="/dental-care/kids-dentistry/pit-fissure-sealants" element={<PitFissureSealantsPage />} />
+      <Route path="/dental-care/kids-dentistry/pit-fissure-sealants/" element={<PitFissureSealantsPage />} />
+      <Route path="/treatments/pit-fissure-sealants" element={<PitFissureSealantsPage />} />
+      <Route path="/treatments/pit-fissure-sealants/" element={<PitFissureSealantsPage />} />
+      <Route path="/dental-care/pedodontics/pit-fissure-sealants" element={<PitFissureSealantsPage />} />
+      <Route path="/dental-care/pedodontics/pit-fissure-sealants/" element={<PitFissureSealantsPage />} />
+      <Route path="/dental-care/pit-fissure-sealants" element={<PitFissureSealantsPage />} />
+      <Route path="/dental-care/pit-fissure-sealants/" element={<PitFissureSealantsPage />} />
+      <Route path="/pit-fissure-sealants" element={<Navigate to="/dental-care/kids-dentistry/pit-fissure-sealants" replace />} />
 
       {/* Dental Implants */}
       <Route path="/dental-care/implantology/dental-implants" element={<DentalImplantsPage />} />

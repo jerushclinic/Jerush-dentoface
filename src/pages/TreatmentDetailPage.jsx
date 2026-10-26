@@ -42,6 +42,7 @@ const SUBCATEGORY_MAP = {
   'facial-surgery-treatment': 'Facial & Maxillofacial Surgery',
   'cleft-lip-palate': 'Cleft Lip & Palate Surgery',
   'pediatric-dentistry': 'Kids & Pediatric Dentistry',
+  'pedo-extractions': 'Kids & Pediatric Dentistry',
   'dental-consultation': 'Kids & Pediatric Dentistry',
   'pulpectomy': 'Kids & Pediatric Dentistry',
   'oral-pathology': 'Oral Health & Cancer Screening',

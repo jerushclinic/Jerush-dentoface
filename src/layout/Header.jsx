@@ -1055,7 +1055,7 @@ export default function Header() {
                                     </h5>
                                     <ul>
                                       <li>{renderDentalIconItem('/dental-care/kids-dentistry/pediatric-dental-care', 'Pediatric Dental Care', 'pediatric-dental-care.webp', handleLinkClick)}</li>
-                                      <li>{renderDentalIconItem('/treatments/dental-consultation', 'Dental Consultation', 'dental-consultation.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/treatments/pedo-extractions', 'Pedo Extractions', 'pedo-extractions.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/pit-fissure-sealants', 'Pit & Fissure Sealants', 'pit-fissure-sealants.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/habit-breaking-appliances', 'Habit Appliances', 'habit-breaking-appliances.webp', handleLinkClick)}</li>
                                     </ul>
@@ -2483,7 +2483,7 @@ export default function Header() {
                 </Link>
                 <div className="grid grid-cols-2 gap-2">
                   {renderMobileTreatmentItem('/dental-care/kids-dentistry/pediatric-dental-care', 'Pediatric Care', 'pediatric-dental-care.webp', 'dental', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/dental-consultation', 'Dental Consultation', 'dental-consultation.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/treatments/pedo-extractions', 'Pedo Extractions', 'pedo-extractions.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/pit-fissure-sealants', 'Pit & Fissure Sealants', 'pit-fissure-sealants.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/habit-breaking-appliances', 'Habit Appliances', 'habit-breaking-appliances.webp', 'dental', handleLinkClick)}
                 </div>

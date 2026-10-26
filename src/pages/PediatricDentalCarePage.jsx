@@ -180,28 +180,44 @@ const FAQS = [
 
 const RELATED_TREATMENTS = [
   {
-    title: 'Pit & Fissure Sealants',
-    desc: 'Protective resin coatings applied to deep chewing grooves of permanent molars to block food and plaque bacteria.',
-    link: '/treatments/pit-fissure-sealants',
-    icon: Sparkles
-  },
-  {
-    title: 'Pulpectomy (Child Root Canal)',
-    desc: 'Gentle, pain-free nerve therapy designed to preserve severely decayed baby molars until natural exfoliation.',
-    link: '/treatments/pulpectomy',
-    icon: ShieldCheck
-  },
-  {
-    title: 'Habit Breaking Appliances',
-    desc: 'Custom pediatric appliances to gently eliminate thumb-sucking, tongue-thrusting, and prevent malocclusion.',
-    link: '/treatments/habit-breaking-appliances',
-    icon: Smile
+    title: 'Pedo Extractions',
+    desc: 'Gentle, pain-free tooth removal for severely decayed or damaged baby teeth with preservation guidance.',
+    link: '/dental-care/kids-dentistry/pedo-extractions',
+    image: '/images/medical-services/dental-care/kids-dentistry-pedodontics/pedo-extractions/Gentle-pediatric-tooth-extraction.webp',
+    alt: 'Gentle paediatric tooth extraction at Jerush clinic',
+    tag: 'Gentle Removal',
+    badgeColor: 'bg-rose-50 text-rose-700 border-rose-200',
+    accentBorder: 'hover:border-rose-400/60'
   },
   {
     title: 'Space Maintainers',
     desc: 'Precision spacers that keep room open for permanent teeth when a baby tooth is lost prematurely.',
     link: '/treatments/space-maintainers',
-    icon: Heart
+    image: '/images/medical-services/dental-care/kids-dentistry-pedodontics/space-maintainers/space-maintainer-overview.webp',
+    alt: 'Pediatric orthodontic space maintainer holding space for permanent tooth',
+    tag: 'Space Preservation',
+    badgeColor: 'bg-cyan-50 text-cyan-700 border-cyan-500/20',
+    accentBorder: 'hover:border-cyan-400/60'
+  },
+  {
+    title: 'Pulpectomy (Child Root Canal)',
+    desc: 'Gentle, pain-free nerve therapy designed to preserve severely decayed baby molars until natural exfoliation.',
+    link: '/treatments/pulpectomy',
+    image: '/images/medical-services/dental-care/kids-dentistry-pedodontics/pediatric-dental-care/treatment-for-cavities.webp',
+    alt: 'Pediatric tooth restoration and pulp therapy for children',
+    tag: 'Nerve Therapy',
+    badgeColor: 'bg-amber-50 text-amber-700 border-amber-500/20',
+    accentBorder: 'hover:border-amber-400/60'
+  },
+  {
+    title: 'Pit & Fissure Sealants',
+    desc: 'Protective resin coatings applied to deep chewing grooves of permanent molars to block food and plaque bacteria.',
+    link: '/treatments/pit-fissure-sealants',
+    image: '/images/medical-services/dental-care/kids-dentistry-pedodontics/pediatric-dental-care/cavity-prevention.webp',
+    alt: 'Cavity prevention fluoride applications and sealants for children',
+    tag: 'Cavity Barrier',
+    badgeColor: 'bg-sky-50 text-brandSky border-brandSky/20',
+    accentBorder: 'hover:border-brandSky/60'
   }
 ];
 
@@ -953,36 +969,46 @@ export default function PediatricDentalCarePage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {RELATED_TREATMENTS.map((item, idx) => {
-              const IconComponent = item.icon;
-              return (
-                <Link
-                  key={idx}
-                  to={item.link}
-                  className="p-6 rounded-3xl bg-white border border-slate-200 hover:border-brandSky hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
-                >
-                  <div>
-                    <div className="w-12 h-12 rounded-2xl bg-blue-50 text-brandBlue flex items-center justify-center mb-4 group-hover:bg-brandBlue group-hover:text-white transition-colors shadow-xs">
-                      <IconComponent className="w-6 h-6" />
+            {RELATED_TREATMENTS.map((item, idx) => (
+              <Link
+                key={idx}
+                to={item.link}
+                className={`flex flex-col bg-slate-50/70 rounded-3xl overflow-hidden border border-slate-200/90 ${item.accentBorder} hover:bg-white hover:shadow-xl transition-all duration-300 group`}
+              >
+                {/* 1:1 Aspect-Square Image Container: Pristine Square Ratio with Zero Cropping */}
+                <div className="relative p-3 pb-0">
+                  <div className="relative rounded-2xl overflow-hidden bg-white aspect-square border border-slate-100 shadow-inner">
+                    <img
+                      src={item.image}
+                      alt={item.alt}
+                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute top-3 left-3">
+                      <span className={`inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider border backdrop-blur-md shadow-xs ${item.badgeColor}`}>
+                        {item.tag}
+                      </span>
                     </div>
-                    <h3
-                      style={{ lineHeight: 1.4 }}
-                      className="font-headline font-bold text-lg text-slate-900 mb-2 leading-[1.4] group-hover:text-brandBlue transition-colors"
-                    >
+                  </div>
+                </div>
+
+                {/* Card Content */}
+                <div className="p-5 sm:p-6 flex flex-col flex-1 justify-between space-y-3">
+                  <div>
+                    <h3 className="font-headline font-bold text-base sm:text-lg text-slate-900 group-hover:text-brandBlue transition-colors">
                       {item.title}
                     </h3>
-                    <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mt-2">
                       {item.desc}
                     </p>
                   </div>
 
-                  <div className="mt-5 pt-3 border-t border-slate-100 flex items-center gap-1 text-xs font-bold text-brandBlue group-hover:text-brandSky">
-                    <span>Learn more</span>
+                  <div className="pt-3 border-t border-slate-200/80 flex items-center justify-between text-xs font-headline font-bold text-brandBlue group-hover:text-brandSky transition-colors">
+                    <span>Explore treatment</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </div>
-                </Link>
-              );
-            })}
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
