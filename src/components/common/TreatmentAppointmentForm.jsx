@@ -132,7 +132,7 @@ export default function TreatmentAppointmentForm({
   const selectedCentre = CENTRES.find(c => c.id === formData.centre) || CENTRES[0];
 
   return (
-    <section id={id} className={`w-full py-12 lg:py-16 bg-gradient-to-b from-slate-50 via-white to-slate-50 border-y border-slate-200/80 font-body ${className}`}>
+    <section id={id} className={`w-full py-12 lg:py-16 bg-gradient-to-b from-slate-50 via-white to-slate-50 border-y border-slate-200/80 font-body scroll-mt-24 sm:scroll-mt-28 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
 

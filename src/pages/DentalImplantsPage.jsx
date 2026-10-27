@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -71,21 +71,21 @@ const TYPES = [
   {
     title: 'Single Tooth Implant',
     desc: 'Ideal for replacing one missing tooth without altering or shaving down neighboring healthy teeth. A titanium post replaces the root with a custom crown on top.',
-    img: '/images/medical-services/dental-care/dental-implants/implant-types.webp',
+    img: '/images/medical-services/dental-care/dental-implants/single-tooth-implant.webp',
     badge: 'Single Unit',
     points: ['100% preserves adjacent teeth', 'Natural look and chewing feel', 'Permanent, lifetime bond']
   },
   {
     title: 'Multiple Teeth Implants',
     desc: 'Replaces several consecutive missing teeth using strategically spaced implant posts supporting an implant-supported fixed bridge.',
-    img: '/images/medical-services/dental-care/dental-implants/materials-used.webp',
+    img: '/images/medical-services/dental-care/dental-implants/multiple-teeth-implants.webp',
     badge: 'Multi-Unit Bridge',
     points: ['Eliminates partial dentures', 'Prevents bone collapse across gap', 'High bite-force capacity']
   },
   {
     title: 'All-on-4 / All-on-6 Full Arch',
     desc: 'Complete upper or lower arch restoration anchored by 4 or 6 tilted titanium implants for permanent, non-removable full smile transformation.',
-    img: '/images/medical-services/dental-care/dental-implants/full-dental-implant-packages.webp',
+    img: '/images/medical-services/dental-care/dental-implants/all-on-4-full-arch.webp',
     badge: 'Full Arch Restoration',
     points: ['Fixed alternative to loose dentures', 'Same-week smile makeover', 'Maximum stability and confidence']
   },
@@ -171,7 +171,7 @@ const CONDITIONS = [
   {
     title: 'Jawbone Loss Issues',
     desc: 'Halt progressive bone resorption after tooth extraction and preserve your natural facial contour.',
-    img: '/images/medical-services/dental-care/dental-implants/bone%20loss%20issues.webp',
+    img: '/images/medical-services/dental-care/dental-implants/bone-loss-issues.webp',
     tag: 'Bone Preservation'
   },
   {
@@ -302,29 +302,37 @@ const TESTIMONIALS = [
 
 const FAQS = [
   {
-    q: 'How painful are dental implants?',
-    a: 'With modern computer-guided techniques and local anesthesia, dental implant placement is virtually painless during surgery. Most patients report feeling only mild pressure. Any minor post-operative soreness or mild swelling over the next 2–3 days is easily managed with routine over-the-counter pain relief medication.'
+    q: 'How painful is the dental implant procedure?',
+    a: 'With modern computer-guided 3D techniques, local anesthesia, and micro-surgical protocols, dental implant placement is virtually painless during surgery. Most patients report feeling only light vibration or pressure. Any mild post-procedure soreness or minor swelling over the next 2 to 3 days is easily managed with routine pain medication and cold compression.'
   },
   {
     q: 'Will dental implants last a lifetime?',
-    a: 'Yes. With proper daily oral hygiene (brushing and flossing) and routine biannual dental checkups, the titanium implant post fuses permanently with the jawbone and can easily last for decades or a lifetime. The custom zirconia crown on top typically lasts 15–20+ years.'
+    a: 'Yes. When maintained with proper daily oral hygiene (regular brushing, flossing, or water flossing) and routine biannual check-ups, the medical-grade titanium fixture fuses permanently with the jawbone (osseointegration) and can last for decades or a lifetime. The custom monolithic zirconia crown on top typically lasts 15 to 25+ years.'
   },
   {
-    q: 'How many teeth can be replaced with implants?',
-    a: 'A single implant can replace one missing tooth. Two or more implants can support a fixed multi-unit dental bridge. For patients missing all teeth, 4 to 6 strategically angled implants (All-on-4 / All-on-6) can permanently restore an entire full upper or lower arch.'
+    q: 'How many teeth can be replaced with dental implants?',
+    a: 'Dental implants are completely scalable: a single implant fixture replaces one isolated missing tooth without touching neighboring healthy teeth; two or three implants can support a fixed multi-unit dental bridge; and 4 to 6 strategically angled implants (All-on-4 / All-on-6 protocols) can permanently anchor an entire full upper or lower arch.'
   },
   {
     q: 'Which is safer: dental implants or a traditional dental bridge?',
-    a: 'Dental implants are the safer, more conservative, and permanent solution. Traditional bridges require shaving down healthy adjacent teeth to anchor the bridge, and they do not prevent bone loss under the missing tooth. Implants stand independently, stimulate natural jawbone density, and preserve adjacent healthy teeth 100%.'
+    a: 'Dental implants are clinically safer, longer-lasting, and far more conservative than traditional bridges. A traditional bridge requires permanently grinding down and shaving healthy enamel off adjacent teeth to act as abutments, and it does not stop jawbone loss under the empty gap. Implants stand independently, stimulate natural bone growth, and preserve 100% of adjacent natural teeth.'
   },
   {
     q: 'What is the cost of dental implants in Chennai at Jerush?',
-    a: 'The cost of dental implants in Chennai depends on the number of teeth, chosen implant material (Titanium vs Zirconia), crown type, and whether preparatory procedures (bone grafting or sinus lift) are needed. At Jerush Dentofacial, we offer transparent, cost-effective pricing packages with 0% interest EMI options. Book a free consultation for an exact transparent quote.'
+    a: 'The total cost of dental implants in Chennai depends on the number of teeth, chosen implant fixture brand (Titanium vs Zirconia), final restoration type (CAD/CAM monolithic Zirconia or ceramic), and whether preparatory procedures like bone grafting or sinus lifts are required. Jerush Dentofacial provides hospital-level transparent pricing with 0% interest EMI options to make world-class implantology accessible.'
   },
   {
     q: 'How long does the entire dental implant process take?',
-    a: 'The initial surgical placement takes just 30–45 minutes per implant. The osseointegration (bone fusion) phase typically takes 3–6 months to ensure permanent anchorage before the final custom Zirconia crown is placed. In cases with optimal bone density, immediate-load temporary crowns can be placed on the same day.'
+    a: 'The surgical implant placement takes just 30 to 45 minutes per implant. Following placement, the osseointegration (natural bone fusion) phase lasts approximately 3 to 6 months to guarantee immovable biological anchorage before fitting the permanent custom zirconia crown. In select patients with high bone density, immediate-load temporary crowns can even be fitted on the same day.'
   },
+  {
+    q: 'Am I a suitable candidate for dental implants if I have bone loss or diabetes?',
+    a: 'Yes! Even if you have experienced progressive bone loss after tooth extraction, advanced preparatory techniques like bone grafting, ridge augmentation, and sinus elevation can rebuild an ideal bone foundation. Patients with well-managed diabetes or controlled systemic health conditions are also successfully treated with high success rates under our maxillofacial surgical protocols.'
+  },
+  {
+    q: 'What is the difference between Titanium and Zirconia dental implants?',
+    a: 'Medical-grade Titanium is the international gold standard in implantology with over 50 years of clinical evidence and a 98%+ success rate, making it ideal for molars and heavy bite forces. Zirconia is 100% metal-free, ceramic, and tooth-colored, making it an excellent aesthetic choice for patients with thin gum tissue in the front smile zone or those with metal sensitivities.'
+  }
 ];
 
 const TABS = [
@@ -350,6 +358,24 @@ export default function DentalImplantsPage() {
     TABS.map(tab => tab.id),
     138
   );
+
+  useEffect(() => {
+    document.title = 'Dental Implants in Chennai — Cost, Procedure & Specialists | Jerush Dentofacial';
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, []);
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQS.map(faq => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.a
+      }
+    }))
+  };
 
   const handleBookClick = () => {
     const el = document.getElementById('treatment-appointment-section');
@@ -539,7 +565,10 @@ export default function DentalImplantsPage() {
               style={{ lineHeight: 1.4 }}
               className="font-headline font-black text-2xl sm:text-3xl text-slate-900 leading-[1.4]"
             >
-              What Is a Dental Implant?
+              What Is a{' '}
+              <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
+                Dental Implant?
+              </span>
             </h2>
             <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
               A dental implant is a titanium post surgically anchored into the jawbone to serve as the sturdy root for an artificial tooth. Once integrated with your natural bone tissue, a custom-crafted Zirconia crown, bridge, or denture is attached on top.
@@ -563,8 +592,15 @@ export default function DentalImplantsPage() {
             <span className="text-[10px] font-bold text-brandSky uppercase tracking-widest bg-brandSky/8 px-3.5 py-1.5 rounded-full border border-brandSky/15">
               Cost Transparency
             </span>
-            <h2 className="font-headline font-black text-2xl sm:text-3xl text-slate-900">
-              Professional Insights on Dental Implant Cost in Chennai
+            <h2
+              style={{ lineHeight: 1.4 }}
+              className="font-headline font-black text-2xl sm:text-3xl text-slate-900 leading-[1.4]"
+            >
+              Professional Insights on{' '}
+              <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
+                Dental Implant Cost
+              </span>{' '}
+              in Chennai
             </h2>
             <p className="text-slate-500 text-xs sm:text-sm max-w-2xl mx-auto">
               On average, the dental implants cost per tooth in Chennai is highly affordable and depends on the case complexity, material selection, and required preparatory care.
@@ -607,8 +643,15 @@ export default function DentalImplantsPage() {
           <span className="text-[10px] font-bold text-brandSky uppercase tracking-widest bg-brandSky/8 px-3.5 py-1.5 rounded-full border border-brandSky/15">
             Solutions Tailored For You
           </span>
-          <h2 className="font-headline font-black text-2xl sm:text-3xl text-slate-900">
-            Types of Dental Implants We Offer
+          <h2
+            style={{ lineHeight: 1.4 }}
+            className="font-headline font-black text-2xl sm:text-3xl text-slate-900 leading-[1.4]"
+          >
+            Types of{' '}
+            <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
+              Dental Implants
+            </span>{' '}
+            We Offer
           </h2>
           <p className="text-slate-500 text-xs sm:text-sm max-w-xl mx-auto">
             From single tooth gaps to comprehensive full-arch smile restorations, our specialists provide exact, lasting solutions.
@@ -626,9 +669,13 @@ export default function DentalImplantsPage() {
               className="bg-white border border-slate-200/80 rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all space-y-5 flex flex-col justify-between"
             >
               <div className="space-y-4">
-                <div className="h-56 rounded-2xl overflow-hidden bg-gradient-to-b from-slate-50 to-white relative shadow-inner border border-slate-100 p-3.5 flex items-center justify-center">
-                  <img src={type.img} alt={type.title} className="w-full h-full object-contain" />
-                  <span className="absolute top-2.5 left-2.5 bg-brandBlue text-white text-[9px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-md">
+                <div className="h-56 rounded-2xl overflow-hidden bg-slate-900/5 relative shadow-inner border border-slate-100 group">
+                  <img
+                    src={type.img}
+                    alt={type.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <span className="absolute top-2.5 left-2.5 bg-brandBlue/90 backdrop-blur-md text-white text-[9px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-md border border-white/20">
                     {type.badge}
                   </span>
                 </div>
@@ -671,9 +718,12 @@ export default function DentalImplantsPage() {
             <span className="text-[10px] font-bold text-brandSky uppercase tracking-widest bg-brandSky/10 px-3.5 py-1.5 rounded-full border border-brandSky/20">
               Surgical Roadmap
             </span>
-            <h2 className="font-headline font-black text-2xl sm:text-3xl text-white">
+            <h2
+              style={{ lineHeight: 1.4 }}
+              className="font-headline font-black text-2xl sm:text-3xl text-white leading-[1.4]"
+            >
               Step-by-Step{' '}
-              <span className="bg-gradient-to-r from-brandSky to-brandBlue bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brandSky via-sky-300 to-white bg-clip-text text-transparent">
                 Dental Implants Procedure
               </span>
             </h2>
@@ -822,8 +872,15 @@ export default function DentalImplantsPage() {
             <span className="text-[10px] font-bold text-brandSky uppercase tracking-widest bg-brandSky/8 px-3.5 py-1.5 rounded-full border border-brandSky/15">
               Life-Changing Advantages
             </span>
-            <h2 className="font-headline font-black text-2xl sm:text-3xl text-slate-900">
-              The Benefits of Dental Implants Are Far Beyond Just Replacing Teeth
+            <h2
+              style={{ lineHeight: 1.4 }}
+              className="font-headline font-black text-2xl sm:text-3xl text-slate-900 leading-[1.4]"
+            >
+              The Benefits of{' '}
+              <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
+                Dental Implants
+              </span>{' '}
+              Extend Far Beyond Just Replacing Teeth
             </h2>
             <p className="text-slate-600 text-sm leading-relaxed">
               Dental implants restore your chewing efficiency, protect facial bone health, and dramatically boost self-confidence with results that last decades.
@@ -860,8 +917,14 @@ export default function DentalImplantsPage() {
             <span className="text-[10px] font-bold text-brandSky uppercase tracking-widest bg-brandSky/8 px-3.5 py-1.5 rounded-full border border-brandSky/15">
               Patient Eligibility
             </span>
-            <h2 className="font-headline font-black text-2xl sm:text-3xl text-slate-900">
-              What Conditions Are Treated with Dental Implants?
+            <h2
+              style={{ lineHeight: 1.4 }}
+              className="font-headline font-black text-2xl sm:text-3xl text-slate-900 leading-[1.4]"
+            >
+              What Conditions Are Treated with{' '}
+              <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
+                Dental Implants?
+              </span>
             </h2>
             <p className="text-slate-500 text-xs sm:text-sm max-w-xl mx-auto">
               Whether you have lost a single tooth or struggle with unmanaged dentures, our implant protocols are tailored for your specific condition.
@@ -915,8 +978,15 @@ export default function DentalImplantsPage() {
             <span className="text-[10px] font-bold text-brandSky uppercase tracking-widest bg-brandSky/8 px-3.5 py-1.5 rounded-full border border-brandSky/15">
               Clinic Selection Guide
             </span>
-            <h2 className="font-headline font-black text-2xl sm:text-3xl text-slate-900">
-              Tips for Choosing the Right Dental Clinic for Implants in Chennai
+            <h2
+              style={{ lineHeight: 1.4 }}
+              className="font-headline font-black text-2xl sm:text-3xl text-slate-900 leading-[1.4]"
+            >
+              Tips for Choosing the{' '}
+              <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
+                Right Dental Clinic
+              </span>{' '}
+              for Implants in Chennai
             </h2>
             <p className="text-slate-600 text-sm leading-relaxed">
               When searching for a trusted dental implant clinic near you, keep these essential criteria in mind to guarantee safe, permanent surgical outcomes:
@@ -946,8 +1016,14 @@ export default function DentalImplantsPage() {
               <span className="text-[10px] font-bold text-brandSky uppercase tracking-widest bg-brandSky/8 px-3.5 py-1.5 rounded-full border border-brandSky/15">
                 Long-Term Maintenance
               </span>
-              <h2 className="font-headline font-black text-2xl sm:text-3xl text-slate-900">
-                Post-Implant Care Tips to Make Implants Last a Lifetime
+              <h2
+                style={{ lineHeight: 1.4 }}
+                className="font-headline font-black text-2xl sm:text-3xl text-slate-900 leading-[1.4]"
+              >
+                Post-Implant Care Tips to Make{' '}
+                <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
+                  Implants Last a Lifetime
+                </span>
               </h2>
               <p className="text-slate-600 text-sm leading-relaxed">
                 Dental implants have a 98%+ clinical success rate. Adhering to these practical aftercare recommendations ensures flawless, lifelong smile health:
@@ -983,8 +1059,15 @@ export default function DentalImplantsPage() {
             <span className="text-[10px] font-bold text-brandSky uppercase tracking-widest bg-brandSky/8 px-3.5 py-1.5 rounded-full border border-brandSky/15">
               Excellence in Implantology
             </span>
-            <h2 className="font-headline font-black text-2xl sm:text-3xl text-slate-900">
-              Why Choose Jerush Dentofacial & Cosmetic Laser Centre?
+            <h2
+              style={{ lineHeight: 1.4 }}
+              className="font-headline font-black text-2xl sm:text-3xl text-slate-900 leading-[1.4]"
+            >
+              Why Choose{' '}
+              <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
+                Jerush Dentofacial
+              </span>{' '}
+              & Cosmetic Laser Centre?
             </h2>
             <p className="text-slate-500 text-xs sm:text-sm max-w-2xl mx-auto">
               At Jerush Dentofacial in Chennai, Trichy, and Thuckalay, our mission is to deliver world-class, ethically driven implantology supported by digital technology and 24/7 care.
@@ -1021,8 +1104,14 @@ export default function DentalImplantsPage() {
           <span className="text-[10px] font-bold text-brandSky uppercase tracking-widest bg-brandSky/8 px-3.5 py-1.5 rounded-full border border-brandSky/15">
             Verified Reviews
           </span>
-          <h2 className="font-headline font-black text-2xl sm:text-3xl text-slate-900">
-            Happy Clients for Dental Treatments
+          <h2
+            style={{ lineHeight: 1.4 }}
+            className="font-headline font-black text-2xl sm:text-3xl text-slate-900 leading-[1.4]"
+          >
+            Happy Clients for{' '}
+            <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
+              Dental Implant Treatments
+            </span>
           </h2>
           <p className="text-slate-500 text-xs sm:text-sm max-w-xl mx-auto">
             Read firsthand experiences from local and international patients treated at Jerush Dentofacial centres.
@@ -1068,17 +1157,27 @@ export default function DentalImplantsPage() {
       </section>
 
       {/* ─── SECTION 11: FAQS ─── */}
-      <section id="faqs" className="bg-slate-50/70 py-16 px-6 border-t border-slate-200/80">
-        <div className="max-w-3xl mx-auto">
+      <section id="faqs" className="bg-slate-50/70 py-16 lg:py-20 px-6 border-t border-slate-200/80">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+        <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 space-y-2">
             <span className="text-[10px] font-bold text-brandSky uppercase tracking-widest bg-gradient-to-r from-brandSky/10 to-brandBlue/10 px-3.5 py-1.5 rounded-full border border-brandSky/20">
               Answers & Clarifications
             </span>
-            <h2 className="font-headline font-black text-2xl sm:text-3xl text-slate-900">
-              FAQs – Dental Implants in Chennai
+            <h2
+              style={{ lineHeight: 1.4 }}
+              className="font-headline font-black text-2xl sm:text-3xl lg:text-4xl text-slate-900 leading-[1.4]"
+            >
+              Frequently Asked Questions About{' '}
+              <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
+                Dental Implants in Chennai
+              </span>
             </h2>
-            <p className="text-slate-500 text-xs sm:text-sm">
-              Common questions about implant safety, costs, recovery timeline, and procedure details.
+            <p className="text-slate-500 text-xs sm:text-sm max-w-xl mx-auto">
+              Common questions about implant safety, costs, recovery timeline, and procedure details answered by our specialists.
             </p>
           </div>
 
@@ -1091,7 +1190,7 @@ export default function DentalImplantsPage() {
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: i * 0.05 }}
+                  transition={{ duration: 0.3, delay: i * 0.04 }}
                   className={`rounded-2xl overflow-hidden transition-all duration-300 ${
                     isExpanded
                       ? 'bg-gradient-to-r from-white via-blue-50/50 to-sky-50/40 border border-brandSky/40 shadow-md ring-1 ring-brandSky/20'
@@ -1099,28 +1198,29 @@ export default function DentalImplantsPage() {
                   }`}
                 >
                   <button
+                    type="button"
                     onClick={() => setExpandedFaq(isExpanded ? null : i)}
-                    className="w-full flex items-center justify-between gap-4 px-6 py-4.5 text-left font-headline font-bold text-slate-900 text-xs sm:text-sm transition-colors group cursor-pointer"
+                    className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-headline font-bold text-slate-900 text-sm sm:text-base hover:text-brandBlue transition-colors group cursor-pointer"
                   >
-                    <span>{faq.q}</span>
-                    <div className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${
+                    <span className="pr-4">{faq.q}</span>
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${
                       isExpanded 
                         ? 'bg-gradient-to-r from-brandBlue to-brandSky text-white rotate-180 shadow-sm' 
-                        : 'bg-slate-100 text-slate-600 group-hover:bg-brandBlue group-hover:text-white'
+                        : 'bg-gradient-to-br from-brandBlue/10 to-brandSky/10 text-brandBlue group-hover:bg-brandBlue group-hover:text-white'
                     }`}>
-                      <ChevronDown className="w-3.5 h-3.5" />
+                      <ChevronDown className="w-4 h-4" />
                     </div>
                   </button>
-                  <AnimatePresence>
+                  <AnimatePresence initial={false}>
                     {isExpanded && (
                       <motion.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.25 }}
+                        transition={{ duration: 0.3, ease: 'easeInOut' }}
                         className="overflow-hidden"
                       >
-                        <div className="px-6 pb-5 pt-2 text-slate-600 text-xs leading-relaxed border-t border-slate-100 bg-white/60">
+                        <div className="px-6 pb-6 pt-2 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-100 bg-gradient-to-br from-white/40 via-blue-50/20 to-slate-50/50 font-body">
                           {faq.a}
                         </div>
                       </motion.div>

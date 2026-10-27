@@ -384,6 +384,16 @@ export default function Header() {
     };
   }, [isNavHidden]);
 
+  // Listen for programmatic subnav scroll events to immediately hide header
+  useEffect(() => {
+    const handleHideNav = () => {
+      setIsNavHidden(true);
+      document.documentElement.classList.add('nav-hidden');
+    };
+    window.addEventListener('jerush:hide-nav', handleHideNav);
+    return () => window.removeEventListener('jerush:hide-nav', handleHideNav);
+  }, []);
+
   // Handle scroll events for sticky header and smooth hide-on-scroll-down / show-on-scroll-up
   useEffect(() => {
     let ticking = false;
@@ -414,6 +424,14 @@ export default function Header() {
             setIsNavHidden(false);
             lastScrollY.current = safeScrollY;
           } else {
+            // If programmatic subnav scrolling is active, maintain hidden header
+            if (window.__jerush_subnav_scrolling) {
+              setIsNavHidden(true);
+              lastScrollY.current = safeScrollY;
+              ticking = false;
+              return;
+            }
+
             const scrollDelta = safeScrollY - lastScrollY.current;
             const maxScroll = (document.documentElement.scrollHeight || document.body.scrollHeight) - window.innerHeight;
             const isNearBottom = maxScroll > 0 && safeScrollY >= maxScroll - 25;

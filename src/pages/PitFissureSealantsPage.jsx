@@ -23,7 +23,6 @@ const STATS = [
 ];
 
 const TABS = [
-  { id: 'overview', label: 'Overview' },
   { id: 'how-it-works', label: 'How They Work' },
   { id: 'candidates', label: 'Who Benefits' },
   { id: 'procedure', label: 'Application Steps' },

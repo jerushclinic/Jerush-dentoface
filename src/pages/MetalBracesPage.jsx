@@ -1106,10 +1106,10 @@ export default function MetalBracesPage() {
         onPrimaryClick={handleBookClick}
         secondaryBtnText="Call +91 94891 60055"
         secondaryBtnPhone="+919489160055"
-        doctorImage="/images/doctors/ajai-shalu2.webp"
-        doctorName="Dr. Ajai Shalu"
-        doctorRole="Oral & Maxillofacial Surgeon"
-        doctorAlt="Dr. Ajai Shalu - Jerush Dentofacial"
+        doctorImage="/images/doctors/dr-bladbin-portrait.webp"
+        doctorName="DR. A. BLADBIN"
+        doctorRole="Founder & Chief Maxillofacial Surgeon"
+        doctorAlt="DR. A. BLADBIN - Jerush Dentofacial"
         className="py-12"
       />
 
