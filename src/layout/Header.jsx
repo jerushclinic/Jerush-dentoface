@@ -1087,7 +1087,7 @@ export default function Header() {
                                     <ul>
                                       <li>{renderDentalIconItem('/treatments/smile-designing', 'Smile Designing', 'smile-designing.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/dental-veneers', 'Veneers & Laminates', 'veneers.webp', handleLinkClick)}</li>
-                                      <li>{renderDentalIconItem('/treatments/tooth-jewellery', 'Tooth Jewellery', 'tooth-jewellery.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/dental-care/cosmetic-dentistry/tooth-jewellery', 'Tooth Jewellery', 'tooth-jewellery.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
                                   <div className="jerush-megamenu-subgroup">
@@ -1099,7 +1099,8 @@ export default function Header() {
                                     <ul>
                                       <li>{renderDentalIconItem('/dental-treatments/top-quality-invisible-clear-aligners-jerushaligne', 'Jerushaligne Aligners', 'clear-aligner.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/metal-braces', 'Metal Braces', 'metal-braces.webp', handleLinkClick)}</li>
-                                      <li>{renderDentalIconItem('/treatments/ceramic-braces', 'Ceramic & Lingual Braces', 'ceramic-braces.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/dental-care/orthodontic-care/ceramic-braces', 'Ceramic Braces', 'ceramic-braces.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/treatments/lingual-braces', 'Lingual Braces', 'lingual-braces.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
                                 </div>
@@ -1117,6 +1118,8 @@ export default function Header() {
                                       <li>{renderDentalIconItem('/treatments/dental-crowns-bridges', 'Crowns & Bridges', 'dental-crown-bridge.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/dental-care/prosthodontic-care/removable-partial-dentures', 'Removable Partial Dentures', 'denture.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/fixed-partial-denture', 'Fixed Partial Dentures', 'fixed-partial-dentures.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/dental-care/prosthodontic-care/post-core-metal-post', 'Metal Post & Core', 'teeth-post-core.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/treatments/fibre-post', 'Fibre Post & Core', 'teeth-post-core.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
                                   <div className="jerush-megamenu-subgroup">
@@ -1128,7 +1131,6 @@ export default function Header() {
                                     <ul>
                                       <li>{renderDentalIconItem('/dental-treatments/root-canal-treatment-in-tamilnadu', 'Single Visit Rotary RCT', 'root-canal.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/tooth-coloured-fillings', 'Tooth Restorations', 'tooth-colored-fillings.webp', handleLinkClick)}</li>
-                                      <li>{renderDentalIconItem('/treatments/post-and-core', 'Post & Core Reconstruction', 'teeth-post-core.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
                                   <div className="jerush-megamenu-subgroup">
@@ -1153,7 +1155,7 @@ export default function Header() {
                                       </Link>
                                     </h5>
                                     <ul>
-                                      <li>{renderDentalIconItem('/treatments/deep-teeth-cleaning', 'Deep Ultrasonic Scaling', 'deep-teeth-cleaning.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/treatments/scaling-curettage', 'Deep Scaling & Curettage', 'deep-teeth-cleaning.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/gum-surgery', 'Regenerative Flap Surgery', 'gum-surgery.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/gum-grafting', 'Bone & Tissue Grafting', 'gum-grafting.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/crown-lengthening', 'Crown Lengthening', 'crown-lengthening.webp', handleLinkClick)}</li>
@@ -2525,7 +2527,7 @@ export default function Header() {
                 <div className="grid grid-cols-2 gap-2">
                   {renderMobileTreatmentItem('/treatments/smile-designing', 'Smile Designing', 'smile-designing.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/dental-veneers', 'Veneers & Laminates', 'veneers.webp', 'dental', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/tooth-jewellery', 'Tooth Jewellery', 'tooth-jewellery.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/dental-care/cosmetic-dentistry/tooth-jewellery', 'Tooth Jewellery', 'tooth-jewellery.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/full-mouth-rehabilitation', 'Full Mouth Rehab', 'full-mouth-rehabilitation.webp', 'dental', handleLinkClick)}
                 </div>
               </div>
@@ -2548,7 +2550,8 @@ export default function Header() {
                 <div className="grid grid-cols-2 gap-2">
                   {renderMobileTreatmentItem('/dental-treatments/top-quality-invisible-clear-aligners-jerushaligne', 'Jerushaligne Aligners', 'clear-aligner.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/metal-braces', 'Metal Braces', 'metal-braces.webp', 'dental', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/ceramic-braces', 'Ceramic Braces', 'ceramic-braces.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/dental-care/orthodontic-care/ceramic-braces', 'Ceramic Braces', 'ceramic-braces.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/treatments/lingual-braces', 'Lingual Braces', 'lingual-braces.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/self-ligating-braces', 'Self-Ligating Braces', 'ligating-braces.webp', 'dental', handleLinkClick)}
                 </div>
               </div>
@@ -2573,6 +2576,8 @@ export default function Header() {
                   {renderMobileTreatmentItem('/treatments/dental-crowns-bridges', 'Crowns & Bridges', 'dental-crown-bridge.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/dental-care/prosthodontic-care/removable-partial-dentures', 'Removable Partials', 'denture.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/fixed-partial-denture', 'Fixed Partials', 'fixed-partial-dentures.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/dental-care/prosthodontic-care/post-core-metal-post', 'Metal Post & Core', 'teeth-post-core.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/treatments/fibre-post', 'Fibre Post & Core', 'teeth-post-core.webp', 'dental', handleLinkClick)}
                 </div>
               </div>
 
@@ -2595,7 +2600,6 @@ export default function Header() {
                   {renderMobileTreatmentItem('/dental-treatments/root-canal-treatment-in-tamilnadu', 'Single Visit RCT', 'root-canal.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/multiple-visit-root-canal', 'Multiple-Visit RCT', 'root-canal.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/tooth-coloured-fillings', 'Tooth Restorations', 'tooth-colored-fillings.webp', 'dental', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/post-and-core', 'Post & Core', 'teeth-post-core.webp', 'dental', handleLinkClick)}
                 </div>
               </div>
 
@@ -2636,7 +2640,7 @@ export default function Header() {
                   <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover/hdr:text-brandSky transition-colors" />
                 </Link>
                 <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/treatments/deep-teeth-cleaning', 'Scaling & Curettage', 'deep-teeth-cleaning.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/treatments/scaling-curettage', 'Deep Scaling & Curettage', 'deep-teeth-cleaning.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/gum-surgery', 'Flap Surgery', 'gum-surgery.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/gum-grafting', 'Bone Grafting', 'gum-grafting.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/crown-lengthening', 'Crown Lengthening', 'crown-lengthening.webp', 'dental', handleLinkClick)}

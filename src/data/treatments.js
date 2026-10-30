@@ -257,7 +257,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": null,
-    "image": "/images/medical-services/dental_implants.png"
+    "image": "/images/medical-services/dental-care/cosmetic-dentistry/smile-designing/smile-design-around-you.webp"
   },
   {
     "id": "veneers-laminates",
@@ -273,7 +273,7 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": "veneers.webp",
-    "image": "/images/medical-services/dental_implants.png"
+    "image": "/images/medical-services/dental-care/cosmetic-dentistry/veneers-laminates/smile-with-dental-veneers.webp"
   },
   {
     "id": "full-mouth-rehabilitation",
@@ -312,16 +312,16 @@ export const treatments = [
     "title": "Tooth Jewellery",
     "category": "dental",
     "subcategory": "Cosmetic Dentistry",
-    "desc": "Specialized Tooth Jewellery procedure providing advanced clinical care and lasting results at Jerush Dentoface.",
-    "details": "Our specialist clinicians provide high-precision Tooth Jewellery with state-of-the-art diagnostic protocols, personalized treatment planning, and strict international sterilization standards.",
+    "desc": "Aesthetic dental crystals and gold ornaments bonded safely to natural enamel without drilling or tooth damage.",
+    "details": "Tooth jewellery is a cosmetic dental procedure attaching decorative crystals, gems, or specially designed gold ornaments to the visible surface of teeth using medical-grade dental bonding materials at Jerush Dentofacial & Cosmetic Laser Centre.",
     "benefits": [
-      "Specialist clinical expertise",
-      "Advanced diagnostic technology",
-      "Personalized treatment plan"
+      "100% drill-free & non-invasive",
+      "Medical-grade biocompatible dental gems",
+      "Completely reversible & safe removal"
     ],
-    "iconName": "Smile",
+    "iconName": "Sparkles",
     "iconFile": null,
-    "image": "/images/medical-services/dental_implants.png"
+    "image": "/images/medical-services/dental-care/cosmetic-dentistry/tooth-jewellery/personal-touch.webp"
   },
   {
     "id": "dentures",
@@ -503,35 +503,35 @@ export const treatments = [
   },
   {
     "id": "post-and-core",
-    "title": "Post & Core",
+    "title": "Post & Core Reconstruction",
     "category": "dental",
-    "desc": "Specialized structural reinforcement post inserted into root-canal treated teeth before final crown placement.",
+    "desc": "Specialized intra-radicular post and core build-up restoring severely broken or decayed root canal-treated teeth before final crown placement.",
     "iconName": "ShieldCheck",
-    "image": "/images/medical-services/root_canal.png",
-    "details": "Custom fiber or metal post anchored within the root canal to rebuild lost coronal tooth structure, ensuring long-term crown retention.",
+    "image": "/images/medical-services/dental-care/prosthodontic-care-tooth-replacement/metal-post-core/rebuilding-a-tooth.webp",
+    "details": "High-strength metal post anchored securely within the root canal space to retain core filling material and create an unyielding foundation for full-coverage crowns.",
     "benefits": [
-      "Restores severely broken teeth",
-      "Provides anchor for crowns",
-      "Enhances structural strength"
+      "Retains core foundation in severely broken teeth",
+      "Solid anchor foundation for final prosthetic crowns",
+      "Preserves biological tooth root from extraction"
     ],
     "subcategory": "Prosthodontic Care / Tooth Replacement",
     "iconFile": "teeth-post-core.webp"
   },
   {
     "id": "metal-post",
-    "title": "Metal Post",
+    "title": "Metal Post & Core",
     "category": "dental",
     "subcategory": "Prosthodontic Care / Tooth Replacement",
-    "desc": "Specialized Metal Post procedure providing advanced clinical care and lasting results at Jerush Dentoface.",
-    "details": "Our specialist clinicians provide high-precision Metal Post with state-of-the-art diagnostic protocols, personalized treatment planning, and strict international sterilization standards.",
+    "desc": "Intra-canal metal post placement providing high-tensile core retention and functional bite support for heavily damaged teeth.",
+    "details": "Specialist prosthodontic post space preparation preserving the 4–5 mm apical seal, passive post cementation, and anatomical core reconstruction.",
     "benefits": [
-      "Specialist clinical expertise",
-      "Advanced diagnostic technology",
-      "Personalized treatment plan"
+      "Rigid metallic intra-radicular retention",
+      "Full coronal volume reconstruction",
+      "Circumferential 360° ferrule crown preparation"
     ],
-    "iconName": "Smile",
+    "iconName": "ShieldCheck",
     "iconFile": "teeth-post-core.webp",
-    "image": "/images/medical-services/dental_implants.png"
+    "image": "/images/medical-services/dental-care/prosthodontic-care-tooth-replacement/metal-post-core/rebuilding-a-tooth.webp"
   },
   {
     "id": "fibre-post",
@@ -633,7 +633,7 @@ export const treatments = [
   },
   {
     "id": "scaling-curettage",
-    "title": "Scaling & Curettage",
+    "title": "Deep Scaling & Curettage",
     "category": "dental",
     "subcategory": "Periodontal / Gum Care",
     "desc": "Specialized Scaling & Curettage procedure providing advanced clinical care and lasting results at Jerush Dentoface.",
@@ -779,14 +779,14 @@ export const treatments = [
     "id": "ceramic-braces",
     "title": "Ceramic Braces",
     "category": "dental",
-    "desc": "Aesthetic ceramic brackets that blend in with natural enamel color for discrete orthodontic alignment.",
+    "desc": "Tooth-coloured and clear ceramic braces providing discreet, natural-looking fixed orthodontic alignment.",
     "iconName": "Smile",
-    "image": "/images/medical-services/orthodontics_braces.png",
-    "details": "Translucent ceramic brackets designed to match your tooth shade while delivering the full structural alignment power of conventional braces.",
+    "image": "/images/medical-services/dental-care/orthodontic-care/ceramic-braces/straighten-your-smile.webp",
+    "details": "Clear ceramic braces provide a subtle fixed orthodontic option that blends in naturally with your teeth, correcting tooth crowding, gaps, rotations, and bite irregularities at Jerush Dentofacial & Cosmetic Laser Centre.",
     "benefits": [
-      "Discreet tooth-colored brackets",
-      "Stain-resistant ceramic material",
-      "Effective for all age groups"
+      "Discreet tooth-coloured brackets",
+      "Continuous 24/7 fixed alignment",
+      "Stain-resistant polycrystalline ceramic"
     ],
     "subcategory": "Orthodontic Care",
     "iconFile": "ceramic-braces.webp"
@@ -797,7 +797,7 @@ export const treatments = [
     "category": "dental",
     "desc": "Custom braces fitted on the inside (lingual) surface of your teeth for completely invisible orthodontic treatment.",
     "iconName": "Smile",
-    "image": "/images/medical-services/orthodontics_braces.png",
+    "image": "/images/medical-services/dental-care/orthodontic-care/lingual-braces/teeth-without-brackets.webp",
     "details": "Custom-cast brackets attached to the back of teeth, providing total aesthetic invisibility during adult orthodontic correction.",
     "benefits": [
       "Completely hidden behind teeth",

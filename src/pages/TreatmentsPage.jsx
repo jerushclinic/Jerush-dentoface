@@ -103,6 +103,12 @@ export default function TreatmentsPage() {
     if (id === 'jerushaligne' || id === 'clear-aligners' || id === 'top-quality-invisible-clear-aligners-jerushaligne') return '/dental-care/orthodontic-care/clear-aligners-jerushaligne';
     if (id === 'dentures' || id === 'removable-partial-dentures') return '/dental-care/prosthodontic-care/removable-partial-dentures';
     if (id === 'pediatric-dental-care' || id === 'pediatric-dentistry' || id === 'dental-consultation') return '/dental-care/kids-dentistry/pediatric-dental-care';
+    if (id === 'tooth-jewellery' || id === 'dental-jewellery') return '/dental-care/cosmetic-dentistry/tooth-jewellery';
+    if (id === 'smile-designing' || id === 'smile-design') return '/dental-care/cosmetic-dentistry/smile-designing';
+    if (id === 'veneers-laminates' || id === 'dental-veneers' || id === 'veneers-and-laminates') return '/dental-care/cosmetic-dentistry/veneers-and-laminates';
+    if (id === 'ceramic-braces') return '/dental-care/orthodontic-care/ceramic-braces';
+    if (id === 'lingual-braces') return '/dental-care/orthodontic-care/lingual-braces';
+    if (id === 'post-and-core' || id === 'metal-post' || id === 'post-core' || id === 'post-core-metal-post') return '/dental-care/prosthodontic-care/post-core-metal-post';
     
     // Dynamic hierarchy for all other catalogue treatments
     if (item && item.category && item.subcategory) {
