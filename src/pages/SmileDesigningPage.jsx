@@ -265,48 +265,42 @@ const REGIONAL_LOCATIONS = [
   {
     name: 'Thuckalay (Central Hospital)',
     region: 'Kanyakumari District Headquarters',
-    address: 'NH 47, Main Road, Thuckalay, Tamil Nadu',
-    highlight: 'Advanced Digital Smile Studio & Surgical Laser Wing',
+        highlight: 'Advanced Digital Smile Studio & Surgical Laser Wing',
     serving: 'Serving Thuckalay, Marthandam, Karungal, Colachel, Kulasekharam, Padmanabhapuram, Eraniel & Kaliakkavilai.',
     badge: 'Flagship Multispecialty Hospital'
   },
   {
     name: 'Nagercoil Regional Centre',
     region: 'Southern Tamil Nadu Hub',
-    address: 'Court Road / Cape Road, Nagercoil, Tamil Nadu',
-    highlight: 'Comprehensive Cosmetic & Orthodontic Outpatient Wing',
+        highlight: 'Comprehensive Cosmetic & Orthodontic Outpatient Wing',
     serving: 'Serving Nagercoil Town, Kanyakumari Coast, Suchindram, Agastheeswaram, Valliyoor, Radhapuram & Southern Tirunelveli.',
     badge: 'Specialist Regional Centre'
   },
   {
     name: 'Tirunelveli & Madurai Corridor',
     region: 'Southern Highway Patient Access',
-    address: 'Direct access via NH 44 / NH 7 Corridor',
-    highlight: 'Dedicated Smile Makeover & Tertiary Dental Concierge',
+        highlight: 'Dedicated Smile Makeover & Tertiary Dental Concierge',
     serving: 'Catering to travelling patients from Tirunelveli, Palayamkottai, Madurai, Tuticorin, Kovilpatti & Virudhunagar.',
     badge: 'Regional Referral Network'
   },
   {
     name: 'Trichy Regional Centre',
     region: 'Central Tamil Nadu Hub',
-    address: 'Cantonment / Thillai Nagar, Tiruchirappalli, Tamil Nadu',
-    highlight: 'Aesthetic Dentistry, Implants & Digital Orthodontics',
+        highlight: 'Aesthetic Dentistry, Implants & Digital Orthodontics',
     serving: 'Serving Tiruchirappalli, Thanjavur, Karur, Pudukkottai, Dindigul, Perambalur & Central Tamil Nadu districts.',
     badge: 'Centres of Excellence'
   },
   {
     name: 'Chennai Regional Centre',
     region: 'Metropolitan & International Hub',
-    address: 'City Metro Suite, Chennai, Tamil Nadu',
-    highlight: 'Smile Design Studio & International Patient Lounge',
+        highlight: 'Smile Design Studio & International Patient Lounge',
     serving: 'Serving Greater Chennai, Kanchipuram, Chengalpattu & Global Dental Tourism patients from Sri Lanka, Singapore, Malaysia & Gulf.',
     badge: 'Metro Smile Suite'
   },
   {
     name: 'Cross-Border Kerala Access',
     region: 'Trivandrum & South Kerala Border',
-    address: 'Within 45 Mins via NH 66 from Trivandrum',
-    highlight: 'Cross-Border Cosmetic Dentistry & Transparent Care',
+        highlight: 'Cross-Border Cosmetic Dentistry & Transparent Care',
     serving: 'Serving Trivandrum (Thiruvananthapuram), Neyyattinkara, Balaramapuram, Parasala & Poovar.',
     badge: 'Cross-Border Access'
   }
@@ -1115,7 +1109,7 @@ export default function SmileDesigningPage() {
                 </div>
 
                 <div className="pt-4 mt-5 border-t border-slate-100 flex items-center justify-between text-xs">
-                  <span className="text-slate-500 font-medium">{loc.address}</span>
+                  <span className="text-slate-500 font-medium">Official address in footer below</span>
                   <button
                     type="button"
                     onClick={handleBookClick}

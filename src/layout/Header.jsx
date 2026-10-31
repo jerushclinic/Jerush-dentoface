@@ -976,7 +976,7 @@ export default function Header() {
 
                     {/* Medical Services Mega Menu Trigger */}
                     <li className={`jerush-nav-item jerush-mega-trigger ${activeHoverMenu === 'treatments' ? 'open' : ''}`} onMouseEnter={() => handleMenuEnter('treatments')} onMouseLeave={handleMenuLeave}>
-                      <Link to="/treatments" onClick={handleLinkClick} className="jerush-nav-link font-headline">
+                      <Link to="/medical-services" onClick={handleLinkClick} className="jerush-nav-link font-headline">
                         Medical Services <span className="jerush-arrow"></span>
                       </Link>
 
@@ -1075,7 +1075,7 @@ export default function Header() {
                                       <li>{renderDentalIconItem('/dental-care/kids-dentistry/pediatric-dental-care', 'Pediatric Dental Care', 'pediatric-dental-care.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/pedo-extractions', 'Pedo Extractions', 'pedo-extractions.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/pit-fissure-sealants', 'Pit & Fissure Sealants', 'pit-fissure-sealants.webp', handleLinkClick)}</li>
-                                      <li>{renderDentalIconItem('/treatments/habit-breaking-appliances', 'Habit Appliances', 'habit-breaking-appliances.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/dental-care/kids-dentistry/habit-breaking-appliances', 'Habit Appliances', 'habit-breaking-appliances.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
                                   <div className="jerush-megamenu-subgroup">
@@ -1129,7 +1129,8 @@ export default function Header() {
                                       </Link>
                                     </h5>
                                     <ul>
-                                      <li>{renderDentalIconItem('/dental-treatments/root-canal-treatment-in-tamilnadu', 'Single Visit Rotary RCT', 'root-canal.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/dental-treatments/root-canal-treatment-in-tamilnadu', 'Single Visit Root Canal Treatment', 'root-canal.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/treatments/multiple-visit-root-canal-treatment', 'Multiple-Visit Root Canal Treatment', 'root-canal.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/tooth-coloured-fillings', 'Tooth Restorations', 'tooth-colored-fillings.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
@@ -1146,7 +1147,7 @@ export default function Header() {
                                   </div>
                                 </div>
 
-                                {/* Column 3: Periodontal, Maxillofacial, Oral Medicine */}
+                                {/* Column 3: Periodontal, Maxillofacial, Oral Medicine (4, 4, 2) */}
                                 <div className="jerush-grid-column">
                                   <div className="jerush-megamenu-subgroup">
                                     <h5>
@@ -1168,7 +1169,7 @@ export default function Header() {
                                       </Link>
                                     </h5>
                                     <ul>
-                                      <li>{renderDentalIconItem('/treatments/wisdom-tooth-removal', 'Wisdom Tooth Impaction', 'wisdom-tooth.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/treatments/wisdom-tooth-removal', 'Wisdom Tooth Removal', 'wisdom-tooth.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/jaw-surgery', 'Corrective Jaw Surgery', 'jaw-surgery.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/cleft-lip-palate', 'Cleft Lip & Palate Surgery', 'cleft-lip-palate.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/cyst-tumour-surgery', 'Cyst & Tumour Surgery', 'cyst-tumour-surgery.webp', handleLinkClick)}</li>
@@ -2505,7 +2506,7 @@ export default function Header() {
                   {renderMobileTreatmentItem('/dental-care/kids-dentistry/pediatric-dental-care', 'Pediatric Care', 'pediatric-dental-care.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/pedo-extractions', 'Pedo Extractions', 'pedo-extractions.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/pit-fissure-sealants', 'Pit & Fissure Sealants', 'pit-fissure-sealants.webp', 'dental', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/habit-breaking-appliances', 'Habit Appliances', 'habit-breaking-appliances.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/dental-care/kids-dentistry/habit-breaking-appliances', 'Habit Appliances', 'habit-breaking-appliances.webp', 'dental', handleLinkClick)}
                 </div>
               </div>
 
@@ -2597,8 +2598,8 @@ export default function Header() {
                   <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover/hdr:text-brandSky transition-colors" />
                 </Link>
                 <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/dental-treatments/root-canal-treatment-in-tamilnadu', 'Single Visit RCT', 'root-canal.webp', 'dental', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/multiple-visit-root-canal', 'Multiple-Visit RCT', 'root-canal.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/dental-treatments/root-canal-treatment-in-tamilnadu', 'Single Visit Root Canal', 'root-canal.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/treatments/multiple-visit-root-canal-treatment', 'Multiple-Visit RCT', 'root-canal.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/tooth-coloured-fillings', 'Tooth Restorations', 'tooth-colored-fillings.webp', 'dental', handleLinkClick)}
                 </div>
               </div>

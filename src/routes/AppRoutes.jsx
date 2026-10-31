@@ -51,6 +51,7 @@ import LingualBracesPage from '../pages/LingualBracesPage.jsx';
 import SmileDesigningPage from '../pages/SmileDesigningPage.jsx';
 import VeneersLaminatesPage from '../pages/VeneersLaminatesPage.jsx';
 import MetalPostCorePage from '../pages/MetalPostCorePage.jsx';
+import HabitBreakingAppliancesPage from '../pages/HabitBreakingAppliancesPage.jsx';
 
 export default function AppRoutes() {
   return (
@@ -65,6 +66,9 @@ export default function AppRoutes() {
       <Route path="/advanced-technologies" element={<Navigate to="/technologies" replace />} />
       <Route path="/about/technologies" element={<Navigate to="/technologies" replace />} />
       <Route path="/treatments" element={<TreatmentsPage />} />
+      <Route path="/medical-services" element={<TreatmentsPage />} />
+      <Route path="/medical-services/" element={<TreatmentsPage />} />
+      <Route path="/medical-services/:id" element={<TreatmentDetailPage />} />
 
       {/* ─── DENTAL CARE HIERARCHICAL ROUTES ─── */}
       {/* Kids Dentistry / Pediatric Dental Care */}
@@ -104,6 +108,14 @@ export default function AppRoutes() {
       <Route path="/dental-care/pit-fissure-sealants" element={<PitFissureSealantsPage />} />
       <Route path="/dental-care/pit-fissure-sealants/" element={<PitFissureSealantsPage />} />
       <Route path="/pit-fissure-sealants" element={<Navigate to="/dental-care/kids-dentistry/pit-fissure-sealants" replace />} />
+
+      {/* Habit Breaking Appliances */}
+      <Route path="/dental-care/kids-dentistry/habit-breaking-appliances" element={<HabitBreakingAppliancesPage />} />
+      <Route path="/dental-care/kids-dentistry/habit-breaking-appliances/" element={<HabitBreakingAppliancesPage />} />
+      <Route path="/treatments/habit-breaking-appliances" element={<Navigate to="/dental-care/kids-dentistry/habit-breaking-appliances" replace />} />
+      <Route path="/treatments/habit-breaking-appliances/" element={<Navigate to="/dental-care/kids-dentistry/habit-breaking-appliances" replace />} />
+      <Route path="/habit-breaking-appliances" element={<Navigate to="/dental-care/kids-dentistry/habit-breaking-appliances" replace />} />
+      <Route path="/dental-care/pedodontics/habit-breaking-appliances" element={<Navigate to="/dental-care/kids-dentistry/habit-breaking-appliances" replace />} />
 
       {/* Dental Implants */}
       <Route path="/dental-care/implantology/dental-implants" element={<DentalImplantsPage />} />
@@ -292,6 +304,7 @@ export default function AppRoutes() {
 
       {/* Generic Catalog Routes */}
       <Route path="/treatments/deep-teeth-cleaning" element={<Navigate to="/treatments/scaling-curettage" replace />} />
+      <Route path="/treatments/multiple-visit-root-canal" element={<Navigate to="/treatments/multiple-visit-root-canal-treatment" replace />} />
       <Route path="/treatments/:id" element={<TreatmentDetailPage />} />
       <Route path="/treatments/:id/" element={<TreatmentDetailPage />} />
       <Route path="/services" element={<Navigate to="/treatments" replace />} />

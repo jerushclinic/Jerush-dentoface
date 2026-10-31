@@ -275,36 +275,17 @@ const AFTERCARE_GUIDELINES = [
   }
 ];
 
-// Section 6: Regional Centres Data (Tamil Nadu & South Kerala)
-const REGIONAL_CENTRES = [
-  {
-    city: 'Thuckalay (HQ Centre)',
-    role: 'Main Hospital & Prosthodontic Excellence Wing',
-    address: 'Near Govt Hospital Road, Thuckalay, Kanyakumari District, TN 629175',
-    phone: '+91 94891 60000',
-    features: ['CAD/CAM Digital Lab In-House', 'Advanced 3D CBCT Imaging', 'Master Prosthodontist Consultation']
-  },
-  {
-    city: 'Nagercoil Regional Centre',
-    role: 'Endodontic & Advanced Restorative Centre',
-    address: 'Court Road / KP Road Junction, Nagercoil, TN 629001',
-    phone: '+91 94891 60000',
-    features: ['Rotary Endodontic Specialists', 'Digital Intraoral Scanners', 'Rapid Crown Delivery']
-  },
-  {
-    city: 'Tirunelveli Regional Centre',
-    role: 'Comprehensive Dental & Maxillofacial Hub',
-    address: 'South Bypass Road, Vannarpettai, Tirunelveli, TN 627003',
-    phone: '+91 94891 60000',
-    features: ['Specialist Endodontic Unit', 'Digital Periapical Radiography', 'Full Mouth Rehabilitation']
-  },
-  {
-    city: 'Trichy Regional Centre',
-    role: 'Central Tamil Nadu Referral Clinic',
-    address: 'Cantonment / Thillai Nagar Main Road, Tiruchirappalli, TN 620018',
-    phone: '+91 94891 60000',
-    features: ['Prosthodontic & Aesthetic Wing', 'Laser Gum Contouring', 'Weekend Emergency Support']
-  }
+// Section 6: Regional Location Coverage Tags (Official addresses in hospital footer)
+const REGIONAL_LOCATION_TAGS = [
+  { name: 'Thuckalay (Hospital HQ)', highlight: 'Main Multispecialty Hospital' },
+  { name: 'Nagercoil', highlight: 'Regional Dental Centre' },
+  { name: 'Tirunelveli', highlight: 'Comprehensive Dental Hub' },
+  { name: 'Trichy', highlight: 'Central Tamil Nadu Centre' },
+  { name: 'Chennai', highlight: 'Specialist Consultation Hub' },
+  { name: 'Madurai Corridor', highlight: 'Regional Referral Network' },
+  { name: 'Marthandam', highlight: 'Local Access Wing' },
+  { name: 'Kanyakumari Coast', highlight: 'Coastal Coverage' },
+  { name: 'South Kerala / Trivandrum', highlight: 'Cross-Border Patient Access' }
 ];
 
 // Section 7: 7 FAQs from PDF Page 4
@@ -983,76 +964,55 @@ export default function MetalPostCorePage() {
         </div>
       </section>
 
-      {/* ─── Section 6: Regional Centres of Excellence (Tamil Nadu & South Kerala) ─── */}
-      <section id="locations" className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden border-b border-slate-200/80">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* ─── Section 6: Regional Location Coverage (Tags Only - Official Address in Footer) ─── */}
+      <section id="locations" className="py-16 sm:py-20 bg-white relative overflow-hidden border-b border-slate-200/80">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
           {/* Section Header */}
-          <div className="max-w-3xl mx-auto text-center space-y-4 mb-14">
+          <div className="max-w-3xl mx-auto space-y-4 mb-10">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sky-100/80 border border-sky-200 text-brandBlue text-xs font-bold uppercase tracking-wider">
               <MapPin className="w-3.5 h-3.5 text-brandSky" />
-              <span>Tamil Nadu & South Kerala Network</span>
+              <span>Regional Coverage</span>
             </div>
             <h2
               style={{ lineHeight: 1.4 }}
               className="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-headline text-slate-900 tracking-tight leading-[1.4]"
             >
-              Regional Prosthodontic{' '}
+              Serving Patients Across{' '}
               <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
-                Centres of Excellence
+                Tamil Nadu & South Kerala
               </span>
             </h2>
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-              Post and core restorations are performed by qualified specialist prosthodontists and endodontists across our modern regional centres. Conveniently accessible to patients from Kanyakumari, Tirunelveli, Madurai, Trichy, Chennai, and South Kerala.
+              Specialist post and core tooth reconstruction is accessible to patients across our regional network locations:
             </p>
           </div>
 
-          {/* 4 Regional Centres Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {REGIONAL_CENTRES.map((centre, cIdx) => (
+          {/* Location Tags Grid */}
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 max-w-4xl mx-auto">
+            {REGIONAL_LOCATION_TAGS.map((loc, idx) => (
               <div
-                key={cIdx}
-                className="bg-slate-50/70 rounded-2xl p-6 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-brandSky/40 transition-all flex flex-col justify-between"
+                key={idx}
+                className="inline-flex items-center gap-2.5 px-4 sm:px-5 py-2.5 sm:py-3 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-brandSky/60 hover:bg-sky-50/40 hover:shadow-xs transition-all text-left group"
               >
-                <div>
-                  <div className="w-10 h-10 rounded-xl bg-brandBlue text-white flex items-center justify-center mb-4 shadow-sm">
-                    <MapPin className="w-5 h-5 text-brandSky" />
-                  </div>
-                  <h3 className="text-lg font-bold font-headline text-slate-900 mb-1">
-                    {centre.city}
-                  </h3>
-                  <p className="text-xs font-bold text-brandBlue uppercase tracking-wider mb-3">
-                    {centre.role}
-                  </p>
-                  <p className="text-slate-600 text-xs leading-relaxed mb-4">
-                    {centre.address}
-                  </p>
-                  <div className="space-y-1.5 pt-3 border-t border-slate-200/70">
-                    {centre.features.map((feat, fIdx) => (
-                      <div key={fIdx} className="flex items-center gap-1.5 text-xs text-slate-700">
-                        <Check className="w-3.5 h-3.5 text-brandSky shrink-0" />
-                        <span>{feat}</span>
-                      </div>
-                    ))}
-                  </div>
+                <div className="w-7 h-7 rounded-lg bg-sky-100 flex items-center justify-center shrink-0 group-hover:bg-brandBlue transition-colors">
+                  <MapPin className="w-3.5 h-3.5 text-brandBlue group-hover:text-white transition-colors" />
                 </div>
-
-                <div className="pt-4 mt-4 border-t border-slate-200/80">
-                  <a
-                    href={`tel:${centre.phone.replace(/\s+/g, '')}`}
-                    className="inline-flex items-center gap-2 text-xs font-bold text-brandBlue hover:text-brandSky transition-colors"
-                  >
-                    <Phone className="w-3.5 h-3.5" />
-                    <span>{centre.phone}</span>
-                  </a>
+                <div>
+                  <span className="font-headline font-bold text-xs sm:text-sm text-slate-900 block leading-tight">
+                    {loc.name}
+                  </span>
+                  <span className="text-[11px] text-slate-500 block">
+                    {loc.highlight}
+                  </span>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Regional Connectivity Note */}
-          <div className="mt-10 p-5 rounded-2xl bg-sky-50/60 border border-sky-100 text-center text-xs sm:text-sm text-slate-700 max-w-3xl mx-auto">
-            <span className="font-bold text-brandBlue">Regional Patient Transport:</span> Patients from Marthandam, Karungal, Colachel, Valliyur, Tenkasi, and Neyyattinkara (Kerala) enjoy direct highway access to our Thuckalay headquarters and Nagercoil regional clinic.
+          {/* Reference to Official Address in Footer */}
+          <div className="mt-10 p-4.5 rounded-2xl bg-sky-50/60 border border-sky-100 text-center text-xs sm:text-sm text-slate-600 max-w-2xl mx-auto">
+            <span className="font-semibold text-slate-900">Hospital Branch Addresses:</span> Complete clinic street addresses, Google Maps locations, and contact details are available in the footer section below.
           </div>
         </div>
       </section>
