@@ -1,7 +1,7 @@
 ﻿import { apiClient } from "./api";
 import { treatments } from "../data/treatments";
 
-const TREATMENTS_STORAGE_KEY = 'jerush_treatments_catalogue_v3';
+const TREATMENTS_STORAGE_KEY = 'jerush_treatments_catalogue_v4';
 
 function getLocalTreatments() {
   try {

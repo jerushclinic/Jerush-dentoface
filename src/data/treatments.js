@@ -1210,18 +1210,34 @@ export const treatments = [
     "image": "/images/medical-services/dental_implants.png"
   },
   {
-    "id": "maxillary-sinus-view",
-    "title": "Maxillary Sinus View",
+    "id": "tmj-diagnosis-treatment",
+    "title": "TMJ Diagnosis & Treatment",
     "category": "dental",
     "subcategory": "Temporomandibular Joint (TMJ) Care",
-    "desc": "Specialized Maxillary Sinus View procedure providing advanced clinical care and lasting results at Jerush Dentoface.",
-    "details": "Our specialist clinicians provide high-precision Maxillary Sinus View with state-of-the-art diagnostic protocols, personalized treatment planning, and strict international sterilization standards.",
+    "desc": "Specialized TMJ Diagnosis & Treatment providing clinical assessment, jaw joint pain relief, and lasting rehabilitation at Jerush Dentoface.",
+    "details": "Our specialist clinicians provide high-precision TMJ Diagnosis & Treatment with state-of-the-art diagnostic protocols, personalized joint care, and strict international sterilization standards.",
     "benefits": [
       "Specialist clinical expertise",
       "Advanced diagnostic technology",
       "Personalized treatment plan"
     ],
     "iconName": "Activity",
+    "iconFile": null,
+    "image": "/images/medical-services/dental_implants.png"
+  },
+  {
+    "id": "tmj-appliances",
+    "title": "TMJ Appliances",
+    "category": "dental",
+    "subcategory": "Temporomandibular Joint (TMJ) Care",
+    "desc": "Specialized TMJ Appliances engineered to deprogram muscles, stabilize jaw alignment, and prevent temporomandibular joint strain.",
+    "details": "Our specialist clinicians provide custom-engineered TMJ Appliances with state-of-the-art diagnostic protocols, personalized treatment planning, and strict international sterilization standards.",
+    "benefits": [
+      "Specialist clinical expertise",
+      "Advanced diagnostic technology",
+      "Personalized treatment plan"
+    ],
+    "iconName": "Smile",
     "iconFile": null,
     "image": "/images/medical-services/dental_implants.png"
   },

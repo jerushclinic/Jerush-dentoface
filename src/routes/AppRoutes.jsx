@@ -143,6 +143,10 @@ export default function AppRoutes() {
       <Route path="/dental-treatments/removable-partial-dentures" element={<Navigate to="/dental-care/prosthodontic-care/removable-partial-dentures" replace />} />
       <Route path="/dental-treatments/removable-partial-dentures/" element={<Navigate to="/dental-care/prosthodontic-care/removable-partial-dentures" replace />} />
       <Route path="/removable-partial-dentures" element={<Navigate to="/dental-care/prosthodontic-care/removable-partial-dentures" replace />} />
+      <Route path="/complete-dentures" element={<Navigate to="/treatments/complete-dentures" replace />} />
+      <Route path="/flexible-dentures" element={<Navigate to="/treatments/flexible-dentures" replace />} />
+      <Route path="/dental-care/prosthodontic-care/complete-dentures" element={<Navigate to="/treatments/complete-dentures" replace />} />
+      <Route path="/dental-care/prosthodontic-care/flexible-dentures" element={<Navigate to="/treatments/flexible-dentures" replace />} />
 
       {/* Root Canal Treatment */}
       <Route path="/dental-care/endodontic-care/root-canal-treatment" element={<RootCanalTreatmentPage />} />
@@ -305,6 +309,8 @@ export default function AppRoutes() {
       {/* Generic Catalog Routes */}
       <Route path="/treatments/deep-teeth-cleaning" element={<Navigate to="/treatments/scaling-curettage" replace />} />
       <Route path="/treatments/multiple-visit-root-canal" element={<Navigate to="/treatments/multiple-visit-root-canal-treatment" replace />} />
+      <Route path="/treatments/tmj-splints" element={<Navigate to="/treatments/tmj-appliances" replace />} />
+      <Route path="/treatments/botox" element={<Navigate to="/treatments/botox-treatment" replace />} />
       <Route path="/treatments/:id" element={<TreatmentDetailPage />} />
       <Route path="/treatments/:id/" element={<TreatmentDetailPage />} />
       <Route path="/services" element={<Navigate to="/treatments" replace />} />

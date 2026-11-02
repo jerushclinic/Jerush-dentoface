@@ -1142,7 +1142,7 @@ export default function Header() {
                                     </h5>
                                     <ul>
                                       <li>{renderDentalIconItem('/treatments/geriatric-dental-care', 'Geriatric Dental Care', 'denture.webp', handleLinkClick)}</li>
-                                      <li>{renderDentalIconItem('/treatments/dentures', 'Complete & Flexible Dentures', 'denture.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/treatments/dentures', 'Dentures', 'denture.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
                                 </div>
@@ -1209,9 +1209,9 @@ export default function Header() {
                                       </Link>
                                     </h5>
                                     <ul>
-                                      <li>{renderDentalIconItem('/treatments/tmj-splints', 'TMJ Soft & Hard Splints', 'soft-splints.webp', handleLinkClick)}</li>
-                                      <li>{renderDentalIconItem('/treatments/night-guards', 'Bruxism Night Guards', 'night-guards.webp', handleLinkClick)}</li>
-                                      <li>{renderDentalIconItem('/treatments/botox', 'TMJ Botox for Bruxism', 'botox-treatment.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/treatments/tmj-diagnosis-treatment', 'TMJ Diagnosis & Treatment', 'soft-splints.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/treatments/tmj-appliances', 'TMJ Appliances', 'botox-treatment.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/treatments/night-guards', 'Night Guards', 'night-guards.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
                                   <div className="jerush-megamenu-subgroup">
@@ -2621,7 +2621,7 @@ export default function Header() {
                 </Link>
                 <div className="grid grid-cols-2 gap-2">
                   {renderMobileTreatmentItem('/treatments/geriatric-dental-care', 'Geriatric Dental Care', 'denture.webp', 'dental', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/dentures', 'Complete & Flexible Dentures', 'denture.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/treatments/dentures', 'Dentures', 'denture.webp', 'dental', handleLinkClick)}
                 </div>
               </div>
 
@@ -2733,10 +2733,9 @@ export default function Header() {
                   <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover/hdr:text-brandSky transition-colors" />
                 </Link>
                 <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/treatments/tmj-splints', 'Soft & Hard Splints', 'soft-splints.webp', 'dental', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/night-guards', 'Bruxism Night Guards', 'night-guards.webp', 'dental', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/botox', 'TMJ Botox Therapy', 'botox-treatment.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/treatments/tmj-diagnosis-treatment', 'TMJ Diagnosis & Treatment', 'soft-splints.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/tmj-appliances', 'TMJ Appliances', 'tmj-appliances.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/treatments/night-guards', 'Night Guards', 'night-guards.webp', 'dental', handleLinkClick)}
                 </div>
               </div>
 
