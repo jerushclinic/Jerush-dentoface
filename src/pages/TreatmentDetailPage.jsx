@@ -44,6 +44,7 @@ const SUBCATEGORY_MAP = {
   'tmj-diagnosis-treatment': 'TMJ & Jaw Joint Care',
   'tmj-appliances': 'TMJ & Jaw Joint Care',
   'night-guards': 'TMJ & Jaw Joint Care',
+  'botox-treatment': 'TMJ & Jaw Joint Care',
   'pediatric-dentistry': 'Kids & Pediatric Dentistry',
   'pedo-extractions': 'Kids & Pediatric Dentistry',
   'dental-consultation': 'Kids & Pediatric Dentistry',

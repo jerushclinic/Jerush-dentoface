@@ -1210,8 +1210,8 @@ export default function Header() {
                                     </h5>
                                     <ul>
                                       <li>{renderDentalIconItem('/treatments/tmj-diagnosis-treatment', 'TMJ Diagnosis & Treatment', 'soft-splints.webp', handleLinkClick)}</li>
-                                      <li>{renderDentalIconItem('/treatments/tmj-appliances', 'TMJ Appliances', 'botox-treatment.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/night-guards', 'Night Guards', 'night-guards.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/treatments/botox-treatment', 'Botox Treatment', 'botox-treatment.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
                                   <div className="jerush-megamenu-subgroup">
@@ -2734,8 +2734,8 @@ export default function Header() {
                 </Link>
                 <div className="grid grid-cols-2 gap-2">
                   {renderMobileTreatmentItem('/treatments/tmj-diagnosis-treatment', 'TMJ Diagnosis & Treatment', 'soft-splints.webp', 'dental', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/tmj-appliances', 'TMJ Appliances', 'tmj-appliances.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/night-guards', 'Night Guards', 'night-guards.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/treatments/botox-treatment', 'Botox Treatment', 'botox-treatment.webp', 'dental', handleLinkClick)}
                 </div>
               </div>
 
