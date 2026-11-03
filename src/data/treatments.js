@@ -830,12 +830,13 @@ export const treatments = [
     "title": "Geriatric Dental Care",
     "category": "dental",
     "subcategory": "Geriatric Dentistry",
-    "desc": "Specialized Geriatric Dental Care procedure providing advanced clinical care and lasting results at Jerush Dentoface.",
-    "details": "Our specialist clinicians provide high-precision Geriatric Dental Care with state-of-the-art diagnostic protocols, personalized treatment planning, and strict international sterilization standards.",
+    "desc": "Comfortable, personalised dental care for older adults focusing on gum health, dry mouth management, and natural tooth preservation.",
+    "details": "At Jerush Dentofacial & Cosmetic Laser Centre, geriatric dental care is thoughtfully planned around each person's oral health, medical history, physical comfort, and individual daily routine. Treatment covers root decay prevention, gentle professional cleaning, dry mouth relief, and denture assessments.",
     "benefits": [
-      "Specialist clinical expertise",
-      "Advanced diagnostic technology",
-      "Personalized treatment plan"
+      "Medical history-first clinical protocols",
+      "Paced, gentle, unhurried appointments",
+      "Comprehensive denture & natural tooth care",
+      "Wheelchair & mobility friendly clinical operatories"
     ],
     "iconName": "Smile",
     "iconFile": "denture.webp",
@@ -844,15 +845,16 @@ export const treatments = [
   {
     "id": "dentures-1",
     "title": "Dentures",
+    "slug": "dentures",
     "category": "dental",
-    "desc": "Custom-fitted acrylic and BPS flexible dentures for comfortable, natural-looking full or partial tooth replacement.",
+    "desc": "Custom-fitted complete, partial, and implant-supported dentures to replace missing teeth and restore everyday chewing comfort.",
     "iconName": "ShieldCheck",
-    "image": "/images/medical-services/fixed_partial_denture.png",
-    "details": "Lightweight, bio-compatible prosthetics designed to match facial muscle contours and restore masticatory function.",
+    "image": "/images/medical-services/dental-care/geriatric-dentistry/dentures/replacing-missing-teeth.webp",
+    "details": "At Jerush Dentofacial & Cosmetic Laser Centre, dentures are custom-engineered to restore natural chewing, speech clarity, and confident facial profile support with full, partial, and implant-stabilized options.",
     "benefits": [
-      "Comfortable custom fit",
-      "BPS bio-functional option",
-      "Affordable tooth replacement"
+      "Custom precision anatomical fit",
+      "Complete, partial & implant-supported",
+      "Restores natural chewing and speech"
     ],
     "subcategory": "Geriatric Dentistry",
     "iconFile": "denture.webp"
@@ -1322,12 +1324,12 @@ export const treatments = [
     "image": "/images/medical-services/dental_implants.png"
   },
   {
-    "id": "oral-pathology",
+    "id": "oral-cancer-screening",
     "title": "Oral Cancer Screening",
     "category": "dental",
     "desc": "Diagnostic checkups, soft tissue evaluations, and biopsy screenings for early detection of oral mucosal lesions.",
     "iconName": "Activity",
-    "image": "/images/medical-services/wisdom_tooth.png",
+    "image": "/images/medical-services/dental-care/community-dentistry/oral-cancer-screening/cancer-screening.webp",
     "details": "Comprehensive clinical examination using specialized diagnostic lights and biopsy sampling to evaluate suspicious sores, patches, or growths early.",
     "benefits": [
       "Early detection saves lives",
@@ -1335,7 +1337,8 @@ export const treatments = [
       "Histopathology verification"
     ],
     "subcategory": "Community Dentistry",
-    "iconFile": "oral-cancer-screen.webp"
+    "iconFile": "oral-cancer-screen.webp",
+    "link": "/dental-care/community-dentistry/oral-cancer-screening"
   },
   {
     "id": "oral-health-care",

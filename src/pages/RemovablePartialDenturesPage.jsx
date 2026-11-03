@@ -12,6 +12,7 @@ import {
 import PageBreadcrumbHero from '../components/common/PageBreadcrumbHero';
 import TreatmentCtaBanner from '../components/common/TreatmentCtaBanner';
 import TreatmentSectionNav from '../components/common/TreatmentSectionNav';
+import TreatmentAppointmentForm from '../components/common/TreatmentAppointmentForm';
 import useTreatmentScrollSpy from '../hooks/useTreatmentScrollSpy';
 
 const STATS = [
@@ -220,8 +221,15 @@ export default function RemovablePartialDenturesPage() {
   }, []);
 
   const handleBookClick = () => {
-    navigate('/contact');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const el = document.getElementById('treatment-appointment-section');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const nameInput = document.getElementById('treatment-form-name');
+      if (nameInput) nameInput.focus();
+    } else {
+      navigate('/contact');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   return (
@@ -230,8 +238,8 @@ export default function RemovablePartialDenturesPage() {
       <PageBreadcrumbHero
         title="Removable Partial Dentures"
         breadcrumbs={[
-          { label: 'Dental Care', path: '/treatments' },
-          { label: 'Prosthodontic Care', path: '/treatments?category=dental' },
+          { label: 'Dental Care', path: '/dental-care' },
+          { label: 'Prosthodontic Care', path: '/dental-care/prosthodontic-care' },
           { label: 'Removable Partial Dentures', active: true }
         ]}
       />
@@ -358,6 +366,37 @@ export default function RemovablePartialDenturesPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* ─── Top Appointment Consultation Section ─── */}
+      <TreatmentAppointmentForm
+        id="treatment-appointment-section"
+        treatmentName="Removable Partial Dentures"
+        title="Book a Consultation"
+        highlightWord="Near You"
+        subtitle="Get personalised advice from Jerush Dentofacial & Cosmetic Laser Centre's leading specialists."
+        features={[
+          {
+            icon: Smile,
+            title: 'Custom Precision Fit',
+            desc: 'Shade-matched teeth and anatomical moulds aligned to your natural gum contours.'
+          },
+          {
+            icon: Award,
+            title: 'Specialist-Led Care',
+            desc: 'Consultations and clinical treatment supervised by hospital prosthodontic specialists.'
+          },
+          {
+            icon: Layers,
+            title: 'Advanced In-House Lab',
+            desc: 'Fast turnaround times with high-precision digital scanning and CAD/CAM fabrication.'
+          },
+          {
+            icon: MapPin,
+            title: '4 Regional Centres',
+            desc: 'World-class hospital care available across Thuckalay, Nagercoil, Tirunelveli, and Trichy.'
+          }
+        ]}
+      />
 
       {/* ─── Key Stats Bar ─── */}
       <section className="bg-gradient-to-r from-[#0F172A] via-[#2852A3] to-[#0F172A] py-10 sm:py-12 px-4 sm:px-6 text-white shadow-inner relative overflow-hidden">
@@ -637,17 +676,12 @@ export default function RemovablePartialDenturesPage() {
                 className="rounded-3xl bg-slate-800/80 border border-white/10 overflow-hidden flex flex-col hover:border-brandSky/50 hover:bg-slate-800 transition-all duration-300 group"
               >
                 {/* Step Image */}
-                <div className="relative h-48 overflow-hidden bg-slate-950">
+                <div className="relative aspect-square w-full p-3 sm:p-4 flex items-center justify-center bg-gradient-to-b from-slate-950/90 via-slate-900/80 to-slate-800/50 overflow-hidden">
                   <img
                     src={step.img}
                     alt={`${step.title} - Jerush Dentofacial`}
-                    className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 drop-shadow-2xl"
                   />
-                  <div className="absolute top-3 left-3 bg-slate-900/85 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
-                    <span className="font-headline font-black text-xs text-brandSky">
-                      STEP {step.step}
-                    </span>
-                  </div>
                 </div>
 
                 {/* Step Content */}
@@ -998,7 +1032,7 @@ export default function RemovablePartialDenturesPage() {
         onPrimaryClick={handleBookClick}
         secondaryBtnText="Call +91 94891 60000"
         secondaryBtnPhone="+919489160000"
-        doctorImage="/images/doctors/sherine2.webp"
+        doctorImage="/images/doctors/dr-sherine-ponraj-prosthodontist.webp"
         doctorName="DR. SHERINE PONRAJ"
         doctorRole="Prosthodontist (BDS, MDS)"
         doctorAlt="DR. SHERINE PONRAJ - Specialist Prosthodontist at Jerush Dentofacial"

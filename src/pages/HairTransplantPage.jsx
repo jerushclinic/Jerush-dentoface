@@ -128,8 +128,9 @@ export default function HairTransplantPage() {
       <PageBreadcrumbHero 
         title="FUE Hair Transplant Surgery" 
         breadcrumbs={[
-          { label: 'Hair Restoration', path: '/treatments' },
-          { label: 'Hair Transplant', active: true }
+          { label: 'Hair Care', path: '/treatments?category=hair' },
+          { label: 'Hair Transplant', path: '/treatments?category=hair&sub=Hair%20Transplant' },
+          { label: 'FUE Hair Transplant', active: true }
         ]}
       />
 

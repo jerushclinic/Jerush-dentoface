@@ -335,7 +335,8 @@ export default function CrownsBridgesPage() {
       <PageBreadcrumbHero
         title="Dental Crowns & Bridges"
         breadcrumbs={[
-          { label: 'Dental Care', path: '/treatments' },
+          { label: 'Dental Care', path: '/dental-care' },
+          { label: 'Prosthodontic Care', path: '/dental-care/prosthodontic-care' },
           { label: 'Dental Crowns & Bridges', active: true }
         ]}
       />
@@ -1077,10 +1078,10 @@ export default function CrownsBridgesPage() {
         onPrimaryClick={handleBookClick}
         secondaryBtnText="Request a Call"
         secondaryBtnPhone="+919489160055"
-        doctorImage="/images/doctors/sherine2.webp"
+        doctorImage="/images/doctors/dr-sherine-ponraj-prosthodontist.webp"
         doctorName="DR. SHERINE PONRAJ"
-        doctorRole="Restorative Dental Specialist"
-        doctorAlt="DR. SHERINE PONRAJ - Jerush Dentofacial"
+        doctorRole="Prosthodontist & Crown-Bridge Specialist (BDS, MDS)"
+        doctorAlt="DR. SHERINE PONRAJ - Specialist Prosthodontist at Jerush Dentofacial"
       />
     </div>
   );

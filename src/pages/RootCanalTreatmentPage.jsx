@@ -178,7 +178,8 @@ export default function RootCanalTreatmentPage() {
       <PageBreadcrumbHero
         title="Root Canal Treatment"
         breadcrumbs={[
-          { label: 'Root Canal & Tooth Repair', path: '/treatments' },
+          { label: 'Dental Care', path: '/dental-care' },
+          { label: 'Endodontic Care', path: '/dental-care/endodontic-care' },
           { label: 'Root Canal Treatment', active: true }
         ]}
       />
@@ -704,22 +705,20 @@ export default function RootCanalTreatmentPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: i * 0.05 }}
-                className={`rounded-2xl overflow-hidden transition-all duration-300 ${
-                  isExpanded
+                className={`rounded-2xl overflow-hidden transition-all duration-300 ${isExpanded
                     ? 'bg-gradient-to-r from-white via-blue-50/50 to-sky-50/40 border border-brandSky/40 shadow-md ring-1 ring-brandSky/20'
                     : 'bg-gradient-to-r from-white via-slate-50/60 to-blue-50/20 border border-slate-200/70 hover:border-brandSky/40 hover:shadow-md hover:from-white hover:to-blue-50/40'
-                }`}
+                  }`}
               >
                 <button
                   onClick={() => setExpandedFaq(isExpanded ? null : i)}
                   className="w-full px-6 py-5 flex items-center justify-between text-left font-headline font-black text-sm sm:text-base text-slate-900 hover:text-brandBlue transition-colors group"
                 >
                   <span className="pr-4">{faq.q}</span>
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${
-                    isExpanded 
-                      ? 'bg-gradient-to-r from-brandBlue to-brandSky text-white rotate-180 shadow-sm' 
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${isExpanded
+                      ? 'bg-gradient-to-r from-brandBlue to-brandSky text-white rotate-180 shadow-sm'
                       : 'bg-gradient-to-br from-brandBlue/10 to-brandSky/10 text-brandBlue group-hover:bg-brandBlue group-hover:text-white'
-                  }`}>
+                    }`}>
                     <ChevronDown className="w-4 h-4" />
                   </div>
                 </button>
@@ -755,10 +754,10 @@ export default function RootCanalTreatmentPage() {
         onPrimaryClick={handleBookClick}
         secondaryBtnText="Call +91 94891 60000"
         secondaryBtnPhone="+919489160000"
-        doctorImage="/images/doctors/sherine2.webp"
-        doctorName="DR. SHERINE PONRAJ"
-        doctorRole="Root Canal Specialist"
-        doctorAlt="DR. SHERINE PONRAJ - Jerush Dentofacial"
+        doctorImage="/images/doctors/dr-jasmin-endodontist.webp"
+        doctorName="DR. V. JASMIN SHAMILI"
+        doctorRole="Endodontist & Conservative Dentist (BDS, MDS)"
+        doctorAlt="DR. V. JASMIN SHAMILI - Endodontic Specialist at Jerush Dentofacial"
       />
     </div>
   );

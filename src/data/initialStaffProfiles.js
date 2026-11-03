@@ -114,7 +114,7 @@ export const initialStaffProfiles = [
     "department": "dental_doctors",
     "branch": "Jerush Head Clinic – Thuckalay",
     "role": "Prosthodontist",
-    "image": "/images/doctors/sherine1.webp",
+    "image": "/images/doctors/sherine-ponraj-prosthodontist.webp",
     "status": "Active",
     "email": "sherine.ponraj@jerushdentoface.com",
     "qualification": "BDS, MDS (Prosthodontics)",

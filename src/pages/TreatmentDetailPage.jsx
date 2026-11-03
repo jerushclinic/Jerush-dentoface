@@ -45,6 +45,7 @@ const SUBCATEGORY_MAP = {
   'tmj-appliances': 'TMJ & Jaw Joint Care',
   'night-guards': 'TMJ & Jaw Joint Care',
   'botox-treatment': 'TMJ & Jaw Joint Care',
+  'geriatric-dental-care': 'Geriatric Dentistry',
   'pediatric-dentistry': 'Kids & Pediatric Dentistry',
   'pedo-extractions': 'Kids & Pediatric Dentistry',
   'dental-consultation': 'Kids & Pediatric Dentistry',
@@ -85,6 +86,65 @@ const SUBCATEGORY_MAP = {
   'muscle-toning': 'Muscle Toning & Definition',
   'rf-body-tightening': 'RF Body Skin Tightening',
   'clinical-wellness': 'Clinical Body Wellness'
+};
+
+const DENTAL_SUBCATEGORY_MAP = {
+  'Kids Dentistry / Pedodontics': { label: 'Kids Dentistry', path: '/dental-care/kids-dentistry' },
+  'Kids Dentistry': { label: 'Kids Dentistry', path: '/dental-care/kids-dentistry' },
+  'Geriatric Dentistry': { label: 'Geriatric Dentistry', path: '/dental-care/geriatric-dentistry' },
+  'Prosthodontic Care / Tooth Replacement': { label: 'Prosthodontic Care', path: '/dental-care/prosthodontic-care' },
+  'Prosthodontic Care': { label: 'Prosthodontic Care', path: '/dental-care/prosthodontic-care' },
+  'Orthodontic Care': { label: 'Orthodontic Care', path: '/dental-care/orthodontic-care' },
+  'Cosmetic Dentistry': { label: 'Cosmetic Dentistry', path: '/dental-care/cosmetic-dentistry' },
+  'Endodontic Care': { label: 'Endodontic Care', path: '/dental-care/endodontic-care' },
+  'Implantology': { label: 'Implantology', path: '/dental-care/implantology' },
+  'Oral Pathology': { label: 'Oral Pathology', path: '/dental-care/oral-pathology' },
+  'Periodontal / Gum Care': { label: 'Periodontal Care', path: '/dental-care/periodontal-gum-care' },
+  'Oral & Maxillofacial Care': { label: 'Oral & Maxillofacial Care', path: '/dental-care/oral-maxillofacial' },
+  'Oral Medicine': { label: 'Oral Medicine', path: '/dental-care/oral-medicine' },
+  'Radiology': { label: 'Dental Radiology', path: '/dental-care/radiology' },
+  'Temporomandibular Joint (TMJ) Care': { label: 'TMJ Care', path: '/dental-care/tmj-care' },
+  'Community Dentistry': { label: 'Community Dentistry', path: '/dental-care/community-dentistry' }
+};
+
+const getBreadcrumbsForTreatment = (treatment) => {
+  if (!treatment) return [{ label: 'Treatments', path: '/treatments' }];
+  if (treatment.category === 'dental') {
+    const subInfo = DENTAL_SUBCATEGORY_MAP[treatment.subcategory] || {
+      label: treatment.subcategory || 'Dental Procedures',
+      path: '/dental-care'
+    };
+    return [
+      { label: 'Dental Care', path: '/dental-care' },
+      { label: subInfo.label, path: subInfo.path },
+      { label: treatment.title, active: true }
+    ];
+  }
+  if (treatment.category === 'cosmetic') {
+    return [
+      { label: 'Skin & Laser', path: '/treatments?category=cosmetic' },
+      { label: getSubcategoryLabel(treatment), path: `/treatments?category=cosmetic&sub=${encodeURIComponent(treatment.subcategory || '')}` },
+      { label: treatment.title, active: true }
+    ];
+  }
+  if (treatment.category === 'hair') {
+    return [
+      { label: 'Hair Care', path: '/treatments?category=hair' },
+      { label: getSubcategoryLabel(treatment), path: `/treatments?category=hair&sub=${encodeURIComponent(treatment.subcategory || '')}` },
+      { label: treatment.title, active: true }
+    ];
+  }
+  if (treatment.category === 'body') {
+    return [
+      { label: 'Body Contouring', path: '/treatments?category=body' },
+      { label: getSubcategoryLabel(treatment), path: `/treatments?category=body&sub=${encodeURIComponent(treatment.subcategory || '')}` },
+      { label: treatment.title, active: true }
+    ];
+  }
+  return [
+    { label: 'Medical Services', path: '/treatments' },
+    { label: treatment.title, active: true }
+  ];
 };
 
 const getSubcategoryLabel = (treatment) => {
@@ -183,10 +243,7 @@ export default function TreatmentDetailPage() {
     <div className="w-full bg-slate-50 font-body text-left relative pt-0 pb-24 min-h-screen">
       <PageBreadcrumbHero 
         title={treatment.title} 
-        breadcrumbs={[
-          { label: getSubcategoryLabel(treatment), path: '/treatments' },
-          { label: treatment.title, active: true }
-        ]} 
+        breadcrumbs={getBreadcrumbsForTreatment(treatment)} 
       />
 
       <div className="max-w-7xl mx-auto px-6 mt-12 relative z-10">

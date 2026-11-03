@@ -416,8 +416,8 @@ export default function MetalPostCorePage() {
       <PageBreadcrumbHero
         title="Post & Core: Metal Post"
         breadcrumbs={[
-          { label: 'Dental Care', path: '/treatments' },
-          { label: 'Prosthodontic Care', path: '/treatments?category=dental&sub=Prosthodontic%20Care%20%2F%20Tooth%20Replacement' },
+          { label: 'Dental Care', path: '/dental-care' },
+          { label: 'Prosthodontic Care', path: '/dental-care/prosthodontic-care' },
           { label: 'Post & Core: Metal Post', active: true }
         ]}
       />
@@ -1171,7 +1171,7 @@ export default function MetalPostCorePage() {
         onPrimaryClick={handleBookClick}
         secondaryBtnText="Call +91 94891 60000"
         secondaryBtnPhone="+919489160000"
-        doctorImage="/images/doctors/sherine2.webp"
+        doctorImage="/images/doctors/dr-sherine-ponraj-prosthodontist.webp"
         doctorName="DR. SHERINE PONRAJ"
         doctorRole="MDS Prosthodontics & Crown and Bridge"
         doctorAlt="DR. SHERINE PONRAJ - Specialist Prosthodontist at Jerush Dentofacial"

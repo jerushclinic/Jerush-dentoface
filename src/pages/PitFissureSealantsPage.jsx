@@ -329,8 +329,8 @@ export default function PitFissureSealantsPage() {
       <PageBreadcrumbHero
         title="Pit & Fissure Sealants"
         breadcrumbs={[
-          { label: 'Dental Care', path: '/treatments' },
-          { label: 'Kids Dentistry', path: '/treatments?category=dental&sub=Kids%20Dentistry%20%2F%20Pedodontics' },
+          { label: 'Dental Care', path: '/dental-care' },
+          { label: 'Kids Dentistry', path: '/dental-care/kids-dentistry' },
           { label: 'Pit & Fissure Sealants', active: true }
         ]}
       />
@@ -423,8 +423,7 @@ export default function PitFissureSealantsPage() {
               <div className="absolute -inset-4 bg-gradient-to-tr from-brandSky/20 via-brandBlue/15 to-transparent rounded-3xl blur-2xl -z-10" />
 
               <div className="relative rounded-3xl overflow-hidden bg-white border border-slate-200/90 shadow-2xl p-2.5 sm:p-3 group">
-                {/* 16:9 Aspect container matches native 1672x941 image perfectly without cropping! */}
-                <div className="relative rounded-2xl overflow-hidden bg-slate-50 aspect-[16/10] sm:aspect-[16/9]">
+                <div className="relative rounded-2xl overflow-hidden bg-slate-50 aspect-square">
                   <img
                     src="/images/medical-services/dental-care/kids-dentistry-pedodontics/pit-fissure-sealants/grooves-of-growing-teeth.webp"
                     alt="Dentist applying a protective pit and fissure sealant to a child's molar to help prevent tooth decay."
@@ -876,7 +875,7 @@ export default function PitFissureSealantsPage() {
               className="lg:col-span-5 relative"
             >
               <div className="relative rounded-3xl overflow-hidden bg-white border border-slate-200/90 shadow-xl p-2.5 sm:p-3 group">
-                <div className="relative rounded-2xl overflow-hidden bg-slate-50 aspect-[16/10] sm:aspect-[16/9]">
+                <div className="relative rounded-2xl overflow-hidden bg-slate-50 aspect-[4/3]">
                   <img
                     src="/images/medical-services/dental-care/kids-dentistry-pedodontics/pit-fissure-sealants/how-long-do-sealants-last.webp"
                     alt="Checking longevity and condition of dental sealants during routine pediatric check-up"

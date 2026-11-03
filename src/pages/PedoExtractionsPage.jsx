@@ -364,8 +364,8 @@ export default function PedoExtractionsPage() {
       <PageBreadcrumbHero
         title="Pedo Extractions"
         breadcrumbs={[
-          { label: 'Dental Care', path: '/treatments' },
-          { label: 'Kids Dentistry', path: '/treatments?category=dental&sub=Kids%20Dentistry%20%2F%20Pedodontics' },
+          { label: 'Dental Care', path: '/dental-care' },
+          { label: 'Kids Dentistry', path: '/dental-care/kids-dentistry' },
           { label: 'Pedo Extractions', active: true }
         ]}
       />
@@ -445,7 +445,7 @@ export default function PedoExtractionsPage() {
               </div>
             </motion.div>
 
-            {/* Right Column: Hero Graphic - Clean Frame, No status dots, 16:9 Natural Ratio so Image is 100% visible */}
+            {/* Right Column: Hero Graphic - Clean Frame, Aspect Square Ratio matching Pediatric Dental Care */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -455,8 +455,7 @@ export default function PedoExtractionsPage() {
               <div className="absolute -inset-4 bg-gradient-to-tr from-brandSky/20 via-brandBlue/15 to-transparent rounded-3xl blur-2xl -z-10" />
 
               <div className="relative rounded-3xl overflow-hidden bg-white border border-slate-200/90 shadow-2xl p-2.5 sm:p-3 group">
-                {/* 16:9 Aspect container matches the native 1672x941 image perfectly without cropping! */}
-                <div className="relative rounded-2xl overflow-hidden bg-slate-50 aspect-[16/10] sm:aspect-[16/9]">
+                <div className="relative rounded-2xl overflow-hidden bg-slate-50 aspect-square">
                   <img
                     src="/images/medical-services/dental-care/kids-dentistry-pedodontics/pedo-extractions/Gentle-pediatric-tooth-extraction.webp"
                     alt="Paediatric dentist preparing for a child's tooth extraction in a child-friendly dental clinic."
@@ -943,7 +942,7 @@ export default function PedoExtractionsPage() {
               className="lg:col-span-5 relative"
             >
               <div className="relative rounded-3xl overflow-hidden bg-white border border-slate-200/90 shadow-xl p-2.5 sm:p-3 group">
-                <div className="relative rounded-2xl overflow-hidden bg-slate-50 aspect-[16/10] sm:aspect-[16/9]">
+                <div className="relative rounded-2xl overflow-hidden bg-slate-50 aspect-[4/3]">
                   <img
                     src="/images/medical-services/dental-care/kids-dentistry-pedodontics/pedo-extractions/caring-for-your-child.webp"
                     alt="Parent lovingly caring for child at home following dental extraction"

@@ -1053,7 +1053,7 @@ export default function Header() {
                                   <p className="text-xs text-slate-500 font-medium">Specialized Departments & Clinical Procedures</p>
                                 </div>
                                 <Link
-                                  to="/treatments?category=dental"
+                                  to="/dental-care"
                                   onClick={handleLinkClick}
                                   className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-blue-50/80 hover:bg-brandBlue text-brandBlue hover:text-white font-headline text-xs font-bold transition-all shadow-xs group"
                                 >
@@ -1067,7 +1067,7 @@ export default function Header() {
                                 <div className="jerush-grid-column">
                                   <div className="jerush-megamenu-subgroup">
                                     <h5>
-                                      <Link to="/treatments?category=dental&sub=Kids%20Dentistry%20%2F%20Pedodontics" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
+                                      <Link to="/dental-care/kids-dentistry" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
                                         Kids Dentistry / Pedodontics
                                       </Link>
                                     </h5>
@@ -1080,7 +1080,7 @@ export default function Header() {
                                   </div>
                                   <div className="jerush-megamenu-subgroup">
                                     <h5>
-                                      <Link to="/treatments?category=dental&sub=Cosmetic%20Dentistry" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
+                                      <Link to="/dental-care/cosmetic-dentistry" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
                                         Cosmetic Dentistry
                                       </Link>
                                     </h5>
@@ -1092,7 +1092,7 @@ export default function Header() {
                                   </div>
                                   <div className="jerush-megamenu-subgroup">
                                     <h5>
-                                      <Link to="/treatments?category=dental&sub=Orthodontic%20Care" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
+                                      <Link to="/dental-care/orthodontic-care" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
                                         Orthodontic Care
                                       </Link>
                                     </h5>
@@ -1109,7 +1109,7 @@ export default function Header() {
                                 <div className="jerush-grid-column">
                                   <div className="jerush-megamenu-subgroup">
                                     <h5>
-                                      <Link to="/treatments?category=dental&sub=Prosthodontic%20Care%20%2F%20Tooth%20Replacement" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
+                                      <Link to="/dental-care/prosthodontic-care" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
                                         Prosthodontic Care
                                       </Link>
                                     </h5>
@@ -1117,14 +1117,14 @@ export default function Header() {
                                       <li>{renderDentalIconItem('/dental-implants', 'Dental Implants & All-on-4', 'dental-implant.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/dental-crowns-bridges', 'Crowns & Bridges', 'dental-crown-bridge.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/dental-care/prosthodontic-care/removable-partial-dentures', 'Removable Partial Dentures', 'denture.webp', handleLinkClick)}</li>
-                                      <li>{renderDentalIconItem('/treatments/fixed-partial-denture', 'Fixed Partial Dentures', 'fixed-partial-dentures.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/dental-care/prosthodontic-care/fixed-partial-dentures', 'Fixed Partial Dentures', 'fixed-partial-dentures.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/dental-care/prosthodontic-care/post-core-metal-post', 'Metal Post & Core', 'teeth-post-core.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/fibre-post', 'Fibre Post & Core', 'teeth-post-core.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
                                   <div className="jerush-megamenu-subgroup">
                                     <h5>
-                                      <Link to="/treatments?category=dental&sub=Endodontic%20Care" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
+                                      <Link to="/dental-care/endodontic-care" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
                                         Endodontic Care
                                       </Link>
                                     </h5>
@@ -1136,13 +1136,13 @@ export default function Header() {
                                   </div>
                                   <div className="jerush-megamenu-subgroup">
                                     <h5>
-                                      <Link to="/treatments?category=dental&sub=Geriatric%20Dentistry" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
+                                      <Link to="/dental-care/geriatric-dentistry" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
                                         Geriatric Dentistry
                                       </Link>
                                     </h5>
                                     <ul>
-                                      <li>{renderDentalIconItem('/treatments/geriatric-dental-care', 'Geriatric Dental Care', 'denture.webp', handleLinkClick)}</li>
-                                      <li>{renderDentalIconItem('/treatments/dentures', 'Dentures', 'denture.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/dental-care/geriatric-dentistry/geriatric-dental-care', 'Geriatric Dental Care', 'denture.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/dental-care/geriatric-dentistry/dentures', 'Dentures', 'denture.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
                                 </div>
@@ -1151,7 +1151,7 @@ export default function Header() {
                                 <div className="jerush-grid-column">
                                   <div className="jerush-megamenu-subgroup">
                                     <h5>
-                                      <Link to="/treatments?category=dental&sub=Periodontal%20%2F%20Gum%20Care" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
+                                      <Link to="/dental-care/periodontal-gum-care" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
                                         Periodontal / Gum Care
                                       </Link>
                                     </h5>
@@ -1164,7 +1164,7 @@ export default function Header() {
                                   </div>
                                   <div className="jerush-megamenu-subgroup">
                                     <h5>
-                                      <Link to="/treatments?category=dental&sub=Oral%20%26%20Maxillofacial%20Care" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
+                                      <Link to="/dental-care/oral-maxillofacial" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
                                         Oral & Maxillofacial Care
                                       </Link>
                                     </h5>
@@ -1177,7 +1177,7 @@ export default function Header() {
                                   </div>
                                   <div className="jerush-megamenu-subgroup">
                                     <h5>
-                                      <Link to="/treatments?category=dental&sub=Oral%20Medicine" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
+                                      <Link to="/dental-care/oral-medicine" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
                                         Oral Medicine
                                       </Link>
                                     </h5>
@@ -1192,7 +1192,7 @@ export default function Header() {
                                 <div className="jerush-grid-column">
                                   <div className="jerush-megamenu-subgroup">
                                     <h5>
-                                      <Link to="/treatments?category=dental&sub=Radiology" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
+                                      <Link to="/dental-care/radiology" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
                                         Dental Radiology
                                       </Link>
                                     </h5>
@@ -1204,7 +1204,7 @@ export default function Header() {
                                   </div>
                                   <div className="jerush-megamenu-subgroup">
                                     <h5>
-                                      <Link to="/treatments?category=dental&sub=Temporomandibular%20Joint%20(TMJ)%20Care" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
+                                      <Link to="/dental-care/tmj-care" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
                                         TMJ Care
                                       </Link>
                                     </h5>
@@ -1216,13 +1216,13 @@ export default function Header() {
                                   </div>
                                   <div className="jerush-megamenu-subgroup">
                                     <h5>
-                                      <Link to="/treatments?category=dental&sub=Community%20Dentistry" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
+                                      <Link to="/dental-care/community-dentistry" onClick={handleLinkClick} className="hover:text-brandBlue transition-colors block w-full">
                                         Community Dentistry
                                       </Link>
                                     </h5>
                                     <ul>
                                       <li>{renderDentalIconItem('/treatments/dental-health-camps', 'Dental Health Camps', 'dental-health-camps.webp', handleLinkClick)}</li>
-                                      <li>{renderDentalIconItem('/dental-treatments/oral-pathology-screening', 'Oral Cancer Screening', 'oral-cancer-screen.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/dental-care/community-dentistry/oral-cancer-screening', 'Oral Cancer Screening', 'oral-cancer-screen.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/oral-health-care', 'Community Oral Health Care', 'oral-health-care.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
@@ -1232,7 +1232,7 @@ export default function Header() {
                               {/* Bottom Highlight Strip */}
                               <div className="mt-3.5 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs">
                                 <span className="text-slate-500 font-medium">Looking for a specialized dental procedure? Search our complete clinical database.</span>
-                                <Link to="/treatments?category=dental" onClick={handleLinkClick} className="font-bold text-brandBlue hover:text-brandSky flex items-center gap-1 transition-colors">
+                                <Link to="/dental-care" onClick={handleLinkClick} className="font-bold text-brandBlue hover:text-brandSky flex items-center gap-1 transition-colors">
                                   <span>View All Dental Procedures</span>
                                   <ChevronRight className="w-3.5 h-3.5" />
                                 </Link>
@@ -2490,7 +2490,7 @@ export default function Header() {
               {/* Kids Dentistry / Pedodontics */}
               <div className="mb-3.5">
                 <Link
-                  to="/treatments?category=dental&sub=Kids%20Dentistry%20%2F%20Pedodontics"
+                  to="/dental-care/kids-dentistry"
                   onClick={handleLinkClick}
                   className="flex items-center justify-between gap-2 mb-2 pb-1 border-b border-white/10 group/hdr"
                 >
@@ -2513,7 +2513,7 @@ export default function Header() {
               {/* Cosmetic Dentistry */}
               <div className="mb-3.5">
                 <Link
-                  to="/treatments?category=dental&sub=Cosmetic%20Dentistry"
+                  to="/dental-care/cosmetic-dentistry"
                   onClick={handleLinkClick}
                   className="flex items-center justify-between gap-2 mb-2 pb-1 border-b border-white/10 group/hdr"
                 >
@@ -2536,7 +2536,7 @@ export default function Header() {
               {/* Orthodontic Care */}
               <div className="mb-3.5">
                 <Link
-                  to="/treatments?category=dental&sub=Orthodontic%20Care"
+                  to="/dental-care/orthodontic-care"
                   onClick={handleLinkClick}
                   className="flex items-center justify-between gap-2 mb-2 pb-1 border-b border-white/10 group/hdr"
                 >
@@ -2560,7 +2560,7 @@ export default function Header() {
               {/* Prosthodontic Care */}
               <div className="mb-3.5">
                 <Link
-                  to="/treatments?category=dental&sub=Prosthodontic%20Care%20%2F%20Tooth%20Replacement"
+                  to="/dental-care/prosthodontic-care"
                   onClick={handleLinkClick}
                   className="flex items-center justify-between gap-2 mb-2 pb-1 border-b border-white/10 group/hdr"
                 >
@@ -2576,7 +2576,7 @@ export default function Header() {
                   {renderMobileTreatmentItem('/dental-implants', 'Dental Implants & All-on-4', 'dental-implant.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/dental-crowns-bridges', 'Crowns & Bridges', 'dental-crown-bridge.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/dental-care/prosthodontic-care/removable-partial-dentures', 'Removable Partials', 'denture.webp', 'dental', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/fixed-partial-denture', 'Fixed Partials', 'fixed-partial-dentures.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/dental-care/prosthodontic-care/fixed-partial-dentures', 'Fixed Partials', 'fixed-partial-dentures.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/dental-care/prosthodontic-care/post-core-metal-post', 'Metal Post & Core', 'teeth-post-core.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/fibre-post', 'Fibre Post & Core', 'teeth-post-core.webp', 'dental', handleLinkClick)}
                 </div>
@@ -2585,7 +2585,7 @@ export default function Header() {
               {/* Endodontic Care */}
               <div className="mb-3.5">
                 <Link
-                  to="/treatments?category=dental&sub=Endodontic%20Care"
+                  to="/dental-care/endodontic-care"
                   onClick={handleLinkClick}
                   className="flex items-center justify-between gap-2 mb-2 pb-1 border-b border-white/10 group/hdr"
                 >
@@ -2607,7 +2607,7 @@ export default function Header() {
               {/* Geriatric Dentistry */}
               <div className="mb-3.5">
                 <Link
-                  to="/treatments?category=dental&sub=Geriatric%20Dentistry"
+                  to="/dental-care/geriatric-dentistry"
                   onClick={handleLinkClick}
                   className="flex items-center justify-between gap-2 mb-2 pb-1 border-b border-white/10 group/hdr"
                 >
@@ -2620,15 +2620,15 @@ export default function Header() {
                   <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover/hdr:text-brandSky transition-colors" />
                 </Link>
                 <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/treatments/geriatric-dental-care', 'Geriatric Dental Care', 'denture.webp', 'dental', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/dentures', 'Dentures', 'denture.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/dental-care/geriatric-dentistry/geriatric-dental-care', 'Geriatric Dental Care', 'denture.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/dental-care/geriatric-dentistry/dentures', 'Dentures', 'denture.webp', 'dental', handleLinkClick)}
                 </div>
               </div>
 
               {/* Periodontal / Gum Care */}
               <div className="mb-3.5">
                 <Link
-                  to="/treatments?category=dental&sub=Periodontal%20%2F%20Gum%20Care"
+                  to="/dental-care/periodontal-gum-care"
                   onClick={handleLinkClick}
                   className="flex items-center justify-between gap-2 mb-2 pb-1 border-b border-white/10 group/hdr"
                 >
@@ -2651,7 +2651,7 @@ export default function Header() {
               {/* Oral & Maxillofacial Care */}
               <div className="mb-3.5">
                 <Link
-                  to="/treatments?category=dental&sub=Oral%20%26%20Maxillofacial%20Care"
+                  to="/dental-care/oral-maxillofacial"
                   onClick={handleLinkClick}
                   className="flex items-center justify-between gap-2 mb-2 pb-1 border-b border-white/10 group/hdr"
                 >
@@ -2674,7 +2674,7 @@ export default function Header() {
               {/* Oral Medicine */}
               <div className="mb-3.5">
                 <Link
-                  to="/treatments?category=dental&sub=Oral%20Medicine"
+                  to="/dental-care/oral-medicine"
                   onClick={handleLinkClick}
                   className="flex items-center justify-between gap-2 mb-2 pb-1 border-b border-white/10 group/hdr"
                 >
@@ -2697,7 +2697,7 @@ export default function Header() {
               {/* Dental Radiology */}
               <div className="mb-3.5">
                 <Link
-                  to="/treatments?category=dental&sub=Radiology"
+                  to="/dental-care/radiology"
                   onClick={handleLinkClick}
                   className="flex items-center justify-between gap-2 mb-2 pb-1 border-b border-white/10 group/hdr"
                 >
@@ -2720,7 +2720,7 @@ export default function Header() {
               {/* TMJ Care */}
               <div className="mb-3.5">
                 <Link
-                  to="/treatments?category=dental&sub=Temporomandibular%20Joint%20(TMJ)%20Care"
+                  to="/dental-care/tmj-care"
                   onClick={handleLinkClick}
                   className="flex items-center justify-between gap-2 mb-2 pb-1 border-b border-white/10 group/hdr"
                 >
@@ -2742,7 +2742,7 @@ export default function Header() {
               {/* Community Dentistry */}
               <div className="mb-3.5">
                 <Link
-                  to="/treatments?category=dental&sub=Community%20Dentistry"
+                  to="/dental-care/community-dentistry"
                   onClick={handleLinkClick}
                   className="flex items-center justify-between gap-2 mb-2 pb-1 border-b border-white/10 group/hdr"
                 >
@@ -2756,7 +2756,7 @@ export default function Header() {
                 </Link>
                 <div className="grid grid-cols-2 gap-2">
                   {renderMobileTreatmentItem('/treatments/dental-health-camps', 'Dental Health Camps', 'dental-health-camps.webp', 'dental', handleLinkClick)}
-                  {renderMobileTreatmentItem('/dental-treatments/oral-pathology-screening', 'Oral Cancer Screening', 'oral-cancer-screen.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/dental-care/community-dentistry/oral-cancer-screening', 'Oral Cancer Screening', 'oral-cancer-screen.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/oral-health-care', 'Community Oral Care', 'oral-health-care.webp', 'dental', handleLinkClick)}
                 </div>
               </div>
@@ -2764,7 +2764,7 @@ export default function Header() {
               {/* Bottom CTA to view all treatments */}
               <div className="mt-5 pt-3.5 border-t border-white/10">
                 <Link
-                  to="/treatments?category=dental"
+                  to="/dental-care"
                   onClick={handleLinkClick}
                   className="w-full py-2.5 px-4 rounded-xl bg-white/[0.08] hover:bg-white/[0.14] text-white font-headline font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 border border-white/15 backdrop-blur-md transition-colors"
                 >

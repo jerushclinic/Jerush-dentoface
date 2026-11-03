@@ -293,8 +293,8 @@ export default function PediatricDentalCarePage() {
       <PageBreadcrumbHero
         title="Pediatric Dental Care"
         breadcrumbs={[
-          { label: 'Dental Care', path: '/treatments' },
-          { label: 'Kids Dentistry', path: '/treatments?category=dental&sub=Kids%20Dentistry%20%2F%20Pedodontics' },
+          { label: 'Dental Care', path: '/dental-care' },
+          { label: 'Kids Dentistry', path: '/dental-care/kids-dentistry' },
           { label: 'Pediatric Dental Care', active: true }
         ]}
       />

@@ -359,9 +359,8 @@ export default function HabitBreakingAppliancesPage() {
       <PageBreadcrumbHero
         title="Habit Breaking Appliances"
         breadcrumbs={[
-          { label: 'Medical Services', path: '/medical-services' },
-          { label: 'Dental Care', path: '/treatments?category=dental' },
-          { label: 'Kids Dentistry', path: '/treatments?category=dental&sub=Kids%20Dentistry%20%2F%20Pedodontics' },
+          { label: 'Dental Care', path: '/dental-care' },
+          { label: 'Kids Dentistry', path: '/dental-care/kids-dentistry' },
           { label: 'Habit Breaking Appliances', active: true }
         ]}
       />
@@ -505,6 +504,37 @@ export default function HabitBreakingAppliancesPage() {
           </div>
         </div>
       </section>
+
+      {/* ─── Top Appointment Consultation Section ─── */}
+      <TreatmentAppointmentForm
+        id="treatment-appointment-section"
+        treatmentName="Habit Breaking Appliances"
+        title="Book a Pediatric Consultation"
+        highlightWord="for Your Child"
+        subtitle="Get compassionate, child-friendly advice from Dr. K. Shanika and our paediatric dental team at Jerush Dentofacial & Cosmetic Laser Centre."
+        features={[
+          {
+            icon: Smile,
+            title: 'Child-Centered Comfort',
+            desc: 'Gentle, reassuring habit cessation visits designed without pressure or anxiety for young children.'
+          },
+          {
+            icon: Award,
+            title: 'Specialist-Led Evaluation',
+            desc: 'Consultations supervised by experienced pediatric dental surgeons focused on jaw and dental alignment.'
+          },
+          {
+            icon: ShieldCheck,
+            title: 'Custom Fabricated Appliances',
+            desc: 'Fixed or removable habit-breaking appliances custom-crafted for gentle, predictable bite protection.'
+          },
+          {
+            icon: MapPin,
+            title: '4 Regional Centres',
+            desc: 'Direct specialist consultations available across Thuckalay, Nagercoil, Tirunelveli, and Trichy.'
+          }
+        ]}
+      />
 
       {/* ─── Counter & Key Stats Section (Signature Navy to Royal Blue Gradient) ─── */}
       <section className="bg-gradient-to-r from-[#0F172A] via-[#2852A3] to-[#0F172A] py-10 sm:py-12 px-4 sm:px-6 text-white shadow-inner relative overflow-hidden">
@@ -1230,15 +1260,6 @@ export default function HabitBreakingAppliancesPage() {
           </div>
         </div>
       </section>
-
-      {/* ─── Appointment Form Component ─── */}
-      <TreatmentAppointmentForm
-        treatmentName="Habit Breaking Appliances"
-        title="Book a Pediatric Consultation"
-        highlightWord="for Your Child"
-        subtitle="Get compassionate, child-friendly advice from Dr. K. Shanika and our paediatric dental team at Jerush Dentofacial & Cosmetic Laser Centre."
-        id="treatment-appointment-section"
-      />
 
       {/* ─── Bottom CTA Banner (Unified Dark Navy Format with Dr. Shanika cutout) ─── */}
       <TreatmentCtaBanner

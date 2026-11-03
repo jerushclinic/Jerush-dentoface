@@ -42,7 +42,7 @@ export const doctors = [
     role: 'Prosthodontist',
     qualification: 'BDS., MDS',
     experience: '18+ Years Experience',
-    image: '/images/doctors/sherine1.webp',
+    image: '/images/doctors/sherine-ponraj-prosthodontist.webp',
     fallbackImg: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=400',
     specialties: ['Prosthodontics', 'Crown and Bridge', 'Dental Restorations', 'Evidence-Based Dentistry'],
     bio: 'Sherine graduated with a Bachelor of Dental Science from Annamalai University – 2008. She has been practising dentistry in Missionary hospitals and private practices for over 14 years. She initially obtained "Fellowship in General and Hospital Dentistry" from Christian Medical College, Vellore and currently has a post graduation degree in Prosthodontics and Crown and Bridge from Christian Medical College, Ludhiana. Sherine enjoys all aspects of Dentistry and is passionate about delivering evidence based treatments and quality care to her patients in the most professional way possible.',

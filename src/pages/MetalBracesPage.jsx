@@ -286,9 +286,10 @@ export default function MetalBracesPage() {
         <PageBreadcrumbHero
           title="Precision Metal Braces in Tamil Nadu — Nagercoil, Thuckalay, Trichy & Chennai"
           breadcrumbs={[
-            { label: 'Dental Care', path: '/treatments' },
-            { label: 'Precision Metal Braces', active: true }
-          ]}
+          { label: 'Dental Care', path: '/dental-care' },
+          { label: 'Orthodontic Care', path: '/dental-care/orthodontic-care' },
+          { label: 'Metal Braces', active: true }
+        ]}
         />
 
         {/* Subtle Ambient Lighting Glows */}

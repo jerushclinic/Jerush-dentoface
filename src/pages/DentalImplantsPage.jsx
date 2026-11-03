@@ -396,8 +396,9 @@ export default function DentalImplantsPage() {
       <PageBreadcrumbHero
         title="Dental Implants in Chennai — Cost, Benefits & Procedure"
         breadcrumbs={[
-          { label: 'Dental Care', path: '/treatments' },
-          { label: 'Dental Implants in Chennai', active: true }
+          { label: 'Dental Care', path: '/dental-care' },
+          { label: 'Implantology', path: '/dental-care/implantology' },
+          { label: 'Dental Implants & All-on-4', active: true }
         ]}
       />
 

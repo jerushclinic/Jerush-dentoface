@@ -151,7 +151,8 @@ export default function FractionalCo2LaserPage() {
       <PageBreadcrumbHero 
         title="CO₂ / Fractional Laser Resurfacing" 
         breadcrumbs={[
-          { label: 'Acne & Pigmentation', path: '/treatments' },
+          { label: 'Skin Care', path: '/treatments?category=cosmetic' },
+          { label: 'Laser Treatments', path: '/treatments?category=cosmetic&sub=Laser%20Treatments' },
           { label: 'Fractional CO₂ Laser', active: true }
         ]}
       />

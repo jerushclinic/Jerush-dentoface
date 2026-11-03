@@ -129,7 +129,8 @@ export default function GfcHairPage() {
       <PageBreadcrumbHero 
         title="GFC (Growth Factor Concentrate) Hair Therapy" 
         breadcrumbs={[
-          { label: 'Hair Fall Treatments', path: '/treatments' },
+          { label: 'Hair Care', path: '/treatments?category=hair' },
+          { label: 'Growth Factor Therapy', path: '/treatments?category=hair&sub=Growth%20Factor%20Therapy' },
           { label: 'GFC Hair Therapy', active: true }
         ]}
       />

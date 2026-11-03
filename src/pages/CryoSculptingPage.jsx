@@ -130,7 +130,8 @@ export default function CryoSculptingPage() {
       <PageBreadcrumbHero 
         title="Cryo Cool Sculpting & Fat Freezing" 
         breadcrumbs={[
-          { label: 'Fat Reduction & Body Sculpting', path: '/treatments' },
+          { label: 'Body Contouring', path: '/treatments?category=body' },
+          { label: 'Cryo Sculpting', path: '/treatments?category=body&sub=Cryo%20Sculpting' },
           { label: 'Cryo Cool Sculpting', active: true }
         ]}
       />

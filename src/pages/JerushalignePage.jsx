@@ -213,7 +213,8 @@ export default function JerushalignePage() {
       <PageBreadcrumbHero
         title="Top-Quality Invisible Clear Aligners (Jerushaligne)"
         breadcrumbs={[
-          { label: 'Dental Care', path: '/treatments' },
+          { label: 'Dental Care', path: '/dental-care' },
+          { label: 'Orthodontic Care', path: '/dental-care/orthodontic-care' },
           { label: 'Jerushaligne Clear Aligners', active: true }
         ]}
       />

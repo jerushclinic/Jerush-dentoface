@@ -29,6 +29,7 @@
 ## Clean Hero Section & No Unwanted Badges
 - **Hero Title Clearance**: Do not clutter the hero with excessive pill badges, category chips, or tags above the title (e.g., avoid "Category: ..." and "Custom Precision Fit" pills above headlines). Lead cleanly with the clinic branding and title.
 - **Hero Image Presentation**: Keep hero image cards clean and frame-focused. Do not add top banner header strips with labels or pulsing status dots (e.g., avoid "Clinical Dental Model", "Prosthodontic Care" top tags on image cards).
+- **Zero Content Inside Images**: Never overlay any text boxes, floating glass badges, status pills, description cards, or labels inside or over images. All hero and clinical images must remain 100% clean, unobstructed, and frame-focused.
 
 ## Title Typography & Line Spacing (1.40 Line-Height Convention)
 - **Ratio Standard**: All `h1`, `h2`, and multi-line display headlines across all current and upcoming treatment pages and landing pages MUST maintain a clean **1.40 line-height ratio** (`line-height: 1.4` or `leading-[1.4]`).

@@ -140,7 +140,8 @@ export default function OralPathologyPage() {
       <PageBreadcrumbHero 
         title="Oral Pathology & Cancer Screening" 
         breadcrumbs={[
-          { label: 'Oral Health & Cancer Screening', path: '/treatments' },
+          { label: 'Dental Care', path: '/dental-care' },
+          { label: 'Oral Pathology', path: '/dental-care/oral-pathology' },
           { label: 'Oral Pathology & Screening', active: true }
         ]}
       />

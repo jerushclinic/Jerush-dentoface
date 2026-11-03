@@ -250,9 +250,9 @@ export default function Footer() {
         {/* Item 2: Clinics */}
         <Link to="/contact" onClick={handleLinkClick} className="flex flex-col items-center justify-center text-center w-full py-1 text-slate-400 hover:text-brandSky transition-all duration-200 group">
           <svg className="w-[15px] h-[15px] mb-0.5 group-hover:scale-110 transition-all duration-300" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 21C16.5 16.8 19 13.2 19 9.5C19 5.36 15.86 2 12 2C8.14 2 5 5.36 5 9.5C5 13.2 7.5 16.8 12 21Z" stroke="#f43f5e" stroke-width="1.8" fill="#f43f5e" fillOpacity="0.15" strokeLinejoin="round" />
+            <path d="M12 21C16.5 16.8 19 13.2 19 9.5C19 5.36 15.86 2 12 2C8.14 2 5 5.36 5 9.5C5 13.2 7.5 16.8 12 21Z" stroke="#f43f5e" strokeWidth="1.8" fill="#f43f5e" fillOpacity="0.15" strokeLinejoin="round" />
             <circle cx="12" cy="9.5" r="3.5" fill="#38bdf8" />
-            <path d="M12 7.5V11.5M10 9.5H14" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" />
+            <path d="M12 7.5V11.5M10 9.5H14" stroke="#ffffff" strokeWidth="1.2" strokeLinecap="round" />
           </svg>
           <span className="text-[9px] font-bold uppercase tracking-wider font-headline mt-0.5">Clinics</span>
         </Link>
@@ -260,7 +260,7 @@ export default function Footer() {
         {/* Item 3: Specialities */}
         <Link to="/treatments" onClick={handleLinkClick} className="flex flex-col items-center justify-center text-center w-full py-1 text-slate-400 hover:text-brandSky transition-all duration-200 group">
           <svg className="w-[15px] h-[15px] mb-0.5 group-hover:scale-110 transition-all duration-300" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 3C9 3 7 4.2 7 7.5C7 9.8 8 11.5 8 14.5C8 17.5 9.5 19.5 9.5 19.5C9.5 19.5 10.5 17.8 12 17.8C13.5 17.8 14.5 19.5 14.5 19.5C14.5 19.5 16 17.5 16 14.5C16 11.5 17 9.8 17 7.5C17 4.2 15 3 12 3Z" stroke="#34d399" stroke-width="1.8" fill="#34d399" fillOpacity="0.15" strokeLinejoin="round" />
+            <path d="M12 3C9 3 7 4.2 7 7.5C7 9.8 8 11.5 8 14.5C8 17.5 9.5 19.5 9.5 19.5C9.5 19.5 10.5 17.8 12 17.8C13.5 17.8 14.5 19.5 14.5 19.5C14.5 19.5 16 17.5 16 14.5C16 11.5 17 9.8 17 7.5C17 4.2 15 3 12 3Z" stroke="#34d399" strokeWidth="1.8" fill="#34d399" fillOpacity="0.15" strokeLinejoin="round" />
             <path d="M18.5 4.5L19 5.5L20 5.8L19 6.1L18.5 7.1L18 6.1L17 5.8L18 5.5L18.5 4.5Z" fill="#fbbf24" />
             <path d="M5.5 7.5L5.8 8.2L6.5 8.4L5.8 8.6L5.5 9.3L5.2 8.6L4.5 8.4L5.2 8.2L5.5 7.5Z" fill="#fbbf24" />
           </svg>

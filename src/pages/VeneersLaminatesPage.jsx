@@ -427,8 +427,8 @@ export default function VeneersLaminatesPage() {
       <PageBreadcrumbHero
         title="Veneers &amp; Laminates"
         breadcrumbs={[
-          { label: 'Dental Care', path: '/treatments' },
-          { label: 'Cosmetic Dentistry', path: '/treatments?category=dental&sub=Cosmetic%20Dentistry' },
+          { label: 'Dental Care', path: '/dental-care' },
+          { label: 'Cosmetic Dentistry', path: '/dental-care/cosmetic-dentistry' },
           { label: 'Veneers & Laminates', active: true }
         ]}
       />

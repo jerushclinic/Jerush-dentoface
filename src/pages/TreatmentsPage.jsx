@@ -91,6 +91,8 @@ export default function TreatmentsPage() {
   };
 
   const getTreatmentPath = (id, item) => {
+    if (item && item.link) return item.link;
+    if (id === 'oral-cancer-screening') return '/dental-care/community-dentistry/oral-cancer-screening';
     if (id === 'gfc-hair') return '/hair-care/growth-factor-therapy/gfc-hair';
     if (id === 'fractional-co2-laser') return '/skin-care/laser-treatments/fractional-co2-laser';
     if (id === 'cryo-sculpting') return '/body-contouring/cryo-sculpting/cool-sculpting';
@@ -98,6 +100,7 @@ export default function TreatmentsPage() {
     if (id === 'oral-pathology') return '/dental-care/oral-pathology/oral-pathology-screening';
     if (id === 'dental-implants') return '/dental-care/implantology/dental-implants';
     if (id === 'crowns-bridges' || id === 'dental-crowns-bridges') return '/dental-care/prosthodontic-care/dental-crowns-bridges';
+    if (id === 'fixed-partial-dentures-crowns-bridges' || id === 'fixed-partial-dentures' || id === 'fixed-partial-denture') return '/dental-care/prosthodontic-care/fixed-partial-dentures';
     if (id === 'root-canal' || id === 'root-canal-treatment-in-tamilnadu') return '/dental-care/endodontic-care/root-canal-treatment';
     if (id === 'metal-braces') return '/dental-care/orthodontic-care/metal-braces';
     if (id === 'jerushaligne' || id === 'clear-aligners' || id === 'top-quality-invisible-clear-aligners-jerushaligne') return '/dental-care/orthodontic-care/clear-aligners-jerushaligne';
@@ -109,6 +112,9 @@ export default function TreatmentsPage() {
     if (id === 'ceramic-braces') return '/dental-care/orthodontic-care/ceramic-braces';
     if (id === 'lingual-braces') return '/dental-care/orthodontic-care/lingual-braces';
     if (id === 'post-and-core' || id === 'metal-post' || id === 'post-core' || id === 'post-core-metal-post') return '/dental-care/prosthodontic-care/post-core-metal-post';
+    if (id === 'geriatric-dental-care' || id === 'geriatric-dentistry') return '/dental-care/geriatric-dentistry/geriatric-dental-care';
+    if (id === 'dentures-1' || (id === 'dentures' && item?.subcategory === 'Geriatric Dentistry')) return '/dental-care/geriatric-dentistry/dentures';
+    if (id === 'habit-breaking-appliances' || id === 'habit-appliances') return '/dental-care/kids-dentistry/habit-breaking-appliances';
     
     // Dynamic hierarchy for all other catalogue treatments
     if (item && item.category && item.subcategory) {
@@ -208,11 +214,81 @@ export default function TreatmentsPage() {
     setSearchParams(nextParams, { replace: true });
   };
 
+  const getPageTitleAndCrumbs = () => {
+    if (activeCategory === 'dental') {
+      if (activeSubcategory !== 'all') {
+        const subClean = activeSubcategory.replace(' / Pedodontics', '').replace(' / Tooth Replacement', '');
+        return {
+          title: activeSubcategory,
+          breadcrumbs: [
+            { label: 'Dental Care', path: '/dental-care' },
+            { label: subClean, active: true }
+          ]
+        };
+      }
+      return {
+        title: 'Dental Care & Procedures',
+        breadcrumbs: [{ label: 'Dental Care', active: true }]
+      };
+    }
+    if (activeCategory === 'cosmetic') {
+      if (activeSubcategory !== 'all') {
+        return {
+          title: activeSubcategory,
+          breadcrumbs: [
+            { label: 'Skin & Laser', path: '/treatments?category=cosmetic' },
+            { label: activeSubcategory, active: true }
+          ]
+        };
+      }
+      return {
+        title: 'Skin & Laser Treatments',
+        breadcrumbs: [{ label: 'Skin & Laser', active: true }]
+      };
+    }
+    if (activeCategory === 'hair') {
+      if (activeSubcategory !== 'all') {
+        return {
+          title: activeSubcategory,
+          breadcrumbs: [
+            { label: 'Hair Care', path: '/treatments?category=hair' },
+            { label: activeSubcategory, active: true }
+          ]
+        };
+      }
+      return {
+        title: 'Hair Restoration Treatments',
+        breadcrumbs: [{ label: 'Hair Care', active: true }]
+      };
+    }
+    if (activeCategory === 'body') {
+      if (activeSubcategory !== 'all') {
+        return {
+          title: activeSubcategory,
+          breadcrumbs: [
+            { label: 'Body Contouring', path: '/treatments?category=body' },
+            { label: activeSubcategory, active: true }
+          ]
+        };
+      }
+      return {
+        title: 'Body Contouring & Wellness',
+        breadcrumbs: [{ label: 'Body Contouring', active: true }]
+      };
+    }
+    return {
+      title: 'Our Medical Services',
+      breadcrumbs: [{ label: 'Medical Services', active: true }]
+    };
+  };
+
+  const { title: heroTitle, breadcrumbs: heroBreadcrumbs } = getPageTitleAndCrumbs();
+
   return (
     <div className="bg-slate-50/70 text-slate-800 min-h-screen pt-0 font-body relative text-left pb-24">
       <PageBreadcrumbHero
-        title="Our Medical Services"
-        breadcrumbs={[{ label: 'Medical Services', active: true }]}
+        title={heroTitle}
+        breadcrumbs={heroBreadcrumbs}
       />
 
       {/* Decorative ambient background glows contained without trapping sticky */}

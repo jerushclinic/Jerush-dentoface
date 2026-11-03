@@ -328,7 +328,7 @@ export default function ClinicalExcellencePage() {
 
       {/* ─── 5. BOTTOM CALL TO ACTION (New Dark Navy Aesthetic) ─── */}
       <TreatmentCtaBanner
-        badgeText="Root Canal Specialist"
+        badgeText="CENTRE OF EXCELLENCE"
         titlePrefix="Consult Our"
         highlightWord="Medical Specialists"
         titleSuffix=""
@@ -337,10 +337,10 @@ export default function ClinicalExcellencePage() {
         onPrimaryClick={handleBookClick}
         secondaryBtnText="Call Helpline"
         secondaryBtnPhone="+919489160055"
-        doctorImage="/images/doctors/sherine2.webp"
-        doctorName="DR. SHERINE PONRAJ"
-        doctorRole="Root Canal Specialist"
-        doctorAlt="DR. SHERINE PONRAJ - Root Canal Specialist"
+        doctorImage="/images/doctors/dr-bladbin-portrait.webp"
+        doctorName="DR. A. BLADBIN"
+        doctorRole="Founder & Chief Medical Director"
+        doctorAlt="DR. A. BLADBIN - Jerush Dentofacial"
       />
     </div>
   );

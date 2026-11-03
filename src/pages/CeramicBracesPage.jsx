@@ -438,8 +438,8 @@ export default function CeramicBracesPage() {
       <PageBreadcrumbHero
         title="Ceramic Braces"
         breadcrumbs={[
-          { label: 'Dental Care', path: '/treatments' },
-          { label: 'Orthodontic Care', path: '/treatments?category=dental&sub=Orthodontic%20Care' },
+          { label: 'Dental Care', path: '/dental-care' },
+          { label: 'Orthodontic Care', path: '/dental-care/orthodontic-care' },
           { label: 'Ceramic Braces', active: true }
         ]}
       />
