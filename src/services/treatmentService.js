@@ -72,7 +72,26 @@ export const treatmentService = {
     
     // Check local treatments list
     const list = getLocalTreatments();
-    const treatment = list.find(t => String(t.id).toLowerCase() === String(id).toLowerCase());
+    const cleanId = String(id).toLowerCase();
+    const treatment = list.find(t => {
+      const tid = String(t.id).toLowerCase();
+      return tid === cleanId ||
+        (cleanId === 'melasma-treatment' && tid === 'pigmentation-treatment') ||
+        (cleanId === 'melasma' && tid === 'pigmentation-treatment') ||
+        (cleanId === 'botox' && tid === 'botox-fillers') ||
+        (cleanId === 'dermal-fillers' && tid === 'botox-fillers-1') ||
+        (cleanId === 'skin-tag-removal' && tid === 'mole-removal-1') ||
+        (cleanId === 'scar-revision-surgery' && tid === 'rhinoplasty-1') ||
+        (cleanId === 'facial-surgery' && tid === 'facial-surgery-treatment') ||
+        (cleanId === 'chemical-peel' && tid === 'chemical-peels') ||
+        (cleanId === 'skin-whitening' && tid === 'skin-whitening-treatment') ||
+        (cleanId === 'carbon-peel-laser' && tid === 'carbon-peel-laser-treatment') ||
+        (cleanId === 'collagen' && tid === 'anti-ageing-facial') ||
+        (cleanId === 'wrinkle-treatment' && tid === 'wrinkle-correction') ||
+        (cleanId === 'laser-hair-removal' && tid === 'full-body-laser-hair-reduction') ||
+        (cleanId === 'facial-laser-hair-removal' && tid === 'facial-hair-reduction') ||
+        (cleanId === 'lip-brightening' && tid === 'lip-lightening-laser-therapy');
+    });
     if (treatment) return treatment;
 
     // Smart fallback for any new SEO treatment slug:

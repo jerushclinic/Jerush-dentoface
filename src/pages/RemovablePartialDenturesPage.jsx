@@ -393,7 +393,7 @@ export default function RemovablePartialDenturesPage() {
           {
             icon: MapPin,
             title: '4 Regional Centres',
-            desc: 'World-class hospital care available across Thuckalay, Nagercoil, Tirunelveli, and Trichy.'
+            desc: 'World-class hospital care available across Thuckalay, Chennai, Trichy, and UAE.'
           }
         ]}
       />

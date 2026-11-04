@@ -115,6 +115,8 @@ export default function TreatmentsPage() {
     if (id === 'geriatric-dental-care' || id === 'geriatric-dentistry') return '/dental-care/geriatric-dentistry/geriatric-dental-care';
     if (id === 'dentures-1' || (id === 'dentures' && item?.subcategory === 'Geriatric Dentistry')) return '/dental-care/geriatric-dentistry/dentures';
     if (id === 'habit-breaking-appliances' || id === 'habit-appliances') return '/dental-care/kids-dentistry/habit-breaking-appliances';
+    if (id === 'scaling-curettage' || id === 'scaling-and-curettage') return '/dental-care/periodontal-gum-care/scaling-and-curettage';
+    if (id === 'flap-surgery' || id === 'gum-surgery' || id === 'periodontal-flap-surgery') return '/dental-care/periodontal-gum-care/flap-surgery';
     
     // Dynamic hierarchy for all other catalogue treatments
     if (item && item.category && item.subcategory) {

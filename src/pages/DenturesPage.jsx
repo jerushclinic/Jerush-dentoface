@@ -498,7 +498,7 @@ export default function DenturesPage() {
           {
             icon: MapPin,
             title: '4 Regional Centres',
-            desc: 'Centres of Excellence in Thuckalay, Nagercoil, Tirunelveli, and Trichy.'
+            desc: 'Centres of Excellence in Thuckalay, Chennai, Trichy, and UAE.'
           }
         ]}
       />
@@ -1063,14 +1063,14 @@ export default function DenturesPage() {
                 city: 'Kanyakumari District'
               },
               {
-                title: 'Nagercoil Centre',
-                role: 'Comprehensive Prosthodontic & Dental Wing',
-                city: 'Nagercoil Town'
+                title: 'Chennai Centre',
+                role: 'Aesthetics & Restorative Dental Care',
+                city: 'Adyar, Chennai'
               },
               {
-                title: 'Tirunelveli Centre',
-                role: 'Regional Dental Prosthetics & Implant Centre',
-                city: 'South Tamil Nadu'
+                title: 'UAE Clinic',
+                role: 'International Dental & Aesthetic Centre',
+                city: 'Fujairah / UAE'
               },
               {
                 title: 'Trichy Centre',

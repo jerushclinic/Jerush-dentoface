@@ -37,3 +37,6 @@
 - **Implementation**: Enforce with `leading-[1.4]` class and `style={{ lineHeight: 1.4 }}` on all `h1` and `h2` elements, supported by the global CSS rule in `src/input.css`.
 
 
+
+## Hero Image Aspect Ratio Convention
+- **Ratio Requirement**: The top first image section (Hero image card) on all treatment pages MUST ALWAYS use the signature `aspect-square` ratio (`aspect-square` inner container with `w-full h-full object-cover object-center`, wrapped in a `rounded-3xl` white border card with subtle backdrop glow), exactly as exemplified in `Pit & Fissure Sealants` and `Pedo Extractions`. Never use short or wide landscape ratios (e.g. `16:9` or `16:10`) for the top hero image card.

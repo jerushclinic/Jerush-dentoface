@@ -12,14 +12,14 @@ const BRANCHES = [
   {
     name: 'Adyar - Chennai',
     title: 'Jerush Dentofacial & Cosmetic Laser Centre',
-    address: 'Chandhini Apartment,\n29, Mahatma Gandhi Rd,\nNear SBI, Shastri Nagar, Adyar,\nTamil Nadu 600020',
+    address: 'Chandhini Apartment,\n29, Mahatma Gandhi Rd,\nNear SBI, Shastri Nagar, Adyar,\nChennai, Tamil Nadu - 600020',
     phones: ['+91 97510 10107'],
     mapEmbedUrl: 'https://maps.google.com/maps?q=Jerush+Dentofacial+Cosmetic+Laser+Centre,+Adyar,+Chennai&t=&z=14&ie=UTF8&iwloc=&output=embed'
   },
   {
     name: 'Thenur - Trichy',
     title: 'Jerush Dentofacial & Cosmetic Laser Centre',
-    address: 'No. 72, Second floor,\nPattabiraman pillai road, Thenur,\nTrichy, Tamil Nadu – 600017',
+    address: 'No. 72, Second floor,\nPattabiraman pillai road, Thenur,\nTrichy, Tamil Nadu – 620017',
     phones: ['+91 94891 60033', '+91 94891 60011'],
     mapEmbedUrl: 'https://maps.google.com/maps?q=Jerush+Dentofacial+Cosmetic+Laser+Centre,+Trichy&t=&z=14&ie=UTF8&iwloc=&output=embed'
   },
@@ -27,7 +27,7 @@ const BRANCHES = [
     name: 'Fujairah - UAE',
     title: 'Jerush Dental and Aesthetic Laser Clinic LLC',
     address: 'Flat 101 & 102, First Floor,\nFahad Building, Near Talal Market,\nFujairah - UAE',
-    phones: ['+971 507253105'],
+    phones: ['+971 50 725 3105'],
     mapEmbedUrl: 'https://maps.google.com/maps?q=Jerush+Dental+and+Aesthetic+Laser+Clinic+LLC,+Fujairah&t=&z=14&ie=UTF8&iwloc=&output=embed'
   }
 ];

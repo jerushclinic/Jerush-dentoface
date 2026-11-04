@@ -635,35 +635,37 @@ export const treatments = [
   },
   {
     "id": "scaling-curettage",
-    "title": "Deep Scaling & Curettage",
+    "title": "Scaling & Curettage",
     "category": "dental",
     "subcategory": "Periodontal / Gum Care",
-    "desc": "Specialized Scaling & Curettage procedure providing advanced clinical care and lasting results at Jerush Dentoface.",
-    "details": "Our specialist clinicians provide high-precision Scaling & Curettage with state-of-the-art diagnostic protocols, personalized treatment planning, and strict international sterilization standards.",
+    "desc": "Professional periodontal cleaning to remove plaque, hardened tartar, and treat diseased gum tissue for healthier gums.",
+    "details": "Scaling removes plaque and hardened tartar from tooth surfaces and root surfaces. Curettage addresses diseased tissue in gum pockets when clinically indicated to create healthier conditions around teeth.",
     "benefits": [
-      "Specialist clinical expertise",
-      "Advanced diagnostic technology",
-      "Personalized treatment plan"
+      "Reduce plaque and tartar buildup",
+      "Improve gum inflammation and bleeding",
+      "Ultrasonic gentle cleaning"
     ],
     "iconName": "Smile",
     "iconFile": "deep-teeth-cleaning.webp",
-    "image": "/images/medical-services/dental_implants.png"
+    "image": "/images/medical-services/dental-care/periodontal-gum-care/scaling-curettage/healthier-gums-professional-cleaning.webp",
+    "link": "/dental-care/periodontal-gum-care/scaling-and-curettage"
   },
   {
     "id": "gum-surgery",
     "title": "Flap Surgery",
     "category": "dental",
-    "desc": "Advanced surgical flap procedure and laser pocket reduction for deep-seated periodontal bone & tissue restoration.",
+    "desc": "Advanced periodontal procedure to gently lift gum tissue, clean contaminated root surfaces, and treat deep gum pockets.",
     "iconName": "Scissors",
-    "image": "/images/medical-services/root_canal.png",
-    "details": "Microsurgical gum pocket clearing and regenerative bone grafting performed under localized anesthesia.",
+    "image": "/images/medical-services/dental-care/periodontal-gum-care/flap-surgery/advanced-gum-treatment.webp",
+    "details": "Flap surgery provides direct visual access to deep periodontal pockets and root surfaces for thorough cleaning and treatment of supporting bone defects.",
     "benefits": [
-      "Reduces deep gum pockets",
-      "Regenerates supporting bone",
-      "Preserves natural teeth long-term"
+      "Better access for deep cleaning",
+      "Reduces deep periodontal pockets",
+      "Supports natural tooth preservation"
     ],
     "subcategory": "Periodontal / Gum Care",
-    "iconFile": "gum-surgery.webp"
+    "iconFile": "gum-surgery.webp",
+    "link": "/dental-care/periodontal-gum-care/flap-surgery"
   },
   {
     "id": "guided-tissue-regeneration",

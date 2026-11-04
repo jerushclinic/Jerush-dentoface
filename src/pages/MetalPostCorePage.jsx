@@ -455,7 +455,7 @@ export default function MetalPostCorePage() {
                     At <strong className="text-slate-900 font-semibold">Jerush Dentofacial & Cosmetic Laser Centre</strong>, treatment is planned according to the remaining tooth structure, root condition and the restoration needed to protect the tooth.
                   </p>
                   <p className="text-slate-600 text-xs sm:text-sm leading-relaxed pt-1 border-t border-slate-100">
-                    Prosthodontic & endodontic restorative consultations are available across our 4 regional centres in Thuckalay, Nagercoil, Tirunelveli, and Trichy with hospital-grade sterilization and digital imaging.
+                    Prosthodontic & endodontic restorative consultations are available across our 4 centres in Thuckalay, Chennai, Trichy, and UAE with hospital-grade sterilization and digital imaging.
                   </p>
                 </div>
               </div>
@@ -1166,7 +1166,7 @@ export default function MetalPostCorePage() {
         titlePrefix="Restore and Protect"
         highlightWord="Your Natural Tooth"
         titleSuffix="at Jerush"
-        subtitle="A badly damaged tooth may still be suitable for restoration, depending on the health of its root and the amount of natural structure remaining. At Jerush Dentofacial & Cosmetic Laser Centre, our prosthodontic and restorative dental team assesses each case thoroughly to explain suitable restorative options before treatment. Book your specialist consultation across Thuckalay, Nagercoil, Tirunelveli, Madurai, Trichy, and Chennai."
+        subtitle="A badly damaged tooth may still be suitable for restoration, depending on the health of its root and the amount of natural structure remaining. At Jerush Dentofacial & Cosmetic Laser Centre, our prosthodontic and restorative dental team assesses each case thoroughly to explain suitable restorative options before treatment. Book your specialist consultation across Thuckalay, Chennai, Trichy, and UAE."
         primaryBtnText="Book Dental Consultation"
         onPrimaryClick={handleBookClick}
         secondaryBtnText="Call +91 94891 60000"

@@ -531,7 +531,7 @@ export default function HabitBreakingAppliancesPage() {
           {
             icon: MapPin,
             title: '4 Regional Centres',
-            desc: 'Direct specialist consultations available across Thuckalay, Nagercoil, Tirunelveli, and Trichy.'
+            desc: 'Direct specialist consultations available across Thuckalay, Chennai, Trichy, and UAE.'
           }
         ]}
       />

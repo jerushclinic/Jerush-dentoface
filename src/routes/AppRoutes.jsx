@@ -56,6 +56,8 @@ import GeriatricDentalCarePage from '../pages/GeriatricDentalCarePage.jsx';
 import DenturesPage from '../pages/DenturesPage.jsx';
 import FixedPartialDenturesPage from '../pages/FixedPartialDenturesPage.jsx';
 import OralCancerScreeningPage from '../pages/OralCancerScreeningPage.jsx';
+import ScalingCurettagePage from '../pages/ScalingCurettagePage.jsx';
+import FlapSurgeryPage from '../pages/FlapSurgeryPage.jsx';
 
 export default function AppRoutes() {
   return (
@@ -330,6 +332,36 @@ export default function AppRoutes() {
       <Route path="/treatments/oral-cancer-screening/" element={<Navigate to="/dental-care/community-dentistry/oral-cancer-screening" replace />} />
       <Route path="/community-dentistry/oral-cancer-screening" element={<Navigate to="/dental-care/community-dentistry/oral-cancer-screening" replace />} />
       <Route path="/oral-cancer-screening" element={<Navigate to="/dental-care/community-dentistry/oral-cancer-screening" replace />} />
+
+      {/* Periodontal / Gum Care - Scaling & Curettage */}
+      <Route path="/dental-care/periodontal-gum-care/scaling-and-curettage" element={<ScalingCurettagePage />} />
+      <Route path="/dental-care/periodontal-gum-care/scaling-and-curettage/" element={<ScalingCurettagePage />} />
+      <Route path="/dental-care/periodontal-gum-care/scaling-curettage" element={<ScalingCurettagePage />} />
+      <Route path="/dental-care/periodontal-gum-care/scaling-curettage/" element={<ScalingCurettagePage />} />
+      <Route path="/dental-care/scaling-and-curettage" element={<ScalingCurettagePage />} />
+      <Route path="/dental-care/scaling-curettage" element={<ScalingCurettagePage />} />
+      <Route path="/treatments/scaling-and-curettage" element={<ScalingCurettagePage />} />
+      <Route path="/treatments/scaling-and-curettage/" element={<ScalingCurettagePage />} />
+      <Route path="/treatments/scaling-curettage" element={<ScalingCurettagePage />} />
+      <Route path="/treatments/scaling-curettage/" element={<ScalingCurettagePage />} />
+      <Route path="/periodontal-gum-care/scaling-and-curettage" element={<Navigate to="/dental-care/periodontal-gum-care/scaling-and-curettage" replace />} />
+      <Route path="/scaling-and-curettage" element={<Navigate to="/dental-care/periodontal-gum-care/scaling-and-curettage" replace />} />
+      <Route path="/scaling-curettage" element={<Navigate to="/dental-care/periodontal-gum-care/scaling-and-curettage" replace />} />
+
+      {/* Periodontal / Gum Care - Flap Surgery */}
+      <Route path="/dental-care/periodontal-gum-care/flap-surgery" element={<FlapSurgeryPage />} />
+      <Route path="/dental-care/periodontal-gum-care/flap-surgery/" element={<FlapSurgeryPage />} />
+      <Route path="/dental-care/periodontal-gum-care/periodontal-flap-surgery" element={<FlapSurgeryPage />} />
+      <Route path="/dental-care/flap-surgery" element={<FlapSurgeryPage />} />
+      <Route path="/dental-care/gum-surgery" element={<FlapSurgeryPage />} />
+      <Route path="/treatments/flap-surgery" element={<FlapSurgeryPage />} />
+      <Route path="/treatments/flap-surgery/" element={<FlapSurgeryPage />} />
+      <Route path="/treatments/gum-surgery" element={<FlapSurgeryPage />} />
+      <Route path="/treatments/gum-surgery/" element={<FlapSurgeryPage />} />
+      <Route path="/treatments/periodontal-flap-surgery" element={<FlapSurgeryPage />} />
+      <Route path="/periodontal-gum-care/flap-surgery" element={<Navigate to="/dental-care/periodontal-gum-care/flap-surgery" replace />} />
+      <Route path="/flap-surgery" element={<Navigate to="/dental-care/periodontal-gum-care/flap-surgery" replace />} />
+      <Route path="/gum-surgery" element={<Navigate to="/dental-care/periodontal-gum-care/flap-surgery" replace />} />
 
       {/* ─── SKIN CARE HIERARCHICAL ROUTES ─── */}
       <Route path="/skin-care/laser-treatments/fractional-co2-laser" element={<FractionalCo2LaserPage />} />

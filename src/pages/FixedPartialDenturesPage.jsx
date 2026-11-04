@@ -453,7 +453,7 @@ export default function FixedPartialDenturesPage() {
               {
                 icon: MapPin,
                 title: '4 Regional Centres',
-                desc: 'World-class hospital care available across Thuckalay, Nagercoil, Tirunelveli, and Trichy.'
+                desc: 'World-class hospital care available across Thuckalay, Chennai, Trichy, and UAE.'
               }
             ]}
           />
@@ -1167,14 +1167,14 @@ export default function FixedPartialDenturesPage() {
                 city: 'Kanyakumari District'
               },
               {
-                title: 'Nagercoil Centre',
-                role: 'Regional Restorative & Smile Design Centre',
-                city: 'Nagercoil Town'
+                title: 'Chennai Centre',
+                role: 'Digital Smile Design & Restorative Wing',
+                city: 'Adyar, Chennai'
               },
               {
-                title: 'Tirunelveli Centre',
-                role: 'Comprehensive Dental & Maxillofacial Hub',
-                city: 'South Tamil Nadu'
+                title: 'UAE Clinic',
+                role: 'International Dental & Aesthetic Wing',
+                city: 'Fujairah / UAE'
               },
               {
                 title: 'Trichy Centre',

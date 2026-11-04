@@ -471,7 +471,7 @@ export default function GeriatricDentalCarePage() {
           {
             icon: MapPin,
             title: '4 Regional Centres',
-            desc: 'Centres of Excellence in Thuckalay, Nagercoil, Tirunelveli, and Trichy.'
+            desc: 'Centres of Excellence in Thuckalay, Chennai, Trichy, and UAE.'
           }
         ]}
       />
@@ -976,14 +976,14 @@ export default function GeriatricDentalCarePage() {
                 city: 'Kanyakumari District'
               },
               {
-                title: 'Nagercoil Centre',
-                role: 'Regional Senior Dental & Restorative Centre',
-                city: 'Nagercoil Town'
+                title: 'Chennai Centre',
+                role: 'Cosmetic & Geriatric Dental Suite',
+                city: 'Adyar, Chennai'
               },
               {
-                title: 'Tirunelveli Centre',
-                role: 'Comprehensive Dental & Maxillofacial Hub',
-                city: 'South Tamil Nadu'
+                title: 'UAE Clinic',
+                role: 'International Dental & Aesthetic Wing',
+                city: 'Fujairah / UAE'
               },
               {
                 title: 'Trichy Centre',

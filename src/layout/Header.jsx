@@ -1257,87 +1257,86 @@ export default function Header() {
                               </div>
 
                               <div className="jerush-grid-4cols">
-                                {/* Col 1: Acne & Pigmentation */}
+                                {/* Col 1: Acne & Pigmentation & Laser Hair Reduction */}
                                 <div className="jerush-grid-column">
                                   <div className="jerush-megamenu-subgroup">
-                                    <h5>Acne & Scar Revision</h5>
+                                    <h5>Acne & Pigmentation / Pimple Care</h5>
                                     <ul>
-                                      <li>{renderSkinIconItem('/treatments/acne-treatment', 'Active Acne Clearance', 'acne-treatment.webp', handleLinkClick)}</li>
-                                      <li>{renderSkinIconItem('/cosmetic-dermatology-laser-treatments/fractional-co2-laser', 'Fractional CO2 Laser', 'acne-scar.webp', handleLinkClick)}</li>
-                                      <li>{renderSkinIconItem('/treatments/tca-cross-peel', 'TCA Cross Peel for Scars', 'carbon-peel-laser.webp', handleLinkClick)}</li>
-                                    </ul>
-                                  </div>
-                                  <div className="jerush-megamenu-subgroup">
-                                    <h5>Pigmentation & Tone</h5>
-                                    <ul>
-                                      <li>{renderSkinIconItem('/treatments/pigmentation-treatment', 'Pigmentation Correction', 'pigmentation-treatment.webp', handleLinkClick)}</li>
-                                      <li>{renderSkinIconItem('/treatments/melasma-treatment', 'Melasma Triple Therapy', 'melasma-teatment.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/treatments/acne-treatment', 'Acne Treatment', 'acne-treatment.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/treatments/melasma-treatment', 'Melasma', 'melasma-teatment.webp', handleLinkClick)}</li>
                                       <li>{renderSkinIconItem('/treatments/uneven-skin-tone', 'Uneven Skin Tone', 'uneven-skin-tone.webp', handleLinkClick)}</li>
-                                      <li>{renderSkinIconItem('/treatments/freckles-removal', 'Freckles Laser Removal', 'freckles-removal.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/treatments/freckles-removal', 'Freckles Removal', 'freckles-removal.webp', handleLinkClick)}</li>
+                                    </ul>
+                                  </div>
+                                  <div className="jerush-megamenu-subgroup">
+                                    <h5>Laser Hair Reduction / Diode Lasers</h5>
+                                    <ul>
+                                      <li>{renderSkinIconItem('/treatments/laser-hair-removal', 'Full Body Laser Hair Reduction', 'full-body-laser-hair-removal.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/treatments/facial-laser-hair-removal', 'Facial Hair Reduction', 'facial-hair-removal.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
                                 </div>
 
-                                {/* Col 2: Medi-Facials & Laser Hair Removal */}
+                                {/* Col 2: Skin Glow & Rejuvenation & Lip & Laser Therapy */}
                                 <div className="jerush-grid-column">
                                   <div className="jerush-megamenu-subgroup">
-                                    <h5>Medi-Facials & Glow</h5>
+                                    <h5>Skin Glow & Rejuvenation</h5>
                                     <ul>
-                                      <li>{renderSkinIconItem('/treatments/hydrafacial', 'HydraFacial MD Elite', 'hydrafacial.webp', handleLinkClick)}</li>
-                                      <li>{renderSkinIconItem('/treatments/carbon-peel-laser', 'Carbon Hollywood Laser', 'carbon-peel-laser.webp', handleLinkClick)}</li>
-                                      <li>{renderSkinIconItem('/treatments/chemical-peel', 'Clinical Chemical Peels', 'carbon-peel-laser.webp', handleLinkClick)}</li>
-                                      <li>{renderSkinIconItem('/treatments/skin-whitening', 'Glutathione Skin Brightening', 'skin-whitening.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/treatments/hydrafacial', 'HydraFacial', 'hydrafacial.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/treatments/carbon-peel-laser', 'Carbon Peel Laser', 'carbon-peel-laser.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/treatments/chemical-peel', 'Chemical Peel', 'carbon-peel-laser.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/skin-care/laser-treatments/fractional-co2-laser', 'CO2 Fractional Laser Therapy', 'acne-scar.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
                                   <div className="jerush-megamenu-subgroup">
-                                    <h5>Laser Hair Removal</h5>
+                                    <h5>Lip & Laser Therapy</h5>
                                     <ul>
-                                      <li>{renderSkinIconItem('/treatments/laser-hair-removal', 'Full Body Laser Hair Removal', 'full-body-laser-hair-removal.webp', handleLinkClick)}</li>
-                                      <li>{renderSkinIconItem('/treatments/facial-laser-hair-removal', 'Facial Precision Hair Removal', 'facial-hair-removal.webp', handleLinkClick)}</li>
-                                      <li>{renderSkinIconItem('/treatments/lip-brightening', 'Lip Brightening Laser', 'lip-brightening.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/treatments/lip-brightening', 'Lip Lightening Laser Therapy', 'lip-brightening.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/treatments/lip-lightening-peel-therapy', 'Lip Lightening Peel Therapy', 'lip-brightening.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
                                 </div>
 
-                                {/* Col 3: Anti-Ageing & Minor Dermatology */}
+                                {/* Col 3: Anti-Ageing & Aesthetics & Cosmetic Surgery */}
                                 <div className="jerush-grid-column">
                                   <div className="jerush-megamenu-subgroup">
                                     <h5>Anti-Ageing & Aesthetics</h5>
                                     <ul>
-                                      <li>{renderSkinIconItem('/treatments/botox', 'Botox Wrinkle Smoothing', 'botox-treatment.webp', handleLinkClick)}</li>
-                                      <li>{renderSkinIconItem('/treatments/dermal-fillers', 'Hyaluronic Dermal Fillers', 'dermal-fillers.webp', handleLinkClick)}</li>
-                                      <li>{renderSkinIconItem('/treatments/hifu-skin-tightening', 'HIFU Non-Surgical Facelift', 'hifu-skin-tightening.webp', handleLinkClick)}</li>
-                                      <li>{renderSkinIconItem('/treatments/microdermabrasion', 'Diamond Microdermabrasion', 'microdermabrasion.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/treatments/wrinkle-treatment', 'Wrinkle Correction', 'wrinkle-reduction.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/treatments/botox', 'Botox', 'botox-treatment.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/treatments/dermal-fillers', 'Dermal Fillers', 'dermal-fillers.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/treatments/hifu-skin-tightening', 'HIFU Skin Tightening', 'hifu-skin-tightening.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
                                   <div className="jerush-megamenu-subgroup">
-                                    <h5>Mole & Skin Growths</h5>
+                                    <h5>Cosmetic Surgery</h5>
                                     <ul>
-                                      <li>{renderSkinIconItem('/treatments/mole-removal', 'RF Mole Removal', 'mole-removal.webp', handleLinkClick)}</li>
-                                      <li>{renderSkinIconItem('/treatments/wart-removal', 'Wart & Verruca Removal', 'wart-removal-treatment.webp', handleLinkClick)}</li>
-                                      <li>{renderSkinIconItem('/treatments/skin-tag-removal', 'Skin Tag Vaporization', 'benign-skin-growth-removal.webp', handleLinkClick)}</li>
-                                      <li>{renderSkinIconItem('/treatments/xanthelasma-removal', 'Xanthelasma Removal', 'xanthelasma-removal.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/treatments/facial-surgery', 'Facial Surgery', 'facial-surgery-icon.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/treatments/rhinoplasty', 'Rhinoplasty', 'rhinoplasty.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/treatments/lip-correction-surgery', 'Lip Correction Surgery', 'lip-correction-surgery.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/treatments/scar-revision-surgery', 'Scar Revision Surgery', 'scar-revision-surgery.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
                                 </div>
 
-                                {/* Col 4: Cosmetic Surgery & Clinical Dermatology */}
+                                {/* Col 4: Mole & Skin Growth Removal & Medical Skin Care */}
                                 <div className="jerush-grid-column">
                                   <div className="jerush-megamenu-subgroup">
-                                    <h5>Cosmetic Facial Surgery</h5>
+                                    <h5>Mole & Skin Growth Removal</h5>
                                     <ul>
-                                      <li>{renderSkinIconItem('/treatments/rhinoplasty', 'Rhinoplasty (Nose Reshaping)', 'rhinoplasty.webp', handleLinkClick)}</li>
-                                      <li>{renderSkinIconItem('/treatments/facial-surgery', 'Facial Aesthetic Surgery', 'facial-surgery-icon.webp', handleLinkClick)}</li>
-                                      <li>{renderSkinIconItem('/treatments/lip-correction-surgery', 'Lip Correction Surgery', 'lip-correction-surgery.webp', handleLinkClick)}</li>
-                                      <li>{renderSkinIconItem('/treatments/scar-revision-surgery', 'Precision Scar Revision', 'scar-revision-surgery.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/treatments/mole-removal', 'Mole Removal', 'mole-removal.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/treatments/wart-removal', 'Wart Removal', 'wart-removal-treatment.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/treatments/skin-tag-removal', 'Skin Tag Removal', 'benign-skin-growth-removal.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/treatments/xanthelasma-removal', 'Xanthelasma Removal', 'xanthelasma-removal.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
                                   <div className="jerush-megamenu-subgroup">
-                                    <h5>Clinical Dermatology</h5>
+                                    <h5>Medical Skin Care</h5>
                                     <ul>
-                                      <li>{renderSkinIconItem('/treatments/excimer-laser-therapy', 'Excimer Laser for Vitiligo', 'excimer-laser-therapy.webp', handleLinkClick)}</li>
-                                      <li>{renderSkinIconItem('/treatments/psoriasis-treatment', 'Psoriasis Biological Therapy', 'psoriasis-treatment.webp', handleLinkClick)}</li>
-                                      <li>{renderSkinIconItem('/treatments/keloid-treatment', 'Keloid Intralesional Therapy', 'keloid-treatment.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/treatments/psoriasis-treatment', 'Psoriasis Treatment', 'psoriasis-treatment.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/treatments/vitiligo-treatment', 'Vitiligo Treatment', 'vitiligo-treatment.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/treatments/excimer-laser-therapy', 'Excimer Laser Therapy', 'excimer-laser-therapy.webp', handleLinkClick)}</li>
+                                      <li>{renderSkinIconItem('/treatments/keloid-treatment', 'Keloid Treatment', 'keloid-treatment.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
                                 </div>
@@ -2791,19 +2790,17 @@ export default function Header() {
                 </div>
               </div>
 
-              {/* Group 1: Acne & Pigmentation */}
+              {/* Group 1: Acne & Pigmentation / Pimple Care */}
               <div className="mb-4">
                 <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
                   <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
                   <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
-                    Acne & Pigmentation
+                    Acne & Pigmentation / Pimple Care
                   </h5>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   {renderMobileTreatmentItem('/treatments/acne-treatment', 'Acne Treatment', 'acne-treatment.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/cosmetic-dermatology-laser-treatments/fractional-co2-laser', 'Acne Scars', 'acne-scar.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/pigmentation-treatment', 'Pigmentation', 'pigmentation-treatment.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/melasma-treatment', 'Melasma Care', 'melasma-teatment.webp', 'skin', handleLinkClick)}
+                  {renderMobileTreatmentItem('/treatments/melasma-treatment', 'Melasma', 'melasma-teatment.webp', 'skin', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/uneven-skin-tone', 'Uneven Skin Tone', 'uneven-skin-tone.webp', 'skin', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/freckles-removal', 'Freckles Removal', 'freckles-removal.webp', 'skin', handleLinkClick)}
                 </div>
@@ -2819,46 +2816,27 @@ export default function Header() {
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   {renderMobileTreatmentItem('/treatments/hydrafacial', 'HydraFacial', 'hydrafacial.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/carbon-peel-laser', 'Carbon Laser Peel', 'carbon-peel-laser.webp', 'skin', handleLinkClick)}
+                  {renderMobileTreatmentItem('/treatments/carbon-peel-laser', 'Carbon Peel Laser', 'carbon-peel-laser.webp', 'skin', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/chemical-peel', 'Chemical Peel', 'carbon-peel-laser.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/skin-whitening', 'Skin Whitening', 'skin-whitening.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/skin-brightening', 'Skin Brightening', 'skin-brightening.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/anti-ageing-facial', 'Anti-Ageing Facial', 'anti-ageing-facial.webp', 'skin', handleLinkClick)}
+                  {renderMobileTreatmentItem('/skin-care/laser-treatments/fractional-co2-laser', 'CO2 Fractional Laser', 'acne-scar.webp', 'skin', handleLinkClick)}
                 </div>
               </div>
 
-              {/* Group 3: Laser Hair Removal */}
+              {/* Group 3: Laser Hair Reduction / Diode Lasers */}
               <div className="mb-4">
                 <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
                   <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
                   <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
-                    Laser Hair Removal
+                    Laser Hair Reduction / Diode Lasers
                   </h5>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/treatments/laser-hair-removal', 'Full Body Laser', 'full-body-laser-hair-removal.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/facial-laser-hair-removal', 'Facial Hair Removal', 'facial-hair-removal.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/lip-brightening', 'Lip Brightening', 'lip-brightening.webp', 'skin', handleLinkClick)}
+                  {renderMobileTreatmentItem('/treatments/laser-hair-removal', 'Full Body Laser Hair Reduction', 'full-body-laser-hair-removal.webp', 'skin', handleLinkClick)}
+                  {renderMobileTreatmentItem('/treatments/facial-laser-hair-removal', 'Facial Hair Reduction', 'facial-hair-removal.webp', 'skin', handleLinkClick)}
                 </div>
               </div>
 
-              {/* Group 4: Cosmetic Surgery */}
-              <div className="mb-4">
-                <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
-                  <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
-                    Cosmetic Surgery
-                  </h5>
-                </div>
-                <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/treatments/facial-surgery', 'Facial Surgery', 'facial-surgery-icon.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/rhinoplasty', 'Rhinoplasty', 'rhinoplasty.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/lip-correction-surgery', 'Lip Correction', 'lip-correction-surgery.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/scar-revision-surgery', 'Scar Revision', 'scar-revision-surgery.webp', 'skin', handleLinkClick)}
-                </div>
-              </div>
-
-              {/* Group 5: Anti-Ageing & Aesthetics */}
+              {/* Group 4: Anti-Ageing & Aesthetics */}
               <div className="mb-4">
                 <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
                   <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
@@ -2867,15 +2845,14 @@ export default function Header() {
                   </h5>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/treatments/wrinkle-treatment', 'Wrinkle Reduction', 'wrinkle-reduction.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/botox', 'Botox Treatment', 'botox-treatment.webp', 'skin', handleLinkClick)}
+                  {renderMobileTreatmentItem('/treatments/wrinkle-treatment', 'Wrinkle Correction', 'wrinkle-reduction.webp', 'skin', handleLinkClick)}
+                  {renderMobileTreatmentItem('/treatments/botox', 'Botox', 'botox-treatment.webp', 'skin', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/dermal-fillers', 'Dermal Fillers', 'dermal-fillers.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/hifu-skin-tightening', 'HIFU Tightening', 'hifu-skin-tightening.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/microdermabrasion', 'Microdermabrasion', 'microdermabrasion.webp', 'skin', handleLinkClick)}
+                  {renderMobileTreatmentItem('/treatments/hifu-skin-tightening', 'HIFU Skin Tightening', 'hifu-skin-tightening.webp', 'skin', handleLinkClick)}
                 </div>
               </div>
 
-              {/* Group 6: Mole & Skin Growth Removal */}
+              {/* Group 5: Mole & Skin Growth Removal */}
               <div className="mb-4">
                 <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
                   <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
@@ -2887,7 +2864,23 @@ export default function Header() {
                   {renderMobileTreatmentItem('/treatments/mole-removal', 'Mole Removal', 'mole-removal.webp', 'skin', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/wart-removal', 'Wart Removal', 'wart-removal-treatment.webp', 'skin', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/skin-tag-removal', 'Skin Tag Removal', 'benign-skin-growth-removal.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/xanthelasma-removal', 'Xanthelasma', 'xanthelasma-removal.webp', 'skin', handleLinkClick)}
+                  {renderMobileTreatmentItem('/treatments/xanthelasma-removal', 'Xanthelasma Removal', 'xanthelasma-removal.webp', 'skin', handleLinkClick)}
+                </div>
+              </div>
+
+              {/* Group 6: Cosmetic Surgery */}
+              <div className="mb-4">
+                <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
+                  <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
+                    Cosmetic Surgery
+                  </h5>
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  {renderMobileTreatmentItem('/treatments/facial-surgery', 'Facial Surgery', 'facial-surgery-icon.webp', 'skin', handleLinkClick)}
+                  {renderMobileTreatmentItem('/treatments/rhinoplasty', 'Rhinoplasty', 'rhinoplasty.webp', 'skin', handleLinkClick)}
+                  {renderMobileTreatmentItem('/treatments/lip-correction-surgery', 'Lip Correction Surgery', 'lip-correction-surgery.webp', 'skin', handleLinkClick)}
+                  {renderMobileTreatmentItem('/treatments/scar-revision-surgery', 'Scar Revision Surgery', 'scar-revision-surgery.webp', 'skin', handleLinkClick)}
                 </div>
               </div>
 
@@ -2900,10 +2893,24 @@ export default function Header() {
                   </h5>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/treatments/psoriasis-treatment', 'Psoriasis Care', 'psoriasis-treatment.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/vitiligo-treatment', 'Vitiligo Care', 'vitiligo-treatment.webp', 'skin', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/excimer-laser-therapy', 'Excimer Laser', 'excimer-laser-therapy.webp', 'skin', handleLinkClick)}
+                  {renderMobileTreatmentItem('/treatments/psoriasis-treatment', 'Psoriasis Treatment', 'psoriasis-treatment.webp', 'skin', handleLinkClick)}
+                  {renderMobileTreatmentItem('/treatments/vitiligo-treatment', 'Vitiligo Treatment', 'vitiligo-treatment.webp', 'skin', handleLinkClick)}
+                  {renderMobileTreatmentItem('/treatments/excimer-laser-therapy', 'Excimer Laser Therapy', 'excimer-laser-therapy.webp', 'skin', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/keloid-treatment', 'Keloid Treatment', 'keloid-treatment.webp', 'skin', handleLinkClick)}
+                </div>
+              </div>
+
+              {/* Group 8: Lip & Laser Therapy */}
+              <div className="mb-4">
+                <div className="flex items-center gap-2 mb-2 pb-1 border-b border-white/10">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brandSky"></span>
+                  <h5 className="font-headline font-bold text-xs uppercase tracking-wider text-slate-200">
+                    Lip & Laser Therapy
+                  </h5>
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  {renderMobileTreatmentItem('/treatments/lip-brightening', 'Lip Lightening Laser', 'lip-brightening.webp', 'skin', handleLinkClick)}
+                  {renderMobileTreatmentItem('/treatments/lip-lightening-peel-therapy', 'Lip Lightening Peel', 'lip-brightening.webp', 'skin', handleLinkClick)}
                 </div>
               </div>
 

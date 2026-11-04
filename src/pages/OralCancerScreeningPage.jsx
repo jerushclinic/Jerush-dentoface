@@ -16,7 +16,7 @@ const KEY_STATS = [
   { value: '188K+', label: 'Patients Screened & Protected' },
   { value: '18+ Years', label: 'Maxillofacial & Pathology Care' },
   { value: '< 15 Mins', label: 'Painless Visual Clinical Exam' },
-  { value: '4 Regional Centres', label: 'Centres of Excellence in TN' }
+  { value: '4 Regional Centres', label: 'Centres of Excellence in TN & UAE' }
 ];
 
 // Sticky Sub-Navigation Tabs
@@ -25,7 +25,7 @@ const NAVIGATION_TABS = [
   { id: 'who-should-consider', label: 'Who Should Consider' },
   { id: 'clinical-process', label: 'Screening Process' },
   { id: 'screening-diagnosis-prevention', label: 'Screening vs Diagnosis' },
-  { id: 'regional-centres', label: 'Regional Centres' },
+  { id: 'regional-centres', label: 'Our Locations' },
   { id: 'faqs', label: 'FAQs' }
 ];
 
@@ -126,35 +126,35 @@ const CARE_TABLE = [
   }
 ];
 
-// Section 5: Regional Centres
+// Section 5: Regional Centres (Exact genuine details from Home Page Footer)
 const REGIONAL_CENTRES = [
   {
     city: 'Thuckalay (HQ)',
     name: 'Jerush Dentofacial & Cosmetic Laser Centre',
-    phone: '+91 94891 60000',
+    phones: ['+91 94891 60055', '+91 94891 60000', '+91 94891 50011'],
     timing: 'Mon - Sat: 9:00 AM - 8:30 PM',
-    address: 'Near Old Bus Stand, Thuckalay, Kanyakumari District'
+    address: 'Near Bus Stand, Brammapuram South, Thuckalay, Tamil Nadu - 629175'
   },
   {
-    city: 'Nagercoil',
-    name: 'Jerush Dental & Facial Aesthetics Centre',
-    phone: '+91 94431 70000',
+    city: 'Chennai (Adyar)',
+    name: 'Jerush Dentofacial & Cosmetic Laser Centre',
+    phones: ['+91 97510 10107'],
     timing: 'Mon - Sat: 9:30 AM - 8:00 PM',
-    address: 'Court Road, WCC Junction, Nagercoil'
+    address: 'Chandhini Apartment, 29, Mahatma Gandhi Rd, Near SBI, Shastri Nagar, Adyar, Chennai - 600020'
   },
   {
-    city: 'Tirunelveli',
-    name: 'Jerush Dentofacial Regional Clinic',
-    phone: '+91 94891 60000',
-    timing: 'Mon - Sat: 10:00 AM - 7:30 PM',
-    address: 'South Bypass Road, Vannarpettai, Tirunelveli'
+    city: 'Trichy (Thenur)',
+    name: 'Jerush Dentofacial & Cosmetic Laser Centre',
+    phones: ['+91 94891 60033', '+91 94891 60011'],
+    timing: 'Mon - Sat: 9:30 AM - 7:30 PM',
+    address: 'No. 72, Second Floor, Pattabiraman Pillai Road, Thenur, Trichy - 620017'
   },
   {
-    city: 'Trichy',
-    name: 'Jerush Dental & Maxillofacial Centre',
-    phone: '+91 94431 70000',
-    timing: 'Mon - Sat: 9:30 AM - 7:00 PM',
-    address: 'Thillai Nagar Main Road, Tiruchirappalli'
+    city: 'Fujairah (UAE)',
+    name: 'Jerush Dental and Aesthetic Laser Clinic LLC',
+    phones: ['+971 507253105'],
+    timing: 'Sat - Thu: 9:00 AM - 9:00 PM',
+    address: 'Flat 101 & 102, First Floor, Fahad Building, Near Talal Market, Fujairah - UAE'
   }
 ];
 
@@ -305,7 +305,7 @@ export default function OralCancerScreeningPage() {
                   <img
                     src="/images/medical-services/dental-care/community-dentistry/oral-cancer-screening/cancer-screening.webp"
                     alt="Dentist examining the tongue and oral tissues during an oral cancer screening - Jerush Dentofacial"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
               </div>
@@ -343,7 +343,7 @@ export default function OralCancerScreeningPage() {
               {
                 icon: MapPin,
                 title: '4 Regional Centres',
-                desc: 'Accessible hospital care across Thuckalay, Nagercoil, Tirunelveli, and Trichy.'
+                desc: 'Accessible hospital care across Thuckalay, Chennai, Trichy, and UAE.'
               }
             ]}
           />
@@ -698,11 +698,11 @@ export default function OralCancerScreeningPage() {
             >
               Accessible Care Across{' '}
               <span className="bg-gradient-to-r from-brandBlue to-brandSky bg-clip-text text-transparent">
-                4 Regional Centres
+                Our Clinic Locations
               </span>
             </h2>
             <p className="text-slate-600 text-sm sm:text-base mt-2 max-w-2xl mx-auto">
-              World-class screening, biopsy coordination, and maxillofacial specialist consultations available across South Tamil Nadu.
+              World-class screening, biopsy coordination, and maxillofacial specialist consultations available across Tamil Nadu &amp; UAE.
             </p>
           </div>
 
@@ -730,13 +730,18 @@ export default function OralCancerScreeningPage() {
                     <Clock className="w-3.5 h-3.5 text-brandSky" />
                     <span>{centre.timing}</span>
                   </div>
-                  <a
-                    href={`tel:${centre.phone.replace(/\s+/g, '')}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-headline font-bold text-brandBlue hover:text-brandSky transition-colors"
-                  >
-                    <Phone className="w-3.5 h-3.5" />
-                    <span>{centre.phone}</span>
-                  </a>
+                  <div className="flex flex-col gap-1.5">
+                    {centre.phones.map((phone) => (
+                      <a
+                        key={phone}
+                        href={`tel:${phone.replace(/[^+\d]/g, '')}`}
+                        className="inline-flex items-center gap-1.5 text-xs font-headline font-bold text-brandBlue hover:text-brandSky transition-colors"
+                      >
+                        <Phone className="w-3.5 h-3.5" />
+                        <span>{phone}</span>
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
