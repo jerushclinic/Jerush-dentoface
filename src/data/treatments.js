@@ -537,19 +537,19 @@ export const treatments = [
   },
   {
     "id": "fibre-post",
-    "title": "Fibre Post",
+    "title": "Post & Core: Fibre Post",
     "category": "dental",
     "subcategory": "Prosthodontic Care / Tooth Replacement",
-    "desc": "Specialized Fibre Post procedure providing advanced clinical care and lasting results at Jerush Dentoface.",
-    "details": "Our specialist clinicians provide high-precision Fibre Post with state-of-the-art diagnostic protocols, personalized treatment planning, and strict international sterilization standards.",
+    "desc": "Adhesive glass-fibre reinforced post and core rebuild providing dentine-matching flexibility and an aesthetic foundation for root-treated teeth.",
+    "details": "Conservative canal preparation, adhesive resin cementation of glass fibre post, anatomical composite core build-up, and custom crown protection.",
     "benefits": [
-      "Specialist clinical expertise",
-      "Advanced diagnostic technology",
-      "Personalized treatment plan"
+      "Dentine-matching flexural elasticity",
+      "Aesthetic metal-free translucency",
+      "Conservative root canal preparation"
     ],
-    "iconName": "Smile",
+    "iconName": "ShieldCheck",
     "iconFile": "teeth-post-core.webp",
-    "image": "/images/medical-services/dental_implants.png"
+    "image": "/images/medical-services/dental-care/prosthodontic-care-tooth-replacement/fibre-post-core/restoring-damaged-teeth.webp"
   },
   {
     "id": "fibre-reinforced-composite-bridges",
@@ -568,22 +568,22 @@ export const treatments = [
     "image": "/images/medical-services/dental_implants.png"
   },
   {
-    "id": "root-canal",
-    "title": "Single Visit Root Canal Treatment",
+    "id": "single-visit-root-canal-treatment",
+    "title": "Single-Visit Root Canal Treatment",
     "category": "dental",
-    "desc": "Single visit root canal treatment using advanced rotary instruments and apex locators to save damaged teeth.",
-    "iconName": "Heart",
-    "image": "/images/medical-services/root_canal.png",
+    "subcategory": "Endodontic Care",
+    "desc": "Advanced single-visit root canal treatment using precision rotary instruments, digital apex locators, and warm obturation to eliminate infection painlessly in one appointment.",
     "details": "Minimally invasive, single-visit therapy using high-precision rotary instruments to clean, disinfect, and seal infected tooth root canals with virtually zero pain.",
     "benefits": [
       "Completed in a single visit",
-      "Painless with modern anesthesia",
-      "Save natural tooth structure"
+      "Painless with modern anaesthesia",
+      "Preserves natural tooth structure"
     ],
     "subtitle": "Single-visit painless root canal with rotary tech",
     "backDesc": "Our advanced single-visit root canal procedure uses precision rotary instruments and apex locators to save infected teeth painlessly and efficiently.",
-    "subcategory": "Endodontic Care",
-    "iconFile": "root-canal.webp"
+    "iconName": "ShieldCheck",
+    "iconFile": "root-canal.webp",
+    "image": "/images/medical-services/root_canal.png"
   },
   {
     "id": "multiple-visit-root-canal-treatment",
@@ -606,15 +606,15 @@ export const treatments = [
     "title": "Surgical Extrusion",
     "category": "dental",
     "subcategory": "Endodontic Care",
-    "desc": "Specialized Surgical Extrusion procedure providing advanced clinical care and lasting results at Jerush Dentoface.",
-    "details": "Our specialist clinicians provide high-precision Surgical Extrusion with state-of-the-art diagnostic protocols, personalized treatment planning, and strict international sterilization standards.",
+    "desc": "Specialized surgical extrusion technique to carefully elevate fractured or subgingivally broken teeth into a restorable position without extraction.",
+    "details": "Surgical extrusion is an advanced conservative procedure where a severely broken down or horizontally fractured tooth root is gently mobilized and repositioned coronally. This preserves biological tooth structure and provides sufficient sound tooth margin for post, core, and crown restoration.",
     "benefits": [
-      "Specialist clinical expertise",
-      "Advanced diagnostic technology",
-      "Personalized treatment plan"
+      "Saves severely fractured natural teeth",
+      "Avoids immediate tooth extraction",
+      "Enables strong crown restoration"
     ],
     "iconName": "Smile",
-    "iconFile": null,
+    "iconFile": "root-canal.webp",
     "image": "/images/medical-services/dental_implants.png"
   },
   {
@@ -622,15 +622,15 @@ export const treatments = [
     "title": "Apexification",
     "category": "dental",
     "subcategory": "Endodontic Care",
-    "desc": "Specialized Apexification procedure providing advanced clinical care and lasting results at Jerush Dentoface.",
-    "details": "Our specialist clinicians provide high-precision Apexification with state-of-the-art diagnostic protocols, personalized treatment planning, and strict international sterilization standards.",
+    "desc": "Endodontic procedure inducing a calcified apical barrier in incompletely developed roots of necrotic permanent teeth.",
+    "details": "Apexification promotes the formation of an apical hard-tissue closure in immature, non-vital teeth with open apices using biocompatible bioceramic materials such as MTA, allowing successful root canal filling.",
     "benefits": [
-      "Specialist clinical expertise",
-      "Advanced diagnostic technology",
-      "Personalized treatment plan"
+      "Closes open tooth root apex",
+      "Saves developing permanent teeth",
+      "Bio-compatible barrier sealing"
     ],
     "iconName": "Smile",
-    "iconFile": null,
+    "iconFile": "root-canal.webp",
     "image": "/images/medical-services/dental_implants.png"
   },
   {

@@ -8,7 +8,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
  * @param {string[]} sectionIds - Array of section DOM element IDs in page order
  * @param {number} headerOffset - Fallback offset in pixels
  */
-export function useTreatmentScrollSpy(sectionIds, headerOffset = 138) {
+export function useTreatmentScrollSpy(sectionIds, headerOffset = 140) {
   // Ensure initial active section is a valid ID from the list
   const [activeSection, setActiveSection] = useState(sectionIds?.[0] || '');
   const isManualScrollingRef = useRef(false);
@@ -71,7 +71,7 @@ export function useTreatmentScrollSpy(sectionIds, headerOffset = 138) {
     scrollEndTimeoutRef.current = setTimeout(finishScroll, 1200);
 
     // Calculate exact target position:
-    // With header hidden, sticky subnav is at top: 0
+    // With header hidden, sticky subnav is docked at top: 0
     // Position section so its header starts neatly beneath the subnav with 16px of breathing margin
     const subnavHeight = getSubnavHeight();
     const breathingRoom = 16;
@@ -80,7 +80,7 @@ export function useTreatmentScrollSpy(sectionIds, headerOffset = 138) {
     const elementRect = el.getBoundingClientRect();
     const currentScrollY = window.pageYOffset || window.scrollY;
     const elementTopAbsolute = elementRect.top + currentScrollY;
-    const targetScrollY = Math.max(0, elementTopAbsolute - targetOffset);
+    const targetScrollY = Math.max(0, Math.round(elementTopAbsolute - targetOffset));
 
     window.scrollTo({
       top: targetScrollY,
@@ -99,7 +99,6 @@ export function useTreatmentScrollSpy(sectionIds, headerOffset = 138) {
 
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          // Filter to IDs that actually exist in the DOM
           const validIds = rawIds.filter(id => !!document.getElementById(id));
           if (validIds.length === 0) {
             ticking = false;
@@ -118,7 +117,7 @@ export function useTreatmentScrollSpy(sectionIds, headerOffset = 138) {
           }
 
           // 2. If reached near bottom of page (footer / CTA area), activate last valid tab
-          if (windowHeight + scrollY >= documentHeight - 60) {
+          if (windowHeight + scrollY >= documentHeight - 120) {
             setActiveSection(validIds[validIds.length - 1]);
             ticking = false;
             return;
@@ -126,21 +125,35 @@ export function useTreatmentScrollSpy(sectionIds, headerOffset = 138) {
 
           // 3. Trigger line: offset where section top crosses sticky header + subnav
           const effectiveOffset = getDynamicOffset();
-          const triggerLine = effectiveOffset + 32;
+          const readingLine = effectiveOffset + 40;
 
-          let currentActive = validIds[0];
-
-          for (let i = 0; i < validIds.length; i++) {
+          // Find the section that occupies the active reading line beneath the subnav
+          let foundActive = null;
+          for (let i = validIds.length - 1; i >= 0; i--) {
             const el = document.getElementById(validIds[i]);
             if (el) {
               const rect = el.getBoundingClientRect();
-              if (rect.top <= triggerLine) {
-                currentActive = validIds[i];
+              if (rect.top <= readingLine && rect.bottom > effectiveOffset) {
+                foundActive = validIds[i];
+                break;
               }
             }
           }
 
-          setActiveSection(currentActive);
+          if (foundActive) {
+            setActiveSection(foundActive);
+          } else {
+            // Fallback: find the first section where rect.top <= readingLine
+            let current = validIds[0];
+            for (let i = 0; i < validIds.length; i++) {
+              const el = document.getElementById(validIds[i]);
+              if (el && el.getBoundingClientRect().top <= readingLine) {
+                current = validIds[i];
+              }
+            }
+            setActiveSection(current);
+          }
+
           ticking = false;
         });
 
@@ -148,7 +161,6 @@ export function useTreatmentScrollSpy(sectionIds, headerOffset = 138) {
       }
     };
 
-    // Initial check on mount
     handleScroll();
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -169,4 +181,3 @@ export function useTreatmentScrollSpy(sectionIds, headerOffset = 138) {
 }
 
 export default useTreatmentScrollSpy;
-

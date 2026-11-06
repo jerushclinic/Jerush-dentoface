@@ -357,7 +357,10 @@ export default function MetalPostCorePage() {
   const [openFaqIndex, setOpenFaqIndex] = useState(0);
 
   // ScrollSpy for Sticky Navigation Tabs
-  const activeTab = useTreatmentScrollSpy(TABS.map(tab => tab.id), 120);
+  const { activeSection, scrollToSection } = useTreatmentScrollSpy(
+    TABS.map(tab => tab.id),
+    140
+  );
 
   // Dynamic SEO & FAQ Schema Insertion
   useEffect(() => {
@@ -568,7 +571,11 @@ export default function MetalPostCorePage() {
       </section>
 
       {/* ─── Sticky Section Navigation Bar ─── */}
-      <TreatmentSectionNav tabs={TABS} activeTab={activeTab} />
+      <TreatmentSectionNav
+        tabs={TABS}
+        activeSection={activeSection}
+        onTabClick={scrollToSection}
+      />
 
       {/* ─── Section 1: The Post & Core Triad (PDF Page 1) ─── */}
       <section id="triad" className="py-16 sm:py-20 lg:py-24 bg-slate-50 relative overflow-hidden border-b border-slate-200/80">

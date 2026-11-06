@@ -156,7 +156,10 @@ export default function TreatmentAppointmentForm({
             {/* 4 Feature Cards in 2x2 Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
               {features.map((item, idx) => {
-                const IconComponent = item.icon || Smile;
+                const isString = typeof item === 'string';
+                const title = isString ? item : item?.title || '';
+                const desc = isString ? '' : item?.desc || '';
+                const IconComponent = (!isString && item?.icon) || Smile;
                 return (
                   <div
                     key={idx}
@@ -167,11 +170,13 @@ export default function TreatmentAppointmentForm({
                     </div>
                     <div>
                       <h3 className="font-headline font-bold text-slate-900 text-sm">
-                        {item.title}
+                        {title}
                       </h3>
-                      <p className="text-slate-500 text-xs leading-relaxed mt-1">
-                        {item.desc}
-                      </p>
+                      {desc ? (
+                        <p className="text-slate-500 text-xs leading-relaxed mt-1">
+                          {desc}
+                        </p>
+                      ) : null}
                     </div>
                   </div>
                 );

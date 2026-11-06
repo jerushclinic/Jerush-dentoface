@@ -1,17 +1,23 @@
-﻿import { apiClient } from "./api";
+import { apiClient } from "./api";
 import { treatments } from "../data/treatments";
 
-const TREATMENTS_STORAGE_KEY = 'jerush_treatments_catalogue_v4';
+const TREATMENTS_STORAGE_KEY = 'jerush_treatments_catalogue_v5';
 
 function getLocalTreatments() {
   try {
+    // Purge legacy storage keys to ensure clients get updated catalogue & subcategories
+    ['jerush_treatments_catalogue', 'jerush_treatments_catalogue_v1', 'jerush_treatments_catalogue_v2', 'jerush_treatments_catalogue_v3', 'jerush_treatments_catalogue_v4'].forEach(k => {
+      try { localStorage.removeItem(k); } catch (e) {}
+    });
+
     const raw = localStorage.getItem(TREATMENTS_STORAGE_KEY);
     if (!raw) {
       localStorage.setItem(TREATMENTS_STORAGE_KEY, JSON.stringify(treatments));
       return treatments;
     }
     const parsed = JSON.parse(raw);
-    if (!Array.isArray(parsed) || parsed.length < treatments.length) {
+    const hasMissingSubcategory = Array.isArray(parsed) && parsed.some(t => (t.id === 'single-visit-root-canal-treatment' || t.id === 'root-canal') && !t.subcategory);
+    if (!Array.isArray(parsed) || parsed.length < treatments.length || hasMissingSubcategory) {
       localStorage.setItem(TREATMENTS_STORAGE_KEY, JSON.stringify(treatments));
       return treatments;
     }
@@ -33,14 +39,42 @@ export const treatmentService = {
   getTreatments: async () => {
     try {
       const apiData = await apiClient.get('/treatments.php');
+      const canonicalMap = new Map(treatments.map(t => [t.id, t]));
+
       if (Array.isArray(apiData) && apiData.length >= treatments.length) {
-        saveLocalTreatments(apiData);
-        return apiData;
+        const enrichedApiData = apiData.map(t => {
+          const canon = canonicalMap.get(t.id) || (t.id === 'root-canal' ? canonicalMap.get('single-visit-root-canal-treatment') : null);
+          return {
+            ...t,
+            id: (t.id === 'root-canal' && canon) ? 'single-visit-root-canal-treatment' : t.id,
+            title: canon ? canon.title : t.title,
+            subcategory: t.subcategory || canon?.subcategory,
+            iconFile: t.iconFile || canon?.iconFile,
+            image: t.image || canon?.image
+          };
+        });
+        saveLocalTreatments(enrichedApiData);
+        return enrichedApiData;
       } else if (Array.isArray(apiData) && apiData.length > 0) {
         const local = getLocalTreatments();
         const apiMap = new Map(apiData.map(t => [t.id, t]));
-        const merged = local.map(t => apiMap.get(t.id) || t);
+        const merged = local.map(t => {
+          const apiItem = apiMap.get(t.id) || (t.id === 'single-visit-root-canal-treatment' ? apiMap.get('root-canal') : null);
+          if (!apiItem) return t;
+          return {
+            ...t,
+            ...apiItem,
+            id: t.id,
+            title: t.title,
+            subcategory: apiItem.subcategory || t.subcategory,
+            iconFile: apiItem.iconFile || t.iconFile,
+            image: t.image || apiItem.image
+          };
+        });
         apiData.forEach(t => {
+          if (t.id === 'root-canal' && merged.some(m => m.id === 'single-visit-root-canal-treatment')) {
+            return;
+          }
           if (!merged.some(m => m.id === t.id)) {
             merged.push(t);
           }
@@ -76,6 +110,10 @@ export const treatmentService = {
     const treatment = list.find(t => {
       const tid = String(t.id).toLowerCase();
       return tid === cleanId ||
+        (cleanId === 'single-visit-root-canal-treatment' && (tid === 'root-canal' || tid === 'single-visit-root-canal-treatment')) ||
+        (cleanId === 'root-canal' && (tid === 'single-visit-root-canal-treatment' || tid === 'root-canal')) ||
+        (cleanId === 'surgical-extrusion' && tid === 'surgical-extrusion') ||
+        (cleanId === 'apexification' && tid === 'apexification') ||
         (cleanId === 'melasma-treatment' && tid === 'pigmentation-treatment') ||
         (cleanId === 'melasma' && tid === 'pigmentation-treatment') ||
         (cleanId === 'botox' && tid === 'botox-fillers') ||
@@ -90,7 +128,11 @@ export const treatmentService = {
         (cleanId === 'wrinkle-treatment' && tid === 'wrinkle-correction') ||
         (cleanId === 'laser-hair-removal' && tid === 'full-body-laser-hair-reduction') ||
         (cleanId === 'facial-laser-hair-removal' && tid === 'facial-hair-reduction') ||
-        (cleanId === 'lip-brightening' && tid === 'lip-lightening-laser-therapy');
+        (cleanId === 'lip-brightening' && tid === 'lip-lightening-laser-therapy') ||
+        (cleanId === 'fibre-post-core' && tid === 'fibre-post') ||
+        (cleanId === 'fiber-post-core' && tid === 'fibre-post') ||
+        (cleanId === 'fiber-post' && tid === 'fibre-post') ||
+        (cleanId === 'post-core-fibre-post' && tid === 'fibre-post');
     });
     if (treatment) return treatment;
 
@@ -158,5 +200,3 @@ export const treatmentService = {
     return { success: true };
   }
 };
-
-

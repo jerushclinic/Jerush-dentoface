@@ -491,7 +491,7 @@ export default function FixedPartialDenturesPage() {
       {/* ─── Sticky Sub-Navigation Bar ─── */}
       <TreatmentSectionNav
         tabs={NAVIGATION_TABS}
-        activeTab={activeSection}
+        activeSection={activeSection}
         onTabClick={scrollToSection}
       />
 

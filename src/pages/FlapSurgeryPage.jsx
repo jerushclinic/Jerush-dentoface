@@ -241,7 +241,7 @@ export default function FlapSurgeryPage() {
   const [openFaq, setOpenFaq] = useState(null);
 
   // ScrollSpy for Sub-Navigation Tabs
-  const activeSection = useTreatmentScrollSpy(
+  const { activeSection, scrollToSection } = useTreatmentScrollSpy(
     NAVIGATION_TABS.map(tab => tab.id),
     140
   );
@@ -487,7 +487,7 @@ export default function FlapSurgeryPage() {
       <TreatmentSectionNav
         tabs={NAVIGATION_TABS}
         activeSection={activeSection}
-        onTabClick={handleTabClick}
+        onTabClick={scrollToSection}
       />
 
       {/* ─── Section 1: What Is Periodontal Flap Surgery? (Exact Content from PDF Page 1) ─── */}

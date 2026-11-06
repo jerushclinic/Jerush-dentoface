@@ -216,7 +216,7 @@ export default function ScalingCurettagePage() {
   const [openFaq, setOpenFaq] = useState(null);
 
   // ScrollSpy for Sub-Navigation Tabs
-  const activeSection = useTreatmentScrollSpy(
+  const { activeSection, scrollToSection } = useTreatmentScrollSpy(
     NAVIGATION_TABS.map(tab => tab.id),
     140
   );
@@ -327,7 +327,7 @@ export default function ScalingCurettagePage() {
                     Healthier Gums Start with Professional Cleaning
                   </span>
                 </h1>
-                
+
                 <p className="text-slate-600 text-base sm:text-lg leading-relaxed mt-4">
                   Bleeding gums, persistent bad breath and redness around the teeth can be signs of gum inflammation. When plaque and hardened tartar build up around or below the gum line, routine brushing alone may not be enough to keep the area clean.
                 </p>
@@ -462,14 +462,14 @@ export default function ScalingCurettagePage() {
       <TreatmentSectionNav
         tabs={NAVIGATION_TABS}
         activeSection={activeSection}
-        onTabClick={handleTabClick}
+        onTabClick={scrollToSection}
       />
 
       {/* ─── Section 1: What Are Scaling and Curettage? (Exact Content from PDF Page 1) ─── */}
       <section id="what-is-it" className="py-16 sm:py-20 bg-white scroll-mt-24 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            
+
             {/* Left Content Column */}
             <motion.div
               initial={{ opacity: 0, x: -24 }}
@@ -562,7 +562,7 @@ export default function ScalingCurettagePage() {
       {/* ─── Section 2: When Might You Need This Treatment? (Exact Content from PDF Page 2) ─── */}
       <section id="when-needed" className="py-16 sm:py-20 bg-slate-50/70 scroll-mt-24 border-b border-slate-200/70">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -645,7 +645,7 @@ export default function ScalingCurettagePage() {
       {/* ─── Section 3: How Is Scaling and Curettage Performed? (Exact Content from PDF Page 3) ─── */}
       <section id="clinical-procedure" className="py-16 sm:py-20 bg-white scroll-mt-24 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -799,7 +799,7 @@ export default function ScalingCurettagePage() {
       {/* ─── Section 5: Aftercare: Keeping Your Gums Healthy (Exact Content from PDF Pages 4 & 5) ─── */}
       <section id="aftercare" className="py-16 sm:py-20 bg-white scroll-mt-24 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -881,7 +881,7 @@ export default function ScalingCurettagePage() {
       {/* ─── Section 6: Before and After: Improving Gum Health (Exact Content from PDF Page 5) ─── */}
       <section id="before-after" className="py-16 sm:py-20 bg-slate-50/70 scroll-mt-24 border-b border-slate-200/70">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -980,7 +980,7 @@ export default function ScalingCurettagePage() {
       {/* ─── Section 7: Regional Centres of Excellence ─── */}
       <section id="regional-centres" className="py-16 sm:py-20 bg-white scroll-mt-24 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1001,7 +1001,7 @@ export default function ScalingCurettagePage() {
               </span>
             </h2>
             <p className="text-slate-600 text-sm sm:text-base mt-2 max-w-2xl mx-auto">
-              Advanced periodontal assessments, ultrasonic cleaning, and specialist gum care available across Tamil Nadu &amp; UAE.
+              Advanced periodontal assessments, ultrasonic cleaning and specialist gum care available across Tamil Nadu &amp; UAE.
             </p>
           </motion.div>
 
@@ -1057,7 +1057,7 @@ export default function ScalingCurettagePage() {
       {/* ─── Section 8: Frequently Asked Questions (Exact 7 FAQs from PDF Pages 5 & 6) ─── */}
       <section id="faqs" className="py-16 sm:py-20 bg-slate-50/70 scroll-mt-24 border-b border-slate-200/70">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1099,9 +1099,8 @@ export default function ScalingCurettagePage() {
                 >
                   <span className="text-base sm:text-lg">{faq.q}</span>
                   <div
-                    className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${
-                      openFaq === idx ? 'bg-brandBlue text-white rotate-180' : 'bg-slate-100 text-slate-600'
-                    }`}
+                    className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${openFaq === idx ? 'bg-brandBlue text-white rotate-180' : 'bg-slate-100 text-slate-600'
+                      }`}
                   >
                     <ChevronDown className="w-4 h-4" />
                   </div>

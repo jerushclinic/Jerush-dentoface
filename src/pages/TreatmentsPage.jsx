@@ -101,7 +101,10 @@ export default function TreatmentsPage() {
     if (id === 'dental-implants') return '/dental-care/implantology/dental-implants';
     if (id === 'crowns-bridges' || id === 'dental-crowns-bridges') return '/dental-care/prosthodontic-care/dental-crowns-bridges';
     if (id === 'fixed-partial-dentures-crowns-bridges' || id === 'fixed-partial-dentures' || id === 'fixed-partial-denture') return '/dental-care/prosthodontic-care/fixed-partial-dentures';
-    if (id === 'root-canal' || id === 'root-canal-treatment-in-tamilnadu') return '/dental-care/endodontic-care/root-canal-treatment';
+    if (id === 'root-canal' || id === 'root-canal-treatment-in-tamilnadu' || id === 'single-visit-root-canal-treatment') return '/dental-care/endodontic-care/root-canal-treatment';
+    if (id === 'surgical-extrusion') return '/dental-care/endodontic-care/surgical-extrusion';
+    if (id === 'multiple-visit-root-canal-treatment' || id === 'multiple-visit-root-canal') return '/dental-care/endodontic-care/multiple-visit-root-canal-treatment';
+    if (id === 'apexification') return '/dental-care/endodontic-care/apexification';
     if (id === 'metal-braces') return '/dental-care/orthodontic-care/metal-braces';
     if (id === 'jerushaligne' || id === 'clear-aligners' || id === 'top-quality-invisible-clear-aligners-jerushaligne') return '/dental-care/orthodontic-care/clear-aligners-jerushaligne';
     if (id === 'dentures' || id === 'removable-partial-dentures') return '/dental-care/prosthodontic-care/removable-partial-dentures';
@@ -112,6 +115,7 @@ export default function TreatmentsPage() {
     if (id === 'ceramic-braces') return '/dental-care/orthodontic-care/ceramic-braces';
     if (id === 'lingual-braces') return '/dental-care/orthodontic-care/lingual-braces';
     if (id === 'post-and-core' || id === 'metal-post' || id === 'post-core' || id === 'post-core-metal-post') return '/dental-care/prosthodontic-care/post-core-metal-post';
+    if (id === 'fibre-post' || id === 'fibre-post-core' || id === 'fiber-post' || id === 'fiber-post-core' || id === 'post-core-fibre-post') return '/dental-care/prosthodontic-care/fibre-post-core';
     if (id === 'geriatric-dental-care' || id === 'geriatric-dentistry') return '/dental-care/geriatric-dentistry/geriatric-dental-care';
     if (id === 'dentures-1' || (id === 'dentures' && item?.subcategory === 'Geriatric Dentistry')) return '/dental-care/geriatric-dentistry/dentures';
     if (id === 'habit-breaking-appliances' || id === 'habit-appliances') return '/dental-care/kids-dentistry/habit-breaking-appliances';

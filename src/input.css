@@ -1169,7 +1169,8 @@ h1, h2,
 }
 
 .jerush-sticky-subnav {
-  position: sticky;
+  position: -webkit-sticky !important;
+  position: sticky !important;
   top: var(--header-height, 80px);
   z-index: 999;
   transition: top 0.3s cubic-bezier(0.16, 1, 0.3, 1);

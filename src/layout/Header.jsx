@@ -1119,7 +1119,7 @@ export default function Header() {
                                       <li>{renderDentalIconItem('/dental-care/prosthodontic-care/removable-partial-dentures', 'Removable Partial Dentures', 'denture.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/dental-care/prosthodontic-care/fixed-partial-dentures', 'Fixed Partial Dentures', 'fixed-partial-dentures.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/dental-care/prosthodontic-care/post-core-metal-post', 'Metal Post & Core', 'teeth-post-core.webp', handleLinkClick)}</li>
-                                      <li>{renderDentalIconItem('/treatments/fibre-post', 'Fibre Post & Core', 'teeth-post-core.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/dental-care/prosthodontic-care/fibre-post-core', 'Fibre Post & Core', 'teeth-post-core.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
                                   <div className="jerush-megamenu-subgroup">
@@ -1129,9 +1129,9 @@ export default function Header() {
                                       </Link>
                                     </h5>
                                     <ul>
-                                      <li>{renderDentalIconItem('/dental-treatments/root-canal-treatment-in-tamilnadu', 'Single Visit Root Canal Treatment', 'root-canal.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/dental-care/endodontic-care/root-canal-treatment', 'Single-Visit Root Canal Treatment', 'root-canal.webp', handleLinkClick)}</li>
                                       <li>{renderDentalIconItem('/treatments/multiple-visit-root-canal-treatment', 'Multiple-Visit Root Canal Treatment', 'root-canal.webp', handleLinkClick)}</li>
-                                      <li>{renderDentalIconItem('/treatments/tooth-coloured-fillings', 'Tooth Restorations', 'tooth-colored-fillings.webp', handleLinkClick)}</li>
+                                      <li>{renderDentalIconItem('/dental-care/endodontic-care/surgical-extrusion', 'Surgical Extrusion', 'root-canal.webp', handleLinkClick)}</li>
                                     </ul>
                                   </div>
                                   <div className="jerush-megamenu-subgroup">
@@ -2577,7 +2577,7 @@ export default function Header() {
                   {renderMobileTreatmentItem('/dental-care/prosthodontic-care/removable-partial-dentures', 'Removable Partials', 'denture.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/dental-care/prosthodontic-care/fixed-partial-dentures', 'Fixed Partials', 'fixed-partial-dentures.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/dental-care/prosthodontic-care/post-core-metal-post', 'Metal Post & Core', 'teeth-post-core.webp', 'dental', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/fibre-post', 'Fibre Post & Core', 'teeth-post-core.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/dental-care/prosthodontic-care/fibre-post-core', 'Fibre Post & Core', 'teeth-post-core.webp', 'dental', handleLinkClick)}
                 </div>
               </div>
 
@@ -2597,9 +2597,9 @@ export default function Header() {
                   <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover/hdr:text-brandSky transition-colors" />
                 </Link>
                 <div className="grid grid-cols-2 gap-2">
-                  {renderMobileTreatmentItem('/dental-treatments/root-canal-treatment-in-tamilnadu', 'Single Visit Root Canal', 'root-canal.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/dental-care/endodontic-care/root-canal-treatment', 'Single-Visit Root Canal', 'root-canal.webp', 'dental', handleLinkClick)}
                   {renderMobileTreatmentItem('/treatments/multiple-visit-root-canal-treatment', 'Multiple-Visit RCT', 'root-canal.webp', 'dental', handleLinkClick)}
-                  {renderMobileTreatmentItem('/treatments/tooth-coloured-fillings', 'Tooth Restorations', 'tooth-colored-fillings.webp', 'dental', handleLinkClick)}
+                  {renderMobileTreatmentItem('/dental-care/endodontic-care/surgical-extrusion', 'Surgical Extrusion', 'root-canal.webp', 'dental', handleLinkClick)}
                 </div>
               </div>
 

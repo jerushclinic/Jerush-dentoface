@@ -58,6 +58,7 @@ import FixedPartialDenturesPage from '../pages/FixedPartialDenturesPage.jsx';
 import OralCancerScreeningPage from '../pages/OralCancerScreeningPage.jsx';
 import ScalingCurettagePage from '../pages/ScalingCurettagePage.jsx';
 import FlapSurgeryPage from '../pages/FlapSurgeryPage.jsx';
+import FibrePostCorePage from '../pages/FibrePostCorePage.jsx';
 
 export default function AppRoutes() {
   return (
@@ -193,9 +194,31 @@ export default function AppRoutes() {
       {/* Root Canal Treatment */}
       <Route path="/dental-care/endodontic-care/root-canal-treatment" element={<RootCanalTreatmentPage />} />
       <Route path="/dental-care/endodontic-care/root-canal-treatment/" element={<RootCanalTreatmentPage />} />
+      <Route path="/dental-care/endodontic-care/single-visit-root-canal-treatment" element={<RootCanalTreatmentPage />} />
+      <Route path="/dental-care/endodontic-care/single-visit-root-canal-treatment/" element={<RootCanalTreatmentPage />} />
       <Route path="/dental-care/endodontic-care/root-canal-treatment-in-tamilnadu" element={<RootCanalTreatmentPage />} />
       <Route path="/dental-treatments/root-canal-treatment-in-tamilnadu" element={<Navigate to="/dental-care/endodontic-care/root-canal-treatment" replace />} />
+      <Route path="/dental-treatments/single-visit-root-canal-treatment" element={<Navigate to="/dental-care/endodontic-care/root-canal-treatment" replace />} />
+      <Route path="/treatments/single-visit-root-canal-treatment" element={<Navigate to="/dental-care/endodontic-care/root-canal-treatment" replace />} />
+      <Route path="/treatments/root-canal" element={<Navigate to="/dental-care/endodontic-care/root-canal-treatment" replace />} />
       <Route path="/root-canal-treatment-in-tamilnadu" element={<Navigate to="/dental-care/endodontic-care/root-canal-treatment" replace />} />
+
+      {/* Endodontic Care Specialized Routes */}
+      <Route path="/dental-care/endodontic-care/surgical-extrusion" element={<TreatmentDetailPage />} />
+      <Route path="/dental-care/endodontic-care/surgical-extrusion/" element={<TreatmentDetailPage />} />
+      <Route path="/treatments/surgical-extrusion" element={<TreatmentDetailPage />} />
+      <Route path="/treatments/surgical-extrusion/" element={<TreatmentDetailPage />} />
+
+      <Route path="/dental-care/endodontic-care/apexification" element={<TreatmentDetailPage />} />
+      <Route path="/dental-care/endodontic-care/apexification/" element={<TreatmentDetailPage />} />
+      <Route path="/treatments/apexification" element={<TreatmentDetailPage />} />
+      <Route path="/treatments/apexification/" element={<TreatmentDetailPage />} />
+
+      <Route path="/dental-care/endodontic-care/multiple-visit-root-canal-treatment" element={<TreatmentDetailPage />} />
+      <Route path="/dental-care/endodontic-care/multiple-visit-root-canal-treatment/" element={<TreatmentDetailPage />} />
+      <Route path="/treatments/multiple-visit-root-canal-treatment" element={<TreatmentDetailPage />} />
+      <Route path="/treatments/multiple-visit-root-canal-treatment/" element={<TreatmentDetailPage />} />
+      <Route path="/treatments/multiple-visit-root-canal" element={<Navigate to="/treatments/multiple-visit-root-canal-treatment" replace />} />
 
       {/* Metal Braces */}
       <Route path="/dental-care/orthodontic-care/metal-braces" element={<MetalBracesPage />} />
@@ -311,6 +334,25 @@ export default function AppRoutes() {
       <Route path="/post-and-core" element={<Navigate to="/dental-care/prosthodontic-care/post-core-metal-post" replace />} />
       <Route path="/metal-post-core" element={<Navigate to="/dental-care/prosthodontic-care/post-core-metal-post" replace />} />
       <Route path="/post-core-metal-post" element={<Navigate to="/dental-care/prosthodontic-care/post-core-metal-post" replace />} />
+
+      {/* Post & Core: Fibre Post (Prosthodontics) */}
+      <Route path="/dental-care/prosthodontic-care/fibre-post-core" element={<FibrePostCorePage />} />
+      <Route path="/dental-care/prosthodontic-care/fibre-post-core/" element={<FibrePostCorePage />} />
+      <Route path="/dental-care/prosthodontic-care/post-core-fibre-post" element={<FibrePostCorePage />} />
+      <Route path="/dental-care/prosthodontic-care/post-core-fibre-post/" element={<FibrePostCorePage />} />
+      <Route path="/dental-care/prosthodontic-care/fiber-post-core" element={<FibrePostCorePage />} />
+      <Route path="/dental-care/prosthodontic-care/fiber-post-core/" element={<FibrePostCorePage />} />
+      <Route path="/dental-care/fibre-post-core" element={<FibrePostCorePage />} />
+      <Route path="/dental-care/fibre-post" element={<FibrePostCorePage />} />
+      <Route path="/treatments/fibre-post" element={<FibrePostCorePage />} />
+      <Route path="/treatments/fibre-post/" element={<FibrePostCorePage />} />
+      <Route path="/treatments/fibre-post-core" element={<FibrePostCorePage />} />
+      <Route path="/treatments/fibre-post-core/" element={<FibrePostCorePage />} />
+      <Route path="/treatments/fiber-post" element={<FibrePostCorePage />} />
+      <Route path="/treatments/fiber-post-core" element={<FibrePostCorePage />} />
+      <Route path="/fibre-post-core" element={<Navigate to="/dental-care/prosthodontic-care/fibre-post-core" replace />} />
+      <Route path="/fiber-post-core" element={<Navigate to="/dental-care/prosthodontic-care/fibre-post-core" replace />} />
+      <Route path="/fibre-post" element={<Navigate to="/dental-care/prosthodontic-care/fibre-post-core" replace />} />
 
       {/* Geriatric Dental Care */}
       <Route path="/dental-care/geriatric-dentistry/geriatric-dental-care" element={<GeriatricDentalCarePage />} />

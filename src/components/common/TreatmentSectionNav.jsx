@@ -7,11 +7,17 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
  * Single-row horizontal scrollable capsule pill navigation with Framer Motion
  * physics-based sliding pill indicator, smooth edge masks, and auto-centering.
  */
-export default function TreatmentSectionNav({ tabs, activeSection, onTabClick }) {
+export default function TreatmentSectionNav({ tabs, activeSection, activeTab, onTabClick }) {
   const scrollContainerRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  // Normalize current active ID in case caller passed string, object, or activeTab
+  const currentActiveId =
+    (typeof activeSection === 'string' ? activeSection : activeSection?.activeSection) ||
+    (typeof activeTab === 'string' ? activeTab : activeTab?.activeSection) ||
+    tabs?.[0]?.id;
 
   // Check scroll position to dynamically toggle edge fade masks & arrows
   const checkScrollState = useCallback(() => {
@@ -46,10 +52,10 @@ export default function TreatmentSectionNav({ tabs, activeSection, onTabClick })
 
   // Smoothly auto-center active tab in horizontal scroll view
   useEffect(() => {
-    if (!scrollContainerRef.current || !activeSection) return;
+    if (!scrollContainerRef.current || !currentActiveId) return;
 
     const container = scrollContainerRef.current;
-    const activeEl = container.querySelector(`[data-tab-id="${activeSection}"]`);
+    const activeEl = container.querySelector(`[data-tab-id="${currentActiveId}"]`);
 
     if (activeEl) {
       const containerRect = container.getBoundingClientRect();
@@ -65,7 +71,7 @@ export default function TreatmentSectionNav({ tabs, activeSection, onTabClick })
 
     const timer = setTimeout(checkScrollState, 350);
     return () => clearTimeout(timer);
-  }, [activeSection, checkScrollState]);
+  }, [currentActiveId, checkScrollState]);
 
   // Smooth manual scroll when clicking arrow buttons
   const handleManualScroll = (direction) => {
@@ -79,69 +85,91 @@ export default function TreatmentSectionNav({ tabs, activeSection, onTabClick })
     });
   };
 
+  // Resilient tab click handling that smoothly scrolls to section
+  const handleTabClick = (tabId) => {
+    if (typeof onTabClick === 'function') {
+      onTabClick(tabId);
+    } else if (typeof activeSection?.scrollToSection === 'function') {
+      activeSection.scrollToSection(tabId);
+    } else {
+      const el = document.getElementById(tabId);
+      if (el) {
+        const headerH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 80;
+        const subnavEl = document.querySelector('.jerush-sticky-subnav');
+        const subnavH = subnavEl ? subnavEl.getBoundingClientRect().height : 56;
+        const yOffset = -(headerH + subnavH + 16);
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+      }
+    }
+  };
+
   if (!tabs || tabs.length === 0) return null;
 
   return (
     <div
-      className={`jerush-sticky-subnav py-2.5 sm:py-3 z-30 relative transition-all duration-300 ${isScrolled
+      className={`jerush-sticky-subnav py-2.5 sm:py-3 z-30 transition-all duration-300 ${
+        isScrolled
           ? 'bg-white/95 backdrop-blur-xl border-y border-slate-200/90 shadow-[0_4px_20px_-4px_rgba(15,23,42,0.08)]'
           : 'bg-white/90 backdrop-blur-md border-y border-slate-200/70 shadow-xs'
-        }`}
+      }`}
     >
       <div className="max-w-7xl mx-auto px-2 sm:px-6 relative">
-        {/* ─── Edge Fade-In / Fade-Out Masks ─── */}
+        {/* Edge Fade-In / Fade-Out Masks */}
         <div
-          className={`absolute left-0 top-0 bottom-0 w-8 sm:w-12 bg-gradient-to-r from-white via-white/80 to-transparent pointer-events-none z-10 transition-opacity duration-300 ease-in-out ${canScrollLeft ? 'opacity-100' : 'opacity-0'
-            }`}
+          className={`absolute left-0 top-0 bottom-0 w-8 sm:w-12 bg-gradient-to-r from-white via-white/80 to-transparent pointer-events-none z-10 transition-opacity duration-300 ease-in-out ${
+            canScrollLeft ? 'opacity-100' : 'opacity-0'
+          }`}
         />
         <div
-          className={`absolute right-0 top-0 bottom-0 w-8 sm:w-12 bg-gradient-to-l from-white via-white/80 to-transparent pointer-events-none z-10 transition-opacity duration-300 ease-in-out ${canScrollRight ? 'opacity-100' : 'opacity-0'
-            }`}
+          className={`absolute right-0 top-0 bottom-0 w-8 sm:w-12 bg-gradient-to-l from-white via-white/80 to-transparent pointer-events-none z-10 transition-opacity duration-300 ease-in-out ${
+            canScrollRight ? 'opacity-100' : 'opacity-0'
+          }`}
         />
 
-        {/* ─── Left Chevron Scroll Button ─── */}
+        {/* Left Chevron Scroll Button */}
         <button
           type="button"
           aria-label="Scroll tabs left"
           onClick={() => handleManualScroll('left')}
-          className={`absolute left-1 sm:left-2 top-1/2 -translate-y-1/2 z-20 w-7 h-7 rounded-full bg-white/95 shadow-md border border-slate-200/80 text-slate-700 hover:text-brandBlue hover:border-brandSky/40 flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 ${canScrollLeft
+          className={`absolute left-1 sm:left-2 top-1/2 -translate-y-1/2 z-20 w-7 h-7 rounded-full bg-white/95 shadow-md border border-slate-200/80 text-slate-700 hover:text-brandBlue hover:border-brandSky/40 flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 ${
+            canScrollLeft
               ? 'opacity-100 translate-x-0 pointer-events-auto'
               : 'opacity-0 -translate-x-2 pointer-events-none'
-            }`}
+          }`}
         >
           <ChevronLeft className="w-4 h-4" />
         </button>
 
-        {/* ─── Right Chevron Scroll Button ─── */}
+        {/* Right Chevron Scroll Button */}
         <button
           type="button"
           aria-label="Scroll tabs right"
           onClick={() => handleManualScroll('right')}
-          className={`absolute right-1 sm:right-2 top-1/2 -translate-y-1/2 z-20 w-7 h-7 rounded-full bg-white/95 shadow-md border border-slate-200/80 text-slate-700 hover:text-brandBlue hover:border-brandSky/40 flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 ${canScrollRight
+          className={`absolute right-1 sm:right-2 top-1/2 -translate-y-1/2 z-20 w-7 h-7 rounded-full bg-white/95 shadow-md border border-slate-200/80 text-slate-700 hover:text-brandBlue hover:border-brandSky/40 flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 ${
+            canScrollRight
               ? 'opacity-100 translate-x-0 pointer-events-auto'
               : 'opacity-0 translate-x-2 pointer-events-none'
-            }`}
+          }`}
         >
           <ChevronRight className="w-4 h-4" />
         </button>
 
-        {/* ─── Scrollable Pill List Container ─── */}
+        {/* Scrollable Pill List Container */}
         <div
           ref={scrollContainerRef}
           className="overflow-x-auto no-scrollbar scroll-smooth px-3 sm:px-6 text-xs font-headline font-bold uppercase tracking-wider"
         >
           <div className="flex items-center gap-1.5 sm:gap-2 min-w-max mx-auto py-1">
             {tabs.map((tab) => {
-              const isActive = activeSection === tab.id;
+              const isActive = currentActiveId === tab.id;
               return (
                 <button
                   key={tab.id}
                   type="button"
                   data-tab-id={tab.id}
-                  onClick={() => onTabClick(tab.id)}
-                  className={`relative shrink-0 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-[11px] sm:text-xs font-headline font-bold uppercase tracking-wider transition-colors duration-200 whitespace-nowrap cursor-pointer select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-brandSky/60 ${
-                    isActive ? 'text-white' : 'text-slate-600 hover:text-brandBlue'
-                  }`}
+                  onClick={() => handleTabClick(tab.id)}
+                  className={`group relative shrink-0 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-[11px] sm:text-xs font-headline font-bold uppercase tracking-wider transition-all duration-200 whitespace-nowrap cursor-pointer select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-brandSky/60 hover:scale-[1.03] active:scale-[0.97]`}
                 >
                   {/* Sliding active pill indicator */}
                   {isActive ? (
@@ -151,11 +179,13 @@ export default function TreatmentSectionNav({ tabs, activeSection, onTabClick })
                       transition={{ type: 'spring', stiffness: 420, damping: 32 }}
                     />
                   ) : (
-                    <span className="absolute inset-0 rounded-full bg-slate-100/90 border border-slate-200/80 hover:bg-white hover:border-slate-300 transition-colors duration-150" />
+                    <span className="absolute inset-0 rounded-full bg-slate-100/90 border border-slate-200/80 group-hover:bg-white group-hover:border-brandSky/50 group-hover:shadow-[0_2px_12px_rgba(56,189,248,0.2)] transition-all duration-200" />
                   )}
 
                   {/* Tab Label */}
-                  <span className="relative z-10 block">
+                  <span className={`relative z-10 block font-bold transition-colors duration-200 ${
+                    isActive ? 'text-white' : 'text-slate-600 group-hover:text-brandBlue'
+                  }`}>
                     {tab.label}
                   </span>
                 </button>
