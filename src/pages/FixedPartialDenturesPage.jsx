@@ -278,7 +278,7 @@ const RELATED_TREATMENTS = [
   {
     title: 'Metal Post & Core',
     desc: 'High-strength anatomical metal post and core restorations providing solid internal retention for badly broken teeth before crown placement.',
-    link: '/dental-care/prosthodontic-care/post-core-metal-post',
+    link: '/dental-care/prosthodontic-care/metal-post-core',
     tag: 'Foundation Restoration',
     image: '/images/medical-services/dental-care/prosthodontic-care-tooth-replacement/metal-post-core/damaged-tooth-restored.webp',
     alt: 'Metal post and core foundation restoration for damaged teeth'

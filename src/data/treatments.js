@@ -684,20 +684,21 @@ export const treatments = [
     "image": "/images/medical-services/dental_implants.png"
   },
   {
-    "id": "bone-grafting",
-    "title": "Bone Grafting",
+    "id": "bone-tissue-grafting",
+    "title": "Bone & Tissue Grafting",
     "category": "dental",
     "subcategory": "Periodontal / Gum Care",
-    "desc": "Specialized Bone Grafting procedure providing advanced clinical care and lasting results at Jerush Dentoface.",
-    "details": "Our specialist clinicians provide high-precision Bone Grafting with state-of-the-art diagnostic protocols, personalized treatment planning, and strict international sterilization standards.",
+    "desc": "Advanced bone and soft-tissue grafting to rebuild deteriorated jawbone, restore receded gums, and provide structural support for natural teeth and implants.",
+    "details": "Specialized regenerative periodontal therapy utilizing biocompatible osteoconductive bone graft matrices and soft-tissue membranes to regenerate lost alveolar bone and periodontal attachment.",
     "benefits": [
-      "Specialist clinical expertise",
-      "Advanced diagnostic technology",
-      "Personalized treatment plan"
+      "Regenerates lost supporting bone structure",
+      "Restores receding gum contours",
+      "Solid foundation for dental restorations"
     ],
     "iconName": "Smile",
     "iconFile": "gum-grafting.webp",
-    "image": "/images/medical-services/dental_implants.png"
+    "image": "/images/medical-services/dental-care/periodontal-gum-care/bone-grafting/dental-foundation-at-jerush.webp",
+    "link": "/dental-care/periodontal-gum-care/bone-tissue-grafting"
   },
   {
     "id": "tooth-splinting",
@@ -720,16 +721,17 @@ export const treatments = [
     "title": "Crown Lengthening",
     "category": "dental",
     "subcategory": "Periodontal / Gum Care",
-    "desc": "Specialized Crown Lengthening procedure providing advanced clinical care and lasting results at Jerush Dentoface.",
-    "details": "Our specialist clinicians provide high-precision Crown Lengthening with state-of-the-art diagnostic protocols, personalized treatment planning, and strict international sterilization standards.",
+    "desc": "Surgical gum and bone reshaping to expose more natural tooth structure for crown restorations or to correct a gummy smile.",
+    "details": "Crown lengthening adjusts the gum line and supporting bone to create adequate accessible tooth structure for crowns or veneers, or to achieve balanced smile aesthetics.",
     "benefits": [
-      "Specialist clinical expertise",
-      "Advanced diagnostic technology",
-      "Personalized treatment plan"
+      "Exposes sound tooth structure for crowns & restorations",
+      "Addresses gummy smile and uneven gum contours",
+      "Gentle precision gum and bone contouring"
     ],
     "iconName": "Smile",
-    "iconFile": null,
-    "image": "/images/medical-services/dental_implants.png"
+    "iconFile": "crown-lengthening.webp",
+    "image": "/images/medical-services/dental-care/periodontal-gum-care/crown-lengthening/crown-lengthening.webp",
+    "link": "/dental-care/periodontal-gum-care/crown-lengthening"
   },
   {
     "id": "ridge-augmentation",
@@ -971,7 +973,8 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": "gum-grafting.webp",
-    "image": "/images/medical-services/dental_implants.png"
+    "image": "/images/medical-services/dental-care/periodontal-gum-care/bone-grafting/dental-foundation-at-jerush.webp",
+    "link": "/dental-care/periodontal-gum-care/bone-tissue-grafting"
   },
   {
     "id": "guided-bone-regeneration",
@@ -987,7 +990,8 @@ export const treatments = [
     ],
     "iconName": "Smile",
     "iconFile": "gum-grafting.webp",
-    "image": "/images/medical-services/dental_implants.png"
+    "image": "/images/medical-services/dental-care/periodontal-gum-care/bone-grafting/dental-foundation-at-jerush.webp",
+    "link": "/dental-care/periodontal-gum-care/bone-tissue-grafting"
   },
   {
     "id": "apicoectomy",
@@ -1102,19 +1106,19 @@ export const treatments = [
     "image": "/images/medical-services/dental_implants.png"
   },
   {
-    "id": "management-of-precancerous-cervical-lesions-conditions",
-    "title": "Management of precancerous cervical lesions/conditions",
+    "id": "precancerous-lesion-management",
+    "title": "Precancerous Lesion Care",
     "category": "dental",
     "subcategory": "Oral Medicine",
-    "desc": "Specialized Management of precancerous cervical lesions/conditions procedure providing advanced clinical care and lasting results at Jerush Dentoface.",
-    "details": "Our specialist clinicians provide high-precision Management of precancerous cervical lesions/conditions with state-of-the-art diagnostic protocols, personalized treatment planning, and strict international sterilization standards.",
+    "desc": "Clinical evaluation, biopsy, and therapeutic monitoring of oral leukoplakia, erythroplakia, and potentially malignant oral mucosal disorders.",
+    "details": "Specialist oral medicine screening utilizing autofluorescence diagnostic protocols, vital staining, and precision scalpel biopsies to diagnose and manage mucosal abnormalities early.",
     "benefits": [
-      "Specialist clinical expertise",
-      "Advanced diagnostic technology",
-      "Personalized treatment plan"
+      "Early detection of potentially malignant oral changes",
+      "Specialist clinical staging & biopsy confirmation",
+      "Ongoing long-term surveillance protocols"
     ],
-    "iconName": "Smile",
-    "iconFile": null,
+    "iconName": "ShieldCheck",
+    "iconFile": "oral-cancer-screen.webp",
     "image": "/images/medical-services/dental_implants.png"
   },
   {

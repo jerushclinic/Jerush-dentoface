@@ -345,7 +345,7 @@ const RELATED_TREATMENTS = [
     desc: 'Custom-crafted porcelain shells that transform tooth color, shape, and symmetry with lifelong natural radiance.',
     image: '/images/medical-services/dental-care/cosmetic-dentistry/smile-designing/dental-veneers.webp',
     alt: 'Dental porcelain veneers for smile aesthetics at Jerush',
-    link: '/treatments/dental-veneers',
+    link: '/dental-care/cosmetic-dentistry/veneers-and-laminates',
     badge: 'Aesthetic Porcelain',
     badgeColor: 'bg-sky-50 text-brandSky border-brandSky/20',
     accentBorder: 'hover:border-brandSky/60'

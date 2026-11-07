@@ -100,7 +100,7 @@ const DENTAL_SUBCATEGORY_MAP = {
   'Implantology': { label: 'Implantology', path: '/dental-care/implantology' },
   'Oral Pathology': { label: 'Oral Pathology', path: '/dental-care/oral-pathology' },
   'Periodontal / Gum Care': { label: 'Periodontal Care', path: '/dental-care/periodontal-gum-care' },
-  'Oral & Maxillofacial Care': { label: 'Oral & Maxillofacial Care', path: '/dental-care/oral-maxillofacial' },
+  'Oral & Maxillofacial Care': { label: 'Oral & Maxillofacial Care', path: '/dental-care/oral-maxillofacial-care' },
   'Oral Medicine': { label: 'Oral Medicine', path: '/dental-care/oral-medicine' },
   'Radiology': { label: 'Dental Radiology', path: '/dental-care/radiology' },
   'Temporomandibular Joint (TMJ) Care': { label: 'TMJ Care', path: '/dental-care/tmj-care' },

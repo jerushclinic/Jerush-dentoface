@@ -98,10 +98,10 @@ export default function TreatmentsPage() {
     if (id === 'cryo-sculpting') return '/body-contouring/cryo-sculpting/cool-sculpting';
     if (id === 'hair-transplant' || id === 'fue-transplant') return '/hair-care/hair-transplant/fue-hair-transplant';
     if (id === 'oral-pathology') return '/dental-care/oral-pathology/oral-pathology-screening';
-    if (id === 'dental-implants') return '/dental-care/implantology/dental-implants';
+    if (id === 'dental-implants') return '/dental-care/prosthodontic-care/dental-implants';
     if (id === 'crowns-bridges' || id === 'dental-crowns-bridges') return '/dental-care/prosthodontic-care/dental-crowns-bridges';
     if (id === 'fixed-partial-dentures-crowns-bridges' || id === 'fixed-partial-dentures' || id === 'fixed-partial-denture') return '/dental-care/prosthodontic-care/fixed-partial-dentures';
-    if (id === 'root-canal' || id === 'root-canal-treatment-in-tamilnadu' || id === 'single-visit-root-canal-treatment') return '/dental-care/endodontic-care/root-canal-treatment';
+    if (id === 'root-canal' || id === 'root-canal-treatment-in-tamilnadu' || id === 'single-visit-root-canal-treatment') return '/dental-care/endodontic-care/single-visit-root-canal-treatment';
     if (id === 'surgical-extrusion') return '/dental-care/endodontic-care/surgical-extrusion';
     if (id === 'multiple-visit-root-canal-treatment' || id === 'multiple-visit-root-canal') return '/dental-care/endodontic-care/multiple-visit-root-canal-treatment';
     if (id === 'apexification') return '/dental-care/endodontic-care/apexification';
@@ -109,18 +109,36 @@ export default function TreatmentsPage() {
     if (id === 'jerushaligne' || id === 'clear-aligners' || id === 'top-quality-invisible-clear-aligners-jerushaligne') return '/dental-care/orthodontic-care/clear-aligners-jerushaligne';
     if (id === 'dentures' || id === 'removable-partial-dentures') return '/dental-care/prosthodontic-care/removable-partial-dentures';
     if (id === 'pediatric-dental-care' || id === 'pediatric-dentistry' || id === 'dental-consultation') return '/dental-care/kids-dentistry/pediatric-dental-care';
+    if (id === 'pedo-extractions') return '/dental-care/kids-dentistry/pedo-extractions';
+    if (id === 'pit-fissure-sealants') return '/dental-care/kids-dentistry/pit-fissure-sealants';
     if (id === 'tooth-jewellery' || id === 'dental-jewellery') return '/dental-care/cosmetic-dentistry/tooth-jewellery';
     if (id === 'smile-designing' || id === 'smile-design') return '/dental-care/cosmetic-dentistry/smile-designing';
     if (id === 'veneers-laminates' || id === 'dental-veneers' || id === 'veneers-and-laminates') return '/dental-care/cosmetic-dentistry/veneers-and-laminates';
     if (id === 'ceramic-braces') return '/dental-care/orthodontic-care/ceramic-braces';
     if (id === 'lingual-braces') return '/dental-care/orthodontic-care/lingual-braces';
-    if (id === 'post-and-core' || id === 'metal-post' || id === 'post-core' || id === 'post-core-metal-post') return '/dental-care/prosthodontic-care/post-core-metal-post';
+    if (id === 'post-and-core' || id === 'metal-post' || id === 'post-core' || id === 'post-core-metal-post' || id === 'metal-post-core') return '/dental-care/prosthodontic-care/metal-post-core';
     if (id === 'fibre-post' || id === 'fibre-post-core' || id === 'fiber-post' || id === 'fiber-post-core' || id === 'post-core-fibre-post') return '/dental-care/prosthodontic-care/fibre-post-core';
     if (id === 'geriatric-dental-care' || id === 'geriatric-dentistry') return '/dental-care/geriatric-dentistry/geriatric-dental-care';
     if (id === 'dentures-1' || (id === 'dentures' && item?.subcategory === 'Geriatric Dentistry')) return '/dental-care/geriatric-dentistry/dentures';
     if (id === 'habit-breaking-appliances' || id === 'habit-appliances') return '/dental-care/kids-dentistry/habit-breaking-appliances';
     if (id === 'scaling-curettage' || id === 'scaling-and-curettage') return '/dental-care/periodontal-gum-care/scaling-and-curettage';
     if (id === 'flap-surgery' || id === 'gum-surgery' || id === 'periodontal-flap-surgery') return '/dental-care/periodontal-gum-care/flap-surgery';
+    if (id === 'bone-tissue-grafting' || id === 'bone-grafting' || id === 'gum-grafting') return '/dental-care/periodontal-gum-care/bone-tissue-grafting';
+    if (id === 'crown-lengthening') return '/dental-care/periodontal-gum-care/crown-lengthening';
+    if (id === 'wisdom-tooth-removal' || id === 'wisdom-tooth') return '/dental-care/oral-maxillofacial-care/wisdom-tooth-removal';
+    if (id === 'corrective-jaw-surgery' || id === 'jaw-surgery') return '/dental-care/oral-maxillofacial-care/corrective-jaw-surgery';
+    if (id === 'cleft-lip-palate-surgery' || id === 'cleft-lip-palate') return '/dental-care/oral-maxillofacial-care/cleft-lip-palate-surgery';
+    if (id === 'cyst-tumour-surgery') return '/dental-care/oral-maxillofacial-care/cyst-tumour-surgery';
+    if (id === 'oral-disease-management') return '/dental-care/oral-medicine/oral-disease-management';
+    if (id === 'precancerous-lesion-management' || id === 'management-of-precancerous-cervical-lesions-conditions') return '/dental-care/oral-medicine/precancerous-lesion-management';
+    if (id === 'cbct-3d') return '/dental-care/radiology/cbct-3d';
+    if (id === 'opg') return '/dental-care/radiology/opg';
+    if (id === 'cephalo-frontal-view') return '/dental-care/radiology/cephalo-frontal-view';
+    if (id === 'tmj-diagnosis-treatment') return '/dental-care/tmj-care/tmj-diagnosis-treatment';
+    if (id === 'night-guards') return '/dental-care/tmj-care/night-guards';
+    if (id === 'botox-treatment') return '/dental-care/tmj-care/botox-treatment';
+    if (id === 'dental-health-camps') return '/dental-care/community-dentistry/dental-health-camps';
+    if (id === 'oral-health-care') return '/dental-care/community-dentistry/oral-health-care';
     
     // Dynamic hierarchy for all other catalogue treatments
     if (item && item.category && item.subcategory) {

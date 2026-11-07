@@ -326,7 +326,7 @@ const RELATED_TREATMENTS = [
     title: 'Single Visit Rotary RCT',
     category: 'Endodontic Care',
     desc: 'Advanced motorized rotary endodontic therapy that painlessly cleans, shapes, and seals infected root canals in one appointment.',
-    link: '/dental-care/endodontic-care/root-canal-treatment',
+    link: '/dental-care/endodontic-care/single-visit-root-canal-treatment',
     image: '/images/medical-services/root_canal.png'
   },
   {

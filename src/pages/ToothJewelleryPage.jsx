@@ -383,7 +383,7 @@ const RELATED_TREATMENTS = [
   {
     title: 'Dental Veneers & Laminates',
     desc: 'Ultra-thin porcelain or composite shells that transform smile shape, color, and symmetry with flawless natural aesthetics.',
-    link: '/treatments/dental-veneers',
+    link: '/dental-care/cosmetic-dentistry/veneers-and-laminates',
     image: '/images/medical-services/dental-care/cosmetic-dentistry/veneers-laminates/smile-with-dental-veneers.webp',
     alt: 'Flawless smile with custom dental porcelain veneers',
     badge: 'Smile Makeover',

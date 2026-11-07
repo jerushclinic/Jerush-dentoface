@@ -1,12 +1,12 @@
 import { apiClient } from "./api";
 import { treatments } from "../data/treatments";
 
-const TREATMENTS_STORAGE_KEY = 'jerush_treatments_catalogue_v5';
+const TREATMENTS_STORAGE_KEY = 'jerush_treatments_catalogue_v6';
 
 function getLocalTreatments() {
   try {
     // Purge legacy storage keys to ensure clients get updated catalogue & subcategories
-    ['jerush_treatments_catalogue', 'jerush_treatments_catalogue_v1', 'jerush_treatments_catalogue_v2', 'jerush_treatments_catalogue_v3', 'jerush_treatments_catalogue_v4'].forEach(k => {
+    ['jerush_treatments_catalogue', 'jerush_treatments_catalogue_v1', 'jerush_treatments_catalogue_v2', 'jerush_treatments_catalogue_v3', 'jerush_treatments_catalogue_v4', 'jerush_treatments_catalogue_v5'].forEach(k => {
       try { localStorage.removeItem(k); } catch (e) {}
     });
 
@@ -112,6 +112,21 @@ export const treatmentService = {
       return tid === cleanId ||
         (cleanId === 'single-visit-root-canal-treatment' && (tid === 'root-canal' || tid === 'single-visit-root-canal-treatment')) ||
         (cleanId === 'root-canal' && (tid === 'single-visit-root-canal-treatment' || tid === 'root-canal')) ||
+        (cleanId === 'root-canal-treatment' && (tid === 'single-visit-root-canal-treatment' || tid === 'root-canal')) ||
+        (cleanId === 'dental-veneers' && (tid === 'veneers-laminates' || tid === 'veneers-and-laminates' || tid === 'dental-veneers')) ||
+        (cleanId === 'veneers-and-laminates' && (tid === 'veneers-laminates' || tid === 'veneers-and-laminates' || tid === 'dental-veneers')) ||
+        (cleanId === 'flap-surgery' && (tid === 'gum-surgery' || tid === 'flap-surgery' || tid === 'periodontal-flap-surgery')) ||
+        (cleanId === 'metal-post-core' && (tid === 'post-core-metal-post' || tid === 'metal-post-core' || tid === 'post-and-core' || tid === 'metal-post')) ||
+        (cleanId === 'post-core-metal-post' && (tid === 'metal-post-core' || tid === 'post-core-metal-post' || tid === 'post-and-core')) ||
+        (cleanId === 'bone-tissue-grafting' && (tid === 'bone-tissue-grafting' || tid === 'bone-grafting' || tid === 'gum-grafting')) ||
+        (cleanId === 'gum-grafting' && (tid === 'bone-tissue-grafting' || tid === 'bone-grafting' || tid === 'gum-grafting')) ||
+        (cleanId === 'bone-grafting' && (tid === 'bone-tissue-grafting' || tid === 'bone-grafting' || tid === 'gum-grafting')) ||
+        (cleanId === 'corrective-jaw-surgery' && (tid === 'corrective-jaw-surgery' || tid === 'jaw-surgery')) ||
+        (cleanId === 'jaw-surgery' && (tid === 'corrective-jaw-surgery' || tid === 'jaw-surgery')) ||
+        (cleanId === 'cleft-lip-palate' && (tid === 'cleft-lip-palate-surgery' || tid === 'cleft-lip-palate')) ||
+        (cleanId === 'cleft-lip-palate-surgery' && (tid === 'cleft-lip-palate-surgery' || tid === 'cleft-lip-palate')) ||
+        (cleanId === 'precancerous-lesion-management' && (tid === 'precancerous-lesion-management' || tid === 'management-of-precancerous-cervical-lesions-conditions')) ||
+        (cleanId === 'management-of-precancerous-cervical-lesions-conditions' && (tid === 'precancerous-lesion-management' || tid === 'management-of-precancerous-cervical-lesions-conditions')) ||
         (cleanId === 'surgical-extrusion' && tid === 'surgical-extrusion') ||
         (cleanId === 'apexification' && tid === 'apexification') ||
         (cleanId === 'melasma-treatment' && tid === 'pigmentation-treatment') ||

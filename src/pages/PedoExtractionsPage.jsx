@@ -283,7 +283,7 @@ const RELATED_TREATMENTS = [
   {
     title: 'Pit & Fissure Sealants',
     desc: 'Protective coatings applied to deep molar grooves to block plaque and prevent future cavities.',
-    link: '/treatments/pit-fissure-sealants',
+    link: '/dental-care/kids-dentistry/pit-fissure-sealants',
     image: '/images/medical-services/dental-care/kids-dentistry-pedodontics/pediatric-dental-care/cavity-prevention.webp',
     alt: 'Cavity prevention fluoride applications and sealants for children',
     badge: 'Cavity Barrier',

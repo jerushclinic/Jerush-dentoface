@@ -212,7 +212,7 @@ const RELATED_TREATMENTS = [
   {
     title: 'Pit & Fissure Sealants',
     desc: 'Protective resin coatings applied to deep chewing grooves of permanent molars to block food and plaque bacteria.',
-    link: '/treatments/pit-fissure-sealants',
+    link: '/dental-care/kids-dentistry/pit-fissure-sealants',
     image: '/images/medical-services/dental-care/kids-dentistry-pedodontics/pediatric-dental-care/cavity-prevention.webp',
     alt: 'Cavity prevention fluoride applications and sealants for children',
     tag: 'Cavity Barrier',

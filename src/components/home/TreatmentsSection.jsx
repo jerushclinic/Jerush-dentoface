@@ -94,7 +94,7 @@ const CURATED_TREATMENTS = {
       title: 'Advanced Dental Implants',
       subtitle: 'CBCT-guided permanent titanium roots',
       image: '/images/medical-services/dental_implants.png',
-      path: '/dental-care/implantology/dental-implants',
+      path: '/dental-care/prosthodontic-care/dental-implants',
       tag: 'Lifetime Durability'
     },
     {
@@ -110,7 +110,7 @@ const CURATED_TREATMENTS = {
       title: 'Single-Visit Root Canal',
       subtitle: 'Painless rotary endodontics in 1 sitting',
       image: '/images/medical-services/root_canal.png',
-      path: '/dental-care/endodontic-care/root-canal-treatment',
+      path: '/dental-care/endodontic-care/single-visit-root-canal-treatment',
       tag: 'Save Natural Tooth'
     },
     {

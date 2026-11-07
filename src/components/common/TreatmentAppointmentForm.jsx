@@ -24,7 +24,8 @@ const COUNTRY_CODES = [
 const CENTRES = [
   { id: 'thuckalay', name: 'Thuckalay Centre (Kanyakumari)' },
   { id: 'trichy', name: 'Trichy Centre' },
-  { id: 'chennai', name: 'Chennai Centre' }
+  { id: 'chennai', name: 'Chennai Centre' },
+  { id: 'fujairah', name: 'Fujairah Centre (UAE)' }
 ];
 
 const DEFAULT_FEATURES = [
@@ -45,8 +46,8 @@ const DEFAULT_FEATURES = [
   },
   {
     icon: MapPin,
-    title: '3 Regional Centres',
-    desc: 'World-class hospital care available across Thuckalay, Trichy, and Chennai.'
+    title: '4 Regional Centres',
+    desc: 'World-class hospital care available across Thuckalay, Trichy, Chennai, and UAE.'
   }
 ];
 

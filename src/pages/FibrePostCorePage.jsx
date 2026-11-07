@@ -19,7 +19,7 @@ const STATS = [
   { value: 'Dentine-Like Flex', label: 'Elastic Modulus Harmony' },
   { value: 'Natural Aesthetics', label: 'Metal-Free Translucency' },
   { value: 'Conservative Prep', label: 'Maximized Root Preservation' },
-  { value: '4 Regional Centres', label: 'Centres of Excellence in TN' }
+  { value: '4 Regional Centres', label: 'Centres of Excellence in TN & UAE' }
 ];
 
 // Sticky Navigation Tabs (Pill Subnav)
@@ -252,36 +252,36 @@ const FAQS = [
 // 4 Regional Centres Data (British English Spelling Convention)
 const REGIONAL_CENTRES = [
   {
-    name: 'Thuckalay (HQ)',
-    title: 'Jerush Dentofacial & Cosmetic Laser Centre',
-    address: 'Near Old Bus Stand, Thuckalay, Kanyakumari District',
-    hours: 'Mon - Sat: 9:00 AM - 8:30 PM',
-    phone: '+91 94891 60000',
-    badge: 'Headquarters & Advanced Prosthodontics'
+    city: 'Thuckalay (HQ)',
+    name: 'Jerush Dentofacial & Cosmetic Laser Centre',
+    phones: ['+91 94891 60055', '+91 94891 60000', '+91 94891 50011'],
+    timing: 'Mon - Sat: 9:00 AM - 8:30 PM',
+    address: 'Near Bus Stand, Brammapuram South, Thuckalay, Tamil Nadu - 629175',
+    badge: 'Flagship Hospital & Apex Centre'
   },
   {
-    name: 'Nagercoil',
-    title: 'Jerush Dental & Facial Aesthetics Centre',
-    address: 'Court Road, WCC Junction, Nagercoil',
-    hours: 'Mon - Sat: 9:30 AM - 8:00 PM',
-    phone: '+91 94431 70000',
-    badge: 'Prosthodontic & Implant Centre'
+    city: 'Chennai (Adyar)',
+    name: 'Jerush Dentofacial & Cosmetic Laser Centre',
+    phones: ['+91 97510 10107'],
+    timing: 'Mon - Sat: 9:30 AM - 8:00 PM',
+    address: 'Chandhini Apartment, 29, Mahatma Gandhi Rd, Near SBI, Shastri Nagar, Adyar, Chennai - 600020',
+    badge: 'Cosmetic & Aesthetic Care'
   },
   {
-    name: 'Tirunelveli',
-    title: 'Jerush Dentofacial Regional Clinic',
-    address: 'South Bypass Road, Vannarpettai, Tirunelveli',
-    hours: 'Mon - Sat: 10:00 AM - 7:30 PM',
-    phone: '+91 94891 60000',
-    badge: 'Regional Restorative Wing'
+    city: 'Trichy (Thenur)',
+    name: 'Jerush Dentofacial & Cosmetic Laser Centre',
+    phones: ['+91 94891 60033', '+91 94891 60011'],
+    timing: 'Mon - Sat: 9:30 AM - 7:30 PM',
+    address: 'No. 72, Second Floor, Pattabiraman Pillai Road, Thenur, Trichy - 620017',
+    badge: 'Advanced Restorative Wing'
   },
   {
-    name: 'Trichy',
-    title: 'Jerush Dental & Maxillofacial Centre',
-    address: 'Thillai Nagar Main Road, Tiruchirappalli',
-    hours: 'Mon - Sat: 9:30 AM - 7:00 PM',
-    phone: '+91 94431 70000',
-    badge: 'Comprehensive Oral Care'
+    city: 'Fujairah (UAE)',
+    name: 'Jerush Dental and Aesthetic Laser Clinic LLC',
+    phones: ['+971 50 725 3105'],
+    timing: 'Mon - Sat: 10:00 AM - 8:00 PM',
+    address: 'Flat 101 & 102, First Floor, Fahad Building, Near Talal Market, Fujairah - UAE',
+    badge: 'International Aesthetic Centre'
   }
 ];
 
@@ -454,7 +454,7 @@ export default function FibrePostCorePage() {
           {
             icon: MapPin,
             title: '4 Regional Centres',
-            desc: 'Centres of Excellence located in Thuckalay, Nagercoil, Tirunelveli, and Trichy.'
+            desc: 'Centres of Excellence located in Thuckalay, Chennai, Trichy, and UAE.'
           }
         ]}
       />
@@ -999,30 +999,31 @@ export default function FibrePostCorePage() {
               </span>
             </h2>
             <p className="text-slate-600 text-base sm:text-lg mt-3">
-              Advanced prosthodontic assessments, fibre post placement, and precision crown reconstructions available across Tamil Nadu.
+              Advanced prosthodontic assessments, fibre post placement, and precision crown reconstructions available across Tamil Nadu &amp; UAE.
             </p>
           </div>
 
           {/* 4 Regional Centres Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {REGIONAL_CENTRES.map((centre, index) => (
               <motion.div
-                key={centre.name}
+                key={centre.city}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ y: -6, transition: { duration: 0.2 } }}
                 className="bg-slate-50/80 rounded-3xl border border-slate-200/90 p-5 sm:p-6 shadow-sm hover:shadow-lg hover:border-brandSky/40 transition-all duration-300 flex flex-col justify-between space-y-4"
               >
                 <div>
                   <div className="flex items-center gap-2 mb-2">
                     <MapPin className="w-4 h-4 text-brandSky shrink-0" />
                     <span className="text-xs font-bold font-headline text-brandBlue uppercase tracking-wider">
-                      {centre.name}
+                      {centre.city}
                     </span>
                   </div>
                   <h3 className="font-bold font-headline text-base text-slate-900 leading-snug">
-                    {centre.title}
+                    {centre.name}
                   </h3>
                   <p className="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
                     {centre.address}
@@ -1032,13 +1033,19 @@ export default function FibrePostCorePage() {
                 <div className="pt-3 border-t border-slate-200/80 space-y-2 text-xs text-slate-600">
                   <div className="flex items-center gap-1.5">
                     <Clock className="w-3.5 h-3.5 text-slate-400 shrink-0" />
-                    <span>{centre.hours}</span>
+                    <span>{centre.timing}</span>
                   </div>
-                  <div className="flex items-center gap-1.5">
-                    <Phone className="w-3.5 h-3.5 text-brandBlue shrink-0" />
-                    <a href={`tel:${centre.phone.replace(/\s+/g, '')}`} className="text-brandBlue font-semibold hover:underline">
-                      {centre.phone}
-                    </a>
+                  <div className="flex flex-col gap-1.5">
+                    {centre.phones.map((phone) => (
+                      <a
+                        key={phone}
+                        href={`tel:${phone.replace(/[^+\d]/g, '')}`}
+                        className="inline-flex items-center gap-1.5 text-xs font-headline font-bold text-brandBlue hover:text-brandSky transition-colors"
+                      >
+                        <Phone className="w-3.5 h-3.5" />
+                        <span>{phone}</span>
+                      </a>
+                    ))}
                   </div>
                 </div>
               </motion.div>
